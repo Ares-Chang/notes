@@ -9,7 +9,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }]  // 网站icon图标
   ],
-  base: '/blog/', // 基础路径设置
+  base: '/notes/', // 基础路径设置
   themeConfig: {
     repo: 'Ares-Chang/blog', // 添加一个GitH链接
     // 文档放置在master分支下，要编辑需要重新定向：
