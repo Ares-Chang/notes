@@ -11,7 +11,7 @@ module.exports = {
   ],
   base: '/notes/', // 基础路径设置
   themeConfig: {
-    repo: 'Ares-Chang/blog', // 添加一个GitH链接
+    repo: 'Ares-Chang/notes', // 添加一个GitH链接
     // 文档放置在master分支下，要编辑需要重新定向：
     editLinks: true,  // 启用左下角编辑文档标签
     editLinkText: '编辑文档!', // 页面左下角提示
