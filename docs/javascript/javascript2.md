@@ -1,4 +1,4 @@
-# javascropt2 一级标题
+# javascript2 一级标题
 
 ## 二级标题
 
