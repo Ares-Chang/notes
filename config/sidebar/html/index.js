@@ -1,6 +1,6 @@
 const utils = require('../../../utils')
 
-const children = ['','标签语义化']
+const children = ['','tags-semantization/']
 
 module.exports = [
 	utils.gneSidebar('HTML',children)
