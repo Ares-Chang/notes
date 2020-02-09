@@ -5,6 +5,7 @@
 const html = require('./html')
 const css = require('./css')
 const javascript = require('./javascript')
+const about = require('./about')
 
 module.exports = {
 	'/html/': html,
@@ -15,5 +16,6 @@ module.exports = {
 	'/about/': [
 		'',
 		'test',
+		...about
 	]
 }
