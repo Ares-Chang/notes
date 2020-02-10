@@ -7,13 +7,14 @@ const css = require('./css')
 const javascript = require('./javascript')
 const about = require('./about')
 const hodgepodge = require('./hodgepodge')
+const tools = require('./tools')
 
 module.exports = {
 	'/html/': html,
 	'/css/': css,
 	'/javascript/': javascript,
 	'/hodgepodge/': hodgepodge,
-
+	'/tools/': tools,
 	// 关于我
 	'/about/': [
 		'',

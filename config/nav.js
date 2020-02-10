@@ -20,15 +20,10 @@ module.exports = [
 		items: [
 			{ text: '书单', link: '/books/' },
 			{ text: '鸡汤', link: '/chickenSoup/' },
+			{ text: '工具', link: '/tools/' },
 			{ text: '面试题', link: '/interview/' },
 			{ text: '大杂绘', link: '/hodgepodge/' },
 			{ text: '关于我', link: '/about/' },
-			{
-				text: '语言', items: [
-					{ text: '中文', link: '/language/chinese/' },
-					{ text: 'English', link: '/language/japanese/' }
-				]
-			},
 		]
 	},
 ]
