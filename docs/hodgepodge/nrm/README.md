@@ -10,7 +10,7 @@ nrm 是一个 NPM 源管理器，允许你快速地在如下 NPM 源间切换：
 - [nodejitsu](https://www.nodejitsu.com/)
 - [taobao](http://npm.taobao.org/)
 
-toabao 镜像源在国内所以下载速度相对快一点，推荐使用。
+toabao 和 cnpm 镜像源在国内的下载速度相对快一点，推荐使用。
 
 ## 安装
 
@@ -33,7 +33,7 @@ nrm -V
 
 ## 使用
 
-nrm ls 命令可以列出所有可供选择的源
+`nrm ls` 命令可以列出所有可供选择的源
 
 ```bash 
 nrm ls
