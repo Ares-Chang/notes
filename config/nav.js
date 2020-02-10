@@ -21,7 +21,7 @@ module.exports = [
 			{ text: '书单', link: '/books/' },
 			{ text: '鸡汤', link: '/chickenSoup/' },
 			{ text: '面试题', link: '/interview/' },
-			{ text: '大杂绘', link: '/big-picture/' },
+			{ text: '大杂绘', link: '/hodgepodge/' },
 			{ text: '关于我', link: '/about/' },
 			{
 				text: '语言', items: [
