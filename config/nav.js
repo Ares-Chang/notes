@@ -9,11 +9,12 @@ module.exports = [
 			{ text: 'HTML', link: '/html/' },
 			{ text: 'CSS', link: '/css/' },
 			{ text: 'JavaScript', link: '/javascript/' },
-			{ text: 'AJAX', link: '/AJAX/' },
+			{ text: 'AJAX', link: '/ajax/' },
 		]
 	},
-	{ text: 'Node', link: '/node/' },
+	// { text: 'Node', link: '/node/' },
 	{ text: 'Vue', link: '/vue/' },
+	{ text: 'Git', link: '/git/' },
 	{ text: '算法', link: '/arithmetic/' },
 	{
 		text: '其他',

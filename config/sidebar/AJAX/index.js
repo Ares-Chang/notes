@@ -3,5 +3,5 @@ const utils = require('../../../utils')
 const children = ['', 'Native-AJAX/']
 
 module.exports = [
-	utils.gneSidebar('AJAx', children, false)
+	utils.gneSidebar('AJAX', children, false)
 ]
