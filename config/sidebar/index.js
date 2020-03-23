@@ -10,6 +10,7 @@ const AJAX = require('./AJAX')
 const about = require('./about')
 const hodgepodge = require('./hodgepodge')
 const tools = require('./tools')
+const interview = require('./interview')
 
 module.exports = {
 	'/html/': html,
@@ -19,6 +20,7 @@ module.exports = {
 	'/git/': git,
 	'/hodgepodge/': hodgepodge,
 	'/tools/': tools,
+	'/interview/': interview,
 	// 关于我
 	'/about/': [
 		'',
