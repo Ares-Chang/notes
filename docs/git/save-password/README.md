@@ -1,7 +1,7 @@
 ---
-title: 'git 保存帐户密码'
+title: '保存 git 帐户密码'
 ---
-## 解决 git pull/push 每次都需要输入密码问题
+# 解决 git pull/push 每次都需要输入密码问题
 
 如果我们git clone的下载代码的时候是连接的https://而不是git@git (ssh)的形式，当我们操作git pull/push到远程的时候，总是提示我们输入账号和密码才能操作成功，频繁的输入账号和密码会很麻烦。
 

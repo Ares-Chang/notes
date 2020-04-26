@@ -22,32 +22,65 @@
 
 - 从工作区恢复
 
-```js
+```shell
 	git checkout -- 文件名	// 恢复单个文件
 	git checkout .			// 恢复全部文件
 ```
 
 - 从暂存区恢复
 
-```js
+```shell
 	git reset HEAD 文件名	// 恢复单个文件
 	git reset HEAD 			// 恢复全部文件
 ```
 
 - 从仓库恢复
 
-```js
+```shell
 	git checkout 提交的流水号（只写一部分都行） 文件名	// 恢复单个文件
 	git reset --hard 提交的流水号（只写一部分都行）		// 恢复全部文件
 ```
 
 ## 分支
 
-- 查看所有分支 `git branch`
-- 添加新分支 `git branch 分支名`
+### 查看分支
+
+- 查看本地所有分支 `git branch`
+- 查看远程所有分支 `git branch -a`
+
+> 远程分支会用红色表示出来（如果你开了颜色支持的话）
+
+### 切换分支
+
 - 切换分支 `git chechout 分支名`
 - 新建并切换分支 `git chechout -b 分支名`
-- 删除分支 `git branch -d 分支名`	删除分支不会删除代码
+
+### 新建分支
+
+- 添加新分支 `git branch 分支名`
+
+### 删除分支
+
+- 删除本地分支 `git branch -d 分支名`	
+
+> 删除分支不会删除代码
+
+- 删除远程分支 
+
+方法一：--delete删除远程分支
+
+```shell
+git push origin --delete 分支名
+```
+
+方法二：推送一个空分支到远程分支，其实就相当于删除远程分支
+
+```shell
+git push origin :分支名
+```
+
+### 合并分支
+
 - 合并分支 `git merge 分支名`	把指定分支合并到当前分支
 
 ## 克隆仓库
