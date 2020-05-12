@@ -12,6 +12,7 @@ const about = require('./about')
 const hodgepodge = require('./hodgepodge')
 const tools = require('./tools')
 const interview = require('./interview')
+const linux = require('./linux')
 
 module.exports = {
 	'/html/': html,
@@ -23,6 +24,7 @@ module.exports = {
 	'/hodgepodge/': hodgepodge,
 	'/tools/': tools,
 	'/interview/': interview,
+	'/linux/': linux,
 	// 关于我
 	'/about/': [
 		'',

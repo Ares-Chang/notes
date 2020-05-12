@@ -15,14 +15,15 @@ module.exports = [
 	// { text: 'Node', link: '/node/' },
 	{ text: 'Vue', link: '/vue/' },
 	{ text: 'Git', link: '/git/' },
-	{ text: '算法', link: '/arithmetic/' },
+	{ text: 'Linux', link: '/linux/' },
 	{
 		text: '其他',
 		// ariaLabel: 'Language Menu',
 		items: [
-			{ text: '书单', link: '/books/' },
-			{ text: '鸡汤', link: '/chickenSoup/' },
+			// { text: '书单', link: '/books/' },
+			// { text: '鸡汤', link: '/chickenSoup/' },
 			{ text: '工具', link: '/tools/' },
+			// { text: '算法', link: '/arithmetic/' },
 			{ text: '面试题', link: '/interview/' },
 			{ text: '大杂绘', link: '/hodgepodge/' },
 			{ text: '关于我', link: '/about/' },
