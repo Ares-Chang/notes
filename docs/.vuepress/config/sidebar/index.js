@@ -6,7 +6,7 @@ const html = require('./html')
 const css = require('./css')
 const javascript = require('./javascript')
 const git = require('./git')
-const AJAX = require('./AJAX')
+const ajax = require('./ajax')
 const vue = require('./vue')
 const about = require('./about')
 const hodgepodge = require('./hodgepodge')
@@ -18,7 +18,7 @@ module.exports = {
 	'/html/': html,
 	'/css/': css,
 	'/javascript/': javascript,
-	'/AJAX/': AJAX,
+	'/ajax/': ajax,
 	'/vue/': vue,
 	'/git/': git,
 	'/hodgepodge/': hodgepodge,

@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "cname": "bash cname.sh"
   },
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.5.0",

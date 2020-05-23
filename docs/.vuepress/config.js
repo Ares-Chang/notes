@@ -18,7 +18,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/logo.ico' }]  // 网站icon图标
   ],
   plugins, // 各种插件引入
-  // base: '/notes/', // 基础路径设置,部署在 github 需要打开
+  // base: '/notes/', // 基础路径设置,部署在 github 仓库需要打开
   themeConfig: {
     repo: 'Ares-Chang/notes', // 添加一个GitH链接
     // 文档放置在master分支下，要编辑需要重新定向：
