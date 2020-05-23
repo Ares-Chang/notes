@@ -9,6 +9,9 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.5.0",
+    "@vuepress/plugin-back-to-top": "^1.5.0",
+    "@vuepress/plugin-medium-zoom": "^1.5.0",
     "vuepress": "^1.2.0"
   }
 }
