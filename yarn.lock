@@ -900,6 +900,11 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
+"@vuepress/plugin-google-analytics@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/@vuepress/plugin-google-analytics/download/@vuepress/plugin-google-analytics-1.5.0.tgz#07a9783739a552e3e4c435e3e2ad64432a540002"
+  integrity sha1-B6l4NzmlUuPkxDXj4q1kQypUAAI=
+
 "@vuepress/plugin-last-updated@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-last-updated/download/@vuepress/plugin-last-updated-1.2.0.tgz#7b34065b793848b0482a222b7a6f1b7df3668cdc"

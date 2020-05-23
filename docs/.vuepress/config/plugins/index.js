@@ -9,5 +9,8 @@ module.exports = {
 		}
 	},
 	// 页面滚动自动对应左侧标题
-	'@vuepress/active-header-links': true
+	'@vuepress/active-header-links': true,
+	'@vuepress/google-analytics': {
+		'ga': 'UA-167481421-1'
+	}
 }
