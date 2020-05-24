@@ -3,7 +3,7 @@
  */
 
 const nav = require('./config/nav')
-const sidebar = require('./config/sidebar')
+// const sidebar = require('./config/sidebar')
 const plugins = require('./config/plugins')
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
     docsDir: 'docs', // 如文档不是放在仓库的根目录下需要设置 否则无法编辑
     lastUpdated: '上次更新',  // 更新时间
     nav, // 导航栏配置
-    sidebar, // 侧边栏配置
-    sidebarDepth: 2 // 标题深度
+    // sidebar, // 侧边栏配置
+    // sidebarDepth: 2 // 标题深度
   }
 }

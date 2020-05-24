@@ -6,10 +6,10 @@ module.exports = [
 	{
 		text: '前端',
 		items: [
-			{ text: 'HTML', link: '/html/' },
-			{ text: 'CSS', link: '/css/' },
-			{ text: 'JavaScript', link: '/javascript/' },
-			{ text: 'AJAX', link: '/ajax/' },
+			{ text: 'HTML', link: '/web/html/' },
+			{ text: 'CSS', link: '/web/css/' },
+			{ text: 'JavaScript', link: '/web/javascript/' },
+			{ text: 'AJAX', link: '/web/ajax/' },
 		]
 	},
 	// { text: 'Node', link: '/node/' },
@@ -20,13 +20,13 @@ module.exports = [
 		text: '其他',
 		// ariaLabel: 'Language Menu',
 		items: [
-			// { text: '书单', link: '/books/' },
-			// { text: '鸡汤', link: '/chickenSoup/' },
-			{ text: '工具', link: '/tools/' },
-			// { text: '算法', link: '/arithmetic/' },
-			{ text: '面试题', link: '/interview/' },
-			{ text: '大杂绘', link: '/hodgepodge/' },
-			{ text: '关于我', link: '/about/' },
+			// { text: '书单', link: '/else/books/' },
+			// { text: '鸡汤', link: '/else/chickenSoup/' },
+			{ text: '工具', link: '/else/tools/' },
+			// { text: '算法', link: '/else/arithmetic/' },
+			{ text: '面试题', link: '/else/interview/' },
+			{ text: '大杂绘', link: '/else/hodgepodge/' },
+			{ text: '关于我', link: '/else/about/' },
 		]
 	},
 ]

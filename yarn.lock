@@ -6912,6 +6912,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
+vuepress-plugin-auto-sidebar@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-auto-sidebar/download/vuepress-plugin-auto-sidebar-1.4.1.tgz#c8586447affb2faa4155a9828916bb9bd594f188"
+  integrity sha1-yFhkR6/7L6pBVamCiRa7m9WU8Yg=
+
 vuepress-plugin-container@^2.0.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.1.2.tgz#688c1e5a9709a1b8658605bcaee580b3abb19d16"

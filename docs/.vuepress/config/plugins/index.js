@@ -12,5 +12,14 @@ module.exports = {
 	'@vuepress/active-header-links': true,
 	'@vuepress/google-analytics': {
 		'ga': 'UA-167481421-1'
+	},
+	'vuepress-plugin-auto-sidebar': {
+		titleMode: "uppercase",	// 标题模式
+		titleMap: {
+			// "hodgepodge": "大杂绘",  // 标题名称自定义映射
+		},
+		collapseList: [	// 折叠的路由列表
+			// "/git/"
+		]
 	}
 }
