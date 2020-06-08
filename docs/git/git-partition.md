@@ -1,5 +1,6 @@
 ---
 title: Git 三大分区
+autoPrev: git-easy-order
 ---
 
 ## 介绍
