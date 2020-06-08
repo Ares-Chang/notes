@@ -10,6 +10,12 @@ module.exports = [
 			{ text: 'CSS', link: '/web/css/' },
 			{ text: 'JavaScript', link: '/web/javascript/' },
 			{ text: 'AJAX', link: '/web/ajax/' },
+			{
+				text: '工具',
+				items: [
+					{ text: 'webpack', link: '/web/webpack/' },
+				]
+			}
 		]
 	},
 	// { text: 'Node', link: '/node/' },
