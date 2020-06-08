@@ -1,5 +1,6 @@
 ---
 title: Git 常用命令
+autoPrev: README
 ---
 
 ## 基本提交流程
