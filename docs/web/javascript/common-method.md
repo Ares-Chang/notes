@@ -39,3 +39,17 @@ var newArr = arr.map(Number)		// newArr => [1, 2, 3, 4, 5]
 ```js
 var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 ```
+
+## 获取时间戳
+
+- 获取当前时间戳
+
+```js
+Math.round(new Date() / 1000)
+```
+
+- 获取指定时间戳
+
+```js
+Math.round(new Date('2020-06-12 14:43:58') / 1000)
+```
