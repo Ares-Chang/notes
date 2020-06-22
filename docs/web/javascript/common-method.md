@@ -24,6 +24,37 @@ let arr = [[1,2,[3,[4,[5,[6]]]]]]
 let newArr = arr.flat(Infinity)		// newArr => [1, 2, 3, 4, 5, 6]
 ```
 
+## 数组解构赋值应用
+
+- 交换变量
+
+```js
+// 交换变量
+[a, b] = [b, a]
+[o.a, o.b] = [o.b, o.a]
+// 生成剩余数组
+const [a, ...rest] = [...'asdf'] // a：'a'，rest: ["s", "d", "f"]
+```
+
+- 数组浅拷贝
+
+```js
+let arr = [1,2,3]
+let newArr = [...arr]  // newArr => [1,2,3]
+// 对象同样适用
+let obj = {a: 1,b: 2,c: 3}
+let newObj = {...obj}  // newArr => [a: 1,b: 2,c: 3]
+```
+
+- 数组合并
+
+```js
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
+const arr3 = [7, 8, 9]
+const arr = [...arr1, ...arr2, ...arr3] // arr => [1,2,3,4,5,6,7,8,9]
+```
+
 ## 删除数组中的空白值
 
 - 使用 `filter` 过滤
@@ -52,6 +83,26 @@ let arr = Object.keys(obj).map(item => obj[item])		// arr => ["one", "two", "thr
 let arr = ['1','2',3,'4',5]
 // 数组转换
 let newArr = arr.map(Number)		// newArr => [1, 2, 3, 4, 5]
+```
+
+## 数组取交差集
+
+- 取交集
+
+```js
+const a = [0, 1, 2, 3, 4, 5]
+const b = [3, 4, 5, 6, 7, 8]
+const newArray = [...new Set(a)].filter(item => b.includes(item))
+// newArray => [3, 4, 5]
+```
+
+- 取差集
+
+```js
+const a = [0, 1, 2, 3, 4, 5]
+const b = [3, 4, 5, 6, 7, 8]
+const newArray = [...new Set([...a, ...b])].filter(item => !b.includes(item) || !a.includes(item)) 
+// newArray => [0, 1, 2, 6, 7, 8]
 ```
 
 ## 获取滚动到顶部距离(scrollTop)
