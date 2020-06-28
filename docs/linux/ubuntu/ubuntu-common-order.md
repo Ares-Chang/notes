@@ -1,5 +1,6 @@
 ---
 title: 常用命令
+autoPrev: README
 ---
 
 ## 升级软件和升级系统
