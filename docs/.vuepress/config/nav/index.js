@@ -21,7 +21,14 @@ module.exports = [
 	// { text: 'Node', link: '/node/' },
 	{ text: 'Vue', link: '/vue/' },
 	{ text: 'Git', link: '/git/' },
-	{ text: 'Linux', link: '/linux/' },
+	{
+		text: 'Linux',
+		items: [
+			{ text: 'Linux基础', link: '/linux/linux/' },
+			{ text: 'Vim', link: '/linux/vim/' },
+			{ text: 'Ubuntu', link: '/linux/ubuntu/' },
+		]
+	},
 	{
 		text: '其他',
 		// ariaLabel: 'Language Menu',
