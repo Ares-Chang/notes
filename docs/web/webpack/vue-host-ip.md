@@ -8,11 +8,17 @@ title: vue-cli 2.X 如何开启局域网访问
 
 ## 解决方法
 
-我们可以配置一下自己的 `package.json` 文件，在 `dev` 命令结尾增加一个参数 `--host 192.168.1.150`
+- 方法一：
+
+找到 config 文件夹下的 `index.js` 文件,修改 `host:"localhost"` 为 `host:"0.0.0.0"` 或 `host: [本机IP]`
+
+- 方法二：
+
+我们可以配置一下自己的 `package.json` 文件，在 `dev` 命令结尾增加一个参数 `--host 本机IP`
 
 ```json
 "scripts": {
-	"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --host 192.168.1.150",
+	"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --host [本机IP]",
 	"start": "npm run dev",
 	"build": "node build/build.js"
 },
