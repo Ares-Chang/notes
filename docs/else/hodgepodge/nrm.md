@@ -19,7 +19,7 @@ toabao 和 cnpm 镜像源在国内的下载速度相对快一点，推荐使用�
 ## 安装
 
 ```bash
-# yarn add -g nrm
+# yarn add nrm -g
 npm i -g nrm
 ```
 
