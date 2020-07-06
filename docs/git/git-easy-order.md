@@ -19,7 +19,11 @@ autoPrev: README
 
 - 查看当前状态 `git status`
 
-## 恢复文件
+## 查看修改内容
+
+- `git diff` 查看工作区(work dict)和暂存区(stage)的区别
+
+## 版本回退 && 恢复文件
 
 恢复 `git checkout` 从仓库恢复对应版本
 
@@ -41,8 +45,20 @@ autoPrev: README
 
 ```shell
 	git checkout 提交的流水号（只写一部分都行） 文件名	// 恢复单个文件
-	git reset --hard 提交的流水号（只写一部分都行）		// 恢复全部文件
+	git reset --hard 提交的流水号（只写一部分都行）	// 恢复全部文件
+	git reset --hard HEAD^							// 恢复全部文件
 ```
+> HEAD    表示当前版本，也就是最新的提交
+>
+> HEAD^   上一个版本
+>
+> HEAD^^  上上一个版本
+>
+> HEAD~100   往上100个版本
+
+## 查看命令历史
+
+`git reflog` 会打印从当前版本到最开始的所有记录和 `HEAD@{num}` ，搭配 `git reset` 使用来用做版本回退.
 
 ## 分支
 
