@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vim 学习笔记 | Ares Chang</title>
+    <meta name="description" content="Ares Chang">
+    <link rel="icon" href="/logo.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.5e47c2f5.css" as="style"><link rel="preload" href="/assets/js/app.a3c41ace.js" as="script"><link rel="preload" href="/assets/js/2.d950dce6.js" as="script"><link rel="preload" href="/assets/js/39.45181a15.js" as="script"><link rel="prefetch" href="/assets/js/10.c38d3921.js"><link rel="prefetch" href="/assets/js/11.06a03bf6.js"><link rel="prefetch" href="/assets/js/12.6cd3bb1b.js"><link rel="prefetch" href="/assets/js/13.82d0e86c.js"><link rel="prefetch" href="/assets/js/14.32fe02a1.js"><link rel="prefetch" href="/assets/js/15.ff3b1d33.js"><link rel="prefetch" href="/assets/js/16.b2b4cfc9.js"><link rel="prefetch" href="/assets/js/17.93c22856.js"><link rel="prefetch" href="/assets/js/18.8dfa7c1d.js"><link rel="prefetch" href="/assets/js/19.2b6c908d.js"><link rel="prefetch" href="/assets/js/20.c47f7172.js"><link rel="prefetch" href="/assets/js/21.92131c72.js"><link rel="prefetch" href="/assets/js/22.8d95aa22.js"><link rel="prefetch" href="/assets/js/23.0369958b.js"><link rel="prefetch" href="/assets/js/24.e7b91257.js"><link rel="prefetch" href="/assets/js/25.ef8db7b5.js"><link rel="prefetch" href="/assets/js/26.7f39ba2a.js"><link rel="prefetch" href="/assets/js/27.8d024825.js"><link rel="prefetch" href="/assets/js/28.2966d6ce.js"><link rel="prefetch" href="/assets/js/29.0c24f3eb.js"><link rel="prefetch" href="/assets/js/3.59a2f800.js"><link rel="prefetch" href="/assets/js/30.dbe8c499.js"><link rel="prefetch" href="/assets/js/31.3472e637.js"><link rel="prefetch" href="/assets/js/32.58a33be7.js"><link rel="prefetch" href="/assets/js/33.81379510.js"><link rel="prefetch" href="/assets/js/34.1e401250.js"><link rel="prefetch" href="/assets/js/35.ece61b8b.js"><link rel="prefetch" href="/assets/js/36.efdb3b51.js"><link rel="prefetch" href="/assets/js/37.54089775.js"><link rel="prefetch" href="/assets/js/38.75c23660.js"><link rel="prefetch" href="/assets/js/4.d35644cf.js"><link rel="prefetch" href="/assets/js/40.5ba70be8.js"><link rel="prefetch" href="/assets/js/41.2251a2fd.js"><link rel="prefetch" href="/assets/js/42.476aec48.js"><link rel="prefetch" href="/assets/js/43.5e5d6628.js"><link rel="prefetch" href="/assets/js/44.611aecba.js"><link rel="prefetch" href="/assets/js/45.74501613.js"><link rel="prefetch" href="/assets/js/46.6ec8fcbe.js"><link rel="prefetch" href="/assets/js/47.73deb2d8.js"><link rel="prefetch" href="/assets/js/48.786647fc.js"><link rel="prefetch" href="/assets/js/49.ac7e08f3.js"><link rel="prefetch" href="/assets/js/5.1febf56b.js"><link rel="prefetch" href="/assets/js/50.e5464364.js"><link rel="prefetch" href="/assets/js/51.134914eb.js"><link rel="prefetch" href="/assets/js/52.e992dd4a.js"><link rel="prefetch" href="/assets/js/53.242fe18e.js"><link rel="prefetch" href="/assets/js/54.eb196a6a.js"><link rel="prefetch" href="/assets/js/55.dfdc1732.js"><link rel="prefetch" href="/assets/js/56.b06c3c54.js"><link rel="prefetch" href="/assets/js/57.641b5366.js"><link rel="prefetch" href="/assets/js/58.be9db3ad.js"><link rel="prefetch" href="/assets/js/59.6bff605c.js"><link rel="prefetch" href="/assets/js/6.837631a9.js"><link rel="prefetch" href="/assets/js/60.61ebe876.js"><link rel="prefetch" href="/assets/js/61.2bb418ff.js"><link rel="prefetch" href="/assets/js/7.6a1c087b.js"><link rel="prefetch" href="/assets/js/8.d61588b3.js"><link rel="prefetch" href="/assets/js/9.875587d3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5e47c2f5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">AJAX</a></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">webpack</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">Vue</a></div><div class="nav-item"><a href="/git/" class="nav-link">Git</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">Linux基础</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link router-link-active">Vim</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">Ubuntu</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">工具</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">面试题</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">大杂绘</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">关于我</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">AJAX</a></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">webpack</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">Vue</a></div><div class="nav-item"><a href="/git/" class="nav-link">Git</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">Linux基础</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link router-link-active">Vim</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">Ubuntu</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">工具</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">面试题</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">大杂绘</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">关于我</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>VIM</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/vim/" class="sidebar-link">首页</a></li><li><a href="/linux/vim/vim-notes.html" class="active sidebar-link">vim 学习笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#文档操作" class="sidebar-link">文档操作</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#光标移动和配置自定义键位" class="sidebar-link">光标移动和配置自定义键位</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#搜索" class="sidebar-link">搜索</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#合并下一行" class="sidebar-link">合并下一行</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#进入写入模式" class="sidebar-link">进入写入模式</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#撤销和反撤销" class="sidebar-link">撤销和反撤销</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#缩进和反缩进" class="sidebar-link">缩进和反缩进</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#可视模式命令" class="sidebar-link">可视模式命令</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#宏录制和使用" class="sidebar-link">宏录制和使用</a></li><li class="sidebar-sub-header"><a href="/linux/vim/vim-notes.html#分割窗口" class="sidebar-link">分割窗口</a></li></ul></li><li><a href="/linux/vim/vim-read-only-file.html" class="sidebar-link">强制保存只读文件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>下列命令均在普通模式下进行</p> <h2 id="文档操作"><a href="#文档操作" class="header-anchor">#</a> 文档操作</h2> <blockquote><p>操作后面跟 ! 为强制执行并抛弃当前未保存操作</p></blockquote> <p>:wq: 退出并保存</p> <p>:q: 退出</p> <p>:w: 保存</p> <p>:e: 重新加载当前文档</p> <p>:f: 或 ctrl + g 显示文档名，是否修改，和光标位置</p> <ul><li>新建文件 vim [fileName]</li></ul> <h2 id="光标移动和配置自定义键位"><a href="#光标移动和配置自定义键位" class="header-anchor">#</a> 光标移动和配置自定义键位</h2> <ul><li>光标移动</li></ul> <div class="language- extra-class"><pre class="language-text"><code>h: 左
+j: 下
+k：上
+l：右
+
+w: 移动到下个单词的首字母
+b: 移动到上个单词的首字母
+e: 移动到词尾
+
+H: 移动到这个屏幕最上方第一个字符
+M: 移动到屏幕中间行第一个字符
+L: 移动到屏幕最下方第一个字符
+
+nG: n 为数字,移动到当前文档第几行
+gg: 移动到文件开头
+G: 移动到文件结尾
+n%: 移动到文件 n% 的位置
+
+|: 移动到行首
+0(数字0): 移动到行首
+^(shift + 6): 移动到行首
+$(shift + 4): 移动产行尾
+
+-: 前一行首
++: 后一行首
+
+%: 匹配括号
+
+ctrl + f: 屏幕向下移动一页
+ctrl + b: 屏幕向上移动一页
+ctrl + d: 屏幕向下移动半页
+ctrl + u: 屏幕向上移动半页
+ctrl + e: 屏幕向下滚动一行
+ctrl + y: 屏幕向上滚动一行
+</code></pre></div><ul><li>自定义键位</li></ul> <p>如果键位不习惯可以通过更改配置文件来实现自定义键位：</p> <p>cd 进入家目录，新建一个文件夹 <code>.vim</code> 新建一个文件 <code>vimrc</code></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> ~
+<span class="token function">mkdir</span> .vim
+<span class="token builtin class-name">cd</span> .vim
+<span class="token function">vim</span> vimrc
+</code></pre></div><p>文件内书写自己的 vim 配置文件</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># map 映射键位</span>
+<span class="token comment"># inoremap 普通模式下更改键位命令</span>
+<span class="token comment"># nnoremap 命令模式下更改键位命令，</span>
+nnoremap a b <span class="token comment"># 这句命令可以理解为把 a 键更改为 b 键，但是旧键并不会被删除</span>
+</code></pre></div><blockquote><p>ps: 只使用 map 可能会产生递归问题</p></blockquote> <ul><li>命令组合</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">-</span> nore
+	表示非递归。
+	递归的映射。其实很好理解，也就是如果键a被映射成了b，c又被映射成了a，如果映射是递归的，那么c就被映射成了b。
+<span class="token operator">-</span> n
+	表示在普通模式下生效
+<span class="token operator">-</span> v
+	表示在可视模式下生效
+<span class="token operator">-</span> i
+	表示在插入模式下生效
+<span class="token operator">-</span> c
+	表示在命令行模式下生效
+</code></pre></div><h2 id="搜索"><a href="#搜索" class="header-anchor">#</a> 搜索</h2> <div class="language- extra-class"><pre class="language-text"><code>/: 向后搜索
+%: 向前搜索
+
+n: 查找下一处
+N: 查找上一处
+
+:nohl: 退出搜索
+</code></pre></div><h2 id="合并下一行"><a href="#合并下一行" class="header-anchor">#</a> 合并下一行</h2> <div class="language- extra-class"><pre class="language-text"><code>J: 合并下一行
+</code></pre></div><h2 id="进入写入模式"><a href="#进入写入模式" class="header-anchor">#</a> 进入写入模式</h2> <div class="language- extra-class"><pre class="language-text"><code>i: 光标前插入
+I: 首插入
+
+a: 光标后插入
+A: 尾插入
+
+o: 在当前行下一行开启一行新行并进入写入模式
+O: 当前行上一竺开启一行并进入写入模式
+
+s: 删除后一个字符并进入写入模式
+S: 除当前行内容并进入写入模式
+
+c: 修改 删除并进入写入模式
+C: 改至行尾并进入写入模式
+
+r: 替换后一个字符
+R: 入替换模式
+
+## 复制和粘贴
+
+y: 拷贝
+Y: 拷贝一行
+
+p: 在文字后粘贴
+P: 在文字前粘贴
+</code></pre></div><h2 id="撤销和反撤销"><a href="#撤销和反撤销" class="header-anchor">#</a> 撤销和反撤销</h2> <div class="language- extra-class"><pre class="language-text"><code>u: 撤销上一步操作相当于 ctrl + z
+
+ctrl + r 回退前一个命令，换句话说，它撤销一个撤销
+</code></pre></div><h2 id="缩进和反缩进"><a href="#缩进和反缩进" class="header-anchor">#</a> 缩进和反缩进</h2> <div class="language- extra-class"><pre class="language-text"><code>&gt; : 缩进
+
+&lt;: 反缩进
+
+=: 自动格式化 后面跟执行范围
+</code></pre></div><h2 id="可视模式命令"><a href="#可视模式命令" class="header-anchor">#</a> 可视模式命令</h2> <div class="language- extra-class"><pre class="language-text"><code>v: 进入可视模式
+V: 进入行可视模式
+ctrl + v 进入可视块模式
+
+aw 选中一个单词(包含空格)
+iw 选中一个单词
+
+aW 选中一个字串(包含空格)
+iW 选中一个字串
+
+as 选中一个句子(包含空格)
+is 选中一个句子
+
+ap 选中一个段落(包含空格)
+ip 选中一个段落
+
+ab 选中一个()块(包含小括号)
+ib 选中一个()块内容
+
+aB 选中一个{}块(包含大括号)
+iB 选中一个{}内容
+
+a&lt; 选中一个&lt;&gt;块(包含&lt;&gt;)
+i&lt; 选中一个&lt;&gt;块内容
+
+a[ 选中一个[]块(包含[])
+i[ 选中一个[]块内容
+
+a&quot; 选中一个双引号字符串内容(包含引号)
+i&quot; 选中一个双引号客串内容
+
+a' 选中一个单引号字符串内容(包含引号)
+i' 选中一个单引号客串内容
+
+a` 选中一个反引号字符串(包含引号)
+i` 选中一个反引号字符串内容
+
+u 变成小写
+U 变成大写
+
+- 选中行执行命令
+
+在可视模式下选中行,输入 normal 操作指令 系统会帮你执行这些操作
+</code></pre></div><h2 id="宏录制和使用"><a href="#宏录制和使用" class="header-anchor">#</a> 宏录制和使用</h2> <p>q 后面跟一个键位,表示宏要录制到哪个键位上,回车结束设置,然后跟宏要执行的命令,结束操作后 esc 再次点击 q 结束宏录制</p> <p>@ 后面跟你设置的宏键位,就会执行</p> <blockquote><p>@ 前面可以设置执行次数,设置多少执行多少次</p></blockquote> <h2 id="分割窗口"><a href="#分割窗口" class="header-anchor">#</a> 分割窗口</h2> <div class="language- extra-class"><pre class="language-text"><code>:Sex: 水平分割一个窗口,浏览文件系统
+:Vex: 垂直分割一个窗口,浏览文件系统
+
+:split: 上下分屏
+:vsplit: 左右分屏
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/linux/vim/vim-notes.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/6/2020, 7:31:50 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/vim/" class="prev router-link-active">首页</a></span> <span class="next"><a href="/linux/vim/vim-read-only-file.html">强制保存只读文件</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.a3c41ace.js" defer></script><script src="/assets/js/2.d950dce6.js" defer></script><script src="/assets/js/39.45181a15.js" defer></script>
+  </body>
+</html>
