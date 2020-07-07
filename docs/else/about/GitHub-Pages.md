@@ -1,5 +1,6 @@
 ---
 title: GitHub Pages
+autoPrev: README
 ---
 
 ## 介绍

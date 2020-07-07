@@ -12,6 +12,6 @@ Vue CLI create 新项目会自动采用 yarn 下载依赖，这样就不会产�
 
 C:\ => [users] => .vuerc => packageManager 修改成想用的下载器
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/image-20200210085804382.png')">
+<img class="zoom" :src="$withBase('/web/webpack/image-20200210085804382.png')">
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/image-20200210090034566.png')">
+<img class="zoom" :src="$withBase('/web/webpack/image-20200210090034566.png')">

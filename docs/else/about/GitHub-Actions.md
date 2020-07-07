@@ -1,5 +1,6 @@
 ---
 title: GitHub Actions 自动部署
+autoPrev: GitHub-Pages
 ---
 
 GitHub Actions 由 GitHub 官方推出的工作流工具。典型的应用场景应该是 CI/CD，类似 Travis 的用法。
