@@ -13,6 +13,7 @@ module.exports = [
 			{
 				text: '工具',
 				items: [
+					{ text: 'iView', link: '/web/iview/' },
 					{ text: 'webpack', link: '/web/webpack/' },
 				]
 			}
