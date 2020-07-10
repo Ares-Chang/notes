@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>表单验证踩坑记录 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    <link rel="preload" href="/assets/css/0.styles.37c174a0.css" as="style"><link rel="preload" href="/assets/js/app.0fd69a44.js" as="script"><link rel="preload" href="/assets/js/2.33f1ca39.js" as="script"><link rel="preload" href="/assets/js/56.79dc8d3e.js" as="script"><link rel="prefetch" href="/assets/js/10.6bb160c0.js"><link rel="prefetch" href="/assets/js/11.2d66d5a3.js"><link rel="prefetch" href="/assets/js/12.07c4679a.js"><link rel="prefetch" href="/assets/js/13.1b8b0338.js"><link rel="prefetch" href="/assets/js/14.a65cf55b.js"><link rel="prefetch" href="/assets/js/15.99a3c107.js"><link rel="prefetch" href="/assets/js/16.44576452.js"><link rel="prefetch" href="/assets/js/17.75812f1f.js"><link rel="prefetch" href="/assets/js/18.9e8794a4.js"><link rel="prefetch" href="/assets/js/19.7d23b72d.js"><link rel="prefetch" href="/assets/js/20.fad43536.js"><link rel="prefetch" href="/assets/js/21.2bc66155.js"><link rel="prefetch" href="/assets/js/22.e6ff59ae.js"><link rel="prefetch" href="/assets/js/23.b76e573f.js"><link rel="prefetch" href="/assets/js/24.9b8345c7.js"><link rel="prefetch" href="/assets/js/25.2c6ae944.js"><link rel="prefetch" href="/assets/js/26.a8a01c24.js"><link rel="prefetch" href="/assets/js/27.f6622161.js"><link rel="prefetch" href="/assets/js/28.f153ea23.js"><link rel="prefetch" href="/assets/js/29.67581229.js"><link rel="prefetch" href="/assets/js/3.5cc9e6e7.js"><link rel="prefetch" href="/assets/js/30.93d93389.js"><link rel="prefetch" href="/assets/js/31.21fbdb11.js"><link rel="prefetch" href="/assets/js/32.5f2b6a0a.js"><link rel="prefetch" href="/assets/js/33.3b59898d.js"><link rel="prefetch" href="/assets/js/34.8a4aa970.js"><link rel="prefetch" href="/assets/js/35.7372be96.js"><link rel="prefetch" href="/assets/js/36.4fd23061.js"><link rel="prefetch" href="/assets/js/37.b2da3149.js"><link rel="prefetch" href="/assets/js/38.2abb7396.js"><link rel="prefetch" href="/assets/js/39.2f4ad791.js"><link rel="prefetch" href="/assets/js/4.4fca55e2.js"><link rel="prefetch" href="/assets/js/40.52df7106.js"><link rel="prefetch" href="/assets/js/41.47ee1ce9.js"><link rel="prefetch" href="/assets/js/42.b75ef9ad.js"><link rel="prefetch" href="/assets/js/43.7ddf9f39.js"><link rel="prefetch" href="/assets/js/44.7321a4f2.js"><link rel="prefetch" href="/assets/js/45.3e64ab53.js"><link rel="prefetch" href="/assets/js/46.f190b21a.js"><link rel="prefetch" href="/assets/js/47.bd1ec2b8.js"><link rel="prefetch" href="/assets/js/48.691e8c0b.js"><link rel="prefetch" href="/assets/js/49.d112fbb3.js"><link rel="prefetch" href="/assets/js/5.aa8df70b.js"><link rel="prefetch" href="/assets/js/50.0e86445c.js"><link rel="prefetch" href="/assets/js/51.9a1620a7.js"><link rel="prefetch" href="/assets/js/52.b99172be.js"><link rel="prefetch" href="/assets/js/53.c7206a24.js"><link rel="prefetch" href="/assets/js/54.e55e85e6.js"><link rel="prefetch" href="/assets/js/55.b0ca2489.js"><link rel="prefetch" href="/assets/js/57.5c434ef5.js"><link rel="prefetch" href="/assets/js/58.e0422e67.js"><link rel="prefetch" href="/assets/js/59.145d1c9b.js"><link rel="prefetch" href="/assets/js/6.fae27861.js"><link rel="prefetch" href="/assets/js/60.fae349aa.js"><link rel="prefetch" href="/assets/js/61.abd4ca6a.js"><link rel="prefetch" href="/assets/js/62.82ec520a.js"><link rel="prefetch" href="/assets/js/63.8bf506d3.js"><link rel="prefetch" href="/assets/js/64.217b1db2.js"><link rel="prefetch" href="/assets/js/65.587cc581.js"><link rel="prefetch" href="/assets/js/7.dadff676.js"><link rel="prefetch" href="/assets/js/8.e911bff9.js"><link rel="prefetch" href="/assets/js/9.0622eb49.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37c174a0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link router-link-active">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link router-link-active">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>IVIEW</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/iview/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/iview/iview-Form.html" aria-current="page" class="active sidebar-link">表单验证踩坑记录</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/iview/iview-Form.html#表单验证的属性" class="sidebar-link">表单验证的属性</a></li><li class="sidebar-sub-header"><a href="/web/iview/iview-Form.html#表单必填标志显示偏移" class="sidebar-link">表单必填标志显示偏移</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="表单验证的属性"><a href="#表单验证的属性" class="header-anchor">#</a> 表单验证的属性</h2> <div class="language-js extra-class"><pre class="language-js"><code>ruleValidate<span class="token operator">:</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span> required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'The name cannot be empty'</span><span class="token punctuation">,</span> trigger<span class="token operator">:</span> <span class="token string">'blur'</span> <span class="token punctuation">}</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	mail<span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span> required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'Mailbox cannot be empty'</span><span class="token punctuation">,</span> trigger<span class="token operator">:</span> <span class="token string">'blur'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'email'</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'Incorrect email format'</span><span class="token punctuation">,</span> trigger<span class="token operator">:</span> <span class="token string">'blur'</span> <span class="token punctuation">}</span>
+	<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><p>type :</p> <ul><li>string: 必须是字符串类型。这是默认类型</li> <li>number: 必须是数字</li> <li>boolean: 必须是布尔型的</li> <li>method: 必须是类型函数</li> <li>regexp: 必须是ReGEXP的实例，或者是在创建新的ReGEXP时不会生成异常的字符串</li> <li>integer: 必须是整数.</li> <li>float: 必须是浮点数.</li> <li>array: 必须是由Array.isArray确定的数组</li> <li>object: 必须是类型对象而不是Array.isArray</li> <li>enum: 枚举中必须存在值。</li> <li>date: 按日期确定的值必须有效</li> <li>url: 必须是URL类型。</li> <li>hex: 必须是十六进制。</li> <li>email: 必须是电子邮件类型。</li></ul></li> <li><p>required:true | false</p></li> <li><p>pattern :正则表达式</p></li> <li><p>min: 最小值</p></li> <li><p>max: 最大值</p></li> <li><p>Length : 长度</p></li> <li><p>enum: 验证字段是否存在其中</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span> message<span class="token operator">:</span><span class="token string">'不包含a , u, g'</span><span class="token punctuation">,</span>trigger<span class="token operator">:</span> <span class="token string">'change'</span><span class="token punctuation">,</span>type<span class="token operator">:</span> <span class="token string">'enum'</span><span class="token punctuation">,</span><span class="token keyword">enum</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'u'</span><span class="token punctuation">,</span> <span class="token string">'g'</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+</code></pre></div><ul><li>messages: 错误信息</li> <li>trigger : ‘change’ | ‘blur’</li> <li>whitespace : true | false
+<ul><li>true:空白字符 -&gt;错误提醒</li> <li>false: 空白字符-&gt;不报错</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span> whitespace<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>message<span class="token operator">:</span><span class="token string">'包含空白字符'</span><span class="token punctuation">,</span>trigger<span class="token operator">:</span> <span class="token string">'change'</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="表单必填标志显示偏移"><a href="#表单必填标志显示偏移" class="header-anchor">#</a> 表单必填标志显示偏移</h2> <p>使用情况：需要做一个以 Radio 单选框来控制表单内容的显示和隐藏。但是当单选框切换时，表单验证的 * 号却跑偏了。</p> <p>原因：<code>v-if</code> 会影响到 iview 表单的显示</p> <p>解决方法：可以尝试使用 <code>v-show</code> 来代替 <code>v-if</code></p> <ul><li><code>v-if</code> 只有在条件成立时才会生成 dom</li> <li><code>v-show</code> 是先生成 dom ，再通过 css 控制显示隐藏</li></ul> <p><a href="https://blog.csdn.net/ddwddw4/article/details/89216594" target="_blank" rel="noopener noreferrer">阅读原文<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/iview/iview-Form.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/9/2020, 9:50:23 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/iview/" class="prev router-link-active">
+        首页
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0fd69a44.js" defer></script><script src="/assets/js/2.33f1ca39.js" defer></script><script src="/assets/js/56.79dc8d3e.js" defer></script>
+  </body>
+</html>
