@@ -12,4 +12,6 @@ title: '保存 git 帐户密码'
 git config --global credential.helper store
 ```
 
-之后再 pull 或 push 时只需再输入一次帐号密码,以后就会自动记录到 .gitconfig 文件中
+之后再 pull 或 push 时只需再输入一次帐号密码,以后就会自动记录到 .gitconfig 文件中。
+
+[阅读原文](https://blog.csdn.net/nongweiyilady/article/details/77772602)
