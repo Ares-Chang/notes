@@ -127,7 +127,7 @@ Math.round(new Date() / 1000)
 Math.round(new Date('2020-06-12 14:43:58') / 1000)
 ```
 
-## 深拷贝
+## 浅拷贝
 
 - `Object.assign()`
 
@@ -138,7 +138,16 @@ Object.assign(newObj, obj)
 newObj.a = 2 // newObj => { a: 2, b: 2 }  obj => { a: 1, b: 2 }
 ```
 
-> ps: 该方法深拷贝只针对简单类型,如为引用类型仍然只会拷贝路径
+> ps: 该方法拷贝只针对简单类型,如为引用类型仍然只会拷贝路径
+
+- 扩展运算符
+
+```js
+const obj = { a: 1, b: 2 }
+const newObj = {...obj} // {a: 1, b: 2}
+```
+
+## 深拷贝
 
 - `JSON.stringify` 和 `JSON.parse`
 
