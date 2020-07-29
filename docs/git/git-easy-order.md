@@ -1,6 +1,7 @@
 ---
 title: Git 常用命令
 autoPrev: README
+sidebarDepth: 3
 ---
 
 ## 基本提交流程
@@ -101,6 +102,18 @@ git push origin :分支名
 ### 合并分支
 
 - 合并分支 `git merge 分支名`	把指定分支合并到当前分支
+
+- 变基 `git rebase 分支名` 也可以合并分支记录，但当前分支记录会在最前面
+
+> `git rebase` 相对 `git merge` 来说 commit 记录会更加的清爽一些
+>
+> 但是工作中大多数使用 `git merge` 来完成操作
+>
+> 想要了解具体内容自行 Google
+
+### 查看仓库代码区别
+
+- `git diff` 不加参数即默认比较工作区与暂存区代码不同并罗列出来
 
 ## 克隆仓库
 
