@@ -2,6 +2,13 @@
 title: 常用方法
 ---
 
+## 手机号加密
+
+```js
+let mobile = '17666666666'
+mobile = mobile.substring(0, 3) + "****" + mobile.substring(8, 11)
+```
+
 ## 数组排序并去重
 
 - `new Set(arr)` ES6 数组去重
