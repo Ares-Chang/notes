@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git commit 规范 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    <link rel="preload" href="/assets/css/0.styles.37c174a0.css" as="style"><link rel="preload" href="/assets/js/app.8ad5ccec.js" as="script"><link rel="preload" href="/assets/js/2.33f1ca39.js" as="script"><link rel="preload" href="/assets/js/24.abbd09b1.js" as="script"><link rel="prefetch" href="/assets/js/10.38bad899.js"><link rel="prefetch" href="/assets/js/11.9254bc5d.js"><link rel="prefetch" href="/assets/js/12.4efcfa28.js"><link rel="prefetch" href="/assets/js/13.fccbc885.js"><link rel="prefetch" href="/assets/js/14.5ab6d37b.js"><link rel="prefetch" href="/assets/js/15.f88f5019.js"><link rel="prefetch" href="/assets/js/16.6f9aeedb.js"><link rel="prefetch" href="/assets/js/17.c512a352.js"><link rel="prefetch" href="/assets/js/18.b1ea1eba.js"><link rel="prefetch" href="/assets/js/19.eded313c.js"><link rel="prefetch" href="/assets/js/20.fcb5f507.js"><link rel="prefetch" href="/assets/js/21.70ebc3cb.js"><link rel="prefetch" href="/assets/js/22.0aa33fe0.js"><link rel="prefetch" href="/assets/js/23.364e3e88.js"><link rel="prefetch" href="/assets/js/25.baf42b1b.js"><link rel="prefetch" href="/assets/js/26.33100542.js"><link rel="prefetch" href="/assets/js/27.88e339df.js"><link rel="prefetch" href="/assets/js/28.3e13a833.js"><link rel="prefetch" href="/assets/js/29.0fe08a59.js"><link rel="prefetch" href="/assets/js/3.372a7e38.js"><link rel="prefetch" href="/assets/js/30.46612dce.js"><link rel="prefetch" href="/assets/js/31.ec8e3816.js"><link rel="prefetch" href="/assets/js/32.66a7d9c3.js"><link rel="prefetch" href="/assets/js/33.94701c3d.js"><link rel="prefetch" href="/assets/js/34.2bd69550.js"><link rel="prefetch" href="/assets/js/35.86275c12.js"><link rel="prefetch" href="/assets/js/36.c247e789.js"><link rel="prefetch" href="/assets/js/37.9a0d4873.js"><link rel="prefetch" href="/assets/js/38.b744fcd4.js"><link rel="prefetch" href="/assets/js/39.3d6262ab.js"><link rel="prefetch" href="/assets/js/4.4fca55e2.js"><link rel="prefetch" href="/assets/js/40.1e1f1842.js"><link rel="prefetch" href="/assets/js/41.9cccff08.js"><link rel="prefetch" href="/assets/js/42.fcd41bd5.js"><link rel="prefetch" href="/assets/js/43.7bd159f3.js"><link rel="prefetch" href="/assets/js/44.5822e79f.js"><link rel="prefetch" href="/assets/js/45.a4e4c9fd.js"><link rel="prefetch" href="/assets/js/46.19a935e9.js"><link rel="prefetch" href="/assets/js/47.bb0ffd41.js"><link rel="prefetch" href="/assets/js/48.a3ee566c.js"><link rel="prefetch" href="/assets/js/49.78ca1e86.js"><link rel="prefetch" href="/assets/js/5.aa8df70b.js"><link rel="prefetch" href="/assets/js/50.d56eab5c.js"><link rel="prefetch" href="/assets/js/51.b02a2879.js"><link rel="prefetch" href="/assets/js/52.ddc26d96.js"><link rel="prefetch" href="/assets/js/53.e05ef636.js"><link rel="prefetch" href="/assets/js/54.2aa7078f.js"><link rel="prefetch" href="/assets/js/55.6471c474.js"><link rel="prefetch" href="/assets/js/56.e2cd7c96.js"><link rel="prefetch" href="/assets/js/57.9c2ca5c5.js"><link rel="prefetch" href="/assets/js/58.29bec47d.js"><link rel="prefetch" href="/assets/js/59.289d3ac0.js"><link rel="prefetch" href="/assets/js/6.fae27861.js"><link rel="prefetch" href="/assets/js/60.3b45f0cb.js"><link rel="prefetch" href="/assets/js/61.e5729b99.js"><link rel="prefetch" href="/assets/js/62.87bed99c.js"><link rel="prefetch" href="/assets/js/63.7664bf87.js"><link rel="prefetch" href="/assets/js/64.40c1cdcd.js"><link rel="prefetch" href="/assets/js/65.5285e933.js"><link rel="prefetch" href="/assets/js/66.efe3f765.js"><link rel="prefetch" href="/assets/js/67.fb6394c6.js"><link rel="prefetch" href="/assets/js/68.ff6291a1.js"><link rel="prefetch" href="/assets/js/69.92975621.js"><link rel="prefetch" href="/assets/js/7.e6e67329.js"><link rel="prefetch" href="/assets/js/70.797f6bab.js"><link rel="prefetch" href="/assets/js/71.8fe2eab8.js"><link rel="prefetch" href="/assets/js/72.698bf3a8.js"><link rel="prefetch" href="/assets/js/8.3dd2ee91.js"><link rel="prefetch" href="/assets/js/9.0622eb49.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37c174a0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link router-link-active">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link router-link-active">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>GIT</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/git/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/git/git-easy-order.html" class="sidebar-link">Git 常用命令</a></li><li><a href="/git/git-partition.html" class="sidebar-link">Git 三大分区</a></li><li><a href="/git/delete-commit.html" class="sidebar-link">删除某次提交记录</a></li><li><a href="/git/delete-file.html" class="sidebar-link">删除远程仓库中的文件</a></li><li><a href="/git/git-HEAD^.html" class="sidebar-link">HEAD^ 提示 More?</a></li><li><a href="/git/git-amend.html" class="sidebar-link">重写历史</a></li><li><a href="/git/git-commit.html" aria-current="page" class="active sidebar-link">git commit 规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/git-commit.html#提交规范" class="sidebar-link">提交规范</a></li></ul></li><li><a href="/git/git-merger-failure.html" class="sidebar-link">合并分支失败</a></li><li><a href="/git/git-reset-error.html" class="sidebar-link">版本回退报错</a></li><li><a href="/git/git-soft.html" class="sidebar-link">撤销上次提交</a></li><li><a href="/git/git-stash.html" class="sidebar-link">git stash 暂存修改</a></li><li><a href="/git/inoperative-gitignore.html" class="sidebar-link">解决 .gitignore 不生效问题</a></li><li><a href="/git/issue-repository-exists.html" class="sidebar-link">git 无法 push 成功问题</a></li><li><a href="/git/save-password.html" class="sidebar-link">保存 git 帐户密码</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="提交规范"><a href="#提交规范" class="header-anchor">#</a> 提交规范</h2> <p>简洁明了的 commit 可以让你快速了也解情况，了解本次提交发生了什么。</p> <p>按照规定来完成，<code>commit messages</code> 由 header 、body 、footer 三部分组成。</p> <p>header 又包含 type 、scope 、subject 。header 是必需的，不过其中的 scope 是可选的。</p> <p>body 和 footer 可以省略。</p> <div class="language-git extra-class"><pre class="language-git"><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+// 空行
+&lt;BLANK LINE&gt;
+&lt;body&gt;
+// 空行
+&lt;BLANK LINE&gt;
+&lt;footer&gt;
+</code></pre></div><blockquote><p>ps: 注：为了能在 github 以及各种 git 工具中看得更清晰，<code>commit messages</code> 的每一行都不要超过 100 个字符。</p></blockquote> <h3 id="header"><a href="#header" class="header-anchor">#</a> Header</h3> <h4 id="type"><a href="#type" class="header-anchor">#</a> Type</h4> <p>只能是下列几种类型之一:</p> <ul><li>feat: 新功能</li> <li>fix: bug 修复</li> <li>docs: 仅修改文档</li> <li>style: 修改格式（空格，格式化，省略分号等），对代码运行没有影响</li> <li>refactor: 重构（既不是修 bug ，也不是加功能）</li> <li>build: 构建流程、外部依赖变更，比如升级 npm 包、修改 webpack 配置等</li> <li>perf: 性能优化</li> <li>test: 测试相关</li> <li>chore: 对构建过程或辅助工具和库（如文档生成）的更改</li> <li>ci: ci 相关的更改</li></ul> <p>除此之外，还有一个特殊的类型 revert ，如果当前提交是为了撤销之前的某次提交，应该用 revert 开头，后面加上被撤销的提交的 header，在 body 中应该注明： <code>This reverts commit &lt;hash&gt;.</code>，hash 指的就是将要被撤销的 <code>commit SHA</code> 。</p> <div class="language-git extra-class"><pre class="language-git"><code>// 例如
+
+revert: feat(user): add user type
+
+This reverts commit ca16a365467e17915f0273392f4a13331b17617d.
+</code></pre></div><h4 id="scope"><a href="#scope" class="header-anchor">#</a> Scope</h4> <p>scope 可以指定提交更改的影响范围，这个视项目而定，当修改影响超过单个的 scope 时，可以指定为 *</p> <h4 id="subject"><a href="#subject" class="header-anchor">#</a> Subject</h4> <p>subject 是指更改的简洁描述，长度约定在 50 个字符以内，通常遵循以下几个规范：</p> <ul><li>用动词开头，第一人称现在时表述，例如：change 代替 changed 或 changes</li> <li>第一个字母小写</li> <li>结尾不加句号（.）</li></ul> <h3 id="body"><a href="#body" class="header-anchor">#</a> Body</h3> <p>body 部分是对本地 commit 的详细描述，可以分成多行。</p> <p>跟 subject 类似，用动词开头，第一人称现在时表述，例如：change 代替 changed 或 changes。</p> <p>body 应该说明修改的原因和更改前后的行为对比。</p> <h3 id="footer"><a href="#footer" class="header-anchor">#</a> Footer</h3> <p>footer 基本用在这两种情况：</p> <ul><li><p>不兼容的改动（ Breaking Changes ）,通常用 BREAKING CHANGE: 开头，后面跟一个空格或两个换行符。剩余的部分就是用来说明这个变动的信息和迁移方法等。</p></li> <li><p>关闭 Issue。</p></li></ul> <p><a href="https://juejin.im/post/6854573220176068615" target="_blank" rel="noopener noreferrer">阅读原文<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/git/git-commit.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">8/13/2020, 5:50:42 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/git/git-amend.html" class="prev">
+        重写历史
+      </a></span> <span class="next"><a href="/git/git-merger-failure.html">
+        合并分支失败
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.8ad5ccec.js" defer></script><script src="/assets/js/2.33f1ca39.js" defer></script><script src="/assets/js/24.abbd09b1.js" defer></script>
+  </body>
+</html>
