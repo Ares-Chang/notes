@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>去除背景色 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    <link rel="preload" href="/assets/css/0.styles.37c174a0.css" as="style"><link rel="preload" href="/assets/js/app.351989eb.js" as="script"><link rel="preload" href="/assets/js/2.33f1ca39.js" as="script"><link rel="preload" href="/assets/js/55.930b3d01.js" as="script"><link rel="prefetch" href="/assets/js/10.38bad899.js"><link rel="prefetch" href="/assets/js/11.9254bc5d.js"><link rel="prefetch" href="/assets/js/12.4efcfa28.js"><link rel="prefetch" href="/assets/js/13.fccbc885.js"><link rel="prefetch" href="/assets/js/14.5ab6d37b.js"><link rel="prefetch" href="/assets/js/15.f88f5019.js"><link rel="prefetch" href="/assets/js/16.6f9aeedb.js"><link rel="prefetch" href="/assets/js/17.c512a352.js"><link rel="prefetch" href="/assets/js/18.b1ea1eba.js"><link rel="prefetch" href="/assets/js/19.eded313c.js"><link rel="prefetch" href="/assets/js/20.fcb5f507.js"><link rel="prefetch" href="/assets/js/21.4df79ae9.js"><link rel="prefetch" href="/assets/js/22.53c994a1.js"><link rel="prefetch" href="/assets/js/23.364e3e88.js"><link rel="prefetch" href="/assets/js/24.abbd09b1.js"><link rel="prefetch" href="/assets/js/25.baf42b1b.js"><link rel="prefetch" href="/assets/js/26.33100542.js"><link rel="prefetch" href="/assets/js/27.88e339df.js"><link rel="prefetch" href="/assets/js/28.3e13a833.js"><link rel="prefetch" href="/assets/js/29.0fe08a59.js"><link rel="prefetch" href="/assets/js/3.3ae5ef16.js"><link rel="prefetch" href="/assets/js/30.46612dce.js"><link rel="prefetch" href="/assets/js/31.ec8e3816.js"><link rel="prefetch" href="/assets/js/32.66a7d9c3.js"><link rel="prefetch" href="/assets/js/33.94701c3d.js"><link rel="prefetch" href="/assets/js/34.2bd69550.js"><link rel="prefetch" href="/assets/js/35.86275c12.js"><link rel="prefetch" href="/assets/js/36.c247e789.js"><link rel="prefetch" href="/assets/js/37.9a0d4873.js"><link rel="prefetch" href="/assets/js/38.b744fcd4.js"><link rel="prefetch" href="/assets/js/39.3d6262ab.js"><link rel="prefetch" href="/assets/js/4.4fca55e2.js"><link rel="prefetch" href="/assets/js/40.1e1f1842.js"><link rel="prefetch" href="/assets/js/41.9cccff08.js"><link rel="prefetch" href="/assets/js/42.fcd41bd5.js"><link rel="prefetch" href="/assets/js/43.7bd159f3.js"><link rel="prefetch" href="/assets/js/44.5822e79f.js"><link rel="prefetch" href="/assets/js/45.a4e4c9fd.js"><link rel="prefetch" href="/assets/js/46.30259b6a.js"><link rel="prefetch" href="/assets/js/47.94960a0c.js"><link rel="prefetch" href="/assets/js/48.b970bd24.js"><link rel="prefetch" href="/assets/js/49.97c45df7.js"><link rel="prefetch" href="/assets/js/5.0d8df76a.js"><link rel="prefetch" href="/assets/js/50.22facb89.js"><link rel="prefetch" href="/assets/js/51.e1733f4f.js"><link rel="prefetch" href="/assets/js/52.985dd1d5.js"><link rel="prefetch" href="/assets/js/53.51ca71e8.js"><link rel="prefetch" href="/assets/js/54.9cde7e6b.js"><link rel="prefetch" href="/assets/js/56.2d371c2a.js"><link rel="prefetch" href="/assets/js/57.9c2ca5c5.js"><link rel="prefetch" href="/assets/js/58.29bec47d.js"><link rel="prefetch" href="/assets/js/59.289d3ac0.js"><link rel="prefetch" href="/assets/js/6.0e70b742.js"><link rel="prefetch" href="/assets/js/60.3b45f0cb.js"><link rel="prefetch" href="/assets/js/61.e5729b99.js"><link rel="prefetch" href="/assets/js/62.87bed99c.js"><link rel="prefetch" href="/assets/js/63.7664bf87.js"><link rel="prefetch" href="/assets/js/64.5381a23d.js"><link rel="prefetch" href="/assets/js/65.7333e5fa.js"><link rel="prefetch" href="/assets/js/66.c68ffc65.js"><link rel="prefetch" href="/assets/js/67.87835a1b.js"><link rel="prefetch" href="/assets/js/68.a6399c0e.js"><link rel="prefetch" href="/assets/js/69.7bf4d081.js"><link rel="prefetch" href="/assets/js/7.dadff676.js"><link rel="prefetch" href="/assets/js/70.0726b98c.js"><link rel="prefetch" href="/assets/js/71.8b422a11.js"><link rel="prefetch" href="/assets/js/72.3a9a983f.js"><link rel="prefetch" href="/assets/js/73.ee5b355d.js"><link rel="prefetch" href="/assets/js/74.824214f6.js"><link rel="prefetch" href="/assets/js/8.e911bff9.js"><link rel="prefetch" href="/assets/js/9.0622eb49.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37c174a0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>CSS</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/css/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/css/background-color.html" aria-current="page" class="active sidebar-link">去除背景色</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/css/background-color.html#问题" class="sidebar-link">问题</a></li><li class="sidebar-sub-header"><a href="/web/css/background-color.html#解决方法" class="sidebar-link">解决方法</a></li></ul></li><li><a href="/web/css/css-zoom.html" class="sidebar-link">缩放页面内容</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="问题"><a href="#问题" class="header-anchor">#</a> 问题</h2> <p>平常使用组件经常是带有背景色的，某个情况下我们不需要这个颜色尝试去除，设置 <code>background-color</code> 为 <code>none</code> 却没有产生效果。</p> <p>查询发现 <code>background-color</code> 是没有 <code>none</code> 值属性的。</p> <h2 id="解决方法"><a href="#解决方法" class="header-anchor">#</a> 解决方法</h2> <p>如果想要清除背景颜色可以使用 <code>background-color: transparent</code> 背景颜色透明来暂时解决这个问题。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/css/background-color.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">8/25/2020, 8:26:02 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/css/" class="prev router-link-active">
+        首页
+      </a></span> <span class="next"><a href="/web/css/css-zoom.html">
+        缩放页面内容
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.351989eb.js" defer></script><script src="/assets/js/2.33f1ca39.js" defer></script><script src="/assets/js/55.930b3d01.js" defer></script>
+  </body>
+</html>
