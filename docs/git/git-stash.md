@@ -39,6 +39,12 @@ git stash -u	// 暂存未 add 文件
 git stash -a	// 暂存所有文件(包含忽略文件)
 ```
 
+::: danger 警告
+尽量使用 `git stash -u` 不要使用 `git stash -a`。
+
+`-a` 操作会暂存你所有的文件，不会解析你的 `.gitignore` ，会产生许多无法被读取的文件，到时可能无法重新应用到分支上。
+:::
+
 ### 2. 查看现有 stash
 
 可以使用 `git stash list` 命令，查看当前有多少 stash 暂存。

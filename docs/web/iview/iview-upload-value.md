@@ -44,7 +44,7 @@ title: Upload 上传成功后 input 框无法赋值
 
 这里默认在 formData 将 iconUrl 属性定义一下就可以解决这个问题.
 
-- 方法二：
+- 方法二 ( 推荐 ) ：
 
 我们可以使用 `this.$set(this.data,key,value)` 来实现视图的响应式更新。
 
@@ -57,5 +57,13 @@ uploadBooImg() {
 	...
 }
 ```
+
+- 方法三 ( 不推荐 ) ：
+
+可以使用 `vm.$forceUpdate()` 来强制重新渲染当前组件内容来达到效果。
+
+[官方解释](https://cn.vuejs.org/v2/api/#vm-forceUpdate)：迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。
+
+<br />
 
 具体使用请参考 [官方文档](https://cn.vuejs.org/v2/api/#Vue-set)

@@ -90,6 +90,32 @@ render: (h, params) => {
 },
 ```
 
+另一种写法：
+
+```js
+render: (h, params) => {
+	//return h('元素',{元素的性质},'内容')
+	return h(
+		"i-switch",
+		{
+			props: {
+				size: "large",
+				value: params.row.status == "true",
+			},
+			on: {
+				"on-change": (value) => {
+					console.log(value)
+				},
+			},
+			scopedSlots: {
+				open: () => h("span", "正常"),
+				close: () => h("span", "冻结"),
+			},
+		},
+	);
+},
+```
+
 ### Tag
 
 Render 语法中是可以嵌套 js 语法使用的
