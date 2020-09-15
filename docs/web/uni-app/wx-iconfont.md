@@ -16,10 +16,21 @@ title: 微信小程序内使用阿里图标库
 
 <img class="zoom" :src="$withBase('/web/uni-app/wx-iconfont/Snipaste_2020-09-15_11-08-01.png')">
 
-
 3. 将代码下载到本地
 
+方法一：
+
+点击下载代码，下载 zip 压缩包
+
 <img class="zoom" :src="$withBase('/web/uni-app/wx-iconfont/Snipaste_2020-09-15_11-09-11.png')">
+
+方法二：
+
+直接将代码在线打开，另存为下载，导入项目，方可直接使用。
+
+<img class="zoom" :src="$withBase('/web/uni-app/wx-iconfont/Snipaste_2020-09-15_13-15-21.png')">
+
+> ps: 使用此方法可跳过步骤 6 
 
 4. 下载的代码中有个 `iconfont.css` 的文件，将文件复制到你的项目中
 
@@ -42,3 +53,4 @@ title: 微信小程序内使用阿里图标库
 效果：
 
 <img class="zoom" style="width: 200px" :src="$withBase('/web/uni-app/wx-iconfont/Snipaste_2020-09-15_11-44-12.png')">
+
