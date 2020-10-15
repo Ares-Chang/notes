@@ -4,7 +4,7 @@ title: 图片文件下载
 
 ## 需求
 
-浏览器骨实现点击下载，首先想到的肯定是用 `<a>` 标签来嵌套实现。
+浏览器需要实现点击下载，首先想到的肯定是用 `<a>` 标签来嵌套实现。
 
 但是实验过后却发现不是那么如意，我们使用图片来验证，点击之后却发现只是打开了图片，并没有产生下载步骤。
 
@@ -28,10 +28,12 @@ header("Content-Disposition: attachment; filename='download.jpg'");
 我们希望点击"下载"链接下载图片而不是浏览，直接增加一个 `download` 属性就可以：
 
 ```html
-<a href="test.jpg" download>下载</a>
+<a href="./test.jpg" download="test_name.jpg">下载</a>
 ```
 
-但这种方法只能下载同源的文件
+`download` 属性可以自定义下载名称，但这种方法只能下载同源的文件。
+
+如果想要模拟，可以在 `vscode` 中下载个插件 `Live Server` 启用本地服务模拟。
 
 - 方法三：
 
@@ -41,7 +43,7 @@ header("Content-Disposition: attachment; filename='download.jpg'");
 // 调用方式
 // 参数一： src
 // 参数二： 图片名称，可选
-export const downloadImage = (src: string, name: string) => {
+export const downloadImage = (src, name) => {
 	const image = new Image();
 	// 解决跨域 canvas 污染问题
 	image.setAttribute('crossOrigin','anonymous');
@@ -68,3 +70,44 @@ export const downloadImage = (src: string, name: string) => {
 ```
 
 [阅读原文](https://segmentfault.com/a/1190000016941409)
+
+## 扩展：借助 HTML5 Blob 实现文本信息文件下载
+
+原理简单理解为：把文本或者 js 字符串信息借肋 `Blob` 转换成二进制，然后通过 `<a>` 标签的 `download` 属性实现下载。
+
+```js
+let eleTextarea = [1, 2, 3, 4, 5]
+let eleButton = document.querySelector('button');
+
+// 下载文件方法
+let funDownload = function (content, filename) {
+	let eleLink = document.createElement('a');
+	eleLink.download = filename;
+	eleLink.style.display = 'none';
+	// 字符内容转变成blob地址
+	let blob = new Blob([content]);
+	eleLink.href = URL.createObjectURL(blob);
+	// 触发点击
+	document.body.appendChild(eleLink);
+	eleLink.click();
+	// 然后移除
+	document.body.removeChild(eleLink);
+};
+
+if ('download' in document.createElement('a')) {
+	// 作为test.html文件下载
+	eleButton.addEventListener('click', function () {
+		funDownload(eleTextarea, 'test');
+	});
+} else {
+	eleButton.onclick = function () {
+		alert('浏览器不支持');
+	};
+}
+```
+
+其中，`content` 指需要下载的文本或字符串内容，`filename` 指下载到系统中的文件名称。
+
+<br/>
+
+参考自[张鑫旭](https://www.zhangxinxu.com/)大神的[JS前端创建html或json文件并浏览器导出下载](https://www.zhangxinxu.com/wordpress/2017/07/js-text-string-download-as-html-json-file/)
