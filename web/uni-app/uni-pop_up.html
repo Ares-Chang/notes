@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现点击输入密码弹窗 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    <link rel="preload" href="/assets/css/0.styles.37c174a0.css" as="style"><link rel="preload" href="/assets/js/app.44ebd055.js" as="script"><link rel="preload" href="/assets/js/2.33f1ca39.js" as="script"><link rel="preload" href="/assets/js/81.0bac27d8.js" as="script"><link rel="prefetch" href="/assets/js/10.38bad899.js"><link rel="prefetch" href="/assets/js/11.9254bc5d.js"><link rel="prefetch" href="/assets/js/12.4efcfa28.js"><link rel="prefetch" href="/assets/js/13.fccbc885.js"><link rel="prefetch" href="/assets/js/14.5ab6d37b.js"><link rel="prefetch" href="/assets/js/15.f88f5019.js"><link rel="prefetch" href="/assets/js/16.6f9aeedb.js"><link rel="prefetch" href="/assets/js/17.c512a352.js"><link rel="prefetch" href="/assets/js/18.b1ea1eba.js"><link rel="prefetch" href="/assets/js/19.eded313c.js"><link rel="prefetch" href="/assets/js/20.fcb5f507.js"><link rel="prefetch" href="/assets/js/21.70ebc3cb.js"><link rel="prefetch" href="/assets/js/22.0aa33fe0.js"><link rel="prefetch" href="/assets/js/23.364e3e88.js"><link rel="prefetch" href="/assets/js/24.abbd09b1.js"><link rel="prefetch" href="/assets/js/25.baf42b1b.js"><link rel="prefetch" href="/assets/js/26.0c9c6f67.js"><link rel="prefetch" href="/assets/js/27.68bc8477.js"><link rel="prefetch" href="/assets/js/28.14474c2a.js"><link rel="prefetch" href="/assets/js/29.8a5fc796.js"><link rel="prefetch" href="/assets/js/3.8112050b.js"><link rel="prefetch" href="/assets/js/30.9e18a3ad.js"><link rel="prefetch" href="/assets/js/31.886014ff.js"><link rel="prefetch" href="/assets/js/32.2756eac7.js"><link rel="prefetch" href="/assets/js/33.3dc59d2d.js"><link rel="prefetch" href="/assets/js/34.ddaf96b1.js"><link rel="prefetch" href="/assets/js/35.87a79fb7.js"><link rel="prefetch" href="/assets/js/36.c3c8fd14.js"><link rel="prefetch" href="/assets/js/37.196e1c42.js"><link rel="prefetch" href="/assets/js/38.736b97a6.js"><link rel="prefetch" href="/assets/js/39.cf04ddd9.js"><link rel="prefetch" href="/assets/js/4.4fca55e2.js"><link rel="prefetch" href="/assets/js/40.4b7388db.js"><link rel="prefetch" href="/assets/js/41.7201dacc.js"><link rel="prefetch" href="/assets/js/42.0c399b27.js"><link rel="prefetch" href="/assets/js/43.d200ca3f.js"><link rel="prefetch" href="/assets/js/44.f617084a.js"><link rel="prefetch" href="/assets/js/45.23325f4a.js"><link rel="prefetch" href="/assets/js/46.95b3b0f1.js"><link rel="prefetch" href="/assets/js/47.bb0ffd41.js"><link rel="prefetch" href="/assets/js/48.a3ee566c.js"><link rel="prefetch" href="/assets/js/49.00ae0bfa.js"><link rel="prefetch" href="/assets/js/5.3d642a68.js"><link rel="prefetch" href="/assets/js/50.fa677438.js"><link rel="prefetch" href="/assets/js/51.7336d8dc.js"><link rel="prefetch" href="/assets/js/52.3df66d93.js"><link rel="prefetch" href="/assets/js/53.a6df748f.js"><link rel="prefetch" href="/assets/js/54.4361bb80.js"><link rel="prefetch" href="/assets/js/55.d117629d.js"><link rel="prefetch" href="/assets/js/56.798b9db8.js"><link rel="prefetch" href="/assets/js/57.c75a2d8a.js"><link rel="prefetch" href="/assets/js/58.e28e6b1c.js"><link rel="prefetch" href="/assets/js/59.43ee95c5.js"><link rel="prefetch" href="/assets/js/6.0e70b742.js"><link rel="prefetch" href="/assets/js/60.5819b68d.js"><link rel="prefetch" href="/assets/js/61.a180b9b8.js"><link rel="prefetch" href="/assets/js/62.37e4e80e.js"><link rel="prefetch" href="/assets/js/63.076c76db.js"><link rel="prefetch" href="/assets/js/64.cf63d2cc.js"><link rel="prefetch" href="/assets/js/65.111e6ad0.js"><link rel="prefetch" href="/assets/js/66.f0730607.js"><link rel="prefetch" href="/assets/js/67.488d6ea1.js"><link rel="prefetch" href="/assets/js/68.cab4e9ec.js"><link rel="prefetch" href="/assets/js/69.24f765c0.js"><link rel="prefetch" href="/assets/js/7.dadff676.js"><link rel="prefetch" href="/assets/js/70.2e1bb7db.js"><link rel="prefetch" href="/assets/js/71.ebf421b6.js"><link rel="prefetch" href="/assets/js/72.97df0390.js"><link rel="prefetch" href="/assets/js/73.fc4c779a.js"><link rel="prefetch" href="/assets/js/74.c48d5525.js"><link rel="prefetch" href="/assets/js/75.5850c0c1.js"><link rel="prefetch" href="/assets/js/76.359d4d26.js"><link rel="prefetch" href="/assets/js/77.3b9682ab.js"><link rel="prefetch" href="/assets/js/78.b74620ef.js"><link rel="prefetch" href="/assets/js/79.34b5c7b0.js"><link rel="prefetch" href="/assets/js/8.e911bff9.js"><link rel="prefetch" href="/assets/js/80.369f213e.js"><link rel="prefetch" href="/assets/js/82.dd42e40a.js"><link rel="prefetch" href="/assets/js/83.a42de2b3.js"><link rel="prefetch" href="/assets/js/84.05f33547.js"><link rel="prefetch" href="/assets/js/85.66e93958.js"><link rel="prefetch" href="/assets/js/86.727cf025.js"><link rel="prefetch" href="/assets/js/87.5c52c471.js"><link rel="prefetch" href="/assets/js/88.89bf5cda.js"><link rel="prefetch" href="/assets/js/89.8a59d62a.js"><link rel="prefetch" href="/assets/js/9.0622eb49.js"><link rel="prefetch" href="/assets/js/90.e1e636a9.js"><link rel="prefetch" href="/assets/js/91.592d043a.js"><link rel="prefetch" href="/assets/js/92.0bb93e35.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37c174a0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link router-link-active">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link router-link-active">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>UNI-APP</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/uni-app/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/uni-app/get-userinfo.html" class="sidebar-link">获取用户授权信息</a></li><li><a href="/web/uni-app/uni-goHome.html" class="sidebar-link">去除左上小房子</a></li><li><a href="/web/uni-app/uni-pop_up.html" aria-current="page" class="active sidebar-link">实现点击输入密码弹窗</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/uni-app/uni-pop_up.html#业务需求" class="sidebar-link">业务需求</a></li><li class="sidebar-sub-header"><a href="/web/uni-app/uni-pop_up.html#实现思路" class="sidebar-link">实现思路</a></li><li class="sidebar-sub-header"><a href="/web/uni-app/uni-pop_up.html#解决流程" class="sidebar-link">解决流程</a></li></ul></li><li><a href="/web/uni-app/uni-video.html" class="sidebar-link">小程序中手动控制视频播放</a></li><li><a href="/web/uni-app/wx-hollow_place.html" class="sidebar-link">微信小程序拒绝 ios 虚拟支付</a></li><li><a href="/web/uni-app/wx-iconfont.html" class="sidebar-link">微信小程序内使用阿里图标库</a></li><li><a href="/web/uni-app/wx-link_open_applet.html" class="sidebar-link">扫描普通二维码打开小程序</a></li><li><a href="/web/uni-app/wx-pay.html" class="sidebar-link">微信支付接入</a></li><li><a href="/web/uni-app/wx-share.html" class="sidebar-link">微信分享按钮呈灰色</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="业务需求"><a href="#业务需求" class="header-anchor">#</a> 业务需求</h2> <p>业务需求：自定义密码输入展示弹窗</p> <img src="/web/uni-app/uni-pop_up/Snipaste_2020-10-30_17-33-43.png" class="zoom" style="width:200px;"> <h2 id="实现思路"><a href="#实现思路" class="header-anchor">#</a> 实现思路</h2> <ol><li><p>使用 <code>li</code> 标签更改 <code>css</code> 模拟实现 <code>_</code> 效果。</p></li> <li><p>把 <code>input</code> 标签定位到 <code>li</code> 标签之上，保证用户可以点击触发数字键盘</p></li> <li><p>把 <code>input</code> 标签及其内容隐藏</p></li></ol> <h2 id="解决流程"><a href="#解决流程" class="header-anchor">#</a> 解决流程</h2> <p>本项目使用 <code>uni-app</code> 框架搭建的小程序项目，实现过程执行到第 3 步无法把 <code>input</code> 内容彻底隐藏，现已解决，记录一下，防止下次踩坑。</p> <p>实现过程：</p> <ul><li><p>第一次实现把 <code>input</code> 的 <code>opacity</code> 属性调为 0 设置透明，但是光标和文字并没有如愿隐藏。失败!</p></li> <li><p>第二次实现把 <code>input</code> 的 <code>font-size</code> 属性调为 <code>0.1rpx</code> 并把 <code>color</code> 设置为 白色, 但是手机上显示会存在一个微小光标跟随移动。失败!</p></li></ul> <img src="/web/uni-app/uni-pop_up/Snipaste_2020-10-30_18-44-46.png" class="zoom" style="width:200px;"> <ul><li>第三次实现动态设置 <code>input</code> 具体顶部距离，设置 <code>input</code> 聚焦状态 <code>top: -1000px;</code> 失去焦点 <code>top</code> 回归，运行在安卓设备完美实现(得意洋洋.jpg), 但是运行到 <code>ios</code> 设备却无法找到 <code>input</code> 无法进入键盘。失败!</li></ul> <img src="/web/uni-app/uni-pop_up/Snipaste_2020-10-30_18-57-54.png" class="zoom" style="width:200px;"> <ul><li>第四次实现通过谷歌查询，可以使用 <code>text-indent: -999rpx;</code> 来隐藏文字显示，通过 <code>margin-left: -100%;</code> 来隐藏 <code>input</code> 光标，完美实现需求 成功 Nice~</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/uni-app/uni-pop_up.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020/10/30 上午11:03:18</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/uni-app/uni-goHome.html" class="prev">
+        去除左上小房子
+      </a></span> <span class="next"><a href="/web/uni-app/uni-video.html">
+        小程序中手动控制视频播放
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.44ebd055.js" defer></script><script src="/assets/js/2.33f1ca39.js" defer></script><script src="/assets/js/81.0bac27d8.js" defer></script>
+  </body>
+</html>
