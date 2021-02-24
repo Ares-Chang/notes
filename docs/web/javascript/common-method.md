@@ -125,14 +125,35 @@ let scrollTop = document.documentElement.scrollTop || window.pageYOffset || docu
 - 获取当前时间戳
 
 ```js
-Math.round(new Date() / 1000)
+new Date().getTime()
 ```
 
 - 获取指定时间戳
 
 ```js
-Math.round(new Date('2020-06-12 14:43:58') / 1000)
+new Date('2021-01-01 00:00:00').getTime()
 ```
+
+## 获取当天 00:00:00 和 23:59:59 的时间戳
+
+- 获取当前日期 ( 年/月/日 )
+
+```js
+console.log(new Date().toLocaleDateString())
+```
+
+- 获取当天 `00:00:00` 时间戳
+
+```js
+console.log(new Date(new Date().toLocaleDateString()).getTime())
+```
+
+- 获取当天 `23:59:59` 时间戳
+
+```js
+console.log(new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1)
+```
+
 
 ## 浅拷贝
 
@@ -251,4 +272,17 @@ var digitUppercase = function(n) {
     head + s.replace(/(零.)*零元/, "元").replace(/(零.)+/g, "零").replace(/^整$/, "零元整")
   );
 };
+```
+
+## js禁止移动端访问
+
+- 通过 js 判断用户是 PC 还是移动端访问
+
+```js
+if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+  const hint = "本系统暂不支持移动端访问，请移至 PC 操作，谢谢配合！"
+  document.getElementById('app').style.display = 'none'
+  document.write(hint);
+  alert(hint)
+}
 ```
