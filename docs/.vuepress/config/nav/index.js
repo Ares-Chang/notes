@@ -24,9 +24,15 @@ module.exports = [
 	{ text: 'Vue', link: '/vue/' },
 	{ text: 'Git', link: '/git/' },
 	{
+		text: 'Flutter',
+		items: [
+			{ text: 'Dart 基础', link: '/flutter/dart/' },
+		]
+	},
+	{
 		text: 'Linux',
 		items: [
-			{ text: 'Linux基础', link: '/linux/linux/' },
+			{ text: 'Linux 基础', link: '/linux/linux/' },
 			{ text: 'Vim', link: '/linux/vim/' },
 			{ text: 'Ubuntu', link: '/linux/ubuntu/' },
 		]
