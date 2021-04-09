@@ -1,6 +1,7 @@
 ---
+autoGroup+2: Dart
 title: Dart 基础笔记
-sidebarDepth: 3
+sidebarDepth: 2
 ---
 
 ## 历史

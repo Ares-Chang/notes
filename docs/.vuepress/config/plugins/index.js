@@ -19,7 +19,8 @@ module.exports = {
 			// "hodgepodge": "大杂绘",  // 标题名称自定义映射
 		},
 		collapseList: [	// 折叠的路由列表
-			"/linux/ubuntu/"
+			"/linux/ubuntu/",
+			"/flutter/"
 		]
 	}
 }

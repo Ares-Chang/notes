@@ -23,12 +23,7 @@ module.exports = [
 	// { text: 'Node', link: '/node/' },
 	{ text: 'Vue', link: '/vue/' },
 	{ text: 'Git', link: '/git/' },
-	{
-		text: 'Flutter',
-		items: [
-			{ text: 'Dart 基础', link: '/flutter/dart/' },
-		]
-	},
+	{ text: 'Flutter', link: '/flutter/' },
 	{
 		text: 'Linux',
 		items: [
