@@ -18,16 +18,17 @@ title: 节流与防抖
 
 ```js
 function debounce(fn, delay = 500) {
-	let timeout
-	return () => {
-		let that = this
-		if (timeout) clearTimeout(timeout)
-		timeout = setTimeout(() => {
-			fn.apply(that, arguments)
-		}, delay);
-	}
+  let timer
+  return () => {
+    if (timer) clearTimeout(timer)  // 有定时器未执行就清除。
+    timer = setTimeout(() => {
+      fn.apply(this, arguments)
+    }, delay);
+  }
 }
 ```
+
+具体实现可以查看[代码块](#代码块)。
 
 - 节流
 
@@ -37,17 +38,18 @@ function debounce(fn, delay = 500) {
 
 ```js
 function throttle(fn, delay = 500) {
-	let timeout
-	return () => {
-		let that = this
-		if (timeout) { return }
-		timeout = setTimeout(() => {
-			fn.apply(that, arguments)
-			timeout = null
-		}, delay);
-	}
+  let timer
+  return () => {
+    if (timer) { return } // 有定时器未执行就退出。
+    timer = setTimeout(() => {
+      fn.apply(this, arguments)
+      timer = null
+    }, delay);
+  }
 }
 ```
+
+具体实现可以查看[代码块](#代码块)。
 
 ### 总结：
 
@@ -60,3 +62,49 @@ function throttle(fn, delay = 500) {
 所谓节流，就是在连续触发事件后的 n 秒内，只会执行一次方法，如果在此期间再次被触发，直接 `return` 退出
 
 > 提炼：防抖就是控制次数，节流就是控制频率。需要根据业务需求来决定使用什么方法。
+
+## 代码块
+
+下列代码放入 `.html` 文件中。
+
+```html
+<button id='debounce'>防抖</button>
+<button id='throttle'>节流</button>
+<script>
+  let btn_debounce = document.getElementById('debounce');
+  let btn_throttle = document.getElementById('throttle');
+
+  // 防抖
+  function debounce(fn, delay = 500) {
+    let timer;
+    return () => {
+      if (timer) clearTimeout(timer)
+      timer = setTimeout(() => {
+        fn.apply(this, arguments);
+      }, delay);
+    }
+  }
+
+  // 节流
+  function throttle(fn, delay = 500) {
+    let timer;
+    return () => {
+      if (timer) { return }
+      timer = setTimeout(() => {
+        fn.apply(this, arguments);
+        timer = null;
+      }, delay);
+    }
+  }
+
+  // 注册防抖
+  btn_debounce.onclick = debounce(() => {
+    console.log('多次点击只会执行一次！');
+  }, 1000)
+
+  // 注册节流
+  btn_throttle.onclick = throttle(() => {
+    console.log('一段时间内点击只会执行一次！');
+  }, 1000)
+</script>
+```
