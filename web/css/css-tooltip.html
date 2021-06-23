@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS 实现 Tooltip 效果 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.f3a79c42.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/76.33f846fd.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.be4d003e.js"><link rel="prefetch" href="/assets/js/101.79b48c43.js"><link rel="prefetch" href="/assets/js/102.99e67e67.js"><link rel="prefetch" href="/assets/js/103.7144fc35.js"><link rel="prefetch" href="/assets/js/104.524670b8.js"><link rel="prefetch" href="/assets/js/105.92d29ef3.js"><link rel="prefetch" href="/assets/js/106.5b8e1168.js"><link rel="prefetch" href="/assets/js/107.43d1ac6c.js"><link rel="prefetch" href="/assets/js/108.6b827108.js"><link rel="prefetch" href="/assets/js/109.3f2f852e.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.d7bba309.js"><link rel="prefetch" href="/assets/js/111.fbae3a8a.js"><link rel="prefetch" href="/assets/js/112.77ebef74.js"><link rel="prefetch" href="/assets/js/113.0d3c6f9b.js"><link rel="prefetch" href="/assets/js/114.94865b46.js"><link rel="prefetch" href="/assets/js/115.2249ef62.js"><link rel="prefetch" href="/assets/js/116.6d6d5ac3.js"><link rel="prefetch" href="/assets/js/117.6681ab0c.js"><link rel="prefetch" href="/assets/js/118.a08b8bfa.js"><link rel="prefetch" href="/assets/js/119.f5e0a2f1.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.6b733bce.js"><link rel="prefetch" href="/assets/js/121.580d0f33.js"><link rel="prefetch" href="/assets/js/122.2f813b05.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.a2e03adc.js"><link rel="prefetch" href="/assets/js/19.f3326003.js"><link rel="prefetch" href="/assets/js/20.a26feb85.js"><link rel="prefetch" href="/assets/js/21.7efb1c1a.js"><link rel="prefetch" href="/assets/js/22.7bf48fc0.js"><link rel="prefetch" href="/assets/js/23.c7ad5639.js"><link rel="prefetch" href="/assets/js/24.1f15fa5c.js"><link rel="prefetch" href="/assets/js/25.ede6280d.js"><link rel="prefetch" href="/assets/js/26.0222be65.js"><link rel="prefetch" href="/assets/js/27.52481c6d.js"><link rel="prefetch" href="/assets/js/28.e166758f.js"><link rel="prefetch" href="/assets/js/29.41b207ee.js"><link rel="prefetch" href="/assets/js/3.733c2a42.js"><link rel="prefetch" href="/assets/js/30.2e5553ec.js"><link rel="prefetch" href="/assets/js/31.188d72f0.js"><link rel="prefetch" href="/assets/js/32.a6a288b1.js"><link rel="prefetch" href="/assets/js/33.8354be9e.js"><link rel="prefetch" href="/assets/js/34.9a41afb2.js"><link rel="prefetch" href="/assets/js/35.bca86e35.js"><link rel="prefetch" href="/assets/js/36.94059c63.js"><link rel="prefetch" href="/assets/js/37.cb1a7072.js"><link rel="prefetch" href="/assets/js/38.2d1525e0.js"><link rel="prefetch" href="/assets/js/39.39b91eda.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.1678423f.js"><link rel="prefetch" href="/assets/js/41.d676ac2a.js"><link rel="prefetch" href="/assets/js/42.c66ceba8.js"><link rel="prefetch" href="/assets/js/43.d62bcb81.js"><link rel="prefetch" href="/assets/js/44.b0da7c49.js"><link rel="prefetch" href="/assets/js/45.bb799eb6.js"><link rel="prefetch" href="/assets/js/46.2b99ba01.js"><link rel="prefetch" href="/assets/js/47.fbeb7e14.js"><link rel="prefetch" href="/assets/js/48.c0cf0240.js"><link rel="prefetch" href="/assets/js/49.397f44dd.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.90f65b7e.js"><link rel="prefetch" href="/assets/js/51.87531e31.js"><link rel="prefetch" href="/assets/js/52.73497208.js"><link rel="prefetch" href="/assets/js/53.df63c3fc.js"><link rel="prefetch" href="/assets/js/54.df9079e8.js"><link rel="prefetch" href="/assets/js/55.2a739bc2.js"><link rel="prefetch" href="/assets/js/56.31545ff7.js"><link rel="prefetch" href="/assets/js/57.def3223c.js"><link rel="prefetch" href="/assets/js/58.a0722757.js"><link rel="prefetch" href="/assets/js/59.5612537a.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.7cdf4ebb.js"><link rel="prefetch" href="/assets/js/61.59a751d9.js"><link rel="prefetch" href="/assets/js/62.9ea250bf.js"><link rel="prefetch" href="/assets/js/63.52e7d02b.js"><link rel="prefetch" href="/assets/js/64.a138bf1e.js"><link rel="prefetch" href="/assets/js/65.ad90704e.js"><link rel="prefetch" href="/assets/js/66.2abf674b.js"><link rel="prefetch" href="/assets/js/67.7714e027.js"><link rel="prefetch" href="/assets/js/68.94f6994f.js"><link rel="prefetch" href="/assets/js/69.a3b6aa94.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.c1deed55.js"><link rel="prefetch" href="/assets/js/71.572b926f.js"><link rel="prefetch" href="/assets/js/72.e8746ee4.js"><link rel="prefetch" href="/assets/js/73.e934cbe6.js"><link rel="prefetch" href="/assets/js/74.329b02a0.js"><link rel="prefetch" href="/assets/js/75.ad34664c.js"><link rel="prefetch" href="/assets/js/77.3aa5f6ef.js"><link rel="prefetch" href="/assets/js/78.6e43eae3.js"><link rel="prefetch" href="/assets/js/79.092c3529.js"><link rel="prefetch" href="/assets/js/8.c2feea25.js"><link rel="prefetch" href="/assets/js/80.8656f3ab.js"><link rel="prefetch" href="/assets/js/81.318a1fc8.js"><link rel="prefetch" href="/assets/js/82.c9c05d22.js"><link rel="prefetch" href="/assets/js/83.6df1f403.js"><link rel="prefetch" href="/assets/js/84.01316193.js"><link rel="prefetch" href="/assets/js/85.cb8c11ae.js"><link rel="prefetch" href="/assets/js/86.b4552c25.js"><link rel="prefetch" href="/assets/js/87.8c076100.js"><link rel="prefetch" href="/assets/js/88.db59fa18.js"><link rel="prefetch" href="/assets/js/89.439fcff3.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.f1037255.js"><link rel="prefetch" href="/assets/js/91.b94231ea.js"><link rel="prefetch" href="/assets/js/92.f558504e.js"><link rel="prefetch" href="/assets/js/93.2b7dd36a.js"><link rel="prefetch" href="/assets/js/94.c07f7226.js"><link rel="prefetch" href="/assets/js/95.5fea28bb.js"><link rel="prefetch" href="/assets/js/96.89f19949.js"><link rel="prefetch" href="/assets/js/97.e051d8ab.js"><link rel="prefetch" href="/assets/js/98.fc25d424.js"><link rel="prefetch" href="/assets/js/99.51b9f281.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/css/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/css/background-color.html" class="sidebar-link">去除背景色</a></li><li><a href="/web/css/css-text-indent.html" class="sidebar-link">段落首行缩进</a></li><li><a href="/web/css/css-text-overflow.html" class="sidebar-link">文本打点展示</a></li><li><a href="/web/css/css-tooltip.html" aria-current="page" class="active sidebar-link">CSS 实现 Tooltip 效果</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/css/css-tooltip.html#分享" class="sidebar-link">分享</a></li><li class="sidebar-sub-header"><a href="/web/css/css-tooltip.html#实现方法" class="sidebar-link">实现方法</a></li></ul></li><li><a href="/web/css/css-zoom.html" class="sidebar-link">缩放页面内容</a></li><li><a href="/web/css/scss.html" class="sidebar-link">sass/scss 使用简介</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="分享"><a href="#分享" class="header-anchor">#</a> 分享</h2> <p>使用 CSS 来实现组件库中的 Tooltip 文字提醒功能。</p> <img src="/web/css/css-tooltip/GIF 2021-6-23 17-10-26.gif" class="zoom"> <blockquote><p>PS：本文主要想介绍 attr() 表达式，Tooltip 小组件是附带功能。如介意，请跳过。😊</p></blockquote> <h2 id="实现方法"><a href="#实现方法" class="header-anchor">#</a> 实现方法</h2> <p>只使用一个 <code>span</code> 标签就可以实现上面的功能。</p> <p>功能实现起来很简单，但是怎么实现动态更改文字呢？</p> <p>主要通过 CSS 表达式 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/attr()" target="_blank" rel="noopener noreferrer">attr()<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 来实现。</p> <p>CSS 表达式 <code>attr()</code> 主要用来获取元素的某一 HTML 属性值，并用于其样式。它也可以用于伪元素，属性值采用伪元素所依附的元素。</p> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>理论上 <code>attr()</code> 表达式可以用于所有的 CSS 属性，但目前支持的仅有伪元素的 <code>content</code> 属性，其他的属性和高级特性目前是实验性的。    -- 引自 MDN</p> <p>如果发现浏览器兼容表里 <code>attr()</code> 的高级用法依旧没有良好的支持的话，请慎重使用！！！</p> <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/attr()#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">点击跳转 MDN 查看兼容性<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <p>具体使用方法：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">text-data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>我是测试数据<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">text-data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>我也是<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>测试数据<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">div::after</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">attr</span><span class="token punctuation">(</span>text-data<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* 数据来自于自定义属性 */</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">span::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">attr</span><span class="token punctuation">(</span>text-data<span class="token punctuation">)</span> <span class="token string">'，'</span><span class="token punctuation">;</span> <span class="token comment">/* attr() 表达式后面还是可以跟其他内容的 */</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>下面是 Tooltip 小组件实现方法，可以<a href="https://codepen.io/ares-chang/pen/ExWByYm" target="_blank" rel="noopener noreferrer">点击跳转 CodePen 查看效果<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>网址如无法打开可以复制代码块到本地运行。</p> <details class="custom-block details"><summary>点击查看代码块</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>IE=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">body</span> <span class="token punctuation">{</span>
+      <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+      <span class="token property">margin-top</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.btn</span> <span class="token punctuation">{</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> #6495ed<span class="token punctuation">;</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> 5px 10px<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">;</span>
+      <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.btn::before</span> <span class="token punctuation">{</span>
+      <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">attr</span><span class="token punctuation">(</span>tip-data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> 5px 10px<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> #585e6b<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> -30px<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+      <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">transition</span><span class="token punctuation">:</span> all .3s<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.btn::after</span> <span class="token punctuation">{</span>
+      <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> 8px solid transparent<span class="token punctuation">;</span>
+      <span class="token property">border-top</span><span class="token punctuation">:</span> 8px solid #585e6b<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> -3px<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+      <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">transition</span><span class="token punctuation">:</span> all .3s<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.btn:hover::before</span> <span class="token punctuation">{</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> -40px<span class="token punctuation">;</span>
+      <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.btn:hover::after</span> <span class="token punctuation">{</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> -13px<span class="token punctuation">;</span>
+      <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span> <span class="token attr-name">tip-data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>点击呼叫<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>一个按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/css/css-tooltip.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/6/23 上午9:58:08</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/css/css-text-overflow.html" class="prev">
+        文本打点展示
+      </a></span> <span class="next"><a href="/web/css/css-zoom.html">
+        缩放页面内容
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f3a79c42.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/76.33f846fd.js" defer></script>
+  </body>
+</html>
