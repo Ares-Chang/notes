@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS 鼠标聚焦动画 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.93f669aa.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/75.65f7611a.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.534d22fa.js"><link rel="prefetch" href="/assets/js/101.eaf0782e.js"><link rel="prefetch" href="/assets/js/102.b0898e55.js"><link rel="prefetch" href="/assets/js/103.5fbcd112.js"><link rel="prefetch" href="/assets/js/104.ea8a6e2e.js"><link rel="prefetch" href="/assets/js/105.869d6cf5.js"><link rel="prefetch" href="/assets/js/106.e141cd92.js"><link rel="prefetch" href="/assets/js/107.25436a7b.js"><link rel="prefetch" href="/assets/js/108.0d5052c7.js"><link rel="prefetch" href="/assets/js/109.cf5165f7.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.0db80798.js"><link rel="prefetch" href="/assets/js/111.47eb3a2d.js"><link rel="prefetch" href="/assets/js/112.a6b074e7.js"><link rel="prefetch" href="/assets/js/113.d69f9e5d.js"><link rel="prefetch" href="/assets/js/114.21a2b6e7.js"><link rel="prefetch" href="/assets/js/115.2ee93a5d.js"><link rel="prefetch" href="/assets/js/116.24642b0b.js"><link rel="prefetch" href="/assets/js/117.5d099ed9.js"><link rel="prefetch" href="/assets/js/118.fab42247.js"><link rel="prefetch" href="/assets/js/119.d83ae10c.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.cc02ac85.js"><link rel="prefetch" href="/assets/js/121.59f4cade.js"><link rel="prefetch" href="/assets/js/122.79214578.js"><link rel="prefetch" href="/assets/js/123.4c6e4500.js"><link rel="prefetch" href="/assets/js/124.8c9a5fc1.js"><link rel="prefetch" href="/assets/js/125.ae212a12.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.a2e03adc.js"><link rel="prefetch" href="/assets/js/19.f3326003.js"><link rel="prefetch" href="/assets/js/20.a26feb85.js"><link rel="prefetch" href="/assets/js/21.c0c241c8.js"><link rel="prefetch" href="/assets/js/22.3a450f42.js"><link rel="prefetch" href="/assets/js/23.c7ad5639.js"><link rel="prefetch" href="/assets/js/24.1f15fa5c.js"><link rel="prefetch" href="/assets/js/25.ede6280d.js"><link rel="prefetch" href="/assets/js/26.0222be65.js"><link rel="prefetch" href="/assets/js/27.52481c6d.js"><link rel="prefetch" href="/assets/js/28.e166758f.js"><link rel="prefetch" href="/assets/js/29.41b207ee.js"><link rel="prefetch" href="/assets/js/3.686b2486.js"><link rel="prefetch" href="/assets/js/30.2e5553ec.js"><link rel="prefetch" href="/assets/js/31.188d72f0.js"><link rel="prefetch" href="/assets/js/32.a6a288b1.js"><link rel="prefetch" href="/assets/js/33.8354be9e.js"><link rel="prefetch" href="/assets/js/34.9a41afb2.js"><link rel="prefetch" href="/assets/js/35.bca86e35.js"><link rel="prefetch" href="/assets/js/36.94059c63.js"><link rel="prefetch" href="/assets/js/37.cb1a7072.js"><link rel="prefetch" href="/assets/js/38.2d1525e0.js"><link rel="prefetch" href="/assets/js/39.39b91eda.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.1678423f.js"><link rel="prefetch" href="/assets/js/41.d676ac2a.js"><link rel="prefetch" href="/assets/js/42.c66ceba8.js"><link rel="prefetch" href="/assets/js/43.d62bcb81.js"><link rel="prefetch" href="/assets/js/44.b0da7c49.js"><link rel="prefetch" href="/assets/js/45.bb799eb6.js"><link rel="prefetch" href="/assets/js/46.2b99ba01.js"><link rel="prefetch" href="/assets/js/47.fbeb7e14.js"><link rel="prefetch" href="/assets/js/48.c0cf0240.js"><link rel="prefetch" href="/assets/js/49.397f44dd.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.90f65b7e.js"><link rel="prefetch" href="/assets/js/51.baf6c8b1.js"><link rel="prefetch" href="/assets/js/52.00b35cf9.js"><link rel="prefetch" href="/assets/js/53.df63c3fc.js"><link rel="prefetch" href="/assets/js/54.89b800bb.js"><link rel="prefetch" href="/assets/js/55.3e6060bc.js"><link rel="prefetch" href="/assets/js/56.35aaa12a.js"><link rel="prefetch" href="/assets/js/57.def3223c.js"><link rel="prefetch" href="/assets/js/58.a0722757.js"><link rel="prefetch" href="/assets/js/59.5612537a.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.7cdf4ebb.js"><link rel="prefetch" href="/assets/js/61.56b7fdd4.js"><link rel="prefetch" href="/assets/js/62.d0e7fbc5.js"><link rel="prefetch" href="/assets/js/63.c75865a2.js"><link rel="prefetch" href="/assets/js/64.3cd8b47e.js"><link rel="prefetch" href="/assets/js/65.ad90704e.js"><link rel="prefetch" href="/assets/js/66.edfe9f81.js"><link rel="prefetch" href="/assets/js/67.de2953c6.js"><link rel="prefetch" href="/assets/js/68.4f05299a.js"><link rel="prefetch" href="/assets/js/69.0440d938.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.32b367a7.js"><link rel="prefetch" href="/assets/js/71.9db358af.js"><link rel="prefetch" href="/assets/js/72.bca03cd2.js"><link rel="prefetch" href="/assets/js/73.c3390175.js"><link rel="prefetch" href="/assets/js/74.6f28e15a.js"><link rel="prefetch" href="/assets/js/76.189c9b0d.js"><link rel="prefetch" href="/assets/js/77.25487b12.js"><link rel="prefetch" href="/assets/js/78.87ffacc8.js"><link rel="prefetch" href="/assets/js/79.6a27b0e5.js"><link rel="prefetch" href="/assets/js/8.0c41165c.js"><link rel="prefetch" href="/assets/js/80.5b5e7644.js"><link rel="prefetch" href="/assets/js/81.d3b126b1.js"><link rel="prefetch" href="/assets/js/82.bb576323.js"><link rel="prefetch" href="/assets/js/83.30435602.js"><link rel="prefetch" href="/assets/js/84.082a756b.js"><link rel="prefetch" href="/assets/js/85.0294e419.js"><link rel="prefetch" href="/assets/js/86.3e49a4d2.js"><link rel="prefetch" href="/assets/js/87.ab02be2c.js"><link rel="prefetch" href="/assets/js/88.4e7c7d4e.js"><link rel="prefetch" href="/assets/js/89.4d8a5adf.js"><link rel="prefetch" href="/assets/js/9.39915f2b.js"><link rel="prefetch" href="/assets/js/90.76b86977.js"><link rel="prefetch" href="/assets/js/91.53b00cd3.js"><link rel="prefetch" href="/assets/js/92.880e3e03.js"><link rel="prefetch" href="/assets/js/93.01841105.js"><link rel="prefetch" href="/assets/js/94.c9617aeb.js"><link rel="prefetch" href="/assets/js/95.9c8542f1.js"><link rel="prefetch" href="/assets/js/96.1c4e1c12.js"><link rel="prefetch" href="/assets/js/97.bb069273.js"><link rel="prefetch" href="/assets/js/98.0115ef20.js"><link rel="prefetch" href="/assets/js/99.dfb6f3b9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/css/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/css/background-color.html" class="sidebar-link">去除背景色</a></li><li><a href="/web/css/css-background-clip.html" class="sidebar-link">CSS 实现文字贴图和渐变文字</a></li><li><a href="/web/css/css-mouse_focus.html" aria-current="page" class="active sidebar-link">CSS 鼠标聚焦动画</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/css/css-mouse_focus.html#分享" class="sidebar-link">分享</a></li><li class="sidebar-sub-header"><a href="/web/css/css-mouse_focus.html#实现方法" class="sidebar-link">实现方法</a></li></ul></li><li><a href="/web/css/css-text-indent.html" class="sidebar-link">段落首行缩进</a></li><li><a href="/web/css/css-text-overflow.html" class="sidebar-link">文本打点展示</a></li><li><a href="/web/css/css-text-transform.html" class="sidebar-link">CSS 控制文本大小写</a></li><li><a href="/web/css/css-tooltip.html" class="sidebar-link">CSS 实现 Tooltip 效果</a></li><li><a href="/web/css/css-zoom.html" class="sidebar-link">缩放页面内容</a></li><li><a href="/web/css/scss.html" class="sidebar-link">sass/scss 使用简介</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="分享"><a href="#分享" class="header-anchor">#</a> 分享</h2> <p>记录一种鼠标移动，按钮聚焦效果，主要通过 CSS <code>before</code> 和 <code>after</code> 实现。</p> <p>鼠标移动，展示效果：</p> <div class="content"><span class="btn">按钮</span></div> <style>
+  .content {
+    padding: 20px
+  }
+  .btn {
+    position: relative;
+    font-size: 30px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  .btn:hover {
+    background: pink;
+    box-shadow: 0 0 50px pink;
+    transition-delay: 0.5s;
+  }
+  .btn::before {
+    content: &quot;&quot;;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-top: 6px solid pink;
+    border-left: 6px solid pink;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transition: all .5s;
+  }
+  .btn:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  .btn::after {
+    content: &quot;&quot;;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-right: 6px solid pink;
+    border-bottom: 6px solid pink;
+    box-sizing: border-box;
+    right: 0;
+    bottom: 0;
+    transition: all .5s;
+  }
+  .btn:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+</style> <h2 id="实现方法"><a href="#实现方法" class="header-anchor">#</a> 实现方法</h2> <p><a href="https://codepen.io/ares-chang/pen/YzVzLgM" target="_blank" rel="noopener noreferrer">点击跳转 CodePen 查看详情<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>若地址无法打开可复制代码块到本地运行。</p> <p>代码块：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">body</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #14213d<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">span</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px 40px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> 0.5s<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/* 鼠标移经 btn 显示背景及阴影过渡 */</span>
+  <span class="token selector">span:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #111<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 50px pink<span class="token punctuation">;</span>
+    <span class="token property">transition-delay</span><span class="token punctuation">:</span> 0.5s<span class="token punctuation">;</span> <span class="token comment">/* 动画延时 0.5 秒执行 */</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/* 左上边框动画执行 */</span>
+  <span class="token selector">span::before</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> 6px solid pink<span class="token punctuation">;</span>
+    <span class="token property">border-left</span><span class="token punctuation">:</span> 6px solid pink<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all .5s<span class="token punctuation">;</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">span:hover::before</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/* 右下边框动画执行 */</span>
+  <span class="token selector">span::after</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> 6px solid pink<span class="token punctuation">;</span>
+    <span class="token property">border-right</span><span class="token punctuation">:</span> 6px solid pink<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all .5s<span class="token punctuation">;</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">span:hover::after</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/css/css-mouse_focus.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/6/29 上午5:52:22</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/css/css-background-clip.html" class="prev">
+        CSS 实现文字贴图和渐变文字
+      </a></span> <span class="next"><a href="/web/css/css-text-indent.html">
+        段落首行缩进
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.93f669aa.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/75.65f7611a.js" defer></script>
+  </body>
+</html>
