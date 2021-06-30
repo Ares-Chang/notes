@@ -166,6 +166,7 @@ Android Studio 的体量太大，对一般电脑太不友好了。幸运的是 V
 - Flutter
 - Dart(基本会和 Flutter 捆绑下载，如果没有请自行下载)
 - Flutter Widget Snippets (可选，通过简写命令引入一些代码片段)
+- Awesome Flutter Snippets (可选，通过简写快速插入组件模板)
 
 ### 新建项目
 
