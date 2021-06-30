@@ -1114,11 +1114,11 @@ class HomeContent extends StatelessWidget {
 }
 ```
 
-## Wrap && RaiseButton
+## Wrap && RaisedButton
 
 `Wrap` 可以实现类似流布局，宽度不足以容下内容，会自动换行。
 
-`RaiseButton` 组件可以用来自定义按钮功能。
+`RaisedButton` 组件可以用来自定义按钮功能。
 
 ::: danger 注意：
 RaisedButton 在 v1.25.0-8.1 之后被弃用，可以使用 ElevatedButton 代替使用
@@ -1702,3 +1702,72 @@ class IndexPage extends StatelessWidget {
   }
 }
 ```
+
+### 返回上一层路由
+
+可以理解为返回上一页，调用 `Navigator.of(context).pop()` 来跳转回上一层路由。
+
+> PS: 或者写为 `Navigator.pop(context)` 也可以。
+>
+> 注意，如果要使用 `pop()` 返回上一级，必须有上级页面存在！
+
+实例：
+
+```dart {12-14}
+import 'package:flutter/material.dart';
+
+class SearchContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('搜索内容'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () => {
+            Navigator.pop(context)  // 返回上一层路由
+          },
+          child: Text('点击返回上一页'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+> 本例同下一回 [替换路由](#替换路由) 一起测试。
+
+### 替换路由
+
+替换路由可以简单理解为：
+
+销毁当前页面，生成要跳转的页面。
+
+这时如果使用 `pop()` 返回上一个页面的话就不会返回到已销毁的页面。
+
+实例：
+
+```dart {13}
+import 'package:flutter/material.dart';
+
+class SearchPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('搜索页面'),
+      ),
+      body: Center(
+          child: ElevatedButton(
+        onPressed: () => {
+          Navigator.pushReplacementNamed(context, '/search_content') // 路由替换
+        },
+        child: Text('点击搜索'),
+      )),
+    );
+  }
+}
+```
+
+> PS：注意，本页面由于跳转过程会销毁，不要放在第一页。
