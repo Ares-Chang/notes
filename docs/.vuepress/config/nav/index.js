@@ -20,9 +20,9 @@ module.exports = [
 			}
 		]
 	},
-	// { text: 'Node', link: '/node/' },
 	{ text: 'Vue', link: '/vue/' },
 	{ text: 'Git', link: '/git/' },
+	{ text: 'React', link: '/react/' },
 	{ text: 'Flutter', link: '/flutter/' },
 	{
 		text: 'Linux',
