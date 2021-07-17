@@ -377,3 +377,115 @@ static propTypes = {
   array: PropTypes.array.isRequired,
 }
 ```
+
+## 获取组件 DOM (refs)
+
+React 提倡少 `DOM` 操作，尽量不使用原生 `DOM`。
+
+但是遇到必须要使用的情况，React 也提供了 `refs` 来解决这个问题。
+
+`Refs` 分使用为三种：[~~字符串型~~](#字符串型)，[回调型](#回调型) 和 [`createRef`](#createRef) 同样官方也提示 [勿过度使用 Refs](https://react.docschina.org/docs/refs-and-the-dom.html#dont-overuse-refs)。
+
+### 字符串型
+~~字符串型~~在使用时只需要在标签上添加 `ref='name'` 来标识，React 就会自动收集在 `refs` 属性中。
+
+但是这种方法官方**并不是很推荐**并[认为这是存在一些问题的](https://react.docschina.org/docs/refs-and-the-dom.html#legacy-api-string-refs)，可能会在未来哪个版本弃用这种方法。
+
+```jsx
+class App extends React.Component {
+  showText = () => {
+    // 通过 this.refs 调用
+    const { input } = this.refs
+    alert(input.value)
+  }
+  render() {
+    return (
+      <div>
+        {/* 直接 ref='name' */}
+        <input ref="input" onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+      </div>
+    )
+  }
+}
+```
+
+::: danger PS: 这段会报红!
+Warning: A string ref, "input", has been found within a strict mode tree. String refs are a source of potential bugs and should be avoided. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: [https://reactjs.org/link/strict-mode-string-ref](https://reactjs.org/link/strict-mode-string-ref)
+
+**最新版本官方并不推荐使用 `String` 类型 `Refs`。**
+:::
+
+### 回调型
+
+在官方弃用 `String` 型 `Refs` 后，推荐了一种新的使用方法，回调型 `Refs`。
+
+回调型 `Refs`，字面意思，需要绑定一个回调函数来执行。
+
+只需要给标签的 `ref` 属性绑定一个函数方法，React 在执行的过程中就会自动调用，并传入标签实例为参数。
+
+```jsx
+class App extends React.Component {
+  showText = () => {
+    // 在 this 中引出参数
+    alert(this.input.value)
+  }
+  render() {
+    return (
+      <div>
+        {/* React 在执行时会传入标签实例为参数（内联式注入） */}
+        <input ref={(e) => this.input = e} onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+      </div>
+    )
+  }
+}
+```
+
+::: warning 关于回调型 Refs 说明：
+如果 `ref` 回调函数是以内联函数的方式定义的，在更新过程中它会被执行两次，第一次传入参数 `null`，然后第二次会传入参数 `DOM` 元素。这是因为在每次渲染时会创建一个新的函数实例，所以 React 清空旧的 `ref` 并且设置新的。通过将 `ref` 的回调函数定义成 `class` 的绑定函数的方式可以避免上述问题，但是**大多数情况下它是无关紧要的**。
+::: details Class 绑定式：
+```js {5-7,12}
+class App extends React.Component {
+  showText = () => {
+    alert(this.input.value)
+  }
+  setDome = (e) => {
+    this.input = e
+  }
+  render() {
+    return (
+      <div>
+        {/* class 绑定式 */}
+        <input ref={this.setDome} onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+      </div>
+    )
+  }
+}
+```
+:::
+
+### creatRef
+
+回调型 `Refs` 现阶段有良好的兼容性，但是在 `React 16.3` 版本之后引入了 `React.createRef()` API。
+
+相对的官方更为推荐的是这一种方法。
+
+```jsx {2,4,10}
+class App extends React.Component {
+  myRef = React.createRef()
+  showText = () => {
+    alert(this.myRef.currenst.value)
+  }
+  render() {
+    return (
+      <div>
+        {/* createRef 绑定式 */}
+        <input ref={this.myRef} onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+      </div>
+    )
+  }
+}
+```
+
+::: warning 注意：
+`createRef` 是挂载在 React 原型上的方法，调用时会产生一个存放 `ref` 的容器，但是这个容器是单人单用的，重复调用会被覆盖。
+:::
