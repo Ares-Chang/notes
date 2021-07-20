@@ -489,3 +489,77 @@ class App extends React.Component {
 ::: warning 注意：
 `createRef` 是挂载在 React 原型上的方法，调用时会产生一个存放 `ref` 的容器，但是这个容器是单人单用的，重复调用会被覆盖。
 :::
+
+## 事件处理
+
+React 中的事件处理函数都是官方为了更好的兼容性自行封装的，需要区别原生的处理函数。
+
+React 中把所有的处理函数都封装为 `onXxx`(注意大小写) 把 on 后面的单词首字母大写作为区分。
+
+官方在自定义的事件处理函数中处理了大量兼容问题，其中的事件绑定都是使用的事件委托方式处理的(委托给了组件最外层元素)。
+
+另外，上方也提到过，官方提倡 [勿过度使用 Refs](https://react.docschina.org/docs/refs-and-the-dom.html#dont-overuse-refs)。
+
+和原生 DOM 相同，React 在部分自定义的事件处理函数中也传入了 `event` 对象，可以通过 `event.target` 来获取标签 DOM。
+
+## 组件受控
+
+React 中没有双向数据绑定的概念，但是 React 的中 `受控组件`，可以模拟双向绑定实现需求。
+
+### 受控组件
+
+[受控组件](https://zh-hans.reactjs.org/docs/forms.html#controlled-components)，简单理解，就是把数据存放到 `state` 中，
+
+数据实时更新，当用到的时候就是最新的值。类似 Vue 的双向数据绑定。
+
+```jsx
+class App extends React.Component {
+  state = {
+    userName: '',
+    passWord: ''
+  }
+
+  handleButton = (e) => {
+    e.preventDefault()  // 阻止 form 跳转
+    const { userName, passWord } = this.state
+    console.log(`你输入的用户名为：${userName}，输入的密码为：${passWord}`)
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleButton}>
+        {/* 动态更改数据状态，只要用户触发，就会更改 */}
+        用户名：<input onChange={(e) => this.setState({ userName: e.target.value })} type="text" />
+        密码：<input onChange={(e) => this.setState({ passWord: e.target.value })} type="password" />
+        <button>提交</button>
+      </form>
+    )
+  }
+}
+```
+
+### 非受控组件
+
+[非受控组件](https://zh-hans.reactjs.org/docs/uncontrolled-components.html)就是不管数据再怎么改变，只有在我需要用到的时候才会去取回这个值。
+
+但是这个方法还是需要用到 `Refs` 来实现，同样，大多数情况下官方并[不推荐这种做法](https://zh-hans.reactjs.org/docs/uncontrolled-components.html)。
+
+```jsx
+class App extends React.Component {
+  handleButton = (e) => {
+    e.preventDefault()  // 阻止 form 跳转
+    const { userName, passWord } = this // 只有点击 button 时都会获取用户输入数据
+    console.log(`你输入的用户名为：${userName.value}，输入的密码为：${passWord.value}`)
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleButton}>
+        用户名：<input ref={e => this.userName = e} type="text" />
+        密码：<input ref={e => this.passWord = e} type="password" />
+        <button>提交</button>
+      </form>
+    )
+  }
+}
+```
