@@ -625,7 +625,7 @@ class App extends React.Component {
   // 组件将要挂载的钩子
   componentWillMount() {
     /**
-     * 这是一个旧的钩子函数，新版更名为 
+     * 这是一个旧的钩子函数，新版已被更名。
      * 
      * 组件挂载之前执行此钩子
      */
@@ -737,3 +737,32 @@ class Children extends React.Component {
 ```
 
 ### 生命周期（新）
+
+`React 17.0.1` 在之前版本之上做了以下修改：
+
+> 但是，以下修改官方表示是即将过时的，在新代码中应该[避免使用它们;](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
+
+- 添加以下生命周期别名：
+
+引入不安全生命周期的别名，将 `componentWillMount`，`componentWillReceiveProps`和 `componentWillUpdate` 三个钩子之前加上 `UNSAFE_` 前缀。
+
+更名 `UNSAFE_componentWillMount`，`UNSAFE_componentWillReceiveProps`、 和`UNSAFE_componentWillUpdate` (未来版本会删除更名之前的钩子，只有新的“UNSAFE_”生命周期名称将起作用。)
+
+> 注意：因为新版的这三个生命周期的别名是不安全的，不可以在严格模式中直接使用，如果使用，控制台中会报一个错，会推荐使用别的安全的钩子函数替代。
+>
+> 虽然为这些生命周期添加 "UNSAFE_" 前缀，但是这里的 "UNSAFE_" **不是指安全性**，而是表示使用这些生命周期的代码在 React 的**未来版本**中更有可能出现 BUG，尤其是在启用异步渲染之后。
+
+- 引入两个新的生命周期：
+
+`getDerivedStateFromProps` 和 `getSnapshotBeforeUpdate`，但是官方表示，这两个钩子函数的使用频率并不高。
+
+
+其他具体详细更新点可以 [点击跳转官方文档，查看详细更新！及为何避免使用！](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
+
+新版图解：
+
+<img class="zoom" :src="$withBase('/react/jsx-basic-study/react生命周期(新).png')">
+
+新版图解中隐藏了三个即将废弃的钩子，写入了二个新更新的钩子，并把卸载钩子单独成列，其他运行时并没有修改。
+
+> 注：React 更新 DOM 和 refs 时我们并没有办法插手，在老版中也是有这个环节的只是因为没有应用场景，并没有体现。
