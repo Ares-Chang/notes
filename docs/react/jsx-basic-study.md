@@ -625,7 +625,7 @@ class App extends React.Component {
   // 组件将要挂载的钩子
   componentWillMount() {
     /**
-     * 这是一个旧的钩子函数，新版已被更名。
+     * 这是一个旧的钩子函数，新版已被更名为 UNSAFE_componentWillMount。
      * 
      * 组件挂载之前执行此钩子
      */
@@ -661,6 +661,8 @@ class App extends React.Component {
   // 组件将要更新的钩子
   componentWillUpdate() {
     /**
+     * 这是一个旧的钩子函数，新版已被更名为 UNSAFE_componentWillUpdate
+     *
      * 组件更新之前会执行此钩子。
      */
     console.log('update ---- componentWillUpdate: 组件马上要更新了！')
@@ -723,6 +725,8 @@ class Children extends React.Component {
   // props 更新会触发这个钩子
   componentWillReceiveProps(props) {
     /**
+     * 这是一个旧的钩子函数，新版已被更名为 UNSAFE_componentWillReceiveProps
+     *
      * 父组件更新 props 之后会触发 componentWillReceiveProps 钩子
      * 钩子会自带 props 参数，值为父组件传递的 props 属性
      * 
@@ -754,7 +758,7 @@ class Children extends React.Component {
 
 - 引入两个新的生命周期：
 
-`getDerivedStateFromProps` 和 `getSnapshotBeforeUpdate`，但是官方表示，这两个钩子函数的使用频率并不高。
+**静态的** `getDerivedStateFromProps` 和 `getSnapshotBeforeUpdate`，但是官方表示，这两个钩子函数的使用频率并不高。
 
 
 其他具体详细更新点可以 [点击跳转官方文档，查看详细更新！及为何避免使用！](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
@@ -763,6 +767,139 @@ class Children extends React.Component {
 
 <img class="zoom" :src="$withBase('/react/jsx-basic-study/react生命周期(新).png')">
 
-新版图解中隐藏了三个即将废弃的钩子，写入了二个新更新的钩子，并把卸载钩子单独成列，其他运行时并没有修改。
+新版图解中隐藏了三个即将废弃的钩子，写入了两个新更新的钩子，并把卸载钩子单独成列，其他运行时并没有修改。
 
 > 注：React 更新 DOM 和 refs 时我们并没有办法插手，在老版中也是有这个环节的只是因为没有应用场景，并没有体现。
+
+**代码块详解：**
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// 生命周期
+class App extends React.Component {
+  // 继承
+  constructor(props) {
+    /**
+     * constructor 可以不写，如果写了必须调用 super()。
+     */
+    console.log('mount ---- constructor 调用了！')
+    super(props)
+    this.state = {
+      count: 0, // 计数累加
+    }
+  }
+
+  // 组件挂载完毕的钩子
+  componentDidMount() {
+    /**
+     * 组件挂载完毕之后会执行此钩子。
+     */
+    console.log('mount ---- componentDidMount: 组件挂载完成了！')
+  }
+
+  // 组件从 Props 中获取派生状态挂载完毕
+  static getDerivedStateFromProps(props, state) {
+    /**
+     * 这个钩子并不常用，钩子有两个传值，props 为组件传递过来的值，state 为初始设置的值。
+     * 这个钩子必须有返回值，返回值可以为 null 或者 状态对象
+     * 
+     * 如果返回的是状态对象，那么 state 的值在任何时候都取决于 props。
+     * 简单来说，如果这里返回了 props 状态值，那么以后 state 中存在的值就不能修改了！
+     * 
+     * 官方表示派生状态会导致代码冗余，并使组件难以维护。慎用！！！
+     */
+    console.log(`${!state.count ? "mount" : "update"} ---- getDerivedStateFromProps: 组件派生状态挂载完毕！`)
+    return props
+  }
+
+  // 控制组件是否更新的钩子
+  shouldComponentUpdate() {
+    /**
+     * 每次需要更新之前都会触发这个钩子，
+     * 只有返回为 true，才会触发 render 进行页面渲染。
+     * 返回 false 不做处理。
+     * 
+     * 这个钩子可以不写，不写的情况下默认返回 true。
+     * 如果写了，必须要写返回值！！！ 
+     */
+    console.log('update ---- shouldComponentUpdate: 我确认为真 render 才能渲染！')
+    return true
+  }
+
+  // 在更新之前获取快照
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    /**
+     * getSnapshotBeforeUpdate() 会在最近一次渲染输出（提交到 DOM 节点）之前调用。
+     * 钩子有两个传值，preProps 和 preState，值为更新修改之前的 props 和 state。
+     * 钩子触发时必须有返回值，返回值可选为 null 或 快照(任何类型值都可以作为快照返回)。
+     * 返回值将作为参数传递给 componentDidUpdate()
+     * 
+     * 注：此场景使用并不见，使用几率不高。
+     */
+    console.log('update ---- getSnapshotBeforeUpdate: 在更新之前获取快照！')
+    return null
+  }
+
+  // 组件更新完毕的钩子
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    /**
+     * 钩子有三个参数:
+     * prevProps: 更新修改之前的 props 
+     * prevState: 更新修改之前的 state 
+     * snapshot: getSnapshotBeforeUpdate 传递过来的快照
+     * 
+     * 组件更新完毕之后会执行此钩子。
+     */
+    console.log('update ---- componentDidUpdate: 组件更新完成了！')
+  }
+
+  // 初始化渲染、状态更新之后都会触发的钩子
+  render() {
+    const { count } = this.state
+    console.log(`${!count ? "mount" : "update"} ---- render: 每次需要渲染我都会触发！`)
+    return (
+      <div>
+        <h1>组件的生命周期</h1>
+        <h2>当前求和：{count}</h2>
+        <button onClick={() => this.setState({ count: count + 1 })}>点我加1</button>
+        <button onClick={this.unload}>卸载组件</button>
+        <button onClick={this.force}>强制更新</button>
+      </div>
+    )
+  }
+
+  // 卸载组件的回调
+  unload() {
+    // 卸载组件
+    ReactDOM.unmountComponentAtNode(document.getElementById('root'))
+  }
+
+  // 组件将要卸载的钩子
+  componentWillUnmount() {
+    /**
+    * componentWillUnmount 会在组件卸载及销毁之前直接调用。
+    * 可以在此方法中执行必要的清理操作，
+    * 例如，清除 timer，取消网络请求或清除在 componentDidMount 中创建的订阅等。
+    * componentWillUnmount 中不应调用 setState，因为该组件将永远不会重新渲染。
+    * 组件实例卸载后，将永远不会再挂载它。
+    */
+    console.log('unload ---- componentWillUnmount: 组件将要卸载了！')
+  }
+
+  // 强制更新的回调
+  force = () => {
+    /**
+     * 在不更改 state 中数据的情况下，强制重新渲染。
+     * 不经过 shouldComponentUpdate 检验。
+     */
+    console.log('forceUpdate: 即将进入强制渲染流程！')
+    this.forceUpdate()
+  }
+}
+
+export default App;
+```
+
+React 新版本中更新的钩子并不常用，可以了解一下，具体可以参考 [官方文档](https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate)。
