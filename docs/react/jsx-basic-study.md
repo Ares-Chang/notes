@@ -583,7 +583,7 @@ class App extends React.Component {
      1. `constructor()`
      2. `componentWillMount()`
      3. `render()`
-     4. `componentDidMount()`
+     4. `componentDidMount()` ===> 常用
 
 2. 更新阶段：由组件内部 `this.setSate()` 或父组件 `render` 触发
 
@@ -594,7 +594,7 @@ class App extends React.Component {
 
 3. 卸载阶段：由 `ReactDOM.unmountComponentAtNode()` 触发
 
-     1. `componentWillUnmount()`
+     1. `componentWillUnmount()`  ===> 常用
 
 上例缺少 `componentWillReceiveProps()` 下列会详细说明。
 
@@ -763,7 +763,28 @@ class Children extends React.Component {
 
 其他具体详细更新点可以 [点击跳转官方文档，查看详细更新！及为何避免使用！](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
-新版图解：
+**新版触发流程：**
+
+1. 初始化阶段：由 `ReactDOM.render()` 触发 --- 初次渲染
+
+     1. `constructor()`
+     2. `getDerivedStateFromProps()`
+     3. `render()`
+     4. `componentDidMount()` ===> 常用
+
+2. 更新阶段：由组件内部 `this.setSate()` 或父组件 `render` 触发
+
+     1. `getDerivedStateFromProps()`
+     1. `shouldComponentUpdate()`
+     3. `render()`
+     3. `getSnapshotBeforeUpdate()`
+     4. `componentDidUpdate()`
+
+3. 卸载阶段：由 `ReactDOM.unmountComponentAtNode()` 触发
+
+     1. `componentWillUnmount()`  ===> 常用
+
+**新版图解：**
 
 <img class="zoom" :src="$withBase('/react/jsx-basic-study/react生命周期(新).png')">
 
@@ -902,4 +923,4 @@ class App extends React.Component {
 export default App;
 ```
 
-React 新版本中更新的钩子并不常用，可以了解一下，具体可以参考 [官方文档](https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate)。
+React 新版本中更新的钩子并不常用，可以简单了解一下，具体可以参考 [官方文档](https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate)。
