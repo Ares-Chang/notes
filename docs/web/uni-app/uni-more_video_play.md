@@ -18,7 +18,7 @@ title: 解决同页面多视频可同时播放问题
 
 既然可以暂停视频了，我们只需要通过监听每个视频的播放事件来判断，当前是否已经有视频正在播放，如果有就暂停它。
 
-**代码演示：**
+**代码块：**
 
 ```vue {3,4,31-44}
 <template>
@@ -53,6 +53,7 @@ title: 解决同页面多视频可同时播放问题
     methods: {
       videoPlaying(e) { // 解析同页面多视频同时播放问题
         let newVideo = uni.createVideoContext(e.currentTarget.id); // 根据视频 id 创建对应视频上下文
+        // let newVideo = uni.createVideoContext(e.currentTarget.id, this); // 自定义组件中使用
         newVideo.id = e.currentTarget.id; // 设置上下文 id
         if (!this.video) { // 判断当前如无视频正在播放，直接播放当前视频并记录
           this.video = newVideo;
@@ -76,3 +77,9 @@ title: 解决同页面多视频可同时播放问题
 ```
 
 **注意设置每个视频组件 `id` 属性，方法中需要根据 `id` 来判断播放视频源。否则视频播放会产生错误！**
+
+::: danger 注意：
+**注意！注意！注意！！！组件中使用，传参 `this`，否则方法找不到组件，不会产生效果！！！**
+
+`uni.createVideoContext` 在**自定义组件**中使用时，**第二个参数传入组件实例 this**，以操作组件内 `<video>` 组件。   --- [uni-app 官网](https://uniapp.dcloud.io/api/media/video-context?id=createvideocontext)
+:::
