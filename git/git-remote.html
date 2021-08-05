@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git remote 命令 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.cb2b0cd0.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/40.241c92dd.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.28f19e95.js"><link rel="prefetch" href="/assets/js/101.8985ce26.js"><link rel="prefetch" href="/assets/js/102.5020410c.js"><link rel="prefetch" href="/assets/js/103.9bea6678.js"><link rel="prefetch" href="/assets/js/104.24d83a64.js"><link rel="prefetch" href="/assets/js/105.bf9123a0.js"><link rel="prefetch" href="/assets/js/106.78cef75a.js"><link rel="prefetch" href="/assets/js/107.f67f8e11.js"><link rel="prefetch" href="/assets/js/108.724f2fea.js"><link rel="prefetch" href="/assets/js/109.54d4bdd4.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.f49d25c9.js"><link rel="prefetch" href="/assets/js/111.1ab0639e.js"><link rel="prefetch" href="/assets/js/112.ba4c7e79.js"><link rel="prefetch" href="/assets/js/113.637303d7.js"><link rel="prefetch" href="/assets/js/114.d853a353.js"><link rel="prefetch" href="/assets/js/115.689fde52.js"><link rel="prefetch" href="/assets/js/116.67edc3e3.js"><link rel="prefetch" href="/assets/js/117.f152e1ed.js"><link rel="prefetch" href="/assets/js/118.fcb95623.js"><link rel="prefetch" href="/assets/js/119.8855d2f6.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.3a6d0e57.js"><link rel="prefetch" href="/assets/js/121.e80010f2.js"><link rel="prefetch" href="/assets/js/122.bd812ed5.js"><link rel="prefetch" href="/assets/js/123.12cbf177.js"><link rel="prefetch" href="/assets/js/124.8601cc5a.js"><link rel="prefetch" href="/assets/js/125.aacc261f.js"><link rel="prefetch" href="/assets/js/126.17a49cf6.js"><link rel="prefetch" href="/assets/js/127.8e41dbe7.js"><link rel="prefetch" href="/assets/js/128.ae61e631.js"><link rel="prefetch" href="/assets/js/129.9922cce4.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.ef58340d.js"><link rel="prefetch" href="/assets/js/131.6796cd97.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.a2e03adc.js"><link rel="prefetch" href="/assets/js/19.f3326003.js"><link rel="prefetch" href="/assets/js/20.a26feb85.js"><link rel="prefetch" href="/assets/js/21.c0c241c8.js"><link rel="prefetch" href="/assets/js/22.3a450f42.js"><link rel="prefetch" href="/assets/js/23.c7ad5639.js"><link rel="prefetch" href="/assets/js/24.1f15fa5c.js"><link rel="prefetch" href="/assets/js/25.ede6280d.js"><link rel="prefetch" href="/assets/js/26.3c15e8d2.js"><link rel="prefetch" href="/assets/js/27.4934e92d.js"><link rel="prefetch" href="/assets/js/28.ac32a199.js"><link rel="prefetch" href="/assets/js/29.3ceb650a.js"><link rel="prefetch" href="/assets/js/3.f950d5aa.js"><link rel="prefetch" href="/assets/js/30.1dec99b2.js"><link rel="prefetch" href="/assets/js/31.f5682173.js"><link rel="prefetch" href="/assets/js/32.f657425a.js"><link rel="prefetch" href="/assets/js/33.a7b41a87.js"><link rel="prefetch" href="/assets/js/34.3e1dd3f8.js"><link rel="prefetch" href="/assets/js/35.22762b0b.js"><link rel="prefetch" href="/assets/js/36.ac30a9df.js"><link rel="prefetch" href="/assets/js/37.f773b95f.js"><link rel="prefetch" href="/assets/js/38.4600b902.js"><link rel="prefetch" href="/assets/js/39.40f741be.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/41.1f5c0462.js"><link rel="prefetch" href="/assets/js/42.d5835eda.js"><link rel="prefetch" href="/assets/js/43.94b90624.js"><link rel="prefetch" href="/assets/js/44.935c2854.js"><link rel="prefetch" href="/assets/js/45.f02ab783.js"><link rel="prefetch" href="/assets/js/46.535b13e0.js"><link rel="prefetch" href="/assets/js/47.07fabdfc.js"><link rel="prefetch" href="/assets/js/48.e3fdb05e.js"><link rel="prefetch" href="/assets/js/49.11cd0e94.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.ae38256c.js"><link rel="prefetch" href="/assets/js/51.0ec3c42a.js"><link rel="prefetch" href="/assets/js/52.3cf9a58b.js"><link rel="prefetch" href="/assets/js/53.927c6ab2.js"><link rel="prefetch" href="/assets/js/54.0194c965.js"><link rel="prefetch" href="/assets/js/55.3ea2e923.js"><link rel="prefetch" href="/assets/js/56.cda11bfb.js"><link rel="prefetch" href="/assets/js/57.b9b8df15.js"><link rel="prefetch" href="/assets/js/58.9add7502.js"><link rel="prefetch" href="/assets/js/59.4c2ebec1.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.675f3bc9.js"><link rel="prefetch" href="/assets/js/61.4f9745f5.js"><link rel="prefetch" href="/assets/js/62.7727debc.js"><link rel="prefetch" href="/assets/js/63.ef8240e4.js"><link rel="prefetch" href="/assets/js/64.04f7b2ad.js"><link rel="prefetch" href="/assets/js/65.549d053b.js"><link rel="prefetch" href="/assets/js/66.23a4c00a.js"><link rel="prefetch" href="/assets/js/67.2488beb0.js"><link rel="prefetch" href="/assets/js/68.a3529881.js"><link rel="prefetch" href="/assets/js/69.2997ecb3.js"><link rel="prefetch" href="/assets/js/7.903d6703.js"><link rel="prefetch" href="/assets/js/70.9ca54a2b.js"><link rel="prefetch" href="/assets/js/71.9c775b04.js"><link rel="prefetch" href="/assets/js/72.32c68a6a.js"><link rel="prefetch" href="/assets/js/73.36d08a14.js"><link rel="prefetch" href="/assets/js/74.8794ae90.js"><link rel="prefetch" href="/assets/js/75.ba5d4095.js"><link rel="prefetch" href="/assets/js/76.562e6f12.js"><link rel="prefetch" href="/assets/js/77.40c213f2.js"><link rel="prefetch" href="/assets/js/78.86a4c235.js"><link rel="prefetch" href="/assets/js/79.732a9eaa.js"><link rel="prefetch" href="/assets/js/8.acb56ca8.js"><link rel="prefetch" href="/assets/js/80.b6422ef2.js"><link rel="prefetch" href="/assets/js/81.a3272633.js"><link rel="prefetch" href="/assets/js/82.1ed4de6f.js"><link rel="prefetch" href="/assets/js/83.25181e79.js"><link rel="prefetch" href="/assets/js/84.406b52a2.js"><link rel="prefetch" href="/assets/js/85.4eadc201.js"><link rel="prefetch" href="/assets/js/86.a95abdaa.js"><link rel="prefetch" href="/assets/js/87.d69e03f8.js"><link rel="prefetch" href="/assets/js/88.bdbcb0aa.js"><link rel="prefetch" href="/assets/js/89.d79f83ec.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.abb825d4.js"><link rel="prefetch" href="/assets/js/91.ebfc1155.js"><link rel="prefetch" href="/assets/js/92.0919b03a.js"><link rel="prefetch" href="/assets/js/93.88a50d12.js"><link rel="prefetch" href="/assets/js/94.e9cce8fa.js"><link rel="prefetch" href="/assets/js/95.fd04f302.js"><link rel="prefetch" href="/assets/js/96.de9d9977.js"><link rel="prefetch" href="/assets/js/97.4ad277d9.js"><link rel="prefetch" href="/assets/js/98.2170c70a.js"><link rel="prefetch" href="/assets/js/99.fc7d1a98.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/git/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/git/git-easy-order.html" class="sidebar-link">Git 常用命令</a></li><li><a href="/git/git-partition.html" class="sidebar-link">Git 三大分区</a></li><li><a href="/git/delete-commit.html" class="sidebar-link">删除某次提交记录</a></li><li><a href="/git/delete-file.html" class="sidebar-link">删除远程仓库中的文件</a></li><li><a href="/git/git-HEAD^.html" class="sidebar-link">HEAD^ 提示 More?</a></li><li><a href="/git/git-amend.html" class="sidebar-link">重写历史</a></li><li><a href="/git/git-commit.html" class="sidebar-link">git commit 规范</a></li><li><a href="/git/git-merge-conflict.html" class="sidebar-link">解决 git 合并未完成问题</a></li><li><a href="/git/git-merger-failure.html" class="sidebar-link">合并分支失败</a></li><li><a href="/git/git-remote.html" aria-current="page" class="active sidebar-link">git remote 命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/git-remote.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#使用方法" class="sidebar-link">使用方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/git-remote.html#查看远程仓库" class="sidebar-link">查看远程仓库</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#添加远程仓库" class="sidebar-link">添加远程仓库</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#推送到默认远程仓库" class="sidebar-link">推送到默认远程仓库</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#删除远程仓库" class="sidebar-link">删除远程仓库</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#修改本地仓库别名" class="sidebar-link">修改本地仓库别名</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#修改别名链接" class="sidebar-link">修改别名链接</a></li><li class="sidebar-sub-header"><a href="/git/git-remote.html#查看某个远程仓库" class="sidebar-link">查看某个远程仓库</a></li></ul></li></ul></li><li><a href="/git/git-reset-error.html" class="sidebar-link">版本回退报错</a></li><li><a href="/git/git-soft.html" class="sidebar-link">撤销上次提交</a></li><li><a href="/git/git-stash.html" class="sidebar-link">git stash 暂存修改</a></li><li><a href="/git/inoperative-gitignore.html" class="sidebar-link">解决 .gitignore 不生效问题</a></li><li><a href="/git/issue-repository-exists.html" class="sidebar-link">git 无法 push 成功问题</a></li><li><a href="/git/save-password.html" class="sidebar-link">保存 git 帐户密码</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p>为了操作远程仓库内容，需要使用 <code>git remote</code> 来连接到远程仓库，以便管理。</p> <h2 id="使用方法"><a href="#使用方法" class="header-anchor">#</a> 使用方法</h2> <h3 id="查看远程仓库"><a href="#查看远程仓库" class="header-anchor">#</a> 查看远程仓库</h3> <p>如果想要查看已经配置的远程仓库服务器，可以运行 <code>git remote</code> 命令。</p> <p>它会列出指定的每一个远程服务器的简写。</p> <p>如果你是克隆的远程仓库，那么至少可以看到 <code>origin</code> --- 这是 Git 给仓库服务器的默认别名。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git clone [https://github.com/xxx/xxx.git]
+Cloning into <span class="token string">'test'</span>...
+remote: Enumerating objects: 1857, done.
+remote: Total 1857 (delta 0), reused 0 (delta 0), pack-reused 1857
+Receiving objects: 100% (1857/1857), 334.06 KiB | 30.00 KiB/s, done.
+Resolving deltas: 100% (837/837), done.
+
+λ cd test\
+
+λ git remote
+origin
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意：</p> <p>λ 并不是输入的命令，和 Linux 终端中的 $ 一样，这是每行开始的符号。</p> <p>我使用的 <a href="https://cmder.net/" target="_blank" rel="noopener noreferrer">Cmder<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，如果感兴趣可以点击查看我的 <a href="/else/tools/cmder">Cmder 配置</a>。</p></div> <p>如果想要查看详细信息，可以在 <code>git remote</code> 后面加个 <code>-v</code></p> <p>表示展示读写远程仓库使用的 Git 保存的简写与其对应的 URL。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git remote -v
+origin  https://github.com/xxx/xxx.git (fetch)
+origin  https://github.com/xxx/xxx.git (push)
+</code></pre></div><h3 id="添加远程仓库"><a href="#添加远程仓库" class="header-anchor">#</a> 添加远程仓库</h3> <p>如果我们是通过 <code>git init</code> 创建的本地仓库，但是远程是空仓库的情况下</p> <p>需要通过 <code>git remote add [shortname] [url]</code> 来链接本地仓库与远程仓库。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git remote add origin https://github.com/xxx/xxx.git
+
+λ git remote -v
+origin  https://github.com/xxx/xxx.git (fetch)
+origin  https://github.com/xxx/xxx.git (push)
+</code></pre></div><h3 id="推送到默认远程仓库"><a href="#推送到默认远程仓库" class="header-anchor">#</a> 推送到默认远程仓库</h3> <p>我们更新了代码之后需要推送到远程仓库</p> <p>可以使用 <code>git push [origin] [master]</code> 来进行推送</p> <p>同时，如果以后默认推送到些仓库，可以在 <code>git push</code> 后面添加 <code>-u</code> 属性。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git push -u origin master
+</code></pre></div><h3 id="删除远程仓库"><a href="#删除远程仓库" class="header-anchor">#</a> 删除远程仓库</h3> <p>如果以后不需要用到此仓库，可以通过 <code>git remote remove [origin]</code> 来删除别名。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git remote remove origin
+</code></pre></div><h3 id="修改本地仓库别名"><a href="#修改本地仓库别名" class="header-anchor">#</a> 修改本地仓库别名</h3> <p>如果创建时别名输入错误，想要修改</p> <p>可以通过 <code>git remote rename [old_name] [new_name]</code> 来修改别名。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git remote -v
+origin  https://github.com/xxx/xxx.git (fetch)
+origin  https://github.com/xxx/xxx.git (push)
+
+λ git remote rename origin test
+
+λ git remote -v
+test    https://github.com/xxx/xxx.git (fetch)
+test    https://github.com/xxx/xxx.git (push)
+</code></pre></div><h3 id="修改别名链接"><a href="#修改别名链接" class="header-anchor">#</a> 修改别名链接</h3> <p>如果创建别名时链接写错了，我们当然可以选择删除重建</p> <p>同时也可以通过 <code>git remote set-url [origin] [url]</code> 来只修改链接地址。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git remote set-url origin https://github.com/xxx/xxxxx.git
+
+λ git remote -v
+origin  https://github.com/xxx/xxxxx.git (fetch)
+origin  https://github.com/xxx/xxxxx.git (push)
+</code></pre></div><h3 id="查看某个远程仓库"><a href="#查看某个远程仓库" class="header-anchor">#</a> 查看某个远程仓库</h3> <p>如果想要查看某个远程仓库的详细信息</p> <p>可以使用 <code>git remote show [origin]</code> 来实现，当然分支名称也可以换为 <code>url</code> 链接。</p> <div class="language-git extra-class"><pre class="language-git"><code>λ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/xxx/xxx.git
+  Push  URL: https://github.com/xxx/xxx.git
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    ticgit tracked
+  Local branch configured for <span class="token string">'git pull'</span>:
+    master merges with remote master
+  Local ref configured for <span class="token string">'git push'</span>:
+    master pushes to master (up to date)
+</code></pre></div><p>它同样会列出远程仓库的 URL 与跟踪分支的信息。</p> <p>这些信息非常有用，它告诉你正处于 <code>master</code> 分支，并且如果运行 <code>git pull</code>，就会抓取所有的远程引用，</p> <p>然后将远程 <code>master</code> 分支合并到本地 <code>master</code> 分支。它也会列出拉取到的所有远程引用。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/git/git-remote.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/8/5 上午6:59:25</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/git/git-merger-failure.html" class="prev">
+        合并分支失败
+      </a></span> <span class="next"><a href="/git/git-reset-error.html">
+        版本回退报错
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.cb2b0cd0.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/40.241c92dd.js" defer></script>
+  </body>
+</html>
