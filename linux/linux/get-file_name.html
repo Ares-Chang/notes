@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>获取当前文件夹下所有文件名称 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.482146d8.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/49.04d5f84d.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.b3bab394.js"><link rel="prefetch" href="/assets/js/101.cff01762.js"><link rel="prefetch" href="/assets/js/102.33d93f35.js"><link rel="prefetch" href="/assets/js/103.4b826722.js"><link rel="prefetch" href="/assets/js/104.20b4dd46.js"><link rel="prefetch" href="/assets/js/105.4d873dc5.js"><link rel="prefetch" href="/assets/js/106.8a3e92d1.js"><link rel="prefetch" href="/assets/js/107.3697dbc6.js"><link rel="prefetch" href="/assets/js/108.8fddd4c9.js"><link rel="prefetch" href="/assets/js/109.5991bcc5.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.4668eec5.js"><link rel="prefetch" href="/assets/js/111.31277db9.js"><link rel="prefetch" href="/assets/js/112.abe16207.js"><link rel="prefetch" href="/assets/js/113.c627d147.js"><link rel="prefetch" href="/assets/js/114.22bf5e34.js"><link rel="prefetch" href="/assets/js/115.c723f59c.js"><link rel="prefetch" href="/assets/js/116.9ffded9f.js"><link rel="prefetch" href="/assets/js/117.be73c85f.js"><link rel="prefetch" href="/assets/js/118.65e22de8.js"><link rel="prefetch" href="/assets/js/119.a2542697.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.f5453e48.js"><link rel="prefetch" href="/assets/js/121.ecbe9f06.js"><link rel="prefetch" href="/assets/js/122.91978423.js"><link rel="prefetch" href="/assets/js/123.11dc561f.js"><link rel="prefetch" href="/assets/js/124.719093af.js"><link rel="prefetch" href="/assets/js/125.4d8bf9fc.js"><link rel="prefetch" href="/assets/js/126.27ed62e8.js"><link rel="prefetch" href="/assets/js/127.2e6b8fc8.js"><link rel="prefetch" href="/assets/js/128.cc6b596e.js"><link rel="prefetch" href="/assets/js/129.b748f531.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.74bfb02d.js"><link rel="prefetch" href="/assets/js/131.0d6cd23c.js"><link rel="prefetch" href="/assets/js/132.612c176b.js"><link rel="prefetch" href="/assets/js/133.9806763d.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/15.f4fab799.js"><link rel="prefetch" href="/assets/js/16.12708f06.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.547c33bb.js"><link rel="prefetch" href="/assets/js/19.2421bab7.js"><link rel="prefetch" href="/assets/js/20.fc15f2e9.js"><link rel="prefetch" href="/assets/js/21.c63b6f5c.js"><link rel="prefetch" href="/assets/js/22.0a3306ff.js"><link rel="prefetch" href="/assets/js/23.8536550f.js"><link rel="prefetch" href="/assets/js/24.8b996cd6.js"><link rel="prefetch" href="/assets/js/25.811a838b.js"><link rel="prefetch" href="/assets/js/26.ce11ead0.js"><link rel="prefetch" href="/assets/js/27.0d5ab367.js"><link rel="prefetch" href="/assets/js/28.3aa99f15.js"><link rel="prefetch" href="/assets/js/29.384ee5fc.js"><link rel="prefetch" href="/assets/js/3.adf44674.js"><link rel="prefetch" href="/assets/js/30.4eff5a96.js"><link rel="prefetch" href="/assets/js/31.03c7be71.js"><link rel="prefetch" href="/assets/js/32.98bfb39f.js"><link rel="prefetch" href="/assets/js/33.8f5cf37f.js"><link rel="prefetch" href="/assets/js/34.20f4dcb7.js"><link rel="prefetch" href="/assets/js/35.d8cc0ea8.js"><link rel="prefetch" href="/assets/js/36.d12e6353.js"><link rel="prefetch" href="/assets/js/37.46ce8094.js"><link rel="prefetch" href="/assets/js/38.97166b8d.js"><link rel="prefetch" href="/assets/js/39.7ca66a04.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.2fdca5f5.js"><link rel="prefetch" href="/assets/js/41.6b15cd35.js"><link rel="prefetch" href="/assets/js/42.410f8b56.js"><link rel="prefetch" href="/assets/js/43.0344051b.js"><link rel="prefetch" href="/assets/js/44.bd26d4eb.js"><link rel="prefetch" href="/assets/js/45.6cd24a59.js"><link rel="prefetch" href="/assets/js/46.b02a9266.js"><link rel="prefetch" href="/assets/js/47.70ad9544.js"><link rel="prefetch" href="/assets/js/48.3c33568f.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.6b7afb82.js"><link rel="prefetch" href="/assets/js/51.e4e0886f.js"><link rel="prefetch" href="/assets/js/52.d3fe5dd7.js"><link rel="prefetch" href="/assets/js/53.fad47cb5.js"><link rel="prefetch" href="/assets/js/54.daa73b8a.js"><link rel="prefetch" href="/assets/js/55.4d44ab03.js"><link rel="prefetch" href="/assets/js/56.4cc2b49f.js"><link rel="prefetch" href="/assets/js/57.bac05a1a.js"><link rel="prefetch" href="/assets/js/58.05c21273.js"><link rel="prefetch" href="/assets/js/59.c5d77314.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.e4216420.js"><link rel="prefetch" href="/assets/js/61.53a8addc.js"><link rel="prefetch" href="/assets/js/62.7d9f92c4.js"><link rel="prefetch" href="/assets/js/63.291fd53e.js"><link rel="prefetch" href="/assets/js/64.5ef32a02.js"><link rel="prefetch" href="/assets/js/65.f088ee15.js"><link rel="prefetch" href="/assets/js/66.a0eeb533.js"><link rel="prefetch" href="/assets/js/67.8f45d290.js"><link rel="prefetch" href="/assets/js/68.12d678b9.js"><link rel="prefetch" href="/assets/js/69.facc6fb8.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.dd73f5df.js"><link rel="prefetch" href="/assets/js/71.415f11dd.js"><link rel="prefetch" href="/assets/js/72.8b4369b5.js"><link rel="prefetch" href="/assets/js/73.39ab9ab4.js"><link rel="prefetch" href="/assets/js/74.5292e059.js"><link rel="prefetch" href="/assets/js/75.64037365.js"><link rel="prefetch" href="/assets/js/76.d6d95a9f.js"><link rel="prefetch" href="/assets/js/77.dbe91bd0.js"><link rel="prefetch" href="/assets/js/78.a0ac55ee.js"><link rel="prefetch" href="/assets/js/79.751c3a45.js"><link rel="prefetch" href="/assets/js/8.c2feea25.js"><link rel="prefetch" href="/assets/js/80.2856c7b6.js"><link rel="prefetch" href="/assets/js/81.90837a30.js"><link rel="prefetch" href="/assets/js/82.6f58e4fa.js"><link rel="prefetch" href="/assets/js/83.6017beb6.js"><link rel="prefetch" href="/assets/js/84.3bbfaa7a.js"><link rel="prefetch" href="/assets/js/85.7b2c7a1a.js"><link rel="prefetch" href="/assets/js/86.99008a18.js"><link rel="prefetch" href="/assets/js/87.670c2243.js"><link rel="prefetch" href="/assets/js/88.9ca9bcfd.js"><link rel="prefetch" href="/assets/js/89.79012b3d.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.429b2e85.js"><link rel="prefetch" href="/assets/js/91.d0fcf8f7.js"><link rel="prefetch" href="/assets/js/92.0b0e258b.js"><link rel="prefetch" href="/assets/js/93.7491157b.js"><link rel="prefetch" href="/assets/js/94.7264a52f.js"><link rel="prefetch" href="/assets/js/95.466b789d.js"><link rel="prefetch" href="/assets/js/96.7a652042.js"><link rel="prefetch" href="/assets/js/97.5703188e.js"><link rel="prefetch" href="/assets/js/98.d8ca6399.js"><link rel="prefetch" href="/assets/js/99.fe09dab4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link router-link-active">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link router-link-active">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/linux/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux/linux/linux-order.html" class="sidebar-link">Linux 常用命令</a></li><li><a href="/linux/linux/get-file_name.html" aria-current="page" class="active sidebar-link">获取当前文件夹下所有文件名称</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux/get-file_name.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/linux/linux/get-file_name.html#解决方法" class="sidebar-link">解决方法</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p>业务需求：提取出当前文件夹下所有文件名称。</p> <h2 id="解决方法"><a href="#解决方法" class="header-anchor">#</a> 解决方法</h2> <h3 id="windows"><a href="#windows" class="header-anchor">#</a> Windows</h3> <p>Windows 中可以使用 <code>dir</code> 命令，打印目录下文件的信息。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">dir</span>
+ 驱动器 C 中的卷是 Windows
+ 卷的序列号是 9C8F-DA4C
+
+ C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper 的目录
+
+<span class="token number">2021</span>/08/17  <span class="token number">11</span>:54    <span class="token operator">&lt;</span>DIR<span class="token operator">&gt;</span>          <span class="token builtin class-name">.</span>
+<span class="token number">2021</span>/08/17  <span class="token number">11</span>:54    <span class="token operator">&lt;</span>DIR<span class="token operator">&gt;</span>          <span class="token punctuation">..</span>
+<span class="token number">2021</span>/08/17  <span class="token number">12</span>:13               <span class="token number">160</span> file.txt
+<span class="token number">2021</span>/08/17  <span class="token number">11</span>:59    <span class="token operator">&lt;</span>DIR<span class="token operator">&gt;</span>          folder
+<span class="token number">2021</span>/03/23  <span class="token number">15</span>:54           <span class="token number">290,967</span> wallhaven-2em38y.jpg
+<span class="token number">2021</span>/03/23  <span class="token number">15</span>:54           <span class="token number">113,151</span> wallhaven-4vz9jl.png
+<span class="token number">2021</span>/03/23  <span class="token number">15</span>:54           <span class="token number">791,059</span> wallhaven-6k75kw.jpg
+<span class="token number">2021</span>/03/23  <span class="token number">15</span>:54         <span class="token number">1,607</span>,558 wallhaven-6ojrkw.jpg
+<span class="token number">2021</span>/03/23  <span class="token number">15</span>:54           <span class="token number">678,308</span> wallhaven-9m56vd.jpg
+               <span class="token number">6</span> 个文件      <span class="token number">3,481</span>,203 字节
+               <span class="token number">3</span> 个目录 <span class="token number">125,481</span>,152,512 可用字节
+</code></pre></div><p>使用 <code>dir /b</code> 来操作，只显示文件名称，忽略详细信息</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">dir</span> /b
+file.txt
+folder	<span class="token comment"># 文件夹</span>
+wallhaven-2em38y.jpg
+wallhaven-4vz9jl.png
+wallhaven-6k75kw.jpg
+wallhaven-6ojrkw.jpg
+wallhaven-9m56vd.jpg
+</code></pre></div><p>使用 <code>&gt;</code> 进行输出重定向，创建并输出到 <code>file.txt</code> 文件</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">dir</span> /b <span class="token operator">&gt;</span>file.txt
+
+λ <span class="token function">cat</span> file.txt
+file.txt
+folder	<span class="token comment"># 文件夹</span>
+wallhaven-2em38y.jpg
+wallhaven-4vz9jl.png
+wallhaven-6k75kw.jpg
+wallhaven-6ojrkw.jpg
+wallhaven-9m56vd.jpg
+</code></pre></div><p>因为 <code>folder</code> 是一个文件夹，同时也要获取子文件夹下的文件。</p> <p>可以使用 <code>dir</code> 的 <code>/s/b</code> 属性来打印出来，但是这样做打印出来的是绝对地址，需要做相应处理。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">dir</span> /s/b <span class="token operator">&gt;</span>file.txt
+
+λ <span class="token function">cat</span> file.txt
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>file.txt
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>folder
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>wallhaven-2em38y.jpg
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>wallhaven-4vz9jl.png
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>wallhaven-6k75kw.jpg
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>wallhaven-6ojrkw.jpg
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>wallhaven-9m56vd.jpg
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>folder<span class="token punctuation">\</span><span class="token number">123</span>.jpg
+</code></pre></div><p>觉得这种方法不好用，也可以进入每个文件夹中执行 <code>dir</code> 输出命令。</p> <p>注意：<code>&gt;</code> 代表的是覆盖输出，会覆盖之前的内容。</p> <p>这种情况下，可以使用 <code>&gt;&gt;</code> 来进行追加输出，不会覆盖之前的内容。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper
+λ <span class="token function">dir</span> /b <span class="token operator">&gt;</span>file.txt
+
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper
+λ <span class="token builtin class-name">cd</span> folder<span class="token punctuation">\</span>
+
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>folder
+λ <span class="token function">dir</span> /b <span class="token operator">&gt;&gt;</span><span class="token punctuation">..</span><span class="token punctuation">\</span>file.txt
+
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper<span class="token punctuation">\</span>folder 
+λ <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span><span class="token punctuation">\</span>
+
+C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>EDZ<span class="token punctuation">\</span>Desktop<span class="token punctuation">\</span>wallpaper
+λ <span class="token function">cat</span> file.txt
+file.txt
+folder	<span class="token comment"># 文件夹</span>
+wallhaven-2em38y.jpg
+wallhaven-4vz9jl.png
+wallhaven-6k75kw.jpg
+wallhaven-6ojrkw.jpg
+wallhaven-9m56vd.jpg
+<span class="token number">123</span>.jpg
+</code></pre></div><h3 id="linux"><a href="#linux" class="header-anchor">#</a> Linux</h3> <p>同理，Linux 中可以使用 <code>ls</code> 来进行对应查看及输出。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">ls</span>
+file.txt  folder/  wallhaven-2em38y.jpg  wallhaven-4vz9jl.png  wallhaven-6k75kw.jpg  wallhaven-6ojrkw.jpg  wallhaven-9m56vd.jpg
+
+λ <span class="token function">ls</span> <span class="token operator">&gt;</span>file.txt
+
+λ <span class="token function">cat</span> file.txt
+file.txt
+folder/
+wallhaven-2em38y.jpg
+wallhaven-4vz9jl.png
+wallhaven-6k75kw.jpg
+wallhaven-6ojrkw.jpg
+wallhaven-9m56vd.jpg
+</code></pre></div><p>虽然 <code>cat</code> 出来文件夹是正常显示，但是打开 <code>file.txt</code> 文件查看，文件夹是乱码显示的，需注意！</p> <p>如果也要显示出子级文件，可以使用 <code>ls -R</code> 来查看。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">ls</span> -R
+.:
+file.txt  folder/  wallhaven-2em38y.jpg  wallhaven-4vz9jl.png  wallhaven-6k75kw.jpg  wallhaven-6ojrkw.jpg  wallhaven-9m56vd.jpg
+
+./folder:
+<span class="token number">123</span>.jpg
+</code></pre></div><p>使用 <code>&gt;</code> 来输出。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">ls</span> -R <span class="token operator">&gt;</span>file.txt
+
+λ <span class="token function">cat</span> file.txt
+.:
+file.txt
+folder/
+wallhaven-2em38y.jpg
+wallhaven-4vz9jl.png
+wallhaven-6k75kw.jpg
+wallhaven-6ojrkw.jpg
+wallhaven-9m56vd.jpg
+
+./folder:
+<span class="token number">123</span>.jpg
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/linux/linux/get-file_name.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/8/17 上午4:21:59</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/linux/linux-order.html" class="prev">
+        Linux 常用命令
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.482146d8.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/49.04d5f84d.js" defer></script>
+  </body>
+</html>
