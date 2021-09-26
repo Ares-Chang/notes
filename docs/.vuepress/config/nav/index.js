@@ -16,6 +16,7 @@ module.exports = [
 					{ text: 'iView', link: '/web/iview/' },
 					{ text: 'uni-app', link: '/web/uni-app/' },
 					{ text: 'webpack', link: '/web/webpack/' },
+					{ text: 'echarts', link: '/web/echarts/' },
 				]
 			}
 		]
