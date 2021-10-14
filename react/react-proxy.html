@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React Proxy 代理配置 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.f0b91833.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/62.64120b5d.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.5746a5b7.js"><link rel="prefetch" href="/assets/js/101.18f291a2.js"><link rel="prefetch" href="/assets/js/102.e765004c.js"><link rel="prefetch" href="/assets/js/103.64dde39c.js"><link rel="prefetch" href="/assets/js/104.fa914297.js"><link rel="prefetch" href="/assets/js/105.f18d57ea.js"><link rel="prefetch" href="/assets/js/106.cdc38e14.js"><link rel="prefetch" href="/assets/js/107.a83eeaa7.js"><link rel="prefetch" href="/assets/js/108.9af69b7b.js"><link rel="prefetch" href="/assets/js/109.9778839b.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.dd8ae609.js"><link rel="prefetch" href="/assets/js/111.7ec25700.js"><link rel="prefetch" href="/assets/js/112.161e1bef.js"><link rel="prefetch" href="/assets/js/113.0cb13ee5.js"><link rel="prefetch" href="/assets/js/114.f8ce8e83.js"><link rel="prefetch" href="/assets/js/115.5befd867.js"><link rel="prefetch" href="/assets/js/116.ac8943fe.js"><link rel="prefetch" href="/assets/js/117.cbc7958b.js"><link rel="prefetch" href="/assets/js/118.43f05861.js"><link rel="prefetch" href="/assets/js/119.1a6bf5a2.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.6fde1d12.js"><link rel="prefetch" href="/assets/js/121.b8b2b319.js"><link rel="prefetch" href="/assets/js/122.8d9aff0a.js"><link rel="prefetch" href="/assets/js/123.72d56907.js"><link rel="prefetch" href="/assets/js/124.78b2a054.js"><link rel="prefetch" href="/assets/js/125.5ab426aa.js"><link rel="prefetch" href="/assets/js/126.559d998b.js"><link rel="prefetch" href="/assets/js/127.49cc48c0.js"><link rel="prefetch" href="/assets/js/128.f74e4f3e.js"><link rel="prefetch" href="/assets/js/129.ae1262d6.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.cf7f5fad.js"><link rel="prefetch" href="/assets/js/131.10672ea7.js"><link rel="prefetch" href="/assets/js/132.d7ae0c20.js"><link rel="prefetch" href="/assets/js/133.e3a9a832.js"><link rel="prefetch" href="/assets/js/134.e8cd089d.js"><link rel="prefetch" href="/assets/js/135.23f4c7ea.js"><link rel="prefetch" href="/assets/js/136.669f82be.js"><link rel="prefetch" href="/assets/js/137.ea466d38.js"><link rel="prefetch" href="/assets/js/138.7e49a680.js"><link rel="prefetch" href="/assets/js/139.653f08fd.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/140.2a5a69b0.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.547c33bb.js"><link rel="prefetch" href="/assets/js/19.2421bab7.js"><link rel="prefetch" href="/assets/js/20.fc15f2e9.js"><link rel="prefetch" href="/assets/js/21.c63b6f5c.js"><link rel="prefetch" href="/assets/js/22.0a3306ff.js"><link rel="prefetch" href="/assets/js/23.8536550f.js"><link rel="prefetch" href="/assets/js/24.8b996cd6.js"><link rel="prefetch" href="/assets/js/25.811a838b.js"><link rel="prefetch" href="/assets/js/26.ce11ead0.js"><link rel="prefetch" href="/assets/js/27.0d5ab367.js"><link rel="prefetch" href="/assets/js/28.3aa99f15.js"><link rel="prefetch" href="/assets/js/29.384ee5fc.js"><link rel="prefetch" href="/assets/js/3.c09dc295.js"><link rel="prefetch" href="/assets/js/30.4eff5a96.js"><link rel="prefetch" href="/assets/js/31.03c7be71.js"><link rel="prefetch" href="/assets/js/32.98bfb39f.js"><link rel="prefetch" href="/assets/js/33.8f5cf37f.js"><link rel="prefetch" href="/assets/js/34.20f4dcb7.js"><link rel="prefetch" href="/assets/js/35.d8cc0ea8.js"><link rel="prefetch" href="/assets/js/36.d12e6353.js"><link rel="prefetch" href="/assets/js/37.46ce8094.js"><link rel="prefetch" href="/assets/js/38.97166b8d.js"><link rel="prefetch" href="/assets/js/39.7ca66a04.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.75c0ebbd.js"><link rel="prefetch" href="/assets/js/41.d97d3ad5.js"><link rel="prefetch" href="/assets/js/42.410f8b56.js"><link rel="prefetch" href="/assets/js/43.0344051b.js"><link rel="prefetch" href="/assets/js/44.50d61267.js"><link rel="prefetch" href="/assets/js/45.db1b8298.js"><link rel="prefetch" href="/assets/js/46.b02a9266.js"><link rel="prefetch" href="/assets/js/47.8025b656.js"><link rel="prefetch" href="/assets/js/48.3c33568f.js"><link rel="prefetch" href="/assets/js/49.04d5f84d.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.6b7afb82.js"><link rel="prefetch" href="/assets/js/51.e4e0886f.js"><link rel="prefetch" href="/assets/js/52.d3fe5dd7.js"><link rel="prefetch" href="/assets/js/53.fad47cb5.js"><link rel="prefetch" href="/assets/js/54.daa73b8a.js"><link rel="prefetch" href="/assets/js/55.846a049c.js"><link rel="prefetch" href="/assets/js/56.cd7f62f2.js"><link rel="prefetch" href="/assets/js/57.b305b82c.js"><link rel="prefetch" href="/assets/js/58.26dc0c1c.js"><link rel="prefetch" href="/assets/js/59.0d63d80c.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.e4216420.js"><link rel="prefetch" href="/assets/js/61.4cb17f19.js"><link rel="prefetch" href="/assets/js/63.05b8eabe.js"><link rel="prefetch" href="/assets/js/64.b2dea53f.js"><link rel="prefetch" href="/assets/js/65.fd0095c8.js"><link rel="prefetch" href="/assets/js/66.c13bae2c.js"><link rel="prefetch" href="/assets/js/67.222deac6.js"><link rel="prefetch" href="/assets/js/68.6ea2667d.js"><link rel="prefetch" href="/assets/js/69.29d630fd.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.c0dd896b.js"><link rel="prefetch" href="/assets/js/71.03bd2664.js"><link rel="prefetch" href="/assets/js/72.f41ee87e.js"><link rel="prefetch" href="/assets/js/73.a8e86678.js"><link rel="prefetch" href="/assets/js/74.122d6883.js"><link rel="prefetch" href="/assets/js/75.653e7dcd.js"><link rel="prefetch" href="/assets/js/76.30417d23.js"><link rel="prefetch" href="/assets/js/77.c8c9ab70.js"><link rel="prefetch" href="/assets/js/78.7f2fcab7.js"><link rel="prefetch" href="/assets/js/79.69f57091.js"><link rel="prefetch" href="/assets/js/8.c2feea25.js"><link rel="prefetch" href="/assets/js/80.74057370.js"><link rel="prefetch" href="/assets/js/81.c9c3fb4a.js"><link rel="prefetch" href="/assets/js/82.3a406066.js"><link rel="prefetch" href="/assets/js/83.94820160.js"><link rel="prefetch" href="/assets/js/84.a3c95010.js"><link rel="prefetch" href="/assets/js/85.3f9c6499.js"><link rel="prefetch" href="/assets/js/86.3e9b7cfe.js"><link rel="prefetch" href="/assets/js/87.8b71e98e.js"><link rel="prefetch" href="/assets/js/88.b2d0843d.js"><link rel="prefetch" href="/assets/js/89.4edefc8a.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.5d3f7b0b.js"><link rel="prefetch" href="/assets/js/91.1f5950fd.js"><link rel="prefetch" href="/assets/js/92.941ad6de.js"><link rel="prefetch" href="/assets/js/93.998c8a79.js"><link rel="prefetch" href="/assets/js/94.2784ec35.js"><link rel="prefetch" href="/assets/js/95.70756aaf.js"><link rel="prefetch" href="/assets/js/96.ddc29a4d.js"><link rel="prefetch" href="/assets/js/97.a9797c48.js"><link rel="prefetch" href="/assets/js/98.9e26e606.js"><link rel="prefetch" href="/assets/js/99.3001ce10.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/react/react-staging.html" class="sidebar-link">React 脚手架安装</a></li><li><a href="/react/jsx-basic-study.html" class="sidebar-link">JSX 基础语法</a></li><li><a href="/react/react-proxy.html" aria-current="page" class="active sidebar-link">React Proxy 代理配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/react-proxy.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/react/react-proxy.html#原理" class="sidebar-link">原理</a></li><li class="sidebar-sub-header"><a href="/react/react-proxy.html#单地址" class="sidebar-link">单地址</a></li><li class="sidebar-sub-header"><a href="/react/react-proxy.html#多地址-推荐" class="sidebar-link">多地址（推荐）</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p>由于浏览器的同源策略影响，我们无法进行不同域名下的数据请求。</p> <p>但是我们可以通过 Proxy 来进行代理访问请求。</p> <h2 id="原理"><a href="#原理" class="header-anchor">#</a> 原理</h2> <p>Proxy 原理就是在本地开启一个微型服务器，我们项目请求链接到微型服务器上，然后再通过微型服务器转发到远程服务器。</p> <p>因为服务器到服务器是没有同源影响的，所以这样可以有效解决跨域问题。</p> <p>同时因为这个微型服务是开在我们本地的，和项目是处于同一端口上的，也是属于同源，所以不会触发跨域问题。</p> <h2 id="单地址"><a href="#单地址" class="header-anchor">#</a> 单地址</h2> <p>可以在 <code>package.json</code> 文件中添加以下代码块来进行代理：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;basic_study&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;private&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// ... 省略配置</span>
+  <span class="token property">&quot;proxy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://localhost:5000&quot;</span> <span class="token comment">// 这里填写代理目标地址</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p><strong>文件修改完成之后需要重启项目，否则不生效！！！</strong></p></blockquote> <p>使用时可以直接填写项目地址请求：</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">&quot;axios&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">GetDataList</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * @description 学习测试 axios 请求及 proxy 代理
+   */</span>
+  <span class="token function-variable function">getStudentData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 代理服务和项目运行在同一地址，可直接使用 3000 端口</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token string">&quot;http://localhost:3000/students&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>getStudentData<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">点击请求学生数据</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>但是这样配置只能有一个跨域请求地址，如果需要配置多个目标地址，这种写法就没办法满足了。</p> <h2 id="多地址-推荐"><a href="#多地址-推荐" class="header-anchor">#</a> 多地址（推荐）</h2> <p>在 <code>src</code> 目录下新建一个 <code>setupProxy.js</code> 文件，在文件中写入以下代码块：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description Proxy 全局代理配置
+ */</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;http-proxy-middleware&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">app</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+    <span class="token comment">// /api1 为 http://localhost:5000 别名，拦截请求检测到 /api1 会自动匹配此规则</span>
+    <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">&quot;/api1&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">&quot;http://localhost:5000&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 转发目标地址</span>
+      <span class="token comment">// 控制服务器收到的响应头中 Host 字段的值 true 为 目标地址，false 为 项目地址</span>
+      changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 默认值为 false，需改为 true</span>
+      pathRewrite<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">&quot;^/api1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 重写请求路径，将 /api1 替换为空串</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">&quot;/api2&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      target<span class="token operator">:</span> <span class="token string">&quot;http://localhost:5001&quot;</span><span class="token punctuation">,</span>
+      changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      pathRewrite<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">&quot;^/api2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// ... 如果还有别的配置项，可以继续向下写</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>http-proxy-middleware</code> 模块在创建项目时已经被安装好，在 <code>package.json</code> 文件中的配置也是使用的这个模块，只是默认已经配置好了罢了。</p> <blockquote><p><strong>文件创建完成之后需要重启项目，否则不生效！！！</strong></p></blockquote> <p>使用时需要在项目地址后添加 <code>/cname</code> 来请求：</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">&quot;axios&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">GetDataList</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * @description 学习测试 axios 请求及 proxy 代理
+   */</span>
+  <span class="token function-variable function">getStudentData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 项目地址之前添加 /api1</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token string">&quot;http://localhost:3000/api1/students&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">getCarData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 项目地址之前添加 /api2</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token string">&quot;http://localhost:3000/api2/cars&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>getStudentData<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">点击请求学生数据</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>getCarData<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">点击请求汽车数据</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/react/react-proxy.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/10/14 上午8:07:29</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/jsx-basic-study.html" class="prev">
+        JSX 基础语法
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f0b91833.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/62.64120b5d.js" defer></script>
+  </body>
+</html>
