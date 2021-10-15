@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PubSubJS 发布订阅机制 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.6a4f524c.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/62.5fbdde88.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.3d76343e.js"><link rel="prefetch" href="/assets/js/101.992e4c74.js"><link rel="prefetch" href="/assets/js/102.19045359.js"><link rel="prefetch" href="/assets/js/103.b199cefa.js"><link rel="prefetch" href="/assets/js/104.a9002585.js"><link rel="prefetch" href="/assets/js/105.aa188716.js"><link rel="prefetch" href="/assets/js/106.c3547d4f.js"><link rel="prefetch" href="/assets/js/107.36eacf9e.js"><link rel="prefetch" href="/assets/js/108.3624eeac.js"><link rel="prefetch" href="/assets/js/109.f04e4400.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.ba37f8f5.js"><link rel="prefetch" href="/assets/js/111.7c9ad84c.js"><link rel="prefetch" href="/assets/js/112.49bece19.js"><link rel="prefetch" href="/assets/js/113.c8962d9e.js"><link rel="prefetch" href="/assets/js/114.600cdbb2.js"><link rel="prefetch" href="/assets/js/115.45af0fdc.js"><link rel="prefetch" href="/assets/js/116.28ddbd23.js"><link rel="prefetch" href="/assets/js/117.dc772a0a.js"><link rel="prefetch" href="/assets/js/118.997a44fd.js"><link rel="prefetch" href="/assets/js/119.64b73c50.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.ca7237ca.js"><link rel="prefetch" href="/assets/js/121.320cd3fa.js"><link rel="prefetch" href="/assets/js/122.148faedf.js"><link rel="prefetch" href="/assets/js/123.b46c4acf.js"><link rel="prefetch" href="/assets/js/124.5ee35549.js"><link rel="prefetch" href="/assets/js/125.2b5cdd03.js"><link rel="prefetch" href="/assets/js/126.83c29500.js"><link rel="prefetch" href="/assets/js/127.a95d87da.js"><link rel="prefetch" href="/assets/js/128.34127f85.js"><link rel="prefetch" href="/assets/js/129.260ebb1b.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.8570558b.js"><link rel="prefetch" href="/assets/js/131.8265261c.js"><link rel="prefetch" href="/assets/js/132.146f079d.js"><link rel="prefetch" href="/assets/js/133.547caa7a.js"><link rel="prefetch" href="/assets/js/134.889ab9a4.js"><link rel="prefetch" href="/assets/js/135.9303fd7b.js"><link rel="prefetch" href="/assets/js/136.663aaa70.js"><link rel="prefetch" href="/assets/js/137.44d794aa.js"><link rel="prefetch" href="/assets/js/138.c7d1ca5f.js"><link rel="prefetch" href="/assets/js/139.1a07c71c.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/140.311c3d75.js"><link rel="prefetch" href="/assets/js/141.186d3237.js"><link rel="prefetch" href="/assets/js/15.f4fab799.js"><link rel="prefetch" href="/assets/js/16.12708f06.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.547c33bb.js"><link rel="prefetch" href="/assets/js/19.2421bab7.js"><link rel="prefetch" href="/assets/js/20.fc15f2e9.js"><link rel="prefetch" href="/assets/js/21.c63b6f5c.js"><link rel="prefetch" href="/assets/js/22.0a3306ff.js"><link rel="prefetch" href="/assets/js/23.8536550f.js"><link rel="prefetch" href="/assets/js/24.8b996cd6.js"><link rel="prefetch" href="/assets/js/25.811a838b.js"><link rel="prefetch" href="/assets/js/26.ce11ead0.js"><link rel="prefetch" href="/assets/js/27.0d5ab367.js"><link rel="prefetch" href="/assets/js/28.3aa99f15.js"><link rel="prefetch" href="/assets/js/29.384ee5fc.js"><link rel="prefetch" href="/assets/js/3.69d8133b.js"><link rel="prefetch" href="/assets/js/30.4eff5a96.js"><link rel="prefetch" href="/assets/js/31.03c7be71.js"><link rel="prefetch" href="/assets/js/32.98bfb39f.js"><link rel="prefetch" href="/assets/js/33.8f5cf37f.js"><link rel="prefetch" href="/assets/js/34.20f4dcb7.js"><link rel="prefetch" href="/assets/js/35.d8cc0ea8.js"><link rel="prefetch" href="/assets/js/36.d12e6353.js"><link rel="prefetch" href="/assets/js/37.dc37b7c1.js"><link rel="prefetch" href="/assets/js/38.6fb4b634.js"><link rel="prefetch" href="/assets/js/39.5cc41e52.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.f1230707.js"><link rel="prefetch" href="/assets/js/41.d97d3ad5.js"><link rel="prefetch" href="/assets/js/42.410f8b56.js"><link rel="prefetch" href="/assets/js/43.0344051b.js"><link rel="prefetch" href="/assets/js/44.50d61267.js"><link rel="prefetch" href="/assets/js/45.7a34256e.js"><link rel="prefetch" href="/assets/js/46.76fa2630.js"><link rel="prefetch" href="/assets/js/47.8025b656.js"><link rel="prefetch" href="/assets/js/48.3c33568f.js"><link rel="prefetch" href="/assets/js/49.04d5f84d.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.6b7afb82.js"><link rel="prefetch" href="/assets/js/51.e4e0886f.js"><link rel="prefetch" href="/assets/js/52.d3fe5dd7.js"><link rel="prefetch" href="/assets/js/53.fad47cb5.js"><link rel="prefetch" href="/assets/js/54.9063f70f.js"><link rel="prefetch" href="/assets/js/55.a3255865.js"><link rel="prefetch" href="/assets/js/56.1955e8f3.js"><link rel="prefetch" href="/assets/js/57.bac05a1a.js"><link rel="prefetch" href="/assets/js/58.26dc0c1c.js"><link rel="prefetch" href="/assets/js/59.9f2ef4d6.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.7de7ff10.js"><link rel="prefetch" href="/assets/js/61.4cb17f19.js"><link rel="prefetch" href="/assets/js/63.414419b3.js"><link rel="prefetch" href="/assets/js/64.01799152.js"><link rel="prefetch" href="/assets/js/65.65e378e3.js"><link rel="prefetch" href="/assets/js/66.c286fff9.js"><link rel="prefetch" href="/assets/js/67.fcc052fc.js"><link rel="prefetch" href="/assets/js/68.5f29b791.js"><link rel="prefetch" href="/assets/js/69.07391195.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.25b57ea6.js"><link rel="prefetch" href="/assets/js/71.b545da7c.js"><link rel="prefetch" href="/assets/js/72.919c173d.js"><link rel="prefetch" href="/assets/js/73.4045f70b.js"><link rel="prefetch" href="/assets/js/74.877c3497.js"><link rel="prefetch" href="/assets/js/75.c7732feb.js"><link rel="prefetch" href="/assets/js/76.0cc7fa7f.js"><link rel="prefetch" href="/assets/js/77.bdf446ac.js"><link rel="prefetch" href="/assets/js/78.0af4db5b.js"><link rel="prefetch" href="/assets/js/79.c48fe762.js"><link rel="prefetch" href="/assets/js/8.c2feea25.js"><link rel="prefetch" href="/assets/js/80.8b1d4f0a.js"><link rel="prefetch" href="/assets/js/81.16ad8bb5.js"><link rel="prefetch" href="/assets/js/82.5bbb0362.js"><link rel="prefetch" href="/assets/js/83.3b30a5f0.js"><link rel="prefetch" href="/assets/js/84.e99405ba.js"><link rel="prefetch" href="/assets/js/85.0963384d.js"><link rel="prefetch" href="/assets/js/86.a7666485.js"><link rel="prefetch" href="/assets/js/87.7d8cb6f0.js"><link rel="prefetch" href="/assets/js/88.09b9e640.js"><link rel="prefetch" href="/assets/js/89.7d88ad30.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.15bf91ad.js"><link rel="prefetch" href="/assets/js/91.9df5eca6.js"><link rel="prefetch" href="/assets/js/92.6b6f3116.js"><link rel="prefetch" href="/assets/js/93.549cd904.js"><link rel="prefetch" href="/assets/js/94.c1453c2e.js"><link rel="prefetch" href="/assets/js/95.096793f7.js"><link rel="prefetch" href="/assets/js/96.7e3e3849.js"><link rel="prefetch" href="/assets/js/97.beeb18bb.js"><link rel="prefetch" href="/assets/js/98.da31294a.js"><link rel="prefetch" href="/assets/js/99.cf9144b7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/react/react-staging.html" class="sidebar-link">React 脚手架安装</a></li><li><a href="/react/jsx-basic-study.html" class="sidebar-link">JSX 基础语法</a></li><li><a href="/react/pubsubjs.html" aria-current="page" class="active sidebar-link">PubSubJS 发布订阅机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/pubsubjs.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/react/pubsubjs.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/react/pubsubjs.html#案例" class="sidebar-link">案例</a></li></ul></li><li><a href="/react/react-proxy.html" class="sidebar-link">React Proxy 代理配置</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p><code>PubSub</code> 解释为 '发布订阅'。</p> <p>'发布订阅' 的流程简单理解为 '发布信息 -&gt; 订阅信息'。</p> <p>刚好，发布订阅机制可以有效的解决 React 中兄弟组件通信困难的问题。</p> <p>所以，<a href="https://github.com/mroderick/PubSubJS" target="_blank" rel="noopener noreferrer"><code>PubSubJS</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 应运而生。</p> <p><a href="https://github.com/mroderick/PubSubJS" target="_blank" rel="noopener noreferrer"><code>PubSubJS</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个用 JavaScript 编写的基于主题的发布/订阅库。</p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p><code>PubSubJS</code> 可以直接使用 <code>npm/yarn</code> 下载依赖，运行以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> pubsub-js
+<span class="token comment"># yarn add pubsub-js</span>
+</code></pre></div><p><code>PubSubJS</code> 通过 <code>subscribe</code> 方法订阅消息，通过 <code>publish</code> 方法发布消息。</p> <p>官方中写入了一小段代码块可以帮助理解：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> PubSub <span class="token keyword">from</span> <span class="token string">&quot;pubsub-js&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// CommonJS 使用以下方法引入</span>
+<span class="token comment">// const PubSub = require('pubsub-js');</span>
+
+<span class="token comment">// 创建一个函数来订阅主题</span>
+<span class="token keyword">var</span> <span class="token function-variable function">mySubscriber</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">msg<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// msg 返回主题名称</span>
+  <span class="token comment">// data 返回主题发布信息内容</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 将该函数添加到特定主题的订阅者列表中</span>
+<span class="token comment">// 主题订阅后会返回的一个 token，我们可以保留此 token 以便能够取消订阅</span>
+<span class="token keyword">var</span> token <span class="token operator">=</span> PubSub<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">&quot;MY TOPIC&quot;</span><span class="token punctuation">,</span> mySubscriber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 发布信息</span>
+PubSub<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">&quot;MY TOPIC&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;hello world!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 发布信息的同步方法，小心使用！！！</span>
+PubSub<span class="token punctuation">.</span><span class="token function">publishSync</span><span class="token punctuation">(</span><span class="token string">&quot;MY TOPIC&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;hello world!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>这只是 <code>PubSubJS</code> 的几个简单用法，如果想要详细了解可以查看 <a href="https://github.com/mroderick/PubSubJS" target="_blank" rel="noopener noreferrer">PubSubJS GitHub 仓库<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="案例"><a href="#案例" class="header-anchor">#</a> 案例</h2> <p>以下案例 <code>Header</code> 组件和 <code>List</code> 组件为兄弟关系，点击 <code>Header</code> 组件会给 <code>List</code> 组件传递信息。</p> <p><strong>Header 组件:</strong></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> publish <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;pubsub-js&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Header</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">handleSearch</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 发布一个名为 Hello 的主题</span>
+    <span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">&quot;Hello&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;我是 Header 组件发送的问候！&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleSearch<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">点击给 List 发送信息</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>List 组件:</strong></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PubSub <span class="token keyword">from</span> <span class="token string">&quot;pubsub-js&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">List</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    Message<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 展示信息，存储 Header 发送的信息</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 订阅名为 Hello 的消息主题</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>token <span class="token operator">=</span> PubSub<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">&quot;Hello&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">msg<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        Message<span class="token operator">:</span> data<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 在组件销毁之前取消订阅</span>
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    PubSub<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> Message <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>Message<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/react/pubsubjs.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/10/15 上午7:20:54</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/jsx-basic-study.html" class="prev">
+        JSX 基础语法
+      </a></span> <span class="next"><a href="/react/react-proxy.html">
+        React Proxy 代理配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6a4f524c.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/62.5fbdde88.js" defer></script>
+  </body>
+</html>
