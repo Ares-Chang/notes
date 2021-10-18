@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>配置 7z 命令行模式 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.23b04523.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/18.8dd97697.js" as="script"><link rel="prefetch" href="/assets/js/10.85f46616.js"><link rel="prefetch" href="/assets/js/100.96506bfa.js"><link rel="prefetch" href="/assets/js/101.f7646b1a.js"><link rel="prefetch" href="/assets/js/102.97ea7f74.js"><link rel="prefetch" href="/assets/js/103.495c273d.js"><link rel="prefetch" href="/assets/js/104.325d7ee0.js"><link rel="prefetch" href="/assets/js/105.9241abd8.js"><link rel="prefetch" href="/assets/js/106.4bd59374.js"><link rel="prefetch" href="/assets/js/107.8292a152.js"><link rel="prefetch" href="/assets/js/108.78bc6c14.js"><link rel="prefetch" href="/assets/js/109.baff1b1b.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.32b5f59d.js"><link rel="prefetch" href="/assets/js/111.9ed16c9c.js"><link rel="prefetch" href="/assets/js/112.f929170b.js"><link rel="prefetch" href="/assets/js/113.3ef1d976.js"><link rel="prefetch" href="/assets/js/114.d108b756.js"><link rel="prefetch" href="/assets/js/115.18cf1c77.js"><link rel="prefetch" href="/assets/js/116.a37980b0.js"><link rel="prefetch" href="/assets/js/117.4d0ce0e1.js"><link rel="prefetch" href="/assets/js/118.52b427d1.js"><link rel="prefetch" href="/assets/js/119.277c2db0.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.36b644a5.js"><link rel="prefetch" href="/assets/js/121.56971759.js"><link rel="prefetch" href="/assets/js/122.23592e80.js"><link rel="prefetch" href="/assets/js/123.7122b536.js"><link rel="prefetch" href="/assets/js/124.f171073c.js"><link rel="prefetch" href="/assets/js/125.c07bbd39.js"><link rel="prefetch" href="/assets/js/126.f023532a.js"><link rel="prefetch" href="/assets/js/127.79f948b3.js"><link rel="prefetch" href="/assets/js/128.88295641.js"><link rel="prefetch" href="/assets/js/129.c2259bdb.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.3347c86c.js"><link rel="prefetch" href="/assets/js/131.bfb46e9c.js"><link rel="prefetch" href="/assets/js/132.229512b9.js"><link rel="prefetch" href="/assets/js/133.abe8c5be.js"><link rel="prefetch" href="/assets/js/134.f6412f20.js"><link rel="prefetch" href="/assets/js/135.4d3d8d72.js"><link rel="prefetch" href="/assets/js/136.38716c23.js"><link rel="prefetch" href="/assets/js/137.2118e7a9.js"><link rel="prefetch" href="/assets/js/138.17563f61.js"><link rel="prefetch" href="/assets/js/139.9b82cea8.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/140.5086e2fd.js"><link rel="prefetch" href="/assets/js/141.2c9e4e75.js"><link rel="prefetch" href="/assets/js/142.ccaf77af.js"><link rel="prefetch" href="/assets/js/143.e5f08d1b.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/19.caf99c8b.js"><link rel="prefetch" href="/assets/js/20.bfd07a71.js"><link rel="prefetch" href="/assets/js/21.483f6c41.js"><link rel="prefetch" href="/assets/js/22.1e7422c9.js"><link rel="prefetch" href="/assets/js/23.abd97357.js"><link rel="prefetch" href="/assets/js/24.f66438ab.js"><link rel="prefetch" href="/assets/js/25.5afdfc12.js"><link rel="prefetch" href="/assets/js/26.bdf25ebe.js"><link rel="prefetch" href="/assets/js/27.cb0f619b.js"><link rel="prefetch" href="/assets/js/28.ad109f2b.js"><link rel="prefetch" href="/assets/js/29.f4b4c3d4.js"><link rel="prefetch" href="/assets/js/3.fa52f5cd.js"><link rel="prefetch" href="/assets/js/30.927a237a.js"><link rel="prefetch" href="/assets/js/31.cac987ca.js"><link rel="prefetch" href="/assets/js/32.89991436.js"><link rel="prefetch" href="/assets/js/33.6df7467e.js"><link rel="prefetch" href="/assets/js/34.58b016ec.js"><link rel="prefetch" href="/assets/js/35.cad9cc74.js"><link rel="prefetch" href="/assets/js/36.380bbc99.js"><link rel="prefetch" href="/assets/js/37.d969d626.js"><link rel="prefetch" href="/assets/js/38.781f8249.js"><link rel="prefetch" href="/assets/js/39.8f01a1da.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.2977512d.js"><link rel="prefetch" href="/assets/js/41.c2d16548.js"><link rel="prefetch" href="/assets/js/42.3271e8da.js"><link rel="prefetch" href="/assets/js/43.f4dcb292.js"><link rel="prefetch" href="/assets/js/44.8870aaca.js"><link rel="prefetch" href="/assets/js/45.d9de54ab.js"><link rel="prefetch" href="/assets/js/46.b89f875b.js"><link rel="prefetch" href="/assets/js/47.3bbebc1f.js"><link rel="prefetch" href="/assets/js/48.a96a1fb3.js"><link rel="prefetch" href="/assets/js/49.7b9700b5.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.05681d13.js"><link rel="prefetch" href="/assets/js/51.32ef8a14.js"><link rel="prefetch" href="/assets/js/52.6a4586b8.js"><link rel="prefetch" href="/assets/js/53.bfba2463.js"><link rel="prefetch" href="/assets/js/54.8783f635.js"><link rel="prefetch" href="/assets/js/55.f67eb2d8.js"><link rel="prefetch" href="/assets/js/56.496fb687.js"><link rel="prefetch" href="/assets/js/57.61f747e1.js"><link rel="prefetch" href="/assets/js/58.1e9eb410.js"><link rel="prefetch" href="/assets/js/59.3bb24b8b.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.a07b08d7.js"><link rel="prefetch" href="/assets/js/61.9fec7492.js"><link rel="prefetch" href="/assets/js/62.bcc22077.js"><link rel="prefetch" href="/assets/js/63.758b963d.js"><link rel="prefetch" href="/assets/js/64.4ff3c765.js"><link rel="prefetch" href="/assets/js/65.a567d79b.js"><link rel="prefetch" href="/assets/js/66.bba20dc9.js"><link rel="prefetch" href="/assets/js/67.1dcada73.js"><link rel="prefetch" href="/assets/js/68.51ef2d52.js"><link rel="prefetch" href="/assets/js/69.e293cffb.js"><link rel="prefetch" href="/assets/js/7.903d6703.js"><link rel="prefetch" href="/assets/js/70.f0d43275.js"><link rel="prefetch" href="/assets/js/71.0068d189.js"><link rel="prefetch" href="/assets/js/72.5cd42a10.js"><link rel="prefetch" href="/assets/js/73.17c31202.js"><link rel="prefetch" href="/assets/js/74.65c8ee29.js"><link rel="prefetch" href="/assets/js/75.99055f57.js"><link rel="prefetch" href="/assets/js/76.99bcb379.js"><link rel="prefetch" href="/assets/js/77.a02db8ca.js"><link rel="prefetch" href="/assets/js/78.c4d78fda.js"><link rel="prefetch" href="/assets/js/79.711e69dd.js"><link rel="prefetch" href="/assets/js/8.acb56ca8.js"><link rel="prefetch" href="/assets/js/80.14160629.js"><link rel="prefetch" href="/assets/js/81.b74e9941.js"><link rel="prefetch" href="/assets/js/82.ce69fac2.js"><link rel="prefetch" href="/assets/js/83.3748207d.js"><link rel="prefetch" href="/assets/js/84.84527f16.js"><link rel="prefetch" href="/assets/js/85.3191d2f7.js"><link rel="prefetch" href="/assets/js/86.74e6a0b6.js"><link rel="prefetch" href="/assets/js/87.ae85eb0c.js"><link rel="prefetch" href="/assets/js/88.2798836c.js"><link rel="prefetch" href="/assets/js/89.3fc8ad99.js"><link rel="prefetch" href="/assets/js/9.a42975d0.js"><link rel="prefetch" href="/assets/js/90.4a1e46bd.js"><link rel="prefetch" href="/assets/js/91.00de6cb5.js"><link rel="prefetch" href="/assets/js/92.d0dfb955.js"><link rel="prefetch" href="/assets/js/93.aa081ece.js"><link rel="prefetch" href="/assets/js/94.ade42309.js"><link rel="prefetch" href="/assets/js/95.7e1ea071.js"><link rel="prefetch" href="/assets/js/96.bd7673ea.js"><link rel="prefetch" href="/assets/js/97.56d90531.js"><link rel="prefetch" href="/assets/js/98.66176198.js"><link rel="prefetch" href="/assets/js/99.04324994.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link router-link-active">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link router-link-active">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Tools</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/else/tools/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/else/tools/7z-cmd.html" aria-current="page" class="active sidebar-link">配置 7z 命令行模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#解压文件" class="sidebar-link">解压文件</a></li><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#压缩文件" class="sidebar-link">压缩文件</a></li><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#删除压缩文件中的特定内容" class="sidebar-link">删除压缩文件中的特定内容</a></li><li class="sidebar-sub-header"><a href="/else/tools/7z-cmd.html#常用参数列举" class="sidebar-link">常用参数列举</a></li></ul></li></ul></li><li><a href="/else/tools/FQ.html" class="sidebar-link">FQ</a></li><li><a href="/else/tools/cmder.html" class="sidebar-link">Cmder</a></li><li><a href="/else/tools/cmder-expert.html" class="sidebar-link">Cmder 高级应用</a></li><li><a href="/else/tools/nrm.html" class="sidebar-link">nrm</a></li><li><a href="/else/tools/sublime-plugin.html" class="sidebar-link">Sublime Text 插件推荐</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p><a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">7-Zip<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个开放源码的数据压缩程序，主要用在 <code>Microsoft Windows 操作系统</code>。</p> <p>同时又有一个简短的名称 <strong>7z</strong>。</p> <p>虽然 7-Zip 的 UI 界面不是非常好看，但是丝毫不影响它强大的功能。</p> <p>并且 7-Zip 支持强大的命令行调用，只需添加入环境变量可直接使用。</p> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <ol><li><p>到官网下载 <a href="https://www.7-zip.org/download.html" target="_blank" rel="noopener noreferrer">7-Zip (点击跳转官网下载页)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>安装完成找到安装目录，复制目录地址，添加入环境变量 <code>Path</code> 中就可以在命令行中运行。</p></li></ol> <img src="/else/tools/7z-cmd/Snipaste_2021-10-18_11-56-25.png" class="zoom"> <p>添加你的安装目录地址到新建变量中：</p> <img src="/else/tools/7z-cmd/Snipaste_2021-10-18_12-00-32.png" class="zoom"> <p>完成后重启 <code>cmd</code> 运行 <code>7z</code> 出现说明文档表示配置成功。</p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p>配置完成之后可直接在命令行中使用 <code>7z</code> 命令压缩或解压缩。</p> <h3 id="解压文件"><a href="#解压文件" class="header-anchor">#</a> 解压文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>7z x <span class="token punctuation">{</span>fileName<span class="token punctuation">}</span> -o<span class="token punctuation">{</span>outputDirectory<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>x</code> 表示解压</li> <li><code>{fileName}</code> 表示文件名称</li> <li><code>{outputDirectory}</code> 表示解压后的文件或文件夹名称</li> <li><code>-o</code> 表示指定输出路径</li></ul> <p>如果想直接把文件解压到当前文件夹中，可以不指定 <code>-o{outputDirectory}</code></p> <blockquote><p>注意：<code>-o</code> 与 <code>{outputDirectory}</code> 之间没有空格</p></blockquote> <p>示例：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">ls</span>
+<span class="token number">1</span>.7z
+
+λ 7z x <span class="token number">1</span>.7z
+<span class="token comment"># 不指定目录，直接解压至当前文件夹</span>
+
+λ <span class="token function">ls</span>
+<span class="token number">1</span>.7z  <span class="token number">1</span>.txt
+</code></pre></div><h3 id="压缩文件"><a href="#压缩文件" class="header-anchor">#</a> 压缩文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>7z a <span class="token punctuation">{</span>outputFileName<span class="token punctuation">}</span> <span class="token punctuation">{</span>fileName<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>a</code> 表示添加文件到压缩档案中</li> <li><code>{outputFileName}</code> 表示压缩成功文件名称及格式</li> <li><code>{fileName}</code> 表示要压缩的文件或目录</li></ul> <p>示例：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>λ <span class="token function">ls</span>
+<span class="token number">1</span>.txt
+
+λ 7z a <span class="token number">1</span>.7z <span class="token number">1</span>.txt
+<span class="token comment"># 压缩 1.txt 到 1.7z 文件中</span>
+
+λ <span class="token function">ls</span>
+<span class="token number">1</span>.7z <span class="token number">1</span>.txt
+</code></pre></div><p>将 <code>test</code> 文件夹中所有文件添加到 <code>test.7z</code> 文件中，并且不会包含 <code>test</code> 文件夹前缀：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>7z a test.7z .<span class="token punctuation">\</span>test<span class="token punctuation">\</span>*
+</code></pre></div><blockquote><p>此案例可以找一个多层文件夹嵌套目录测试。</p></blockquote> <h3 id="删除压缩文件中的特定内容"><a href="#删除压缩文件中的特定内容" class="header-anchor">#</a> 删除压缩文件中的特定内容</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 删除压缩文件内所有 .txt 文件</span>
+7z d <span class="token punctuation">{</span>fileName<span class="token punctuation">}</span> *.txt -r
+</code></pre></div><ul><li><code>d</code> 表示从压缩档案中删除文件</li> <li><code>{fileName}</code> 表示压缩档案</li> <li><code>*.txt</code> 表示所有的 .txt 文件</li> <li><code>-r</code> 递归，检索包含内部所有文件夹中的内容</li></ul> <h3 id="常用参数列举"><a href="#常用参数列举" class="header-anchor">#</a> 常用参数列举</h3> <ul><li>a：将文件添加到压缩档案中</li> <li>d：从压缩档案中删除文件</li> <li>e：将压缩档案中的所有文件解压到指定路径，所有文件将输出到同一个目录中</li> <li>l：列出压缩档案的内容</li> <li>rn：重命名压缩档案中的文件</li> <li>t：测试压缩档案的完整性</li> <li>u：更新要进入压缩档案中的文件</li> <li>x：将压缩档案中的所有文件解压到指定路径，并包含所有文件的完整路径</li></ul> <p>上述为 7z 命令常用参数，可供参考。</p> <p><a href="https://blog.csdn.net/WPwalter/article/details/90638622" target="_blank" rel="noopener noreferrer">本文部分参考自 walter lv<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 感谢解决我的使用问题！</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/else/tools/7z-cmd.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/10/18 上午5:57:37</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/else/tools/" class="prev router-link-active">
+        首页
+      </a></span> <span class="next"><a href="/else/tools/FQ.html">
+        FQ
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.23b04523.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/18.8dd97697.js" defer></script>
+  </body>
+</html>
