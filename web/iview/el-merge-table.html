@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>动态获取数据合并表格 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.657a47b3.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/106.7075a968.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.d8e1c59d.js"><link rel="prefetch" href="/assets/js/101.58bd6a48.js"><link rel="prefetch" href="/assets/js/102.70cc94ab.js"><link rel="prefetch" href="/assets/js/103.4c678d2b.js"><link rel="prefetch" href="/assets/js/104.20efa45a.js"><link rel="prefetch" href="/assets/js/105.554fe4eb.js"><link rel="prefetch" href="/assets/js/107.f83a36f6.js"><link rel="prefetch" href="/assets/js/108.fbd78788.js"><link rel="prefetch" href="/assets/js/109.297d7f02.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.66263455.js"><link rel="prefetch" href="/assets/js/111.115c1394.js"><link rel="prefetch" href="/assets/js/112.2e13ba71.js"><link rel="prefetch" href="/assets/js/113.4b2893d8.js"><link rel="prefetch" href="/assets/js/114.6e28774c.js"><link rel="prefetch" href="/assets/js/115.deca4466.js"><link rel="prefetch" href="/assets/js/116.5da89db8.js"><link rel="prefetch" href="/assets/js/117.bceb915c.js"><link rel="prefetch" href="/assets/js/118.d70fe0dc.js"><link rel="prefetch" href="/assets/js/119.36b2215c.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.c27970b2.js"><link rel="prefetch" href="/assets/js/121.1eb8c20c.js"><link rel="prefetch" href="/assets/js/122.5e431fc6.js"><link rel="prefetch" href="/assets/js/123.775c5b92.js"><link rel="prefetch" href="/assets/js/124.646523bf.js"><link rel="prefetch" href="/assets/js/125.41cb8fb6.js"><link rel="prefetch" href="/assets/js/126.4c8da02e.js"><link rel="prefetch" href="/assets/js/127.67828085.js"><link rel="prefetch" href="/assets/js/128.2a7ee84f.js"><link rel="prefetch" href="/assets/js/129.7bf9680b.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.6d25365a.js"><link rel="prefetch" href="/assets/js/131.03545416.js"><link rel="prefetch" href="/assets/js/132.b9d09ed6.js"><link rel="prefetch" href="/assets/js/133.52063105.js"><link rel="prefetch" href="/assets/js/134.70473b9d.js"><link rel="prefetch" href="/assets/js/135.6152b372.js"><link rel="prefetch" href="/assets/js/136.05a4a50b.js"><link rel="prefetch" href="/assets/js/137.2c3df245.js"><link rel="prefetch" href="/assets/js/138.cbf77758.js"><link rel="prefetch" href="/assets/js/139.2978624d.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/140.1d01aead.js"><link rel="prefetch" href="/assets/js/141.585ef7a0.js"><link rel="prefetch" href="/assets/js/142.e97c5a53.js"><link rel="prefetch" href="/assets/js/143.87793c35.js"><link rel="prefetch" href="/assets/js/144.171a645f.js"><link rel="prefetch" href="/assets/js/145.b3beca01.js"><link rel="prefetch" href="/assets/js/146.9c6a5677.js"><link rel="prefetch" href="/assets/js/147.6f262cbc.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.8dd97697.js"><link rel="prefetch" href="/assets/js/19.caf99c8b.js"><link rel="prefetch" href="/assets/js/20.bfd07a71.js"><link rel="prefetch" href="/assets/js/21.483f6c41.js"><link rel="prefetch" href="/assets/js/22.1e7422c9.js"><link rel="prefetch" href="/assets/js/23.abd97357.js"><link rel="prefetch" href="/assets/js/24.f66438ab.js"><link rel="prefetch" href="/assets/js/25.5afdfc12.js"><link rel="prefetch" href="/assets/js/26.bdf25ebe.js"><link rel="prefetch" href="/assets/js/27.687b30a5.js"><link rel="prefetch" href="/assets/js/28.f966ae68.js"><link rel="prefetch" href="/assets/js/29.f4b4c3d4.js"><link rel="prefetch" href="/assets/js/3.962a69b9.js"><link rel="prefetch" href="/assets/js/30.927a237a.js"><link rel="prefetch" href="/assets/js/31.cac987ca.js"><link rel="prefetch" href="/assets/js/32.89991436.js"><link rel="prefetch" href="/assets/js/33.6df7467e.js"><link rel="prefetch" href="/assets/js/34.58b016ec.js"><link rel="prefetch" href="/assets/js/35.cad9cc74.js"><link rel="prefetch" href="/assets/js/36.380bbc99.js"><link rel="prefetch" href="/assets/js/37.d969d626.js"><link rel="prefetch" href="/assets/js/38.781f8249.js"><link rel="prefetch" href="/assets/js/39.8f01a1da.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.2977512d.js"><link rel="prefetch" href="/assets/js/41.c2d16548.js"><link rel="prefetch" href="/assets/js/42.3271e8da.js"><link rel="prefetch" href="/assets/js/43.f4dcb292.js"><link rel="prefetch" href="/assets/js/44.8870aaca.js"><link rel="prefetch" href="/assets/js/45.9ba2b3fd.js"><link rel="prefetch" href="/assets/js/46.ed78b8dc.js"><link rel="prefetch" href="/assets/js/47.3bbebc1f.js"><link rel="prefetch" href="/assets/js/48.a96a1fb3.js"><link rel="prefetch" href="/assets/js/49.7b9700b5.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.05681d13.js"><link rel="prefetch" href="/assets/js/51.32ef8a14.js"><link rel="prefetch" href="/assets/js/52.6a4586b8.js"><link rel="prefetch" href="/assets/js/53.bfba2463.js"><link rel="prefetch" href="/assets/js/54.84669a46.js"><link rel="prefetch" href="/assets/js/55.941eeba0.js"><link rel="prefetch" href="/assets/js/56.e3a38385.js"><link rel="prefetch" href="/assets/js/57.f40069ca.js"><link rel="prefetch" href="/assets/js/58.c9f95839.js"><link rel="prefetch" href="/assets/js/59.3bb24b8b.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.a07b08d7.js"><link rel="prefetch" href="/assets/js/61.9fec7492.js"><link rel="prefetch" href="/assets/js/62.e2f1e19b.js"><link rel="prefetch" href="/assets/js/63.a2b804c4.js"><link rel="prefetch" href="/assets/js/64.4ff3c765.js"><link rel="prefetch" href="/assets/js/65.a567d79b.js"><link rel="prefetch" href="/assets/js/66.992429cd.js"><link rel="prefetch" href="/assets/js/67.04780c50.js"><link rel="prefetch" href="/assets/js/68.78426522.js"><link rel="prefetch" href="/assets/js/69.e293cffb.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.f0d43275.js"><link rel="prefetch" href="/assets/js/71.0068d189.js"><link rel="prefetch" href="/assets/js/72.5cd42a10.js"><link rel="prefetch" href="/assets/js/73.46990c90.js"><link rel="prefetch" href="/assets/js/74.65c8ee29.js"><link rel="prefetch" href="/assets/js/75.99055f57.js"><link rel="prefetch" href="/assets/js/76.18104ccb.js"><link rel="prefetch" href="/assets/js/77.03061d59.js"><link rel="prefetch" href="/assets/js/78.ca35844b.js"><link rel="prefetch" href="/assets/js/79.a41733bc.js"><link rel="prefetch" href="/assets/js/8.c2feea25.js"><link rel="prefetch" href="/assets/js/80.da3aa706.js"><link rel="prefetch" href="/assets/js/81.c80e6824.js"><link rel="prefetch" href="/assets/js/82.0dd579c4.js"><link rel="prefetch" href="/assets/js/83.21258529.js"><link rel="prefetch" href="/assets/js/84.68b2d8b5.js"><link rel="prefetch" href="/assets/js/85.d1402e57.js"><link rel="prefetch" href="/assets/js/86.34716519.js"><link rel="prefetch" href="/assets/js/87.18aaae94.js"><link rel="prefetch" href="/assets/js/88.114d8ddf.js"><link rel="prefetch" href="/assets/js/89.ea6934dc.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.762802ac.js"><link rel="prefetch" href="/assets/js/91.9f8d5d71.js"><link rel="prefetch" href="/assets/js/92.a4c6163d.js"><link rel="prefetch" href="/assets/js/93.3355d2be.js"><link rel="prefetch" href="/assets/js/94.3dc59730.js"><link rel="prefetch" href="/assets/js/95.c4bd5440.js"><link rel="prefetch" href="/assets/js/96.d345990a.js"><link rel="prefetch" href="/assets/js/97.d23df757.js"><link rel="prefetch" href="/assets/js/98.733bae61.js"><link rel="prefetch" href="/assets/js/99.c65dac62.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link router-link-active">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/iview/" class="nav-link router-link-active">
+  iView
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Iview</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/iview/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/iview/el-merge-table.html" aria-current="page" class="active sidebar-link">动态获取数据合并表格</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/iview/el-merge-table.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/web/iview/el-merge-table.html#解决方法" class="sidebar-link">解决方法</a></li></ul></li><li><a href="/web/iview/iview-Form.html" class="sidebar-link">表单验证踩坑记录</a></li><li><a href="/web/iview/iview-inputNumber.html" class="sidebar-link">InputNumber 默认显示占位符</a></li><li><a href="/web/iview/iview-modal-verify.html" class="sidebar-link">Modal 嵌入 Form 表单验证之防止关闭</a></li><li><a href="/web/iview/iview-table.html" class="sidebar-link">iview 中 table 里嵌套其他组件</a></li><li><a href="/web/iview/iview-table-sort.html" class="sidebar-link">table 表格中排序错乱问题</a></li><li><a href="/web/iview/iview-upload-value.html" class="sidebar-link">Upload 上传成功后 input 框无法赋值</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p>业务需求，需要用到 <code>element UI</code> 的 <code>table</code> 组件，但是看了文档发现合并项时并没有写的非常清楚。</p> <p>由于官网提供的示例是静态数据，无法完全满足需求。</p> <p>我们需要自己动手来补充需要的数据。</p> <h2 id="解决方法"><a href="#解决方法" class="header-anchor">#</a> 解决方法</h2> <p>其实实现并不难，只是伸手党做习惯了，不想动脑子。</p> <p>其实和使用原生 <code>&lt;tr/td&gt;</code> 标签一样，只需要循环查找出符合的数据。</p> <p>逐一判断元素是应该合并还是删除，更新操作便可。</p> <p>以下代码块可运行在 <code>Vue</code> 环境下，代码中有明确注释可查看。</p> <p><strong>注意！！！数据更新之后需要再次调用 <code>createMergeList</code> 否则会产生数据更新，页面不刷新的场面。</strong></p> <p>代码块：</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-table</span>
+      <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>dataList<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:span-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>arraySpanMethod<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">border</span>
+      <span class="token attr-name">max-height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>400<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-table-column</span>
+        <span class="token attr-name">:prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.name<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.value<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>(item, index) in mergeName<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table-column</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>addList<span class="token punctuation">&quot;</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token style language-css"><span class="token property">margin-top</span><span class="token punctuation">:</span> 20px</span><span class="token punctuation">&quot;</span></span></span>
+      <span class="token punctuation">&gt;</span></span>点击添加数据<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span>
+    <span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 模拟数据列表</span>
+      dataList<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          date<span class="token operator">:</span> <span class="token string">&quot;2021/12/07&quot;</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;王小虎&quot;</span><span class="token punctuation">,</span>
+          food<span class="token operator">:</span> <span class="token string">&quot;苹果&quot;</span><span class="token punctuation">,</span>
+          price<span class="token operator">:</span> <span class="token string">&quot;3.2&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          date<span class="token operator">:</span> <span class="token string">&quot;2021/12/07&quot;</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;王小虎&quot;</span><span class="token punctuation">,</span>
+          food<span class="token operator">:</span> <span class="token string">&quot;香蕉&quot;</span><span class="token punctuation">,</span>
+          price<span class="token operator">:</span> <span class="token string">&quot;5.0&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          date<span class="token operator">:</span> <span class="token string">&quot;2021/12/08&quot;</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;张小明&quot;</span><span class="token punctuation">,</span>
+          food<span class="token operator">:</span> <span class="token string">&quot;香蕉&quot;</span><span class="token punctuation">,</span>
+          price<span class="token operator">:</span> <span class="token string">&quot;2.3&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          date<span class="token operator">:</span> <span class="token string">&quot;2021/12/08&quot;</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;赵小红&quot;</span><span class="token punctuation">,</span>
+          food<span class="token operator">:</span> <span class="token string">&quot;鸭梨&quot;</span><span class="token punctuation">,</span>
+          price<span class="token operator">:</span> <span class="token string">&quot;8.2&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token comment">// 表单头列表</span>
+      mergeName<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token string">&quot;日期&quot;</span><span class="token punctuation">,</span>
+          merge<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">// 控制是否合并单元格</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token string">&quot;人物&quot;</span><span class="token punctuation">,</span>
+          merge<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;food&quot;</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token string">&quot;食物&quot;</span><span class="token punctuation">,</span>
+          merge<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;price&quot;</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token string">&quot;价格&quot;</span><span class="token punctuation">,</span>
+          merge<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      mergeList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token comment">// 记录合并数据</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">createMergeList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 创建合并数据</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 点击添加数据，解决数据更改，列表不渲染问题
+     *
+     * 数据更改后需要手动调用一下表格合并方法，否则数据渲染不出来
+     */</span>
+    <span class="token function">addList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>dataList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+        <span class="token punctuation">{</span>
+          date<span class="token operator">:</span> <span class="token string">&quot;2021/12/09&quot;</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;赵小红&quot;</span><span class="token punctuation">,</span>
+          food<span class="token operator">:</span> <span class="token string">&quot;波菜&quot;</span><span class="token punctuation">,</span>
+          price<span class="token operator">:</span> <span class="token string">&quot;2.2&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          date<span class="token operator">:</span> <span class="token string">&quot;2021/12/09&quot;</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">&quot;赵小红&quot;</span><span class="token punctuation">,</span>
+          food<span class="token operator">:</span> <span class="token string">&quot;地瓜&quot;</span><span class="token punctuation">,</span>
+          price<span class="token operator">:</span> <span class="token string">&quot;4.1&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">createMergeList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 注意！！！数据更新后，这里一定要调用，否则会出现数据更新，页面不刷新情况</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">/**
+     * 遍历创建要合并的数据
+     * 期待数据格式：
+     * [
+     *  [2, 0, 1, 1],
+     *  [2, 0, 1, 1],
+     *  [1, 1, 1, 1],
+     *  [1, 1, 1, 1]
+     * ]
+     * 数字代表重复个数，0 代表重复需要删除
+     */</span>
+    <span class="token function">createMergeList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>mergeName<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setMergeList</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> item<span class="token punctuation">.</span>name<span class="token punctuation">,</span> item<span class="token punctuation">.</span>merge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">/**
+     * 创建要合并的数据
+     * @param {Number} idx 要创建值的下标
+     * @param {String} key 要查询的键名
+     * @param {Boolean} merge 控制是否要合并数据
+     */</span>
+    <span class="token function">setMergeList</span><span class="token punctuation">(</span><span class="token parameter">idx<span class="token punctuation">,</span> key<span class="token punctuation">,</span> merge</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 判别是否需要合并</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>merge<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 不需要合并的初始化默认值 1</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>dataList<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 以下为需要合并的处理</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 初始化列表，后续会向内部填充数据</span>
+      <span class="token keyword">let</span> position <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 控制二维列表下标，数据相同情况下不处理，不同情况下替换为处理数据下标</span>
+      <span class="token comment">// 开始遍历数据</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>dataList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 如果当前处理数据是第一条，没有上一条做对比，不做处理，填充 1</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          position <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 防止进入下一轮遍历时无法从第一条开始</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 判别当前值和上一条值是否一致</span>
+          <span class="token comment">// 特殊条件：必须日期和时间相同的才会合并，否则正常跳过</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>
+            item<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataList<span class="token punctuation">[</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span>
+            item<span class="token punctuation">.</span>date <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataList<span class="token punctuation">[</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>date <span class="token operator">&amp;&amp;</span>
+            item<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataList<span class="token punctuation">[</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name
+          <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">[</span>position<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 如果一致，合并数 + 1</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 当前下标补 0 删除</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 不符合条件，正常渲染</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            position <span class="token operator">=</span> index<span class="token punctuation">;</span> <span class="token comment">// 下标置为 index</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">/**
+     * 列表合并回调
+     * @returns {Object, Array}
+     */</span>
+    <span class="token function">arraySpanMethod</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> row<span class="token punctuation">,</span> column<span class="token punctuation">,</span> rowIndex<span class="token punctuation">,</span> columnIndex <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mergeName<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 0 为删除，1 为正常显示，&gt;1 为合并多少格</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>columnIndex <span class="token operator">===</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> rowspan <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mergeList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>rowIndex<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 行合并数</span>
+          <span class="token keyword">const</span> colspan <span class="token operator">=</span> rowspan <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 列合并数</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+            <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">当前位于 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>rowIndex<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 行，</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnIndex<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 列，行合并：</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>rowspan<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">，列合并：</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>colspan<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            rowspan<span class="token punctuation">,</span>
+            colspan<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/iview/el-merge-table.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/12/15 上午9:33:10</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/iview/" class="prev router-link-active">
+        首页
+      </a></span> <span class="next"><a href="/web/iview/iview-Form.html">
+        表单验证踩坑记录
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.657a47b3.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/106.7075a968.js" defer></script>
+  </body>
+</html>
