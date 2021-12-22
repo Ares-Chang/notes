@@ -1,4 +1,5 @@
 ---
+autoGroup-2: Element
 title: 动态获取数据合并表格
 ---
 

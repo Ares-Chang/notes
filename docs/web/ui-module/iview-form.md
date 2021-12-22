@@ -1,4 +1,5 @@
 ---
+autoGroup-1: iView
 title: 表单验证踩坑记录
 ---
 

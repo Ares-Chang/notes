@@ -1,4 +1,5 @@
 ---
+autoGroup-1: iView
 title: iview 中 table 里嵌套其他组件
 ---
 

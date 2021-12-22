@@ -1,4 +1,5 @@
 ---
+autoGroup-1: iView
 title: Upload 上传成功后 input 框无法赋值
 ---
 

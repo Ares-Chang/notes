@@ -1,4 +1,5 @@
 ---
+autoGroup-1: iView
 title: Modal 嵌入 Form 表单验证之防止关闭
 ---
 
