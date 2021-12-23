@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速获取 URL 中的参数 | Ares Chang</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="Ares Chang">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cbaeff5.css" as="style"><link rel="preload" href="/assets/js/app.129a4f9a.js" as="script"><link rel="preload" href="/assets/js/2.c5d968b8.js" as="script"><link rel="preload" href="/assets/js/114.8881913e.js" as="script"><link rel="prefetch" href="/assets/js/10.83df9ba6.js"><link rel="prefetch" href="/assets/js/100.7726be68.js"><link rel="prefetch" href="/assets/js/101.25b8ccfc.js"><link rel="prefetch" href="/assets/js/102.f4337793.js"><link rel="prefetch" href="/assets/js/103.b52e46b6.js"><link rel="prefetch" href="/assets/js/104.3a68f129.js"><link rel="prefetch" href="/assets/js/105.20fcd9a4.js"><link rel="prefetch" href="/assets/js/106.7af9edb6.js"><link rel="prefetch" href="/assets/js/107.f2ec2519.js"><link rel="prefetch" href="/assets/js/108.4a65d3f4.js"><link rel="prefetch" href="/assets/js/109.4ea6a06b.js"><link rel="prefetch" href="/assets/js/11.c5e815b6.js"><link rel="prefetch" href="/assets/js/110.c06a78a2.js"><link rel="prefetch" href="/assets/js/111.7c9ad84c.js"><link rel="prefetch" href="/assets/js/112.49bece19.js"><link rel="prefetch" href="/assets/js/113.c8962d9e.js"><link rel="prefetch" href="/assets/js/115.77f15306.js"><link rel="prefetch" href="/assets/js/116.20958ca3.js"><link rel="prefetch" href="/assets/js/117.8256c289.js"><link rel="prefetch" href="/assets/js/118.9f851e2a.js"><link rel="prefetch" href="/assets/js/119.31871178.js"><link rel="prefetch" href="/assets/js/12.ff34d491.js"><link rel="prefetch" href="/assets/js/120.cd275213.js"><link rel="prefetch" href="/assets/js/121.10d54640.js"><link rel="prefetch" href="/assets/js/122.8f8ecbd1.js"><link rel="prefetch" href="/assets/js/123.b63835de.js"><link rel="prefetch" href="/assets/js/124.b9d7d10e.js"><link rel="prefetch" href="/assets/js/125.88ac1d10.js"><link rel="prefetch" href="/assets/js/126.3f671e32.js"><link rel="prefetch" href="/assets/js/127.b0085cf9.js"><link rel="prefetch" href="/assets/js/128.4cd9de29.js"><link rel="prefetch" href="/assets/js/129.2b4558a2.js"><link rel="prefetch" href="/assets/js/13.55bc870c.js"><link rel="prefetch" href="/assets/js/130.2f461fd1.js"><link rel="prefetch" href="/assets/js/131.44866f1f.js"><link rel="prefetch" href="/assets/js/132.02246ac6.js"><link rel="prefetch" href="/assets/js/133.12c9022f.js"><link rel="prefetch" href="/assets/js/134.10a65837.js"><link rel="prefetch" href="/assets/js/135.f8a090c1.js"><link rel="prefetch" href="/assets/js/136.ae230d61.js"><link rel="prefetch" href="/assets/js/137.c8ce0957.js"><link rel="prefetch" href="/assets/js/138.35e393f7.js"><link rel="prefetch" href="/assets/js/139.5e7c2001.js"><link rel="prefetch" href="/assets/js/14.e3f0d105.js"><link rel="prefetch" href="/assets/js/140.039e8970.js"><link rel="prefetch" href="/assets/js/141.ce9e9a42.js"><link rel="prefetch" href="/assets/js/142.bc82adeb.js"><link rel="prefetch" href="/assets/js/143.49533263.js"><link rel="prefetch" href="/assets/js/144.152a8633.js"><link rel="prefetch" href="/assets/js/145.48dd1591.js"><link rel="prefetch" href="/assets/js/146.0fb9e49c.js"><link rel="prefetch" href="/assets/js/147.c115492c.js"><link rel="prefetch" href="/assets/js/148.7fd49e1f.js"><link rel="prefetch" href="/assets/js/149.9701cf14.js"><link rel="prefetch" href="/assets/js/15.f069eb11.js"><link rel="prefetch" href="/assets/js/150.ba9f0d26.js"><link rel="prefetch" href="/assets/js/16.17ea08a1.js"><link rel="prefetch" href="/assets/js/17.0624b7c6.js"><link rel="prefetch" href="/assets/js/18.8dd97697.js"><link rel="prefetch" href="/assets/js/19.caf99c8b.js"><link rel="prefetch" href="/assets/js/20.bfd07a71.js"><link rel="prefetch" href="/assets/js/21.483f6c41.js"><link rel="prefetch" href="/assets/js/22.1e7422c9.js"><link rel="prefetch" href="/assets/js/23.abd97357.js"><link rel="prefetch" href="/assets/js/24.f66438ab.js"><link rel="prefetch" href="/assets/js/25.5afdfc12.js"><link rel="prefetch" href="/assets/js/26.bdf25ebe.js"><link rel="prefetch" href="/assets/js/27.cb0f619b.js"><link rel="prefetch" href="/assets/js/28.ad109f2b.js"><link rel="prefetch" href="/assets/js/29.f4b4c3d4.js"><link rel="prefetch" href="/assets/js/3.c839e884.js"><link rel="prefetch" href="/assets/js/30.927a237a.js"><link rel="prefetch" href="/assets/js/31.b4a2b14e.js"><link rel="prefetch" href="/assets/js/32.a43bcb79.js"><link rel="prefetch" href="/assets/js/33.6df7467e.js"><link rel="prefetch" href="/assets/js/34.58b016ec.js"><link rel="prefetch" href="/assets/js/35.cad9cc74.js"><link rel="prefetch" href="/assets/js/36.380bbc99.js"><link rel="prefetch" href="/assets/js/37.d969d626.js"><link rel="prefetch" href="/assets/js/38.781f8249.js"><link rel="prefetch" href="/assets/js/39.7d7bcbf2.js"><link rel="prefetch" href="/assets/js/4.bf66db01.js"><link rel="prefetch" href="/assets/js/40.2e0ba0b4.js"><link rel="prefetch" href="/assets/js/41.ad079068.js"><link rel="prefetch" href="/assets/js/42.504982e6.js"><link rel="prefetch" href="/assets/js/43.74b02413.js"><link rel="prefetch" href="/assets/js/44.4d9de16f.js"><link rel="prefetch" href="/assets/js/45.203b2fcc.js"><link rel="prefetch" href="/assets/js/46.e573ab1d.js"><link rel="prefetch" href="/assets/js/47.3aa80616.js"><link rel="prefetch" href="/assets/js/48.721d85bb.js"><link rel="prefetch" href="/assets/js/49.149465fc.js"><link rel="prefetch" href="/assets/js/5.f03a2102.js"><link rel="prefetch" href="/assets/js/50.b7e69dde.js"><link rel="prefetch" href="/assets/js/51.b3d7327c.js"><link rel="prefetch" href="/assets/js/52.50a0dfa8.js"><link rel="prefetch" href="/assets/js/53.35c97559.js"><link rel="prefetch" href="/assets/js/54.4531962d.js"><link rel="prefetch" href="/assets/js/55.c6f41152.js"><link rel="prefetch" href="/assets/js/56.92a0708b.js"><link rel="prefetch" href="/assets/js/57.6fb27d9b.js"><link rel="prefetch" href="/assets/js/58.715440d8.js"><link rel="prefetch" href="/assets/js/59.b518e358.js"><link rel="prefetch" href="/assets/js/6.9ca53b6f.js"><link rel="prefetch" href="/assets/js/60.b35e8551.js"><link rel="prefetch" href="/assets/js/61.0dca33a0.js"><link rel="prefetch" href="/assets/js/62.9fda70d3.js"><link rel="prefetch" href="/assets/js/63.761dd6de.js"><link rel="prefetch" href="/assets/js/64.3cf450d7.js"><link rel="prefetch" href="/assets/js/65.cd726da2.js"><link rel="prefetch" href="/assets/js/66.f30744d9.js"><link rel="prefetch" href="/assets/js/67.256d7614.js"><link rel="prefetch" href="/assets/js/68.7266724c.js"><link rel="prefetch" href="/assets/js/69.16d3590c.js"><link rel="prefetch" href="/assets/js/7.c8ca8630.js"><link rel="prefetch" href="/assets/js/70.07ddc007.js"><link rel="prefetch" href="/assets/js/71.c2437bfc.js"><link rel="prefetch" href="/assets/js/72.14c2f9df.js"><link rel="prefetch" href="/assets/js/73.26fa42f3.js"><link rel="prefetch" href="/assets/js/74.0cbda63c.js"><link rel="prefetch" href="/assets/js/75.07f7f088.js"><link rel="prefetch" href="/assets/js/76.c111f33b.js"><link rel="prefetch" href="/assets/js/77.2e8e60f2.js"><link rel="prefetch" href="/assets/js/78.c9e4edfe.js"><link rel="prefetch" href="/assets/js/79.a1120125.js"><link rel="prefetch" href="/assets/js/8.c2feea25.js"><link rel="prefetch" href="/assets/js/80.15999c51.js"><link rel="prefetch" href="/assets/js/81.e9988caa.js"><link rel="prefetch" href="/assets/js/82.21cf56d7.js"><link rel="prefetch" href="/assets/js/83.4a0f7ea4.js"><link rel="prefetch" href="/assets/js/84.215366e6.js"><link rel="prefetch" href="/assets/js/85.5d421fea.js"><link rel="prefetch" href="/assets/js/86.0c87a050.js"><link rel="prefetch" href="/assets/js/87.32349882.js"><link rel="prefetch" href="/assets/js/88.ff344a1f.js"><link rel="prefetch" href="/assets/js/89.9ae14e23.js"><link rel="prefetch" href="/assets/js/9.6c22a8e8.js"><link rel="prefetch" href="/assets/js/90.55cdd1c9.js"><link rel="prefetch" href="/assets/js/91.f827c679.js"><link rel="prefetch" href="/assets/js/92.43cc406f.js"><link rel="prefetch" href="/assets/js/93.132ee307.js"><link rel="prefetch" href="/assets/js/94.ddd3a0b4.js"><link rel="prefetch" href="/assets/js/95.36ce9297.js"><link rel="prefetch" href="/assets/js/96.61c558d2.js"><link rel="prefetch" href="/assets/js/97.0ae6f84f.js"><link rel="prefetch" href="/assets/js/98.06a02154.js"><link rel="prefetch" href="/assets/js/99.d719e223.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cbaeff5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ares Chang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/ui-module/" class="nav-link">
+  UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/web/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/web/ajax/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/ui-module/" class="nav-link">
+  UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/web/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-subitem"><a href="/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/web/echarts/" class="nav-link">
+  ECharts
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/flutter/" class="nav-link">
+  Flutter
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/linux/" class="nav-link">
+  Linux 基础
+</a></li><li class="dropdown-item"><!----> <a href="/linux/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-item"><!----> <a href="/linux/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/else/tools/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/else/interview/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/else/hodgepodge/" class="nav-link">
+  大杂绘
+</a></li><li class="dropdown-item"><!----> <a href="/else/about/" class="nav-link">
+  关于我
+</a></li></ul></div></div> <a href="https://github.com/Ares-Chang/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/javascript/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/web/javascript/common-method.html" class="sidebar-link">常用方法</a></li><li><a href="/web/javascript/Mobile-terminal-event.html" class="sidebar-link">移动端常见事件</a></li><li><a href="/web/javascript/base64-blank.html" class="sidebar-link">base 64 图片显示不成功</a></li><li><a href="/web/javascript/es6-map-async.html" class="sidebar-link">解决 map 中无法进行 async 问题</a></li><li><a href="/web/javascript/get-time_quantum.html" class="sidebar-link">获取本周、本月、本季度时间段</a></li><li><a href="/web/javascript/js-ban-copy.html" class="sidebar-link">前端限制：禁止复制剪切</a></li><li><a href="/web/javascript/js-date_format.html" class="sidebar-link">日期格式化 YYMMDD 改为 YY-MM-DD</a></li><li><a href="/web/javascript/js-get-url_params.html" aria-current="page" class="active sidebar-link">快速获取 URL 中的参数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/javascript/js-get-url_params.html#关于" class="sidebar-link">关于</a></li><li class="sidebar-sub-header"><a href="/web/javascript/js-get-url_params.html#实现" class="sidebar-link">实现</a></li><li class="sidebar-sub-header"><a href="/web/javascript/js-get-url_params.html#扩展" class="sidebar-link">扩展</a></li></ul></li><li><a href="/web/javascript/js-newDate.html" class="sidebar-link">JS Date 日期格式和字符串的相互转换</a></li><li><a href="/web/javascript/js-timer.html" class="sidebar-link">js 定时器代码块</a></li><li><a href="/web/javascript/throttle&amp;debounce.html" class="sidebar-link">节流与防抖</a></li><li><a href="/web/javascript/video-pip.html" class="sidebar-link">画中画</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="关于"><a href="#关于" class="header-anchor">#</a> 关于</h2> <p>以前想要获取 <code>url</code> 中的参数都是使用 <code>split</code> 进行分割，一层一层嵌套极其繁琐。</p> <p>最近看到一篇文章，讲解封装 <code>split</code> 和正则解法，文章没什么意思。</p> <p>但是自古评论出人才，评论里提出了一条我没有走过的路。</p> <div class="custom-block danger"><p class="custom-block-title">注意：</p> <p>以下方法存在版本要求，不兼容全系 IE 浏览器！！！</p></div> <h2 id="实现"><a href="#实现" class="header-anchor">#</a> 实现</h2> <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URL/URL" target="_blank" rel="noopener noreferrer"><code>URL</code> 对象<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>有一个 <code>searchParams</code> 属性，提供了一些处理 URL 的实用方法。</p> <blockquote><p>PS: <code>searchParams</code> 也可以通过 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams" target="_blank" rel="noopener noreferrer">new URLSearchParams()<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 直接生成。</p></blockquote> <p>通过 <code>window.location</code> 获取的对象可以使用 <code>new URL()</code> 进行再次转换，或者通过 <code>new URLSearchParams()</code> 获取参数对象。</p> <p>如果想要获取字符串中的参数可以直接通过 <code>new URL()</code> 来转变为 <code>URL 对象</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 将字符串内容转换为 URL 对象，注意此处必须为有效链接，否则会抛出一个 TypeError</span>
+<span class="token keyword">const</span> _URL <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">&quot;https://www.baidu.com?a=1&amp;b=2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 为演示，统一 URL 对象，正常可以使用 new URLSearchParams(window.location.search)</span>
+<span class="token keyword">const</span> _LOCATION <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>location<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>通过 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries" target="_blank" rel="noopener noreferrer"><code>Object.fromEntries()</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 转换为对象形式。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 获取 URL 对象的 searchParams</span>
+Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">&quot;https://www.baidu.com?a=1&amp;b=2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>searchParams<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {a: '1', b: '2'}</span>
+
+<span class="token comment">// 请自行模拟网址</span>
+<span class="token comment">// URLSearchParams 构造函数不会解析完整 URL，但是如果字符串起始位置有 ? 的话会被去除。</span>
+Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>search<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {a: '1', b: '2'}</span>
+</code></pre></div><p>此方法相较原来的 <code>split</code> 分割简单了很多，但是 <code>new URL</code> 无法兼容全系 IE 浏览器，如果要做兼容的话，还是换条路吧。</p> <h2 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h2> <p><code>new URLSearchParams</code> 还提供了很多实用的方法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// URLSearchParams 构造函数不会解析完整 URL，但是如果字符串起始位置有 ? 的话会被去除。</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span><span class="token string">'https://www.baidu.com?a=1&amp;b=2'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">// https://www.baidu.com?a 1</span>
+<span class="token comment">// b 2</span>
+
+<span class="token keyword">const</span> _URLP <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span><span class="token string">&quot;?a=1&amp;b=2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回一个 URLSearchParams 对象</span>
+
+<span class="token comment">// 遍历 URLSearchParams 属性值，_URLP 同 _URLP.entries() 实现效果相同</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> _URLP<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// a 1</span>
+<span class="token comment">// b 2</span>
+
+<span class="token comment">// 插入一个参数及值</span>
+_URLP<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;c&quot;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 删除指定参数及值</span>
+_URLP<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">&quot;b&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 返回一个 iterator 可以遍历所有键值对</span>
+_URLP<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 获取指定搜索参数的第一个值</span>
+_URLP<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '1'</span>
+
+<span class="token comment">// 获取指定搜索参数的所有值，返回是一个数组。(如果值重复)</span>
+_URLP<span class="token punctuation">.</span><span class="token function">getAll</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ['1']</span>
+
+<span class="token comment">// 返回一个 Boolean 判别是否存在此参数</span>
+_URLP<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 返回 iterator 此对象包含了键/值对的所有键名。</span>
+_URLP<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置一个搜索参数的新值，假如原来有多个值将删除其他所有的值</span>
+_URLP<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 按键名排序</span>
+_URLP<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 返回搜索参数组成的字符串，可直接使用在URL上</span>
+_URLP<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'a=1&amp;c=3'</span>
+
+<span class="token comment">// 返回iterator 此对象包含了键/值对的所有值。</span>
+_URLP<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ares-Chang/notes/edit/master/docs/web/javascript/js-get-url_params.md" target="_blank" rel="noopener noreferrer">编辑文档!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/12/23 上午8:31:43</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/javascript/js-date_format.html" class="prev">
+        日期格式化 YYMMDD 改为 YY-MM-DD
+      </a></span> <span class="next"><a href="/web/javascript/js-newDate.html">
+        JS Date 日期格式和字符串的相互转换
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.129a4f9a.js" defer></script><script src="/assets/js/2.c5d968b8.js" defer></script><script src="/assets/js/114.8881913e.js" defer></script>
+  </body>
+</html>
