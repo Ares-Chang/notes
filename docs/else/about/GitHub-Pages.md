@@ -33,7 +33,7 @@ GitHub Pages 是一个静态资源托管服务器，它可来帮我们托管静�
 
 直接在 GitHub 上新建一个名字叫做 `<user>.github.io` 的仓库，user 必须是你的用户名，打包文件 push 到这个仓库中就可以在 `<user>.github.io` 上浏览了。
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Pages/image-20200208215902915.png')">
+![](./images/GitHub-Pages/image-20200208215902915.png)
 
 > PS:要使用 GitHub Pages 公有仓库是免费的，如果要使用私有仓库是收费的
 
@@ -43,10 +43,10 @@ GitHub Pages 是一个静态资源托管服务器，它可来帮我们托管静�
 
 需要 build 的把 dist 目录放入 gh-pages (该分支名具有特殊含义，GitHub Pages 服务的要求)
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Pages/image-20200209101249974.png')">
+![](./images/GitHub-Pages/image-20200209101249974.png)
 
 然后把 gh-pages 分支托管到 GitHub Pages 服务中
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Pages/image-20200209101533065.png')">
+![](./images/GitHub-Pages/image-20200209101533065.png)
 
 托管成功，访问即可。

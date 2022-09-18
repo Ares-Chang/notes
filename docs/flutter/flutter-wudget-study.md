@@ -18,7 +18,7 @@ Flutter 中万物皆组件，所有页面都是组件组成的。
 
 每一门语言都是从 Hello World 开始学起的。
 
-现在[新建一个项目](./flutter-env-setup/#新建项目-2)，删除 `main.dart` 中的内容，把以下内容复制进入吧。
+现在[新建一个项目](./flutter-env-setup.md#新建项目-1)，删除 `main.dart` 中的内容，把以下内容复制进入吧。
 
 ```dart
 import 'package:flutter/material.dart';
@@ -107,7 +107,7 @@ class MyApp extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-46-01.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-46-01.png)
 
 属性介绍：
 ```dart
@@ -258,7 +258,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-44-54.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-44-54.png)
 
 - 方法一：属性圆角
 
@@ -315,7 +315,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-41-08.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-41-08.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -361,7 +361,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-41-22.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-41-22.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -465,7 +465,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-37-24.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-37-24.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -543,7 +543,7 @@ Flutter 中有些组件是没有 `padding` 属性的，所以提供了一个 `Pa
 
 实例：(`Image` 组件不能设置 `padding` 属性)
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-35-46.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-35-46.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -608,7 +608,7 @@ class IconContainer extends StatelessWidget { // 组件化 Icon 块
 
 水平布局组件，可以通过设置 X轴、Y轴来进行页面布局。
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-32-20.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-32-20.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -644,7 +644,7 @@ class HomeContent extends StatelessWidget {
 
 垂直布局组件，`Column` 组件和 `Row` 之间的不同在于，主轴和次轴的方向是相反的，使用时请注意。
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-31-59.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-31-59.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -680,7 +680,7 @@ class HomeContent extends StatelessWidget {
 
 类似 `flex布局`，可以自动适配占据大小。
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-31-31.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-31-31.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -719,7 +719,7 @@ class HomeContent extends StatelessWidget {
 
 实现下例布局：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_15-18-32.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-18-32.png)
 
 布局实例：
 
@@ -813,7 +813,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_16-21-08.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_16-21-08.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -847,7 +847,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_16-34-29.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_16-34-29.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -898,7 +898,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-13_16-44-37.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-13_16-44-37.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -974,7 +974,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-15_16-01-03.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-15_16-01-03.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -1056,7 +1056,7 @@ class HomeContent extends StatelessWidget {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-20_15-44-36.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-20_15-44-36.png)
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -1126,7 +1126,7 @@ RaisedButton 在 v1.25.0-8.1 之后被弃用，可以使用 ElevatedButton 代�
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-20_16-58-43.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-20_16-58-43.png)
 
 ```dart
 // 自定义按钮组件
@@ -1197,7 +1197,7 @@ Flutter 中可以通过 `FloatingActionButton` 组件直接生成一个浮动在
 
 实现点击按钮改变变量
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-20_18-56-53.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-20_18-56-53.png)
 
 ```dart
 class HomeContent extends StatefulWidget {
@@ -1247,7 +1247,7 @@ class _HomeContentState extends State<HomeContent> {
 
 点击添加一条信息渲染。
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-22_14-36-39.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-22_14-36-39.png)
 
 ```dart
 class HomeContent extends StatefulWidget {
@@ -1294,7 +1294,7 @@ class _HomeContentState extends State<HomeContent> {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/Snipaste_2021-04-22_16-32-51.png')">
+![](./images/flutter-wudget-study/Snipaste_2021-04-22_16-32-51.png)
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -1374,7 +1374,7 @@ class _HomeContentState extends State<HomeContent> {
 
 实例：
 
-<img class="zoom" :src="$withBase('/flutter/flutter-wudget-study/GIF 2021-4-23 16-06-36.gif')">
+![](./images/flutter-wudget-study/GIF 2021-4-23 16-06-36.gif)
 
 - 把以下代码写入 `main.dart` 文件中
 

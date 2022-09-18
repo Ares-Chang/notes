@@ -16,8 +16,7 @@ title: Cmder
 
 #### 放下我的 Cmder
 
-<br/>
-<img class="zoom" :src="$withBase('/tools/cmder/image-20200216205926196.png')" alt="效果图">
+![效果图](./images/cmder/image-20200216205926196.png)
 
 
 ## 安装

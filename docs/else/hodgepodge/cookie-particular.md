@@ -60,7 +60,7 @@ sidebarDepth: 3
 - **session 是另一种记录服务器和客户端会话状态的机制**
 - **session 是基于 cookie 实现的，session 存储在服务器端，sessionId 会被存储到客户端的cookie 中**
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/cookie-particular/16f523a04d0b3cf5.png')">
+![](./images/cookie-particular/16f523a04d0b3cf5.png)
 
 - **session 认证流程：**
 
@@ -93,7 +93,7 @@ sidebarDepth: 3
 
 - **token 的身份验证流程：**
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/cookie-particular/16f523a04d9c745f.png')">
+![](./images/cookie-particular/16f523a04d9c745f.png)
 
 1. 客户端使用用户名跟密码请求登录
 2. 服务端收到请求，去验证用户名与密码
@@ -111,7 +111,7 @@ sidebarDepth: 3
 - 另外一种 token——refresh token
 - refresh token 是专用于刷新 access token 的 token。如果没有 refresh token，也可以刷新 access token，但每次刷新都要用户输入登录用户名与密码，会很麻烦。有了 refresh token，可以减少这个麻烦，客户端直接用 refresh token 去更新 access token，无需用户进行额外的操作。
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/cookie-particular/16f523a04d1c887b.png')">
+![](./images/cookie-particular/16f523a04d1c887b.png)
 
 - Access Token 的有效期比较短，当 Acesss Token 由于过期而失效时，使用 Refresh Token 就可以获取到新的 Token，如果 Refresh Token 也失效了，用户就只能重新登录了。
 - Refresh Token 及过期时间是存储在服务器的数据库中，只有在申请新的 Acesss Token 时才会验证，不会对业务接口响应时间造成影响，也不需要向 Session 一样一直保持在内存中以应对大量的请求。
@@ -139,7 +139,7 @@ sidebarDepth: 3
 
 ### JWT 的原理
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/cookie-particular/16f523a04e881087.png')">
+![](./images/cookie-particular/16f523a04e881087.png)
 
 - **JWT 认证流程：**
 
@@ -147,7 +147,7 @@ sidebarDepth: 3
 	- 客户端将 token 保存到本地（通常使用 localstorage，也可以使用 cookie）
 	- 当用户希望访问一个受保护的路由或者资源的时候，需要请求头的 Authorization 字段中使用Bearer 模式添加 JWT，其内容看起来是下面这样
 
-```http
+```js
 Authorization: Bearer <token>
 ```
 
@@ -211,7 +211,7 @@ http://www.example.com/user?token=xxx
 
 ## 常见的加密算法
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/cookie-particular/16f523a04f17f2fc.png')">
+![](./images/cookie-particular/16f523a04f17f2fc.png)
 
 - 哈希算法(Hash Algorithm)又称散列算法、散列函数、哈希函数，是一种从任何一种数据中创建小的数字“指纹”的方法。哈希算法将数据重新打乱混合，重新创建一个哈希值。
 - 哈希算法主要用来保障数据真实性(即完整性)，即发信人将原始消息和哈希值一起发送，收信人通过相同的哈希函数来校验原始数据是否真实。
@@ -309,7 +309,7 @@ http://www.example.com/user?token=xxx
 	- 服务器重启 session 不丢失（不过也要注意 session 在 Redis 中的刷新/失效机制）；
 	- 不仅可以跨服务器 session 共享，甚至可以跨平台（例如网页端和 APP 端）
 
-<img class="zoom" :src="$withBase('/else/hodgepodge/cookie-particular/16f523a04fb8b4b8.png')">
+![](./images/cookie-particular/16f523a04fb8b4b8.png)
 
 4. session 持久化
 

@@ -18,7 +18,7 @@ sidebarDepth: 2
 
 需要改一改，要实现这样的效果：
 
-<img class="zoom" :src="$withBase('/web/uni-app/wx-js-sdk/Snipaste_2021-07-09_14-37-10.png')">
+![](./images/wx-js-sdk/Snipaste_2021-07-09_14-37-10.png)
 
 ## 解决方法
 

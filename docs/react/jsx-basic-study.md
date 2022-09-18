@@ -600,7 +600,7 @@ class App extends React.Component {
 
 **生命周期图解：**
 
-<img class="zoom" :src="$withBase('/react/jsx-basic-study/react生命周期(旧).png')">
+![](./images/jsx-basic-study/react生命周期(旧).png)
 
 **代码块详解：**
 
@@ -786,7 +786,7 @@ class Children extends React.Component {
 
 **新版图解：**
 
-<img class="zoom" :src="$withBase('/react/jsx-basic-study/react生命周期(新).png')">
+![](./images/jsx-basic-study/react生命周期(新).png)
 
 新版图解中隐藏了三个即将废弃的钩子，写入了两个新更新的钩子，并把卸载钩子单独成列，其他运行时并没有修改。
 

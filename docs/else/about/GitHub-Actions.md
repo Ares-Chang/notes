@@ -13,11 +13,11 @@ GitHub Actions 由 GitHub 官方推出的工作流工具。典型的应用场景
 
 域名解析记录中添加一个 CNAME 到 `<user>.github.io`。
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208222036924.png')">
+![](./images/GitHub-Actions/image-20200208222036924.png)
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208222202467.png')">
+![](./images/GitHub-Actions/image-20200208222202467.png)
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208222252745.png')">
+![](./images/GitHub-Actions/image-20200208222252745.png)
 
 > 记录类型：CNAME
 > 
@@ -46,35 +46,35 @@ demo.areschang.top
 
 点击 Settings
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208223029848.png')">
+![](./images/GitHub-Actions/image-20200208223029848.png)
 
 点击 Developer settings
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208223154720.png')">
+![](./images/GitHub-Actions/image-20200208223154720.png)
 
 点击 Personal access tokens 生成个人令牌
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208223316794.png')">
+![](./images/GitHub-Actions/image-20200208223316794.png)
 
 自己取个名字，给予访问权限
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208223358424.png')">
+![](./images/GitHub-Actions/image-20200208223358424.png)
 
 点击确定生成个人令牌
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208223455169.png')">
+![](./images/GitHub-Actions/image-20200208223455169.png)
 
 >  注意：这个令牌自己保存好，只会出现一次，如果忘记只能再次重新生成
 
 ## 三、将 token 配置到项目的 secrets 中
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208224538226.png')">
+![](./images/GitHub-Actions/image-20200208224538226.png)
 
 > Name：最好和我的一致，如果你修改了则下面的脚本内容也要修改。
 > 
 > Value：填写上一步生成的那个 token。
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208224724799.png')">
+![](./images/GitHub-Actions/image-20200208224724799.png)
 
 如图，添加成功了
 
@@ -137,7 +137,7 @@ git push
 ## 六、查看部署状态
 
 <br/>
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208232052118.png')">
+![](./images/GitHub-Actions/image-20200208232052118.png)
 
 > 当所有的任务都完成变为绿色的对勾之后，就表示本次自动部署成功了。
 > 
@@ -150,6 +150,6 @@ git push
 
 部署成功以后，进入 settings 中查看 GitHub Pages 服务是否正常。
 
-<img class="zoom" :src="$withBase('/else/about/GitHub-Actions/image-20200208232225817.png')">
+![](./images/GitHub-Actions/image-20200208232225817.png)
 
 服务正常即可在浏览器中访问你的网站。

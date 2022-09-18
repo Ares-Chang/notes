@@ -19,11 +19,11 @@ sidebarDepth: 2
 
 2. 安装完成找到安装目录，复制目录地址，添加入环境变量 `Path` 中就可以在命令行中运行。
 
-<img class="zoom" :src="$withBase('/else/tools/7z-cmd/Snipaste_2021-10-18_11-56-25.png')">
+![](./images/7z-cmd/Snipaste_2021-10-18_11-56-25.png)
 
 添加你的安装目录地址到新建变量中：
 
-<img class="zoom" :src="$withBase('/else/tools/7z-cmd/Snipaste_2021-10-18_12-00-32.png')">
+![](./images/7z-cmd/Snipaste_2021-10-18_12-00-32.png)
 
 完成后重启 `cmd` 运行 `7z` 出现说明文档表示配置成功。
 

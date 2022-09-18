@@ -14,11 +14,11 @@ title: 扫描普通二维码打开小程序
 
 1. wx 后台打开开发模块 -> 开发设置 -> 启用
 
-<img class="zoom" :src="$withBase('/web/uni-app/wx-link_open_applet/Snipaste_2020-09-27_13-07-18.png')">
+![](./images/wx-link_open_applet/Snipaste_2020-09-27_13-07-18.png)
 
 2. 点击添加，设置截取链接规则
 
-<img class="zoom" :src="$withBase('/web/uni-app/wx-link_open_applet/Snipaste_2020-09-27_13-10-04.png')">
+![](./images/wx-link_open_applet/Snipaste_2020-09-27_13-10-04.png)
 
 规则介绍：
 
@@ -32,7 +32,7 @@ title: 扫描普通二维码打开小程序
 
 :::danger 注意
 <br />
-<img class="zoom" :src="$withBase('/web/uni-app/wx-link_open_applet/Snipaste_2020-09-27_13-28-46.png')">
+![](./images/wx-link_open_applet/Snipaste_2020-09-27_13-28-46.png)
 
 这个地方只限于测试，不会影响到线上，不是只能设置 100(20*5) 个码！！！(我恨自己没有多长几双眼睛去看清 wx 的文档，语文阅读理解没有得满分。就不能换个显眼的字体颜色吗？开个黑背景什么也看不清😡)
 :::
@@ -41,7 +41,7 @@ title: 扫描普通二维码打开小程序
 
 3. 添加成功之后还需要手动发布一下
 
-<img class="zoom" :src="$withBase('/web/uni-app/wx-link_open_applet/Snipaste_2020-09-27_13-40-47.png')">
+![](./images/wx-link_open_applet/Snipaste_2020-09-27_13-40-47.png)
 
 配置发布成功之后会在5分钟之内生效，请不要马上扫描测试，会失败！血泪史！！!😭
 

@@ -18,7 +18,7 @@ cmder 默认打开是在安装位置，但是我想要自定义它的启动位�
 ```batch
 cmd /k ""%ConEmuDir%\..\init.bat" " -new_console:d:D:\
 ```
-<img class="zoom" :src="$withBase('/tools/cmder-expert/image-20200612125614807.png')">
+![](./images/cmder-expert/image-20200612125614807.png)
 
 再次重启程序，启动地址就已经改变了。
 

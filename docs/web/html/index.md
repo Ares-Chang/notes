@@ -6,7 +6,7 @@ title: 关于
 
 大家都在说HTML好学，背背标签，记记单词就会了，没有什么大不了的，然而你想要完全了解我，真的有点太天真了。
 
-<img class="zoom" :src="$withBase('/web/html/h1.jpg')">
+![](./images/h1.jpg)
 
 什么是 HTML？
 

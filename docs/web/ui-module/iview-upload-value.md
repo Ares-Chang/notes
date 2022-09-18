@@ -29,7 +29,7 @@ title: Upload 上传成功后 input 框无法赋值
 
 效果如下:
 
-<img class="zoom" :src="$withBase('/vue/iview-upload-value/iview-upload-value.png')">
+![](./images/iview-upload-value/iview-upload-value.png)
 
 ## 解释
 

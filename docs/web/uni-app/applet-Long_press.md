@@ -18,7 +18,7 @@ title: 小程序内长按分享图片
 <image src="https://picsum.photos/id/302/1728/1080" mode="" show-menu-by-longpress></image>
 ```
 
-<img class="zoom" :src="$withBase('/web/uni-app/applet-Long_press/Snipaste_2020-12-01_15-43-06.png')">
+![](./images/applet-Long_press/Snipaste_2020-12-01_15-43-06.png)
 
 详细问题请查看 [官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
 
@@ -48,7 +48,7 @@ title: 小程序内长按分享图片
 </script>
 ```
 
-<img class="zoom" style="width: 280px" :src="$withBase('/web/uni-app/applet-Long_press/img_7846661920babe22d80d00c7c8e7cee.jpg')">
+<img style="width: 374px" src="./images/applet-Long_press/img_7846661920babe22d80d00c7c8e7cee.jpg">
 
 详细问题请查看 [官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.previewImage.html)
 

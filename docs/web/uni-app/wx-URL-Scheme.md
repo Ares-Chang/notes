@@ -76,7 +76,7 @@ Scheme 将根据是否为到期有效与失效时间参数，分为**短期有�
 
 示例网页地址：**https://postpay-2g5hm2oxbbb721a4-1258211818.tcloudbaseapp.com/jump-mp.html**
 
-<img class="zoom" style="width: 120px;" :src="$withBase('/web/uni-app/wx-URL-Scheme/jump-mp.png')">
+<img class="zoom" style="width: 120px;" src="./images/wx-URL-Scheme/jump-mp.png">
 
 详细代码示例和说明：[云开发静态网站跳转小程序](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/staticstorage/jump-miniprogram.html)。
 

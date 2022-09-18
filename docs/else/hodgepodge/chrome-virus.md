@@ -14,7 +14,7 @@ title: Chrome 主页被劫持到 hao123
 
 但是到 chrome://version/ 查看浏览器版本的时候可以发现这么一句话
 
-<img class="zoom" :src="$withBase('/else/chrome-virus/Snipaste_2020-11-12_11-26-44.png')">
+![](./images/chrome-virus/Snipaste_2020-11-12_11-26-44.png)
 
 经确定是直接修改了 Chrome 的命令行劫持主页。
 

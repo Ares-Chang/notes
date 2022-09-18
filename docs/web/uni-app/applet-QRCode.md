@@ -12,7 +12,7 @@ title: 小程序内长按识别二维码
 
 将此属性设置为 `true`，就可以支持长按二维码识别，但是这种方法只能识别菊花码，也就是小程序码，是无法正常识别普通二维码的。
 
-<img class="zoom" style="width: 200px" :src="$withBase('/web/uni-app/applet-QRCode/img_20201112142944.jpg')">
+<img style="width: 374px" src="./images/applet-QRCode/img_20201112142944.jpg">
 
 
 - 2. 可以使用 `<web-view>` 标签来跳转到公众号文章中，在公众号文章中是支持长按识别二维码的。
@@ -21,4 +21,4 @@ title: 小程序内长按识别二维码
 
 设置完成之后就可以做到长按识别了。
 
-<img class="zoom" style="width: 200px" :src="$withBase('/web/uni-app/applet-QRCode/img_20201112142051.jpg')">
+<img style="width: 374px" src="./images/applet-QRCode/img_20201112142051.jpg">

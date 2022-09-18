@@ -14,13 +14,13 @@ title: 类微信小程序数据统计图表分享
 
 ### 折线图
 
-<img class="zoom" :src="$withBase('/web/echarts/echarts-likeness_wx/line_chart.png')">
+![](./images/echarts-likeness_wx/line_chart.png)
 
 [社区分享地址，点击查看](https://www.makeapie.com/editor.html?c=xEpyKZC2rx)
 
 ### 柱状图
 
-<img class="zoom" :src="$withBase('/web/echarts/echarts-likeness_wx/histogram.png')">
+![](./images/echarts-likeness_wx/histogram.png)
 
 [社区分享地址，点击查看](https://www.makeapie.com/editor.html?c=xhbQRMRslb)
 

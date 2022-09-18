@@ -27,4 +27,4 @@ git config --global credential.helper store
 在 Windows 端，我们可以在 控制面板 -> 用户账户 -> 管理 Windows 凭据 中删除或修改对应的凭证信息即可。
 
 
-<img class="zoom" :src="$withBase('/git/save-password/Snipaste_2021-10-13_11-48-40.png')">
+![](./images/save-password/Snipaste_2021-10-13_11-48-40.png)

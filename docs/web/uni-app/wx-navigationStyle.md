@@ -8,7 +8,7 @@ title: 去除默认导航栏
 
 具体效果是这样的：
 
-<img class="zoom" style="height: 300px" :src="$withBase('/web/uni-app/wx-navigationStyle/Snipaste_2021-09-18_11-12-09.png')">
+<img style="width: 300px" src="./images/wx-navigationStyle/Snipaste_2021-09-18_11-12-09.png">
 
 ## 解决方法
 

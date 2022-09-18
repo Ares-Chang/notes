@@ -73,4 +73,4 @@ class MyApp extends StatelessWidget {
 ### 效果图
 
 <br/>
-<img class="zoom" :src="$withBase('/flutter/hide-status_bar/Snipaste_2021-06-16_16-08-44.png')">
+![](./images/hide-status_bar/Snipaste_2021-06-16_16-08-44.png)

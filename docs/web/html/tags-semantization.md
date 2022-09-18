@@ -9,8 +9,8 @@ title: 标签语义化
 简单点来说，就是为了让别人一目了然的读懂你的代码结构
 
 ## 语义化的结构
-<br/>
-<img class="zoom" :src="$withBase('/web/html/tags-semantization/h2.jpg')" alt="标签语义化">
+
+![标签语义化](./images/tags-semantization/h2.jpg)
 
 上面的图示分别为：
 - `<header>`头部栏（如：Logo，标题）
