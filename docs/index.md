@@ -1,24 +1,45 @@
 ---
-home: true
-heroImage: /hero.jpg
-heroText: Ares Chang的小笔记
-tagline: 热爱生活，热爱编程
-actionText: 进入我的世界 →
-actionLink: /else/about/
+layout: home
+sidebar: false
+
+hero:
+  name: Ares Chang
+  text: Welcome to my Programming World
+  tagline: 这根本不是什么文档，仅仅是一个个人笔记而已，如果能给你带来帮助，我很高兴。
+  image:
+    src: /hero.jpg
+    alt: Ares Chang
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/
+    - theme: alt
+      text: Gadget
+      link: /else/tools
+    - theme: alt
+      text: Git
+      link: /git
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/ares-chang/notes
+
 features:
-- title: 编程
-  details: 程序之美
-- title: 生活
-  details: 人生不止有技术
-- title: 热爱
-  details: 热爱生活，向往自由
-footer: MIT Licensed | Copyright © Ares Chang
+  - icon: ⚡
+    title: VitePress
+    details: 该笔记基于 VitePress 默认主题编写，喜欢可以去 Star 一波
+  - icon: 🔌
+    title: 不定期
+    details: 更新一些开发过程遇到的问题及解决方案
+  - icon: 🎮
+    title: 可能
+    details: 还会更新一些学习过程中开发借鉴的小游戏
+  - icon: 🔋
+    title: 学习
+    details: 是不可能学习的，只有摸摸鱼这样来维持维持生活的样子啦~
+  - icon: 🛠
+    title: Gadget
+    details: 如果有遇到好用的小工具也会记录分享一下的
+  - icon: 🦾
+    title: Live
+    details: 折腾专业户，工具爱好者，三天不打上房揭瓦型选手，ennnnnnn...，闪亮登场！
 ---
-
-### 关于~~文档~~笔记
-
-:::warning Ares Chang：
-这根本不是什么文档，仅仅是一个个人笔记而已。
-
-如果能给你带来帮助，我很高兴。
-:::
