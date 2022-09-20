@@ -19,7 +19,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/ares-chang/notes/tree/main/docs/:path',
+      pattern: 'https://github.com/ares-chang/notes/edit/master/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
 
