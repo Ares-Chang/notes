@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { nav } from './config/index'
+import { nav, sidebar } from './config/index'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -12,6 +12,7 @@ export default defineConfig({
 
   themeConfig: {
     nav,
+    sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ares-chang/notes' }
