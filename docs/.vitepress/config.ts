@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
-
-const nav = [{ text: 'Test', link: '/' }]
+import { nav } from './config/index'
 
 export default defineConfig({
   lang: 'zh-CN',
