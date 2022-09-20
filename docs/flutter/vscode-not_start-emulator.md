@@ -8,7 +8,7 @@ title: VSCode 在 60s 内无法连接到模拟器
 
 尝试关闭，重启多次未果，发现 Dart 插件报错：
 
-```err
+```
 Error: Emulator didn't connect within 60 seconds	// 错误:模拟器没有在60秒内连接
 ```
 
