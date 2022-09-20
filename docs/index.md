@@ -12,13 +12,13 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/
+      link: /else/about/
     - theme: alt
       text: Gadget
-      link: /else/tools
+      link: /else/tools/
     - theme: alt
       text: Git
-      link: /git
+      link: /git/
     - theme: alt
       text: View on GitHub
       link: https://github.com/ares-chang/notes
