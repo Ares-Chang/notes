@@ -45,7 +45,8 @@ export const nav = [
           { text: 'Gadget', link: '/else/tools/' },
           { text: '面试题', link: '/else/interview/' },
           { text: '大杂绘', link: '/else/hodgepodge/' },
-          { text: '关于我', link: '/else/about/' }
+          { text: '关于我', link: '/else/about/' },
+          { text: 'Demo Repo', link: '/demo-repo' },
         ]
       }
     ]

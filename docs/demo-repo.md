@@ -1,6 +1,7 @@
 ---
 title: 「请提供最小重现」
-editLink: false
+titleTemplate: 引自 AntFu
+layout: page
 ---
 
 <!-- 引自 AntFu 大佬，简化链接，便于分享 -->
@@ -12,19 +13,37 @@ editLink: false
 </div>
 
 <style>
+footer[class="VPFooter"] {
+  display: none;
+}
 
+#antfu-why-reproductions-are-required-zh {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+@media screen and (max-width: 960px) {
   #antfu-why-reproductions-are-required-zh {
-    width: 100%;
-    height: 100%;
-    border: none;
-    position: fixed;
-    left: 0;
-    top: 0;
+    padding-top: 56px;
   }
-  #quote {
-    position: absolute;
-    right: 18%;
-    bottom: 13%;
-    font-size: 1.5rem;
+}
+@media screen and (min-width: 960px) {
+  #antfu-why-reproductions-are-required-zh {
+    padding-top: 73px;
   }
+}
+
+#quote {
+  position: fixed;
+  right: 18%;
+  bottom: 13%;
+  font-size: 1.5rem;
+  color: #42b883;
+}
+#quote:hover {
+  color: #33a06f;
+}
 </style>
