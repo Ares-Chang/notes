@@ -6,6 +6,8 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Ares Chang',
   description: 'Ares Chang 的小笔记 - 前端个人开放文档',
+  lastUpdated: true,
+  cleanUrls: 'with-subfolders',
 
   head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 
@@ -23,7 +25,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: `Copyright © 2020-${new Date().getFullYear()} Ares Chang`
+      copyright: 'Copyright © 2020-PRESENT Ares Chang'
     }
   },
 
