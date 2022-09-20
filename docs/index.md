@@ -43,3 +43,32 @@ features:
     title: Live
     details: 折腾专业户，工具爱好者，三天不打上房揭瓦型选手，ennnnnnn...，闪亮登场！
 ---
+
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    315deg,
+    #42d392 25%,
+    #647eff
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #41b88380 30%,
+    #35495e80
+  );
+  --vp-home-hero-image-filter: blur(30px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(72px);
+  }
+}
+</style>
