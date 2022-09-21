@@ -141,7 +141,7 @@ export const sidebar = {
         },
         {
           text: '节流与防抖',
-          link: '/web/javascript/throttle&debounce'
+          link: '/web/javascript/throttle-and-debounce'
         },
         {
           text: '画中画',
@@ -391,7 +391,7 @@ export const sidebar = {
         },
         {
           text: '组件属性透传',
-          link: '/vue/vm.$attrs'
+          link: '/vue/vm.attrs'
         },
         {
           text: '安装 less',
@@ -463,7 +463,7 @@ export const sidebar = {
         },
         {
           text: 'HEAD^ 提示 More?',
-          link: '/git/git-HEAD^'
+          link: '/git/git-HEAD'
         },
         {
           text: '重写历史',
@@ -740,7 +740,7 @@ export const sidebar = {
         },
         {
           text: '在什么情况下 a === a - 1 ?',
-          link: '/else/interview/a===a-1'
+          link: '/else/interview/a-isItEqualTo-a-1'
         },
         {
           text: '面试题',

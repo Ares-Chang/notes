@@ -16,6 +16,6 @@ Use '--' to separate paths from revisions, like this:
 
 1. 因为 `cmd` 控制台中换行符默认是 `^`，而不是`\`，所以`^`符号被 git 编译为换行符了
 
-解决方法：[HEAD^ 提示 More?](./git-HEAD^.md)
+解决方法：[HEAD^ 提示 More?](./git-HEAD.md)
 
 2. 该仓库到目前为止只有 `commit` 过一次代码，故已经是 `head` 版本，也会报这样的错。

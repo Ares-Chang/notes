@@ -112,4 +112,4 @@ setTimeout(() => {
 </script>
 ```
 
-其他按钮效果可以参考[节流与防抖](./throttle&debounce)。
+其他按钮效果可以参考[节流与防抖](./throttle-and-debounce)。
