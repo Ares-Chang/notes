@@ -18,15 +18,16 @@ cmder 默认打开是在安装位置，但是我想要自定义它的启动位�
 ```batch
 cmd /k ""%ConEmuDir%\..\init.bat" " -new_console:d:D:\
 ```
+
 ![](./images/cmder-expert/image-20200612125614807.png)
 
 再次重启程序，启动地址就已经改变了。
 
 ## 自定义 aliases 命令
 
-cmder 还增加了 alias 功能，它让你用短短的指令执行一些常见但指令超长又难以记忆的语法;比如 ls cls等等
+cmder 还增加了 alias 功能，它让你用短短的指令执行一些常见但指令超长又难以记忆的语法;比如 ls cls 等等
 
-打开cmder安装目录下的\config\user-aliases.cmd文件
+打开 cmder 安装目录下的\config\user-aliases.cmd 文件
 
 下面是 cmder 自带的一些命令，你还可以自定义你常用的命令。
 

@@ -21,26 +21,26 @@ sidebarDepth: 2
 
 或者严谨一点说是：正负 `Infinity`。
 
-::: tip 👉🏻知识点：
+::: tip 👉🏻 知识点：
 在 JavaScript 里，`Infinity` 是一个 `Number` 类型的字面量，**表示无穷大**。当一个 `Number` 类型的值，在运算过程中超过了所能表示的最大值，就会得到无穷大。
 :::
 
 比如，我们将一个不为 0 的正数除以 0，得到的结果就是**正无穷大**。
 
 ```js
-console.log(100 / 0);	// Infinity
+console.log(100 / 0) // Infinity
 ```
 
 对应的，负数有**负无穷大**
 
 ```js
-console.log(-100 / 0); // -Infinity
+console.log(-100 / 0) // -Infinity
 ```
 
 如果我们数值运算的值，超过了 `Number` 允许表示的范围，就会得到 `Infinity`。
 
 ```js
-console.log(1e1000); // Infinity
+console.log(1e1000) // Infinity
 ```
 
 在 JS 里，`Number.POSITIVE_INFINITY` 和 `Number.NEGATIVE_INFINITY` 两个常量的值，对应正负 `Infinity`。
@@ -50,29 +50,29 @@ console.log(1e1000); // Infinity
 任何一个有穷的数和 `Infinity` 的加减运算的结果都是 `Infinity`，而 `Infinity === Infinity`，所以：
 
 ```js
-let a = Infinity;
+let a = Infinity
 
-console.log(a === a - 1); // true
+console.log(a === a - 1) // true
 
-let b = -Infinity;
+let b = -Infinity
 
-console.log(b === b - 1);  // true
+console.log(b === b - 1) // true
 ```
 
 **💡 但是，要注意** ，`Infinity` 运算的结果并不总是 `Infinity`，比如我们看下面几种运算：
 
 ```js
-console.log(Infinity + Infinity); // Infinity
-console.log(Infinity - Infinity); // NaN
-console.log(Infinity * Infinity); // Infinity
-console.log(Infinity / Infinity); // NaN
-console.log(Infinity * 0); // NaN
+console.log(Infinity + Infinity) // Infinity
+console.log(Infinity - Infinity) // NaN
+console.log(Infinity * Infinity) // Infinity
+console.log(Infinity / Infinity) // NaN
+console.log(Infinity * 0) // NaN
 ```
 
 结论是，`Infinity` 运算也有可能得到 `NaN`，所以需要小心，例如我们的一个计算表达式中，有两个值相乘，一个值有可能很大，另一个值有可能为 0 时，就需要小心，如果那个很大的值得到 `Infinity`，另一个值恰好为 0 时，整个表达式的值可能是 `NaN`，这会造成一些 `bug`。
 
 ```js
-const result = a + b * c + d;
+const result = a + b * c + d
 
 // 如果 b 是 Infinity 而 c 是 0，整个表达式的结果就有可能是 NaN
 ```
@@ -92,9 +92,9 @@ const result = a + b * c + d;
 我们来测试一下：
 
 ```js
-let a = Number.MAX_SAFE_INTEGER;
-for(let i = 0; i < 10; i++) {
-	console.log(`${i} : ${a + i}`);
+let a = Number.MAX_SAFE_INTEGER
+for (let i = 0; i < 10; i++) {
+  console.log(`${i} : ${a + i}`)
 }
 ```
 
@@ -118,8 +118,8 @@ for(let i = 0; i < 10; i++) {
 我们可以利用这个知识点构造其他一些满足需求的值：
 
 ```js
-let a = Number.MIN_SAFE_INTEGER - 1;
-console.log(a === a - 1); // true
+let a = Number.MIN_SAFE_INTEGER - 1
+console.log(a === a - 1) // true
 ```
 
 为了解决这个问题，出现了一种新的解决方法：**大整数 Big Integer**
@@ -127,16 +127,18 @@ console.log(a === a - 1); // true
 在最新的 Chrome 浏览器下，其实我们可以精确表示大整数，[TC39 的 Big Integer 提案目前是 Stage 3 阶段](https://github.com/tc39/proposal-bigint)，在 Chrome 浏览器上已经被支持。
 
 ```js
-console.log(2 ** 2000); // Infinity
-console.log(2n ** 2000n); // 114813069527425452423283320117768198402231770208869520047764273682576626139237031385665948631650626991844596463898746277344711896086305533142593135616665318539129989145312280000688779148240044871428926990063486244781615463646388363947317026040466353970904996558162398808944629605623311649536164221970332681344168908984458505602379484807914058900934776500429002716706625830522008132236281291761267883317206598995396418127021779858404042159853183251540889433902091920554957783589672039160081957216630582755380425583726015528348786419432054508915275783882625175435528800822842770817965453762184851149029376n
+console.log(2 ** 2000) // Infinity
+console.log(2n ** 2000n) // 114813069527425452423283320117768198402231770208869520047764273682576626139237031385665948631650626991844596463898746277344711896086305533142593135616665318539129989145312280000688779148240044871428926990063486244781615463646388363947317026040466353970904996558162398808944629605623311649536164221970332681344168908984458505602379484807914058900934776500429002716706625830522008132236281291761267883317206598995396418127021779858404042159853183251540889433902091920554957783589672039160081957216630582755380425583726015528348786419432054508915275783882625175435528800822842770817965453762184851149029376n
 ```
 
 ::: warning 注意：
 `NaN` 不等于任何值，包括自身也不相等，所以 `NaN` 是不可以的。
+
 ```js
-let a = NaN;
-console.log(a === a - 1); // false
+let a = NaN
+console.log(a === a - 1) // false
 ```
+
 :::
 
 <br/>

@@ -33,38 +33,38 @@ npm install react-router-dom
 /**
  * index.js 入口文件
  */
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <BrowserRouter>
     <App {...params} />
   </BrowserRouter>,
-  document.getElementById("root")
-);
+  document.getElementById('root')
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()
 ```
 
 2. 把以下代码放置在 `App.js` 文件中
 
-```jsx {2,3,11-49,51-59,65-81}
-import React from "react";
-import { Switch, Route, Link, NavLink, Redirect } from "react-router-dom";
-import qs from "querystring"; // URL 参数拉拼接工具库
+```jsx {2,3,11-46,48-56,62-79}
+import React from 'react'
+import { Switch, Route, Link, NavLink, Redirect } from 'react-router-dom'
+import qs from 'querystring' // URL 参数拉拼接工具库
 
 class App extends React.Component {
   render() {
     return (
       <div>
         {/* 这些 class 是 bootstrap 类名 */}
-        <div className="list-group" style={{ display: "flex" }}>
+        <div className='list-group' style={{ display: 'flex' }}>
           {/**
            * Link 区别与 NavLink，两者功能一致，
            * 但是 NavLink 在选中时会自动添加一个 active 类名，
@@ -77,67 +77,64 @@ class App extends React.Component {
            */}
           {/* params 传值 */}
           <NavLink
-            activeClassName="selected"
-            className="list-group-item"
-            to="/a/1"
-          >
+            activeClassName='selected'
+            className='list-group-item'
+            to='/a/1'>
             A
           </NavLink>
           {/* query 传值 */}
           <NavLink
-            activeClassName="selected"
-            className="list-group-item"
-            to="/b?id=2"
-          >
+            activeClassName='selected'
+            className='list-group-item'
+            to='/b?id=2'>
             B
           </NavLink>
           {/* state 传值 */}
           <NavLink
-            activeClassName="selected"
-            className="list-group-item"
+            activeClassName='selected'
+            className='list-group-item'
             to={{
-              pathname: "/c",
+              pathname: '/c',
               state: {
-                id: 3,
-              },
-            }}
-          >
+                id: 3
+              }
+            }}>
             C
           </NavLink>
         </div>
         {/* 路由注册 */}
         <Switch>
           {/* component 包裹组件，组件内可以接收到路由传值 */}
-          <Route path="/a/:id" component={A} /> {/* params 传值 */}
-          <Route path="/b" component={B} />
-          <Route path="/c" component={C} />
+          <Route path='/a/:id' component={A} /> {/* params 传值 */}
+          <Route path='/b' component={B} />
+          <Route path='/c' component={C} />
           {/* 兜底重定向，查无路由跳转到首页 */}
-          <Redirect to="/" />
+          <Redirect to='/' />
         </Switch>
       </div>
-    );
+    )
   }
 }
 
 /* 函数组件注册，props 通过参数传入，类式组件可直接通过 this.props 调用 */
 function A(props) {
-  console.log("params 传值：", props.match.params);
-  return <h2>我的 A 组件</h2>;
+  console.log('params 传值：', props.match.params)
+  return <h2>我的 A 组件</h2>
 }
 function B(props) {
-  console.log("query 传值：", qs.parse(props.location.search.slice(1)));
-  return <h2>我的 B 组件</h2>;
+  console.log('query 传值：', qs.parse(props.location.search.slice(1)))
+  return <h2>我的 B 组件</h2>
 }
 function C(props) {
   /**
    * 由于 state 是获取缓存中的数据，单纯刷新数据更新可能不及时，
    * 需要深度刷新(ctrl + F5)清除缓存才能体现
    */
-  console.log("state 传值：", props.location.state);
-  return <h2>我的 C 组件</h2>;
+  console.log('state 传值：', props.location.state)
+  return <h2>我的 C 组件</h2>
 }
 
-export default App;
+export default App
 ```
 
 方法类路由跳转等功能都封装在了 `props.history` 属性中，如需了解可自行查看。

@@ -23,7 +23,7 @@ title: 微信小程序中区分运行环境及请求域名
 `miniProgram.envVersion` 的合法值:
 
 | 值      | 说明   |
-|---------|--------|
+| ------- | ------ |
 | develop | 开发版 |
 | trial   | 体验版 |
 | release | 正式版 |
@@ -36,14 +36,14 @@ title: 微信小程序中区分运行环境及请求域名
 // 获取小程序帐号及版本信息
 const accountInfo = wx.getAccountInfoSync()
 const {
-	envVersion = 'release' // 版本不兼容设置默认值
+  envVersion = 'release' // 版本不兼容设置默认值
 } = accountInfo.miniProgram
 
 // 基础请求路径
 const BASEURL = {
-	develop: 'xxx', // 开发版
-	trial: 'xxx', // 体验版
-	release: 'xxx', // 正式版
+  develop: 'xxx', // 开发版
+  trial: 'xxx', // 体验版
+  release: 'xxx' // 正式版
 }
 
 console.log(BASEURL[envVersion]) // 查看对应版本请求路径

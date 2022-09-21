@@ -40,7 +40,12 @@ title: 获取用户授权信息
 
 ```html
 <template>
-	<button class="btn-info" plain="true" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber"></button>
+  <button
+    class="btn-info"
+    plain="true"
+    open-type="getPhoneNumber"
+    @getphonenumber="getPhoneNumber"
+  ></button>
 </template>
 ```
 
@@ -48,59 +53,59 @@ title: 获取用户授权信息
 
 ```js
 export default {
-	data() {
-		return {
-			...
-		}
-	}
-	methods: {
-		async wxlogin() {
-			let [err, loginRes] = await uni.login({
-				provider: 'weixin',
-			});
-			await uni.request({
-				url: `后台获取 openid 接口`
-			})
-		},
-		getPhoneNumber(e) {
-			var that = this;
-			uni.checkSession({
-				success() {
-					var ency = e.detail.encryptedData;
-					var iv = e.detail.iv;
-					if (e.detail.errMsg == 'getPhoneNumber:fail user deny') {
-						...
-						// 用户拒绝授权
-						...
-					} else { //同意授权
-						uni.request({
-							method: 'POST',
-							url: '后台解密接口',
-							data: {
-								encrypted_data: ency,
-								iv: iv,
-							},
-							success: (res) => {
-								console.log("解密成功")
-								console.log(res)
-							},
-							fail: function(res) {
-								console.log("解密失败~~~~~~~~~~~~~");
-								console.log(res);
-							}
-						});
-					}
-				},
-				fail() {
-					console.log("session_key 已经失效，需要重新执行登录流程");
-					that.wxlogin(); //重新登录
-				},
-				complete() {
-					that.shade = false
-				}
-			})
-		},
-	}
+  data() {
+    return {
+      ...
+    }
+  }
+  methods: {
+    async wxlogin() {
+      let [err, loginRes] = await uni.login({
+        provider: 'weixin',
+      });
+      await uni.request({
+        url: `后台获取 openid 接口`
+      })
+    },
+    getPhoneNumber(e) {
+      var that = this;
+      uni.checkSession({
+        success() {
+          var ency = e.detail.encryptedData;
+          var iv = e.detail.iv;
+          if (e.detail.errMsg == 'getPhoneNumber:fail user deny') {
+            ...
+            // 用户拒绝授权
+            ...
+          } else { //同意授权
+            uni.request({
+              method: 'POST',
+              url: '后台解密接口',
+              data: {
+                encrypted_data: ency,
+                iv: iv,
+              },
+              success: (res) => {
+                console.log("解密成功")
+                console.log(res)
+              },
+              fail: function(res) {
+                console.log("解密失败~~~~~~~~~~~~~");
+                console.log(res);
+              }
+            });
+          }
+        },
+        fail() {
+          console.log("session_key 已经失效，需要重新执行登录流程");
+          that.wxlogin(); //重新登录
+        },
+        complete() {
+          that.shade = false
+        }
+      })
+    },
+  }
 }
 ```
 

@@ -10,7 +10,7 @@ title: '保存 git 帐户密码'
 
 这时我们进入项目目录，输入:
 
-```git
+```sh
 git config --global credential.helper store
 ```
 
@@ -25,6 +25,5 @@ git config --global credential.helper store
 但是这时无法直接更改帐号密码，
 
 在 Windows 端，我们可以在 控制面板 -> 用户账户 -> 管理 Windows 凭据 中删除或修改对应的凭证信息即可。
-
 
 ![](./images/save-password/Snipaste_2021-10-13_11-48-40.png)

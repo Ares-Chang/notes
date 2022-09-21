@@ -10,7 +10,7 @@ title: onLaunch 函数中的异步方法处理
 
 但是当活动页加载完成，`onLaunch` 函数内，接口调用的数据却获取不到。
 
-经查询，发现这应该是 `uni-app` 框架本身的问题，在 `onLaunch` 钩子内如果调用异步，数据加载顺序就会发生改变。（避坑🙃）
+经查询，发现这应该是 `uni-app` 框架本身的问题，在 `onLaunch` 钩子内如果调用异步，数据加载顺序就会发生改变。（避坑 🙃）
 
 也就是说在 `onLaunch` 钩子还在执行异步数据获取的时候，页面的 `onLoad` 钩子就已经开始执行了。所以获取不到需要的数据体。
 
@@ -22,7 +22,7 @@ title: onLaunch 函数中的异步方法处理
 
 ```js
 Vue.prototype.$onLaunched = new Promise(resolve => {
-	Vue.prototype.$isResolve = resolve
+  Vue.prototype.$isResolve = resolve
 })
 ```
 
@@ -36,7 +36,7 @@ onLaunch: async function() {
 		page_status
 	} = await this.$u.api.pagesSwitch()
 	console.log(123)
-	this.$isResolve() // 这是重点！！！ 
+	this.$isResolve() // 这是重点！！！
 },
 ```
 
@@ -46,7 +46,7 @@ onLaunch: async function() {
 
 ```js
 async onLoad(option) {
-	await this.$onLaunched // 这是重点！！！ 
+	await this.$onLaunched // 这是重点！！！
 	console.log(456)
 	/**
 	 * 业务代码
@@ -62,13 +62,13 @@ async onLoad(option) {
 
 ```js
 module.exports = {
-	async onLoad() {
-		await this.$onLaunched // 这是重点！！！
-		console.log(456)
-		if (this.getDataList) {
-			this.getDataList()	// 这里执行每个页面特定方法
-		}
-	}
+  async onLoad() {
+    await this.$onLaunched // 这是重点！！！
+    console.log(456)
+    if (this.getDataList) {
+      this.getDataList() // 这里执行每个页面特定方法
+    }
+  }
 }
 ```
 
@@ -76,7 +76,7 @@ module.exports = {
 
 ```js
 import myMixin from './common/my_mixin.js'
-Vue.mixin(myMixin);
+Vue.mixin(myMixin)
 ```
 
 事件注册完成，正常 `console` 显示流程应该是 `123 456` 如果显示顺序不对，证明方法并没有生效。

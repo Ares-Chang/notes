@@ -39,13 +39,13 @@ nrm -V
 
 `nrm ls` 命令可以列出所有可供选择的源
 
-```bash 
+```bash
 nrm ls
 ```
 
-显示带 * 的是当前正在使用的源。
+显示带 \* 的是当前正在使用的源。
 
-```bash 
+```bash
 * npm -------- https://registry.npmjs.org/
   yarn ------- https://registry.yarnpkg.com/
   cnpm ------- http://r.cnpmjs.org/
@@ -59,13 +59,13 @@ nrm ls
 
 使用 `nrm use <源>` 切换到对应的源
 
-```bash 
+```bash
 nrm use taobao
 ```
 
 显示
 
-```bash 
+```bash
 Registry has been set to: https://registry.npm.taobao.org/
 ```
 
@@ -98,6 +98,7 @@ nrm add  <registry> <url> [home]
 # reigstry为源名.
 nrm del <registry>
 ```
+
 ## 测试速度
 
 你还可以通过 `nrm test` 测试相应源的响应时间。

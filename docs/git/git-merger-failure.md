@@ -10,7 +10,7 @@ title: 合并分支失败
 
 - 保留本地的更改,中止合并 -> 重新合并 -> 重新拉取
 
-```git
+```
 git merge --abort
 git reset --merge
 git pull

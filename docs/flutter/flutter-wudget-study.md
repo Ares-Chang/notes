@@ -10,7 +10,6 @@ autoPrev: flutter-env-setup
 Flutter 中万物皆组件，所有页面都是组件组成的。
 
 > PS: 如果一个组件不会使用，可以光标移至组件名称，按 `F12`，跳转对应类来查看用法。或者使用 `ctrl+左键` 来触发。
->
 
 > 还有其他疑问，可以访问[官方文档](https://api.flutter.dev/)，查询用法。
 
@@ -99,7 +98,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-## Text && Container 
+## Text && Container
 
 `Text` 类似 html 中的 `span` 元素，可以用来包裹文本内容。
 
@@ -110,6 +109,7 @@ class MyApp extends StatelessWidget {
 ![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-46-01.png)
 
 属性介绍：
+
 ```dart
 class HomeContent extends StatelessWidget {
   @override
@@ -192,9 +192,9 @@ class HomeContent extends StatelessWidget {
 ```yaml
 - images
   - 2.0x
-    - header.png
+  - header.png
   - 3.0x
-    - header.png
+  - header.png
   - header.png
 ```
 
@@ -205,7 +205,6 @@ class HomeContent extends StatelessWidget {
 ```yaml
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -221,7 +220,6 @@ flutter:
 ```yaml
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -505,8 +503,9 @@ class HomeContent extends StatelessWidget {
 `GridView.builder` 方法循环出来的内容需要在 `gridDelegate` 属性中修改列表样式信息。
 
 `gridDelegate` 的属性类型名有点长：
-  - `SliverGridDelegateWithFixedCrossAxisCount`
-  - `SliverGridDelegateWithMaxCrossAxisExtent`
+
+- `SliverGridDelegateWithFixedCrossAxisCount`
+- `SliverGridDelegateWithMaxCrossAxisExtent`
 
 ```dart
 class HomeContent extends StatelessWidget {
@@ -606,7 +605,7 @@ class IconContainer extends StatelessWidget { // 组件化 Icon 块
 
 ### Row
 
-水平布局组件，可以通过设置 X轴、Y轴来进行页面布局。
+水平布局组件，可以通过设置 X 轴、Y 轴来进行页面布局。
 
 ![](./images/flutter-wudget-study/Snipaste_2021-04-13_15-32-20.png)
 
@@ -1185,7 +1184,7 @@ class HomeContent extends StatelessWidget {
 }
 ```
 
-Flutter 中可以通过 `FloatingActionButton` 组件直接生成一个浮动在右下角按钮，可以应用多种场景。具体使用可以参考 [路由跳转](#路由跳转) Demo实例。
+Flutter 中可以通过 `FloatingActionButton` 组件直接生成一个浮动在右下角按钮，可以应用多种场景。具体使用可以参考 [路由跳转](#路由跳转) Demo 实例。
 
 ## 有状态组件
 
@@ -1236,12 +1235,14 @@ class _HomeContentState extends State<HomeContent> {
 ```
 
 ::: tip VS Code 插件安利
+
 - Awesome Flutter Snippets 可以通过简写来快速插入模板信息。
 
 常用代码块：
-  - `statelessW`  快速生成无状态组件
-  - `statefulW`  快速生成有状态组件
-:::
+
+- `statelessW` 快速生成无状态组件
+- `statefulW` 快速生成有状态组件
+  :::
 
 ### Demo 练习
 

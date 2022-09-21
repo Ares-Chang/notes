@@ -17,7 +17,7 @@ sidebarDepth: 2
 
 如果你是克隆的远程仓库，那么至少可以看到 `origin` --- 这是 Git 给仓库服务器的默认别名。
 
-```git
+```sh
 λ git clone [https://github.com/xxx/xxx.git]
 Cloning into 'test'...
 remote: Enumerating objects: 1857, done.
@@ -37,12 +37,11 @@ origin
 我使用的 [Cmder](https://cmder.net/)，如果感兴趣可以点击查看我的 [Cmder 配置](/else/tools/cmder)。
 :::
 
-
 如果想要查看详细信息，可以在 `git remote` 后面加个 `-v`
 
 表示展示读写远程仓库使用的 Git 保存的简写与其对应的 URL。
 
-```git
+```sh
 λ git remote -v
 origin  https://github.com/xxx/xxx.git (fetch)
 origin  https://github.com/xxx/xxx.git (push)
@@ -54,7 +53,7 @@ origin  https://github.com/xxx/xxx.git (push)
 
 需要通过 `git remote add [shortname] [url]` 来链接本地仓库与远程仓库。
 
-```git
+```sh
 λ git remote add origin https://github.com/xxx/xxx.git
 
 λ git remote -v
@@ -70,7 +69,7 @@ origin  https://github.com/xxx/xxx.git (push)
 
 同时，如果以后默认推送到些仓库，可以在 `git push` 后面添加 `-u` 属性。
 
-```git
+```sh
 λ git push -u origin master
 ```
 
@@ -78,7 +77,7 @@ origin  https://github.com/xxx/xxx.git (push)
 
 如果以后不需要用到此仓库，可以通过 `git remote remove [origin]` 来删除别名。
 
-```git
+```sh
 λ git remote remove origin
 ```
 
@@ -88,7 +87,7 @@ origin  https://github.com/xxx/xxx.git (push)
 
 可以通过 `git remote rename [old_name] [new_name]` 来修改别名。
 
-```git
+```sh
 λ git remote -v
 origin  https://github.com/xxx/xxx.git (fetch)
 origin  https://github.com/xxx/xxx.git (push)
@@ -106,7 +105,7 @@ test    https://github.com/xxx/xxx.git (push)
 
 同时也可以通过 `git remote set-url [origin] [url]` 来只修改链接地址。
 
-```git
+```sh
 λ git remote set-url origin https://github.com/xxx/xxxxx.git
 
 λ git remote -v
@@ -120,7 +119,7 @@ origin  https://github.com/xxx/xxxxx.git (push)
 
 可以使用 `git remote show [origin]` 来实现，当然分支名称也可以换为 `url` 链接。
 
-```git
+```sh
 λ git remote show origin
 * remote origin
   Fetch URL: https://github.com/xxx/xxx.git

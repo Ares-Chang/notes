@@ -68,7 +68,7 @@ ul {
         color: red;
       }
       &::after {
-        content: "...";
+        content: '...';
       }
     }
   }
@@ -85,7 +85,7 @@ ul li a:hover {
 }
 
 ul li a::after {
-  content: "...";
+  content: '...';
 }
 ```
 
@@ -330,7 +330,7 @@ nav {
 
 在单独使用 css 的 `@import` 规则导入文件，是不及 `link` 的效率，比如加载字体库，有次在项目中就吃过这个亏，那会发誓打死我也不用这个规则。
 
-sass 的 `@import` 规则是在生成 css 文件时就把相关文件导入进来，所以，和 css 的 `@impor` t没有什么关系，放心食用。
+sass 的 `@import` 规则是在生成 css 文件时就把相关文件导入进来，所以，和 css 的 `@impor` t 没有什么关系，放心食用。
 
 但是由于 sass 兼容原生的 css，所以它也支持原生的 CSS `@import`，比如导入文件或者 url 是以 `.css` 结尾的。
 
@@ -338,15 +338,15 @@ sass 的 `@import` 规则是在生成 css 文件时就把相关文件导入进�
 
 ```scss
 // 常用方法
-@import "header";
-@import "footer";
+@import 'header';
+@import 'footer';
 
 // 多个导入
-@import "rounded-corners", "text-shadow";
+@import 'rounded-corners', 'text-shadow';
 
 // 嵌套导入
 .blue-theme {
-  @import "blue-theme";
+  @import 'blue-theme';
 }
 ```
 
@@ -414,7 +414,7 @@ Sass 中 `@media` 指令与 CSS 中用法一样，不过还允许其在 CSS 规�
   background-color: #fdd;
 }
 .error.intrusion {
-  background-image: url("/image/hacked.png");
+  background-image: url('/image/hacked.png');
 }
 .seriousError {
   @extend .error;
@@ -431,7 +431,7 @@ Sass 中 `@media` 指令与 CSS 中用法一样，不过还允许其在 CSS 规�
 
 .error.intrusion,
 .intrusion.seriousError {
-  background-image: url("/image/hacked.png");
+  background-image: url('/image/hacked.png');
 }
 
 .seriousError {
@@ -480,6 +480,7 @@ p {
   }
 }
 ```
+
 ```css
 .list-1 {
   width: 1em;
@@ -509,22 +510,22 @@ p {
 ```scss
 @each $kind in small, middle, large {
   .#{$kind}-icon {
-    background-image: url("/images/#{$kind}-icon.png");
+    background-image: url('/images/#{$kind}-icon.png');
   }
 }
 ```
 
 ```css
 .small-icon {
-  background-image: url("/images/small-icon.png");
+  background-image: url('/images/small-icon.png');
 }
 
 .middle-icon {
-  background-image: url("/images/middle-icon.png");
+  background-image: url('/images/middle-icon.png');
 }
 
 .large-icon {
-  background-image: url("/images/large-icon.png");
+  background-image: url('/images/large-icon.png');
 }
 ```
 
@@ -536,7 +537,7 @@ p {
 @mixin clearfix {
   display: inline-block;
   &:after {
-    content: ".";
+    content: '.';
     display: block;
     height: 0;
     clear: both;
@@ -558,7 +559,7 @@ p {
 }
 
 .clearfix:after {
-  content: ".";
+  content: '.';
   display: block;
   height: 0;
   clear: both;

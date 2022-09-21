@@ -28,11 +28,11 @@ git config --global user.email "user@email.com"
 
 Generating public/private rsa key pair.
 
-Enter file in which to save the key (/Users/username/.ssh/id_rsa): 
+Enter file in which to save the key (/Users/username/.ssh/id_rsa):
 
-这里的username是电脑上的用户名，这个地址也是文件的存储地址，然后按回车.
+这里的 username 是电脑上的用户名，这个地址也是文件的存储地址，然后按回车.
 
-然后系统会自动在.ssh文件夹下生成两个文件，id_rsa和id_rsa.pub，用记事本打开id_rsa.pub
+然后系统会自动在.ssh 文件夹下生成两个文件，id_rsa 和 id_rsa.pub，用记事本打开 id_rsa.pub
 
 将全部的内容复制
 

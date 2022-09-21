@@ -9,21 +9,26 @@ title: Upload 上传成功后 input 框无法赋值
 
 ```html
 <i-col span="16">
-	<Form-item label="icon链接" prop="iconUrl">
-		<i-input v-model="formData.iconUrl" placeholder="icon链接" readonly/>
-	</Form-item>
+  <Form-item label="icon链接" prop="iconUrl">
+    <i-input v-model="formData.iconUrl" placeholder="icon链接" readonly />
+  </Form-item>
 </i-col>
 <i-col span="3">
-	<Form-item :label-width="1">
-		<Upload style="width: 300px;" action="../sys/AliyunOss/upload" :format="['jpg','jpeg','png']"
-				max-size="10"
-				:on-success="handleSuccessIconUrl" :on-format-error="handleFormatError"
-				:show-upload-list="false"
-				:before-upload="uploadBooImg"
-				:on-exceeded-size="handleMaxSize">
-			<i-button icon="ios-cloud-upload-outline">上传图片</i-button>
-		</Upload>
-	</Form-item>
+  <Form-item :label-width="1">
+    <Upload
+      style="width: 300px;"
+      action="../sys/AliyunOss/upload"
+      :format="['jpg','jpeg','png']"
+      max-size="10"
+      :on-success="handleSuccessIconUrl"
+      :on-format-error="handleFormatError"
+      :show-upload-list="false"
+      :before-upload="uploadBooImg"
+      :on-exceeded-size="handleMaxSize"
+    >
+      <i-button icon="ios-cloud-upload-outline">上传图片</i-button>
+    </Upload>
+  </Form-item>
 </i-col>
 ```
 
@@ -51,11 +56,11 @@ title: Upload 上传成功后 input 框无法赋值
 
 ```js
 uploadBooImg() {
-	...
+  ...
 
-	this.$set(this.formData,'iconUrl',`图片链接`)
+  this.$set(this.formData,'iconUrl',`图片链接`)
 
-	...
+  ...
 }
 ```
 

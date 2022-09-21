@@ -10,20 +10,20 @@ vue 项目中需要做一个页面滚动到特定位置执行动画的操作，�
 
 ```js
 mounted () {
-	// 给 window 绑定一个滚动事件监听
+  // 给 window 绑定一个滚动事件监听
   window.addEventListener('scroll', this.handleScroll)
 },
 
 methods: {
-  handleScroll () { 
-		var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-		if(scrollTop >= 500) {
-			// 这里写入执行操作
-		}
+  handleScroll () {
+    var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    if(scrollTop >= 500) {
+      // 这里写入执行操作
+    }
   },
 },
 destroyed () {
-	// 离开页面销毁事件
+  // 离开页面销毁事件
   window.removeEventListener('scroll', this.handleScroll)
 }
 ```

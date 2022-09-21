@@ -17,5 +17,12 @@ title: 禁止 Video 视频播放时自动全屏
 使用方法如下：
 
 ```html
-<video src="./test.mp4" webkit-playsinline="" playsinline="" x5-playsinline="" x-webkit-airplay="allow" controls=""></video>
+<video
+  src="./test.mp4"
+  webkit-playsinline=""
+  playsinline=""
+  x5-playsinline=""
+  x-webkit-airplay="allow"
+  controls=""
+></video>
 ```

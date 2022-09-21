@@ -14,7 +14,7 @@ title: 防止 img 的图片被手机浏览器的 图片查看器 打开
 
 ```html
 <a href="javascript:;">
-	<img class="subject_img" src="@/assets/subject/subject-one.png" alt />
+  <img class="subject_img" src="@/assets/subject/subject-one.png" alt />
 </a>
 ```
 

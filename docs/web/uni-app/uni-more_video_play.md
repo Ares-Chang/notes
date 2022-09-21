@@ -20,59 +20,72 @@ title: 解决同页面多视频可同时播放问题
 
 **代码块：**
 
-```vue {3,4,31-44}
+```vue {3-11,41-58}
 <template>
   <view class="content">
     <!-- 设置 id 属性，用于判断视频源 -->
-    <video :src="item.url" :id="item.id" v-for="item in list" :key="item.id" controls @play="videoPlaying"></video>
+    <video
+      :src="item.url"
+      :id="item.id"
+      v-for="item in list"
+      :key="item.id"
+      controls
+      @play="videoPlaying"
+    ></video>
   </view>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        list: [{
-            id: 1,
-            url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
-          },
-          {
-            id: 2,
-            url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
-          }, {
-            id: 3,
-            url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
-          }, {
-            id: 4,
-            url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
-          },
-        ],
-        video: null
+export default {
+  data() {
+    return {
+      list: [
+        {
+          id: 1,
+          url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
+        },
+        {
+          id: 2,
+          url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
+        },
+        {
+          id: 3,
+          url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
+        },
+        {
+          id: 4,
+          url: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4'
+        }
+      ],
+      video: null
+    }
+  },
+  methods: {
+    videoPlaying(e) {
+      // 解析同页面多视频同时播放问题
+      let newVideo = uni.createVideoContext(e.currentTarget.id) // 根据视频 id 创建对应视频上下文
+      // let newVideo = uni.createVideoContext(e.currentTarget.id, this); // 自定义组件中使用
+      newVideo.id = e.currentTarget.id // 设置上下文 id
+      if (!this.video) {
+        // 判断当前如无视频正在播放，直接播放当前视频并记录
+        this.video = newVideo
+        this.video.play()
+        return
       }
-    },
-    methods: {
-      videoPlaying(e) { // 解析同页面多视频同时播放问题
-        let newVideo = uni.createVideoContext(e.currentTarget.id); // 根据视频 id 创建对应视频上下文
-        // let newVideo = uni.createVideoContext(e.currentTarget.id, this); // 自定义组件中使用
-        newVideo.id = e.currentTarget.id; // 设置上下文 id
-        if (!this.video) { // 判断当前如无视频正在播放，直接播放当前视频并记录
-          this.video = newVideo;
-          this.video.play();
-          return;
-        }
-        if (this.video.id !== newVideo.id) { // 哪果之前播放视频和当前播放视频 id 不相同进入执行
-          newVideo.play(); // 当前视频主体播放
-          this.video.pause(); // 之前视频主体暂停
-          this.video = newVideo; // 播放主体切换记录
-        }
-      },
+      if (this.video.id !== newVideo.id) {
+        // 哪果之前播放视频和当前播放视频 id 不相同进入执行
+        newVideo.play() // 当前视频主体播放
+        this.video.pause() // 之前视频主体暂停
+        this.video = newVideo // 播放主体切换记录
+      }
     }
   }
+}
 </script>
 <style lang="scss" scoped>
-  .content {
-    text-align: center;
-  }
+.content {
+  text-align: center;
+}
 </style>
 ```
 
@@ -81,5 +94,5 @@ title: 解决同页面多视频可同时播放问题
 ::: danger 注意：
 **注意！注意！注意！！！组件中使用，传参 `this`，否则方法找不到组件，不会产生效果！！！**
 
-`uni.createVideoContext` 在**自定义组件**中使用时，**第二个参数传入组件实例 this**，以操作组件内 `<video>` 组件。   --- [uni-app 官网](https://uniapp.dcloud.io/api/media/video-context?id=createvideocontext)
+`uni.createVideoContext` 在**自定义组件**中使用时，**第二个参数传入组件实例 this**，以操作组件内 `<video>` 组件。 --- [uni-app 官网](https://uniapp.dcloud.io/api/media/video-context?id=createvideocontext)
 :::

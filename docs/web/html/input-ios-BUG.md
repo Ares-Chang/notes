@@ -8,7 +8,7 @@ BUG：IOS 系统内获取验证码，点击输入时会自动被复制两遍到�
 
 ## 问题产生
 
-这应该是个 IOS 系统 BUG，要不就是 `weixin` 浏览器内核的问题。（PS：这不是前端的问题😈）
+这应该是个 IOS 系统 BUG，要不就是 `weixin` 浏览器内核的问题。（PS：这不是前端的问题 😈）
 
 导致验证码信息到达之后会重复触发 `UITextFieldTextDidChangeNotification` 监听事件，验证码复制了两次。
 
@@ -22,9 +22,9 @@ BUG：IOS 系统内获取验证码，点击输入时会自动被复制两遍到�
 
 ```html
 <input
-	type="text"
-	placeholder="请输入短信验证码"
-	maxlength="6"
-	oninput="if(value.length>6) value = value.slice(0,6)"
+  type="text"
+  placeholder="请输入短信验证码"
+  maxlength="6"
+  oninput="if(value.length>6) value = value.slice(0,6)"
 />
 ```

@@ -14,7 +14,7 @@ Use '--' to separate paths from revisions, like this:
 
 ## 问题原因
 
-1. 因为 `cmd` 控制台中换行符默认是 `^`，而不是`\`，所以`^`符号被git编译为换行符了
+1. 因为 `cmd` 控制台中换行符默认是 `^`，而不是`\`，所以`^`符号被 git 编译为换行符了
 
 解决方法：[HEAD^ 提示 More?](./git-HEAD^.md)
 

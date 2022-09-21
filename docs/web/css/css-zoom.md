@@ -8,7 +8,7 @@ title: 缩放页面内容
 
 ```css
 body {
-	zoom: 0.8;
+  zoom: 0.8;
 }
 ```
 
@@ -18,7 +18,7 @@ body {
 
 ```css
 body {
-	transform: scale(0.8);
+  transform: scale(0.8);
 }
 ```
 

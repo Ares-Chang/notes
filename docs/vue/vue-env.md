@@ -23,14 +23,12 @@ title: Vue 配置多环境接口地址
 let BASEURL = ''
 
 if (process.env.NODE_ENV == 'development') {
-	BASEURL = '开发地址';
+  BASEURL = '开发地址'
 } else if (process.env.NODE_ENV == 'production') {
-	BASEURL = '生产地址';
+  BASEURL = '生产地址'
 }
- 
-export {
-	BASEURL
-}
+
+export { BASEURL }
 ```
 
 我们平常开发所使用的 `yarn dev` 命令会匹配 `development`，`build` 打包后会自动替换为 `production` 来实现地址的自动更换

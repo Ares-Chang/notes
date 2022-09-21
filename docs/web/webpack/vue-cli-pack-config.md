@@ -26,11 +26,11 @@ yarn add cross-env -D
 
 ```js
 "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "cross-env env_config=prod node build/build.js",
-		"build:test": "cross-env env_config=test node build/build.js",
-		"build:pre": "cross-env env_config=pre node build/build.js"
+  "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+  "start": "npm run dev",
+  "build": "cross-env env_config=prod node build/build.js",
+  "build:test": "cross-env env_config=test node build/build.js",
+  "build:pre": "cross-env env_config=pre node build/build.js"
 },
 ```
 
@@ -45,9 +45,9 @@ yarn add cross-env -D
 ```js
 'use strict'
 module.exports = {
-  prod: {NODE_ENV: '"production"'},
-	test: {NODE_ENV: '"testing"'},
-	pre: {NODE_ENV: '"pre-release"'},
+  prod: { NODE_ENV: '"production"' },
+  test: { NODE_ENV: '"testing"' },
+  pre: { NODE_ENV: '"pre-release"' }
 }
 ```
 
@@ -67,7 +67,7 @@ new webpack.DefinePlugin({
 })
 ```
 
-6. 2.x修改完成，然后测试一波，在 `main.js` 中写个判断打印出来看一波
+6. 2.x 修改完成，然后测试一波，在 `main.js` 中写个判断打印出来看一波
 
 ```js
 import Vue from 'vue'
@@ -77,11 +77,11 @@ import router from './router'
 Vue.config.productionTip = false
 
 if (process.env.NODE_ENV === 'production') {
-  console.log('生产环境');
-} else if(process.env.NODE_ENV === 'testing') {
-  console.log('测试环境');
-} else if(process.env.NODE_ENV === 'pre-release') {
-  console.log('预发布环境');
+  console.log('生产环境')
+} else if (process.env.NODE_ENV === 'testing') {
+  console.log('测试环境')
+} else if (process.env.NODE_ENV === 'pre-release') {
+  console.log('预发布环境')
 }
 
 new Vue({
@@ -96,12 +96,12 @@ new Vue({
 
 ### vue-cli 3.X
 
-1. 在项目根目录下新建3个文件，`.env.test`、`.env.prod`、`.env.pre`，在文件内分别写入 `NODE_ENV = testing`、`NODE_ENV = production`、`NODE_ENV = pre-release`。
+1. 在项目根目录下新建 3 个文件，`.env.test`、`.env.prod`、`.env.pre`，在文件内分别写入 `NODE_ENV = testing`、`NODE_ENV = production`、`NODE_ENV = pre-release`。
 
 2. 在项目的 `package.json` 文件中，把 `scripts` 对象的 `build` 字段的值改为以下代码，实际就是修改 `npm run build` 命令。同时再添加 `npm run build:test` 命令和 `npm run build:pre` 命令。
 
-3. 完成2.X的第6步
+3. 完成 2.X 的第 6 步
 
-4. 3.x的实现比2.x简化了很多，官方文档说的很详细[【传送门】](https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F)。
+4. 3.x 的实现比 2.x 简化了很多，官方文档说的很详细[【传送门】](https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F)。
 
 > ps: 文章摘录自 [胖大人本胖](https://juejin.im/post/5d40440351882507d52b187f) ，文章只作收录，感谢提供方案解决我所遇到的问题。

@@ -25,51 +25,53 @@ title: props 双向绑定问题
 可以通过以下方法来实现组件属性的双向绑定
 
 子组件：
+
 ```vue
 <template>
-	<Modal
-		title="弹框组件"
-		v-model="SwitchData"
-		class-name="vertical-center-modal"
-		@on-ok="Confirm"
-		@on-cancel="Cancel">
-		<div class="content">
-			具体业务代码...
-		</div>
-	</Modal>
+  <Modal
+    title="弹框组件"
+    v-model="SwitchData"
+    class-name="vertical-center-modal"
+    @on-ok="Confirm"
+    @on-cancel="Cancel"
+  >
+    <div class="content">具体业务代码...</div>
+  </Modal>
 </template>
 <script>
-  export default {
-    name: 'SonCompenent',
-    props: {
-      Switch: Boolean
+export default {
+  name: 'SonCompenent',
+  props: {
+    Switch: Boolean
+  },
+  data() {
+    return {
+      // 在组件内保存 props 传递下来的值
+      SwitchData: this.Switch
+    }
+  },
+  //监听父组件对 props 属性 Switch 的修改，并同步到组件内的 SwitchData 属性
+  watch: {
+    Switch(val) {
+      this.SwitchData = val
+    }
+  },
+  methods: {
+    Confirm() {
+      // ...
+      this.$emit('changeShowMod', false) // 子组件对开关状态修改后向父组件发送事件通知
     },
-    data () {
-      return {
-        // 在组件内保存 props 传递下来的值
-        SwitchData: this.Switch
-      }
-    },
-    //监听父组件对 props 属性 Switch 的修改，并同步到组件内的 SwitchData 属性
-    watch: {
-      Switch (val) {
-        this.SwitchData = val
-      }
-    },
-    methods: {
-      Confirm () {
-        // ...
-        this.$emit('changeShowMod', false) // 子组件对开关状态修改后向父组件发送事件通知
-      },
-      Cancel () {
-				// ...
-        this.$emit('changeShowMod', false)
-      }
+    Cancel() {
+      // ...
+      this.$emit('changeShowMod', false)
     }
   }
+}
 </script>
 ```
+
 父组件修改
+
 ```vue
 <template>
   <div class="FatherCompenent">
@@ -80,21 +82,21 @@ title: props 双向绑定问题
 <script>
 import SonCompenent from './SonCompenent'
 export default {
-  name: "FatherCompenent",
+  name: 'FatherCompenent',
   data() {
     return {
       Switch: false
-    };
+    }
   },
   components: {
     SonCompenent
   },
   methods: {
     closeModal(data) {
-      this.Switch = data; // 子组件触发父组件事件，进行数据变更，同步 Switch 数据
+      this.Switch = data // 子组件触发父组件事件，进行数据变更，同步 Switch 数据
     }
   }
-};
+}
 </script>
 ```
 

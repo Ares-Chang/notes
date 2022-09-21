@@ -15,7 +15,11 @@ title: 小程序内长按分享图片
 添加此属性可以开启图片长按识别弹出框，但需要基础库在 `2.7.0` 版本以上才支持
 
 ```html
-<image src="https://picsum.photos/id/302/1728/1080" mode="" show-menu-by-longpress></image>
+<image
+  src="https://picsum.photos/id/302/1728/1080"
+  mode=""
+  show-menu-by-longpress
+></image>
 ```
 
 ![](./images/applet-Long_press/Snipaste_2020-12-01_15-43-06.png)
@@ -30,21 +34,25 @@ title: 小程序内长按分享图片
 
 ```vue
 <template>
-	<view class="home">
-		<image src="https://picsum.photos/id/302/1728/1080" mode="" @click="shareImg"></image>
-	</view>
+  <view class="home">
+    <image
+      src="https://picsum.photos/id/302/1728/1080"
+      mode=""
+      @click="shareImg"
+    ></image>
+  </view>
 </template>
 <script>
-	export default {
-		methods: {
-			shareImg() {
-				wx.previewImage({
-					current: '', // 当前显示图片的http链接
-					urls: ['https://picsum.photos/id/302/1728/1080'] // 需要预览的图片http链接列表
-				})
-			}
-		}
-	}
+export default {
+  methods: {
+    shareImg() {
+      wx.previewImage({
+        current: '', // 当前显示图片的http链接
+        urls: ['https://picsum.photos/id/302/1728/1080'] // 需要预览的图片http链接列表
+      })
+    }
+  }
+}
 </script>
 ```
 

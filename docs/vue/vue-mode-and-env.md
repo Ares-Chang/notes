@@ -117,4 +117,4 @@ console.log(process.env.VUE_APP_SECRET)
 
 本文没有提供详细的代码案例，但是如果仔细看完文档会发现，实现环境变量非常简单，只是创建几个文件的事情。
 
-如果实在没看明白就去[官方文档](https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F)多看几遍，可能是我摘录的问题🤪。
+如果实在没看明白就去[官方文档](https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F)多看几遍，可能是我摘录的问题 🤪。

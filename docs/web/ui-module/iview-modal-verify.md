@@ -45,30 +45,30 @@ export default {
       loading: true,
       formValidate: {},
       ruleValidate: {
-        name: [{ required: true, trigger: "blur" }],
+        name: [{ required: true, trigger: 'blur' }],
         mail: [
-          { required: true, trigger: "blur" },
-          { type: "email", trigger: "blur" },
-        ],
-      },
-    };
+          { required: true, trigger: 'blur' },
+          { type: 'email', trigger: 'blur' }
+        ]
+      }
+    }
   },
   methods: {
     asyncOK() {
-      this.$refs["formValidate"].validate((valid) => {
+      this.$refs['formValidate'].validate(valid => {
         if (valid) {
-          this.$Message.success("成功!");
-          this.modal = false;
+          this.$Message.success('成功!')
+          this.modal = false
         } else {
-          this.$Message.error("请填写必选项!");
-          this.loading = false;	// 关闭 loading
+          this.$Message.error('请填写必选项!')
+          this.loading = false // 关闭 loading
           this.$nextTick(() => {
-            this.loading = true; // 下次渲染前打开 loading
-          });
+            this.loading = true // 下次渲染前打开 loading
+          })
         }
-      });
-    },
-  },
-};
+      })
+    }
+  }
+}
 </script>
 ```

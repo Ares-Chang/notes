@@ -6,7 +6,7 @@ sidebarDepth: 3
 
 ## 基本提交流程
 
-1. 初始化一个仓库 `git init` 只做一次就可以，会自动创建一个隐藏的.git文件夹
+1. 初始化一个仓库 `git init` 只做一次就可以，会自动创建一个隐藏的.git 文件夹
 
 2. 把工作区修改，保存提交到暂存区 `git add .`
 
@@ -49,13 +49,14 @@ sidebarDepth: 3
 	git reset --hard 提交的流水号（只写一部分都行）	// 恢复全部文件
 	git reset --hard HEAD^							// 恢复全部文件
 ```
-> HEAD    表示当前版本，也就是最新的提交
+
+> HEAD 表示当前版本，也就是最新的提交
 >
-> HEAD^   上一个版本
+> HEAD^ 上一个版本
 >
-> HEAD^^  上上一个版本
+> HEAD^^ 上上一个版本
 >
-> HEAD~100   往上100个版本
+> HEAD~100 往上 100 个版本
 
 ## 查看命令历史
 
@@ -81,13 +82,13 @@ sidebarDepth: 3
 
 ### 删除分支
 
-- 删除本地分支 `git branch -d 分支名`	
+- 删除本地分支 `git branch -d 分支名`
 
 > 删除分支不会删除代码
 
-- 删除远程分支 
+- 删除远程分支
 
-方法一：--delete删除远程分支
+方法一：--delete 删除远程分支
 
 ```shell
 git push origin --delete 分支名
@@ -101,7 +102,7 @@ git push origin :分支名
 
 ### 合并分支
 
-- 合并分支 `git merge 分支名`	把指定分支合并到当前分支
+- 合并分支 `git merge 分支名` 把指定分支合并到当前分支
 
 - 变基 `git rebase 分支名` 也可以合并分支记录，但当前分支记录会在最前面
 
@@ -113,7 +114,7 @@ git push origin :分支名
 
 ### 拉取远程分支
 
--  拉取并合并
+- 拉取并合并
 
 可以使用 `git pull` 拉取当前分支远程代码并合并到本地
 
@@ -130,7 +131,7 @@ git push origin :分支名
 ```shell
 git pull origin [远程分支名]:[本地分支名]
 
-git fetch origin [远程分支名]:[本地分支名] 
+git fetch origin [远程分支名]:[本地分支名]
 ```
 
 - 拉取远程其他分支并在本地创建相同分支可以使用：
@@ -151,6 +152,6 @@ git pull origin 远程分支名
 
 ## 克隆仓库
 
-从远程GitHub上下载仓库
+从远程 GitHub 上下载仓库
 
 - `git clone [地址]`

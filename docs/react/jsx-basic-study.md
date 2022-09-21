@@ -19,23 +19,26 @@ React 就是使用 JSX 来替代常规的 JavaScript 使用的。
 5. 虚拟 DOM 只能有一个根标签。
 6. 标签必须闭合
 7. 标签首字母
-  1. 若小写字母开头，则将该标签转为 html 中同名元素，若无同名元素，则报错。
-  2. 若大写字母开头，react 则渲染对应组件，若组件未定义，则报错。
+8. 若小写字母开头，则将该标签转为 html 中同名元素，若无同名元素，则报错。
+9. 若大写字母开头，react 则渲染对应组件，若组件未定义，则报错。
 
 例：
 
 ```jsx
 function App() {
-  const text = 'Hello,React!';
+  const text = 'Hello,React!'
   return (
     // 虚拟 DOM 只能有一个根标签并且不需要引号
-    <div className="App"> {/* 样式类名指定不要用 class，要使用 className。 */}
-      <span style={{ fontSize: '24px' }}>{text}</span> {/* 内联样式要用对象形式写。 */}
+    <div className='App'>
+      {' '}
+      {/* 样式类名指定不要用 class，要使用 className。 */}
+      <span style={{ fontSize: '24px' }}>{text}</span>{' '}
+      {/* 内联样式要用对象形式写。 */}
       <br /> {/* 标签必须闭合 */}
       <p>这是一个小写字母</p>
       {/* <P>这里会报错，因为找不到对应的组件。</P> */}
     </div>
-  );
+  )
 }
 ```
 
@@ -56,12 +59,14 @@ function App() {
   // 循环列表
   const dataList = ['Angular', 'React', 'Vue']
   return (
-    <div className="App">
+    <div className='App'>
       <ul>
-        {dataList.map((item, index) => <li key={index}>{item}</li>)}
+        {dataList.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
       </ul>
     </div>
-  );
+  )
 }
 ```
 
@@ -76,13 +81,15 @@ React 中提供了两种创建组件的方法，分别是**函数式组件**和*
 > 下列代码放入 index.js 中
 
 ```jsx
-import React from 'react';	// 引入 React 依赖
-import ReactDOM from 'react-dom';	// 引入虚拟 DOM 依赖
+import React from 'react' // 引入 React 依赖
+import ReactDOM from 'react-dom' // 引入虚拟 DOM 依赖
 
-function App() {	// 注册函数式组件，函数名就是组件名
-  console.log(this);  // 此处 this 是 undefined，因为处于严格模式中。
-  return (	// 函数式组件必须有返回值！！！
-    <div className="App">
+function App() {
+  // 注册函数式组件，函数名就是组件名
+  console.log(this) // 此处 this 是 undefined，因为处于严格模式中。
+  return (
+    // 函数式组件必须有返回值！！！
+    <div className='App'>
       <h1>我是函数式组件。</h1>
     </div>
   )
@@ -91,10 +98,10 @@ function App() {	// 注册函数式组件，函数名就是组件名
 // 渲染组件到页面
 ReactDOM.render(
   <React.StrictMode>
-    <App />	{/* 使用函数式组件 */}
+    <App /> {/* 使用函数式组件 */}
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 /**
  * 执行了 ReactDom.render(<App />, document.getElementById('root')) 之后，发生了什么？
  *  1. React 解析组件标签，找到 App 组件。
@@ -109,13 +116,15 @@ ReactDOM.render(
 > 下列代码放入 index.js 中
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // 类式组件
-class App extends React.Component { // React 中使用类注册组件，必须继承 React.Component
-  render() {  // 类式组件必须包含 render，并且 render 必须有返回值。
-    return <h2>我是类式组件</h2>	// 另一种写法，只支持单独一行。
+class App extends React.Component {
+  // React 中使用类注册组件，必须继承 React.Component
+  render() {
+    // 类式组件必须包含 render，并且 render 必须有返回值。
+    return <h2>我是类式组件</h2> // 另一种写法，只支持单独一行。
   }
 }
 
@@ -125,7 +134,7 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 /**
  * 执行了 ReactDom.render(<App />, document.getElementById('root')) 之后，发生了什么？
  *  1. React 解析组件标签，找到 App 组件。
@@ -147,7 +156,7 @@ React 中组件分为 [简单组件](https://react.docschina.org/) 和复杂组�
 ```jsx
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>今天天气很炎热，微风。</h1>
     </div>
   )
@@ -159,23 +168,27 @@ function App() {
 ```jsx
 class App extends React.Component {
   constructor(props) {
-    super(props)  // constructor 要求必须调用 super 继承。
+    super(props) // constructor 要求必须调用 super 继承。
     this.state = { isHost: true, wind: '微风' } // 设置 state 状态，必须为 {}。内部存放要使用的数据。
-    this.changeWeather = this.changeWeather.bind(this)  // 为函数重新指定 this，如果不重新指定内部 this 为 undefined
+    this.changeWeather = this.changeWeather.bind(this) // 为函数重新指定 this，如果不重新指定内部 this 为 undefined
   }
   render() {
     const { isHost, wind } = this.state // 简写，方便下方调用。
     // 事件注册。
-    return <h2 onClick={this.changeWeather}>今天天气很{isHost ? "炎热" : "凉爽"},{wind}。</h2>
+    return (
+      <h2 onClick={this.changeWeather}>
+        今天天气很{isHost ? '炎热' : '凉爽'},{wind}。
+      </h2>
+    )
   }
 
   changeWeather() {
     // console.log(this)  // 经 bind() 指向，应为 App 类，否则为 undefined。
-    
+
     // 状态不可直接更改，要使用 setState 更改。
     // this.isHost = !this.isHost // 错误，数据更改，但是 React 不认可，无法刷新页面。
     const { isHost } = this.state
-    this.setState({ isHost: !isHost })  // 正确写法，setState 是一种更新，不是替换！！！
+    this.setState({ isHost: !isHost }) // 正确写法，setState 是一种更新，不是替换！！！
   }
 }
 ```
@@ -196,13 +209,18 @@ class App extends React.Component {
 
 ```jsx
 class App extends React.Component {
-  state = { isHost: true, wind: '微风' }  // 类内赋值会自行注册初始化
+  state = { isHost: true, wind: '微风' } // 类内赋值会自行注册初始化
   render() {
     const { isHost, wind } = this.state
-    return <h2 onClick={this.changeWeather}>今天天气很{isHost ? "炎热" : "凉爽"},{wind}</h2>
+    return (
+      <h2 onClick={this.changeWeather}>
+        今天天气很{isHost ? '炎热' : '凉爽'},{wind}
+      </h2>
+    )
   }
 
-  changeWeather = () => { // 箭头函数内是没有 this 的 this 指向父级
+  changeWeather = () => {
+    // 箭头函数内是没有 this 的 this 指向父级
     const { isHost } = this.state
     this.setState({ isHost: !isHost })
   }
@@ -225,7 +243,7 @@ class App extends React.Component {
     // this.props.age = age + 1;  // error: props 是只读的，不能通过代码修改！
     return (
       <ul>
-        <li>姓名：{this.props.name}</li>  {/* 使用传值 */}
+        <li>姓名：{this.props.name}</li> {/* 使用传值 */}
         <li>性别：{this.props.sex}</li>
         <li>年龄：{this.props.age}</li>
       </ul>
@@ -236,7 +254,7 @@ class App extends React.Component {
 ReactDOM.render(
   <App name='tom' sex='女' age={18} />, // 属性传值
   document.getElementById('root')
-);
+)
 ```
 
 ### 批量属性传值
@@ -248,7 +266,7 @@ class App extends React.Component {
   render() {
     return (
       <ul>
-        <li>姓名：{this.props.name}</li>  {/* 使用传值 */}
+        <li>姓名：{this.props.name}</li> {/* 使用传值 */}
         <li>性别：{this.props.sex}</li>
         <li>年龄：{this.props.age}</li>
       </ul>
@@ -256,15 +274,15 @@ class App extends React.Component {
   }
 }
 
-const params = { name: 'tom', sex: '女', age: 18 };
+const params = { name: 'tom', sex: '女', age: 18 }
 ReactDOM.render(
   <App {...params} />, // 批量属性传值
   document.getElementById('root')
-);
+)
 ```
 
 > 注：`{...params}` 不是 js 中的解构赋值。只有在 React 和 babel 共存中可以使用。
-> 
+>
 > js 解析赋值无法直接对对象使用。
 
 ### 函数式 props
@@ -274,7 +292,8 @@ ReactDOM.render(
 函数式组件中的传值会以参数的形式传递，并且所有属性都已经收集为一个对象。
 
 ```jsx
-function App(props) { // 函数式传值
+function App(props) {
+  // 函数式传值
   return (
     <ul>
       <li>姓名：{props.name}</li>
@@ -286,11 +305,12 @@ function App(props) { // 函数式传值
 
 // Prop 验证和设置默认值
 App.propTypes = {
-  name: PropTypes.string,  // 16.x 之后写法，不是必须的
-  sex: PropTypes.string.isRequired,  // isRequired 后缀，标识这具值是必传的
+  name: PropTypes.string, // 16.x 之后写法，不是必须的
+  sex: PropTypes.string.isRequired, // isRequired 后缀，标识这具值是必传的
   age: PropTypes.number.isRequired
 }
-App.defaultProps = { // 设置默认值，如果没有传值会使用默认值。
+App.defaultProps = {
+  // 设置默认值，如果没有传值会使用默认值。
   name: 'Jack'
 }
 
@@ -298,7 +318,7 @@ const params = { sex: '女', age: 18 }
 ReactDOM.render(
   <App {...params} />, // 批量属性传值
   document.getElementById('root')
-);
+)
 ```
 
 > Prop 验证和设置默认值也是可以使用，只不过需要换一种写法。
@@ -336,31 +356,29 @@ npm install prop-types
 class App extends React.Component {
   static propTypes = {
     // name: React.propTypes.string, // 15.x 版本使用这种方法进行验证
-    name: PropTypes.string,  // 16.x 版本需要单独安装 PropTypes
-    sex: PropTypes.string.isRequired,  // isRequired 后缀，标识这具值是必传的
-    age: PropTypes.number.isRequired  // number 传值
+    name: PropTypes.string, // 16.x 版本需要单独安装 PropTypes
+    sex: PropTypes.string.isRequired, // isRequired 后缀，标识这具值是必传的
+    age: PropTypes.number.isRequired // number 传值
   }
-  
-  static defaultProps = { // 设置默认值，如果没有传值会使用默认值。
+
+  static defaultProps = {
+    // 设置默认值，如果没有传值会使用默认值。
     name: 'Jack'
   }
 
   render() {
     return (
       <ul>
-        <li>姓名：{this.props.name}</li>  {/* 'Jack' */}
-        <li>性别：{this.props.sex}</li>  {/* '女' */}
-        <li>年龄：{this.props.age}</li>  {/* 18 */}
+        <li>姓名：{this.props.name}</li> {/* 'Jack' */}
+        <li>性别：{this.props.sex}</li> {/* '女' */}
+        <li>年龄：{this.props.age}</li> {/* 18 */}
       </ul>
     )
   }
 }
 
-const params = { sex: '女', age: 18 };
-ReactDOM.render(
-  <App {...params} />,
-  document.getElementById('root')
-);
+const params = { sex: '女', age: 18 }
+ReactDOM.render(<App {...params} />, document.getElementById('root'))
 ```
 
 ### 验证类型
@@ -387,6 +405,7 @@ React 提倡少 `DOM` 操作，尽量不使用原生 `DOM`。
 `Refs` 分使用为三种：[~~字符串型~~](#字符串型)，[回调型](#回调型) 和 [`createRef`](#createRef) 同样官方也提示 [勿过度使用 Refs](https://react.docschina.org/docs/refs-and-the-dom.html#dont-overuse-refs)。
 
 ### 字符串型
+
 ~~字符串型~~在使用时只需要在标签上添加 `ref='name'` 来标识，React 就会自动收集在 `refs` 属性中。
 
 但是这种方法官方**并不是很推荐**并[认为这是存在一些问题的](https://react.docschina.org/docs/refs-and-the-dom.html#legacy-api-string-refs)，可能会在未来哪个版本弃用这种方法。
@@ -402,7 +421,12 @@ class App extends React.Component {
     return (
       <div>
         {/* 直接 ref='name' */}
-        <input ref="input" onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+        <input
+          ref='input'
+          onBlur={this.showText}
+          type='text'
+          placeholder='失去焦点弹窗输入内容！'
+        />
       </div>
     )
   }
@@ -433,7 +457,12 @@ class App extends React.Component {
     return (
       <div>
         {/* React 在执行时会传入标签实例为参数（内联式注入） */}
-        <input ref={(e) => this.input = e} onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+        <input
+          ref={e => (this.input = e)}
+          onBlur={this.showText}
+          type='text'
+          placeholder='失去焦点弹窗输入内容！'
+        />
       </div>
     )
   }
@@ -443,24 +472,31 @@ class App extends React.Component {
 ::: warning 关于回调型 Refs 说明：
 如果 `ref` 回调函数是以内联函数的方式定义的，在更新过程中它会被执行两次，第一次传入参数 `null`，然后第二次会传入参数 `DOM` 元素。这是因为在每次渲染时会创建一个新的函数实例，所以 React 清空旧的 `ref` 并且设置新的。通过将 `ref` 的回调函数定义成 `class` 的绑定函数的方式可以避免上述问题，但是**大多数情况下它是无关紧要的**。
 ::: details Class 绑定式：
+
 ```js {5-7,12}
 class App extends React.Component {
   showText = () => {
     alert(this.input.value)
   }
-  setDome = (e) => {
+  setDome = e => {
     this.input = e
   }
   render() {
     return (
       <div>
         {/* class 绑定式 */}
-        <input ref={this.setDome} onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+        <input
+          ref={this.setDome}
+          onBlur={this.showText}
+          type='text'
+          placeholder='失去焦点弹窗输入内容！'
+        />
       </div>
     )
   }
 }
 ```
+
 :::
 
 ### creatRef
@@ -469,7 +505,7 @@ class App extends React.Component {
 
 相对的官方更为推荐的是这一种方法。
 
-```jsx {2,4,10}
+```jsx {2,4,10-15}
 class App extends React.Component {
   myRef = React.createRef()
   showText = () => {
@@ -479,7 +515,12 @@ class App extends React.Component {
     return (
       <div>
         {/* createRef 绑定式 */}
-        <input ref={this.myRef} onBlur={this.showText} type="text" placeholder="失去焦点弹窗输入内容！" />
+        <input
+          ref={this.myRef}
+          onBlur={this.showText}
+          type='text'
+          placeholder='失去焦点弹窗输入内容！'
+        />
       </div>
     )
   }
@@ -519,8 +560,8 @@ class App extends React.Component {
     passWord: ''
   }
 
-  handleButton = (e) => {
-    e.preventDefault()  // 阻止 form 跳转
+  handleButton = e => {
+    e.preventDefault() // 阻止 form 跳转
     const { userName, passWord } = this.state
     console.log(`你输入的用户名为：${userName}，输入的密码为：${passWord}`)
   }
@@ -529,8 +570,16 @@ class App extends React.Component {
     return (
       <form onSubmit={this.handleButton}>
         {/* 动态更改数据状态，只要用户触发，就会更改 */}
-        用户名：<input onChange={(e) => this.setState({ userName: e.target.value })} type="text" />
-        密码：<input onChange={(e) => this.setState({ passWord: e.target.value })} type="password" />
+        用户名：
+        <input
+          onChange={e => this.setState({ userName: e.target.value })}
+          type='text'
+        />
+        密码：
+        <input
+          onChange={e => this.setState({ passWord: e.target.value })}
+          type='password'
+        />
         <button>提交</button>
       </form>
     )
@@ -546,17 +595,21 @@ class App extends React.Component {
 
 ```jsx
 class App extends React.Component {
-  handleButton = (e) => {
-    e.preventDefault()  // 阻止 form 跳转
+  handleButton = e => {
+    e.preventDefault() // 阻止 form 跳转
     const { userName, passWord } = this // 只有点击 button 时都会获取用户输入数据
-    console.log(`你输入的用户名为：${userName.value}，输入的密码为：${passWord.value}`)
+    console.log(
+      `你输入的用户名为：${userName.value}，输入的密码为：${passWord.value}`
+    )
   }
 
   render() {
     return (
       <form onSubmit={this.handleButton}>
-        用户名：<input ref={e => this.userName = e} type="text" />
-        密码：<input ref={e => this.passWord = e} type="password" />
+        用户名：
+        <input ref={e => (this.userName = e)} type='text' />
+        密码：
+        <input ref={e => (this.passWord = e)} type='password' />
         <button>提交</button>
       </form>
     )
@@ -580,33 +633,33 @@ class App extends React.Component {
 
 1. 挂载阶段：由 `ReactDOM.render()` 触发 --- 初次渲染
 
-     1. `constructor()`
-     2. `componentWillMount()`
-     3. `render()`
-     4. `componentDidMount()` ===> 常用
+   1. `constructor()`
+   2. `componentWillMount()`
+   3. `render()`
+   4. `componentDidMount()` ===> 常用
 
 2. 更新阶段：由组件内部 `this.setSate()` 或父组件 `render` 触发
 
-     1. `shouldComponentUpdate()`
-     2. `componentWillUpdate()`
-     3. `render()`
-     4. `componentDidUpdate()`
+   1. `shouldComponentUpdate()`
+   2. `componentWillUpdate()`
+   3. `render()`
+   4. `componentDidUpdate()`
 
 3. 卸载阶段：由 `ReactDOM.unmountComponentAtNode()` 触发
 
-     1. `componentWillUnmount()`  ===> 常用
+   1. `componentWillUnmount()` ===> 常用
 
 上例缺少 `componentWillReceiveProps()` 下列会详细说明。
 
 **生命周期图解：**
 
-![](./images/jsx-basic-study/react生命周期(旧).png)
+![](<./images/jsx-basic-study/react生命周期(旧).png>)
 
 **代码块详解：**
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // 生命周期
 class App extends React.Component {
@@ -618,7 +671,7 @@ class App extends React.Component {
     console.log('mount ---- constructor 调用了！')
     super(props)
     this.state = {
-      count: 0, // 计数累加
+      count: 0 // 计数累加
     }
   }
 
@@ -626,7 +679,7 @@ class App extends React.Component {
   componentWillMount() {
     /**
      * 这是一个旧的钩子函数，新版已被更名为 UNSAFE_componentWillMount。
-     * 
+     *
      * 组件挂载之前执行此钩子
      */
     console.log('mount ---- componentWillMount: 组件将要挂载了！')
@@ -637,7 +690,7 @@ class App extends React.Component {
     /**
      * 常用！！！
      * 组件挂载完毕之后会执行此钩子。
-     * 
+     *
      * 一般在这个钩子中做一些初始化的事，
      * 例如：开启定时器、发送网络请求、订阅消息等...
      */
@@ -650,11 +703,13 @@ class App extends React.Component {
      * 每次需要更新之前都会触发这个钩子，
      * 只有返回为 true，才会触发 render 进行页面渲染。
      * 返回 false 不做处理。
-     * 
+     *
      * 这个钩子可以不写，不写的情况下默认返回 true。
-     * 如果写了，必须要写返回值！！！ 
+     * 如果写了，必须要写返回值！！！
      */
-    console.log('update ---- shouldComponentUpdate: 我确认为真 render 才能渲染！')
+    console.log(
+      'update ---- shouldComponentUpdate: 我确认为真 render 才能渲染！'
+    )
     return true
   }
 
@@ -677,14 +732,19 @@ class App extends React.Component {
   }
 
   // 初始化渲染、状态更新之后都会触发的钩子
-  render() {  // 常用！！！必须用！！！
+  render() {
+    // 常用！！！必须用！！！
     const { count } = this.state
-    console.log(`${!count ? "mount" : "update"} ---- render: 每次需要渲染我都会触发！`)
+    console.log(
+      `${!count ? 'mount' : 'update'} ---- render: 每次需要渲染我都会触发！`
+    )
     return (
       <div>
         <Children text='组件的生命周期' />
         <h2>当前求和：{count}</h2>
-        <button onClick={() => this.setState({ count: count + 1 })}>点我加1</button>
+        <button onClick={() => this.setState({ count: count + 1 })}>
+          点我加1
+        </button>
         <button onClick={this.unload}>卸载组件</button>
         <button onClick={this.force}>强制更新</button>
       </div>
@@ -700,13 +760,13 @@ class App extends React.Component {
   // 组件将要卸载的钩子
   componentWillUnmount() {
     /**
-    * 常用！！！
-    * componentWillUnmount 会在组件卸载及销毁之前直接调用。
-    * 可以在此方法中执行必要的清理操作，
-    * 例如，清除 timer，取消网络请求或清除在 componentDidMount 中创建的订阅等。
-    * componentWillUnmount 中不应调用 setState，因为该组件将永远不会重新渲染。
-    * 组件实例卸载后，将永远不会再挂载它。
-    */
+     * 常用！！！
+     * componentWillUnmount 会在组件卸载及销毁之前直接调用。
+     * 可以在此方法中执行必要的清理操作，
+     * 例如，清除 timer，取消网络请求或清除在 componentDidMount 中创建的订阅等。
+     * componentWillUnmount 中不应调用 setState，因为该组件将永远不会重新渲染。
+     * 组件实例卸载后，将永远不会再挂载它。
+     */
     console.log('unload ---- componentWillUnmount: 组件将要卸载了！')
   }
 
@@ -729,10 +789,12 @@ class Children extends React.Component {
      *
      * 父组件更新 props 之后会触发 componentWillReceiveProps 钩子
      * 钩子会自带 props 参数，值为父组件传递的 props 属性
-     * 
+     *
      * 但是！这个钩子第一次挂载并不会生效，只有在父组件再次更新之后才会触发这个钩子！！！
      */
-    console.log('update ---- componentWillReceiveProps: 父组件更新了，我也想更新~')
+    console.log(
+      'update ---- componentWillReceiveProps: 父组件更新了，我也想更新~'
+    )
   }
   render() {
     return <h1>{this.props.text}</h1>
@@ -750,16 +812,15 @@ class Children extends React.Component {
 
 引入不安全生命周期的别名，将 `componentWillMount`，`componentWillReceiveProps`和 `componentWillUpdate` 三个钩子之前加上 `UNSAFE_` 前缀。
 
-更名 `UNSAFE_componentWillMount`，`UNSAFE_componentWillReceiveProps`、 和`UNSAFE_componentWillUpdate` (未来版本会删除更名之前的钩子，只有新的“UNSAFE_”生命周期名称将起作用。)
+更名 `UNSAFE_componentWillMount`，`UNSAFE_componentWillReceiveProps`、 和`UNSAFE_componentWillUpdate` (未来版本会删除更名之前的钩子，只有新的“UNSAFE\_”生命周期名称将起作用。)
 
 > 注意：因为新版的这三个生命周期的别名是不安全的，不可以在严格模式中直接使用，如果使用，控制台中会报一个错，会推荐使用别的安全的钩子函数替代。
 >
-> 虽然为这些生命周期添加 "UNSAFE_" 前缀，但是这里的 "UNSAFE_" **不是指安全性**，而是表示使用这些生命周期的代码在 React 的**未来版本**中更有可能出现 BUG，尤其是在启用异步渲染之后。
+> 虽然为这些生命周期添加 "UNSAFE*" 前缀，但是这里的 "UNSAFE*" **不是指安全性**，而是表示使用这些生命周期的代码在 React 的**未来版本**中更有可能出现 BUG，尤其是在启用异步渲染之后。
 
 - 引入两个新的生命周期：
 
 **静态的** `getDerivedStateFromProps` 和 `getSnapshotBeforeUpdate`，但是官方表示，这两个钩子函数的使用频率并不高。
-
 
 其他具体详细更新点可以 [点击跳转官方文档，查看详细更新！及为何避免使用！](https://zh-hans.reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
@@ -767,26 +828,26 @@ class Children extends React.Component {
 
 1. 初始化阶段：由 `ReactDOM.render()` 触发 --- 初次渲染
 
-     1. `constructor()`
-     2. `getDerivedStateFromProps()`
-     3. `render()`
-     4. `componentDidMount()` ===> 常用
+   1. `constructor()`
+   2. `getDerivedStateFromProps()`
+   3. `render()`
+   4. `componentDidMount()` ===> 常用
 
 2. 更新阶段：由组件内部 `this.setSate()` 或父组件 `render` 触发
 
-     1. `getDerivedStateFromProps()`
-     1. `shouldComponentUpdate()`
-     3. `render()`
-     3. `getSnapshotBeforeUpdate()`
-     4. `componentDidUpdate()`
+   1. `getDerivedStateFromProps()`
+   1. `shouldComponentUpdate()`
+   1. `render()`
+   1. `getSnapshotBeforeUpdate()`
+   1. `componentDidUpdate()`
 
 3. 卸载阶段：由 `ReactDOM.unmountComponentAtNode()` 触发
 
-     1. `componentWillUnmount()`  ===> 常用
+   1. `componentWillUnmount()` ===> 常用
 
 **新版图解：**
 
-![](./images/jsx-basic-study/react生命周期(新).png)
+![](<./images/jsx-basic-study/react生命周期(新).png>)
 
 新版图解中隐藏了三个即将废弃的钩子，写入了两个新更新的钩子，并把卸载钩子单独成列，其他运行时并没有修改。
 
@@ -795,8 +856,8 @@ class Children extends React.Component {
 **代码块详解：**
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // 生命周期
 class App extends React.Component {
@@ -808,7 +869,7 @@ class App extends React.Component {
     console.log('mount ---- constructor 调用了！')
     super(props)
     this.state = {
-      count: 0, // 计数累加
+      count: 0 // 计数累加
     }
   }
 
@@ -825,13 +886,17 @@ class App extends React.Component {
     /**
      * 这个钩子并不常用，钩子有两个传值，props 为组件传递过来的值，state 为初始设置的值。
      * 这个钩子必须有返回值，返回值可以为 null 或者 状态对象
-     * 
+     *
      * 如果返回的是状态对象，那么 state 的值在任何时候都取决于 props。
      * 简单来说，如果这里返回了 props 状态值，那么以后 state 中存在的值就不能修改了！
-     * 
+     *
      * 官方表示派生状态会导致代码冗余，并使组件难以维护。慎用！！！
      */
-    console.log(`${!state.count ? "mount" : "update"} ---- getDerivedStateFromProps: 组件派生状态挂载完毕！`)
+    console.log(
+      `${
+        !state.count ? 'mount' : 'update'
+      } ---- getDerivedStateFromProps: 组件派生状态挂载完毕！`
+    )
     return props
   }
 
@@ -841,11 +906,13 @@ class App extends React.Component {
      * 每次需要更新之前都会触发这个钩子，
      * 只有返回为 true，才会触发 render 进行页面渲染。
      * 返回 false 不做处理。
-     * 
+     *
      * 这个钩子可以不写，不写的情况下默认返回 true。
-     * 如果写了，必须要写返回值！！！ 
+     * 如果写了，必须要写返回值！！！
      */
-    console.log('update ---- shouldComponentUpdate: 我确认为真 render 才能渲染！')
+    console.log(
+      'update ---- shouldComponentUpdate: 我确认为真 render 才能渲染！'
+    )
     return true
   }
 
@@ -856,7 +923,7 @@ class App extends React.Component {
      * 钩子有两个传值，preProps 和 preState，值为更新修改之前的 props 和 state。
      * 钩子触发时必须有返回值，返回值可选为 null 或 快照(任何类型值都可以作为快照返回)。
      * 返回值将作为参数传递给 componentDidUpdate()
-     * 
+     *
      * 注：此场景使用并不见，使用几率不高。
      */
     console.log('update ---- getSnapshotBeforeUpdate: 在更新之前获取快照！')
@@ -867,10 +934,10 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     /**
      * 钩子有三个参数:
-     * prevProps: 更新修改之前的 props 
-     * prevState: 更新修改之前的 state 
+     * prevProps: 更新修改之前的 props
+     * prevState: 更新修改之前的 state
      * snapshot: getSnapshotBeforeUpdate 传递过来的快照
-     * 
+     *
      * 组件更新完毕之后会执行此钩子。
      */
     console.log('update ---- componentDidUpdate: 组件更新完成了！')
@@ -879,12 +946,16 @@ class App extends React.Component {
   // 初始化渲染、状态更新之后都会触发的钩子
   render() {
     const { count } = this.state
-    console.log(`${!count ? "mount" : "update"} ---- render: 每次需要渲染我都会触发！`)
+    console.log(
+      `${!count ? 'mount' : 'update'} ---- render: 每次需要渲染我都会触发！`
+    )
     return (
       <div>
         <h1>组件的生命周期</h1>
         <h2>当前求和：{count}</h2>
-        <button onClick={() => this.setState({ count: count + 1 })}>点我加1</button>
+        <button onClick={() => this.setState({ count: count + 1 })}>
+          点我加1
+        </button>
         <button onClick={this.unload}>卸载组件</button>
         <button onClick={this.force}>强制更新</button>
       </div>
@@ -900,12 +971,12 @@ class App extends React.Component {
   // 组件将要卸载的钩子
   componentWillUnmount() {
     /**
-    * componentWillUnmount 会在组件卸载及销毁之前直接调用。
-    * 可以在此方法中执行必要的清理操作，
-    * 例如，清除 timer，取消网络请求或清除在 componentDidMount 中创建的订阅等。
-    * componentWillUnmount 中不应调用 setState，因为该组件将永远不会重新渲染。
-    * 组件实例卸载后，将永远不会再挂载它。
-    */
+     * componentWillUnmount 会在组件卸载及销毁之前直接调用。
+     * 可以在此方法中执行必要的清理操作，
+     * 例如，清除 timer，取消网络请求或清除在 componentDidMount 中创建的订阅等。
+     * componentWillUnmount 中不应调用 setState，因为该组件将永远不会重新渲染。
+     * 组件实例卸载后，将永远不会再挂载它。
+     */
     console.log('unload ---- componentWillUnmount: 组件将要卸载了！')
   }
 
@@ -920,7 +991,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App
 ```
 
 React 新版本中更新的钩子并不常用，可以简单了解一下，具体可以参考 [官方文档](https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate)。

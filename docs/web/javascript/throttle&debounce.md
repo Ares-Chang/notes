@@ -2,7 +2,7 @@
 title: 节流与防抖
 ---
 
-## 关于 
+## 关于
 
 防抖：字面意思，防止抖动，规定时间内，频繁触发事件会被重置，避免事件被失误触发多次。
 
@@ -20,10 +20,10 @@ title: 节流与防抖
 function debounce(fn, delay = 500) {
   let timer
   return () => {
-    if (timer) clearTimeout(timer)  // 有定时器未执行就清除。
+    if (timer) clearTimeout(timer) // 有定时器未执行就清除。
     timer = setTimeout(() => {
       fn.apply(this, arguments)
-    }, delay);
+    }, delay)
   }
 }
 ```
@@ -40,11 +40,13 @@ function debounce(fn, delay = 500) {
 function throttle(fn, delay = 500) {
   let timer
   return () => {
-    if (timer) { return } // 有定时器未执行就退出。
+    if (timer) {
+      return
+    } // 有定时器未执行就退出。
     timer = setTimeout(() => {
       fn.apply(this, arguments)
       timer = null
-    }, delay);
+    }, delay)
   }
 }
 ```
@@ -68,43 +70,45 @@ function throttle(fn, delay = 500) {
 下列代码放入 `.html` 文件中。
 
 ```html
-<button id='debounce'>防抖</button>
-<button id='throttle'>节流</button>
+<button id="debounce">防抖</button>
+<button id="throttle">节流</button>
 <script>
-  let btn_debounce = document.getElementById('debounce');
-  let btn_throttle = document.getElementById('throttle');
+  let btn_debounce = document.getElementById('debounce')
+  let btn_throttle = document.getElementById('throttle')
 
   // 防抖
   function debounce(fn, delay = 500) {
-    let timer;
+    let timer
     return () => {
       if (timer) clearTimeout(timer)
       timer = setTimeout(() => {
-        fn.apply(this, arguments);
-      }, delay);
+        fn.apply(this, arguments)
+      }, delay)
     }
   }
 
   // 节流
   function throttle(fn, delay = 500) {
-    let timer;
+    let timer
     return () => {
-      if (timer) { return }
+      if (timer) {
+        return
+      }
       timer = setTimeout(() => {
-        fn.apply(this, arguments);
-        timer = null;
-      }, delay);
+        fn.apply(this, arguments)
+        timer = null
+      }, delay)
     }
   }
 
   // 注册防抖
   btn_debounce.onclick = debounce(() => {
-    console.log('多次点击只会执行一次！');
+    console.log('多次点击只会执行一次！')
   }, 1000)
 
   // 注册节流
   btn_throttle.onclick = throttle(() => {
-    console.log('一段时间内点击只会执行一次！');
+    console.log('一段时间内点击只会执行一次！')
   }, 1000)
 </script>
 ```

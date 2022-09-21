@@ -20,17 +20,16 @@ title: 注册全局 filter
 /**
  * 加密手机号码
  */
-
 export const privatePhone = function (val) {
-	let mobile = val.toString()
-	return mobile.substring(0, 3) + "****" + mobile.substring(8, 11)
+  let mobile = val.toString()
+  return mobile.substring(0, 3) + '****' + mobile.substring(8, 11)
 }
 ```
 
 - 在 `main.js` 中注册为全局 `filter`
 
 ```js
-import * as filters from './uilt/filters'	// 引入 filter
+import * as filters from './uilt/filters' // 引入 filter
 
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key]) // 插入过滤器名和对应方法
@@ -41,9 +40,9 @@ Object.keys(filters).forEach(key => {
 
 ```vue
 <template>
-	<div>
-		{{ 17666666666 | privatePhone }}
-	</div>
+  <div>
+    {{ 17666666666 | privatePhone }}
+  </div>
 </template>
 ```
 
@@ -53,18 +52,18 @@ Object.keys(filters).forEach(key => {
 
 ```vue
 <template>
-	<div>
-		{{ 17666666666 | privatePhone }}
-	</div>
+  <div>
+    {{ 17666666666 | privatePhone }}
+  </div>
 </template>
 <script>
-	export default {
-		filters: {
-			privatePhone(val) {
-				let mobile = val.toString();
-				return mobile.substring(0, 3) + "****" + mobile.substring(8, 11);
-			},
-		},
-	}
+export default {
+  filters: {
+    privatePhone(val) {
+      let mobile = val.toString()
+      return mobile.substring(0, 3) + '****' + mobile.substring(8, 11)
+    }
+  }
+}
 </script>
 ```

@@ -15,10 +15,12 @@ title: 微信分享按钮呈灰色
 微信小程序平台的分享管理比较严格，具体请参考 [小程序分享指引](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html)。
 
 使用方法：
+
 ```js
 export default {
   onShareAppMessage(res) {
-    if (res.from === 'button') {// 来自页面内分享按钮
+    if (res.from === 'button') {
+      // 来自页面内分享按钮
       console.log(res.target)
     }
     return {

@@ -15,9 +15,9 @@ Chrome 不是开放源代码浏览器，它也不包含在标准 Ubuntu 存储�
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 
-2. 安装Google Chrome
+2. 安装 Google Chrome
 
-在 Ubuntu 上安装软件包需要管理权限。以具有 sudo 特权的用户身份运行以下命令，以.deb在系统上安装Chrome 软件包：
+在 Ubuntu 上安装软件包需要管理权限。以具有 sudo 特权的用户身份运行以下命令，以.deb 在系统上安装 Chrome 软件包：
 
 ```shell
 sudo apt install ./google-chrome-stable_current_amd64.deb
@@ -29,7 +29,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 ## 更新
 
-在安装过程中，正式的Google存储库将添加到您的系统中。您可以使用以下cat命令来验证文件内容：
+在安装过程中，正式的 Google 存储库将添加到您的系统中。您可以使用以下 cat 命令来验证文件内容：
 
 ```shell
 cat /etc/apt/sources.list.d/google-chrome.list

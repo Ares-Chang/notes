@@ -23,28 +23,28 @@ let video = document.getElementById('video')
 
 ```js
 // 进入画中画
-video.requestPictureInPicture();
+video.requestPictureInPicture()
 ```
 
 - 关闭 pip
 
 ```js
 // 退出画中画
-document.exitPictureInPicture();
+document.exitPictureInPicture()
 ```
 
-为了方便我们监听视频的播放状态，还提供了2个事件API接口和一个 `PictureInPictureWindow` 对象,包含 `width`，`height` 和 `onresize` 这些属性
+为了方便我们监听视频的播放状态，还提供了 2 个事件 API 接口和一个 `PictureInPictureWindow` 对象,包含 `width`，`height` 和 `onresize` 这些属性
 
 ```js
 // 进入画中画模式时候执行
-video.addEventListener('enterpictureinpicture', function(event) {
-	// 已进入画中画模式
-	console.log(event)
-});
+video.addEventListener('enterpictureinpicture', function (event) {
+  // 已进入画中画模式
+  console.log(event)
+})
 
 // 退出画中画模式时候执行
-video.addEventListener('leavepictureinpicture', function(event) {
-	// 已退出画中画模式
-	console.log(event)
-});
+video.addEventListener('leavepictureinpicture', function (event) {
+  // 已退出画中画模式
+  console.log(event)
+})
 ```

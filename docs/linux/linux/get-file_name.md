@@ -94,7 +94,7 @@ C:\Users\EDZ\Desktop\wallpaper
 C:\Users\EDZ\Desktop\wallpaper\folder
 λ dir /b >>..\file.txt
 
-C:\Users\EDZ\Desktop\wallpaper\folder 
+C:\Users\EDZ\Desktop\wallpaper\folder
 λ cd ..\
 
 C:\Users\EDZ\Desktop\wallpaper

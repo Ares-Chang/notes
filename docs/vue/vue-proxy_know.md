@@ -3,9 +3,9 @@ title: 学习了解 Proxy
 sidebarDepth: 3
 ---
 
-> 产品经理身旁过，需求变更逃不过。 测试姐姐眯眼笑，今晚bug必然多。
+> 产品经理身旁过，需求变更逃不过。 测试姐姐眯眼笑，今晚 bug 必然多。
 
-据悉 *Vue3.0* 的正式版将要在本月(8月)发布，从发布到正式投入到正式项目中，还需要一定的过渡期，但我们不能一直等到 *Vue3* 正式投入到项目中的时候才去学习，提前学习，让你更快一步掌握 *Vue3.0* ,升职加薪迎娶白富美就靠它了。不过在学习 *Vue3* 之前，还需要先了解一下 `Proxy`,它是 *Vue3.0* 实现数据双向绑定的基础。
+据悉 _Vue3.0_ 的正式版将要在本月(8 月)发布，从发布到正式投入到正式项目中，还需要一定的过渡期，但我们不能一直等到 _Vue3_ 正式投入到项目中的时候才去学习，提前学习，让你更快一步掌握 _Vue3.0_ ,升职加薪迎娶白富美就靠它了。不过在学习 _Vue3_ 之前，还需要先了解一下 `Proxy`,它是 _Vue3.0_ 实现数据双向绑定的基础。
 
 ## 了解代理模式
 
@@ -17,7 +17,7 @@ sidebarDepth: 3
 
 ### 引申
 
-通过上面的例子，我们想想 *Vue* 的数据响应原理，比如下面这段代码
+通过上面的例子，我们想想 _Vue_ 的数据响应原理，比如下面这段代码
 
 ```js
 const xiaowang = {
@@ -25,13 +25,13 @@ const xiaowang = {
 }
 // 送给小姐姐情书
 function sendToMyLove(obj) {
-    console.log(obj.love)
-    return '流氓，滚'
+  console.log(obj.love)
+  return '流氓，滚'
 }
 console.log(sendToMyLove(xiaowang))
 ```
 
-如果没有 `UI` 小姐姐代替送情书，显示结局是悲惨的，想想 *Vue2.0* 的双向绑定，通过
+如果没有 `UI` 小姐姐代替送情书，显示结局是悲惨的，想想 _Vue2.0_ 的双向绑定，通过
 
 `Object.defineProperty` 来监听的属性 `get`,`set` 方法来实现双向绑定,这个
 
@@ -42,16 +42,16 @@ const xiaowang = {
   loveLetter: '我喜欢你，我想和你睡觉'
 }
 // UI小姐姐代理
-Object.defineProperty(xiaowang,'love', {
+Object.defineProperty(xiaowang, 'love', {
   get() {
-    return xiaowang.loveLetter.replace('睡觉','一起在晨辉的沐浴下起床')
+    return xiaowang.loveLetter.replace('睡觉', '一起在晨辉的沐浴下起床')
   }
 })
 
 // 送给小姐姐情书
 function sendToMyLove(obj) {
-    console.log(obj.love)
-    return '小伙子还挺有诗情画意的么，不过老娘不喜欢，滚'
+  console.log(obj.love)
+  return '小伙子还挺有诗情画意的么，不过老娘不喜欢，滚'
 }
 console.log(sendToMyLove(xiaowang))
 ```
@@ -60,7 +60,7 @@ console.log(sendToMyLove(xiaowang))
 
 ### 存在的问题
 
-在 *Vue2.0* 中，数据双向绑定就是通过 `Object.defineProperty` 去监听对象的每一个属性，然后在 `get`,`set` 方法中通过发布订阅者模式来实现的数据响应，但是存在一定的缺陷，比如只能监听已存在的属性，对于新增删除属性就无能为力了，同时无法监听数组的变化，所以在 *Vue3.0* 中将其换成了功能更强大的 `Proxy`。
+在 _Vue2.0_ 中，数据双向绑定就是通过 `Object.defineProperty` 去监听对象的每一个属性，然后在 `get`,`set` 方法中通过发布订阅者模式来实现的数据响应，但是存在一定的缺陷，比如只能监听已存在的属性，对于新增删除属性就无能为力了，同时无法监听数组的变化，所以在 _Vue3.0_ 中将其换成了功能更强大的 `Proxy`。
 
 ## 了解 Proxy
 
@@ -75,16 +75,16 @@ const xiaowang = {
   loveLetter: '我喜欢你，我想和你睡觉'
 }
 const proxy = new Proxy(xiaowang, {
-  get(target,key) {
-    if(key === 'loveLetter') {
-      return target[key].replace('睡觉','一起在晨辉的沐浴下起床')
+  get(target, key) {
+    if (key === 'loveLetter') {
+      return target[key].replace('睡觉', '一起在晨辉的沐浴下起床')
     }
   }
 })
 // 送给小姐姐情书
 function sendToMyLove(obj) {
-    console.log(obj.loveLetter)
-    return '小伙子还挺有诗情画意的么，不过老娘不喜欢，滚'
+  console.log(obj.loveLetter)
+  return '小伙子还挺有诗情画意的么，不过老娘不喜欢，滚'
 }
 console.log(sendToMyLove(proxy))
 ```
@@ -216,10 +216,10 @@ obj.gzh = '前端有的玩'
 
 ```js
 /**
-* target: 要兼容的对象，可以是一个对象，数组,函数等等
-* handler: 是一个对象，里面包含了可以监听这个对象的行为函数，比如上面例子里面的`get`与`set`
-* 同时会返回一个新的对象proxy, 为了能够触发handler里面的函数，必须要使用返回值去进行其他操作，比如修改值
-*/
+ * target: 要兼容的对象，可以是一个对象，数组,函数等等
+ * handler: 是一个对象，里面包含了可以监听这个对象的行为函数，比如上面例子里面的`get`与`set`
+ * 同时会返回一个新的对象proxy, 为了能够触发handler里面的函数，必须要使用返回值去进行其他操作，比如修改值
+ */
 const proxy = new Proxy(target, handler)
 ```
 
@@ -288,7 +288,7 @@ console.log('name' in obj)
 
 在获取代理对象某个属性的属性描述时触发该操作，比如在执行 `Object.getOwnPropertyDescriptor(proxy, "foo")` 时会进入这个钩子函数
 
-`Proxy` 提供了十三种拦截对象操作的方法，本文主要挑选其中一部分在 *Vue3* 中比较重要的进行说明，其余的建议可以直接阅读 `MDN` 关于 `Proxy` 的介绍。
+`Proxy` 提供了十三种拦截对象操作的方法，本文主要挑选其中一部分在 _Vue3_ 中比较重要的进行说明，其余的建议可以直接阅读 `MDN` 关于 `Proxy` 的介绍。
 
 ## 详细介绍
 
@@ -305,7 +305,7 @@ console.log('name' in obj)
  * receiver: receiver相当于是我们要读取的属性的this,一般情况
  *           下他就是proxy对象本身，关于receiver的作用，后文将具体讲解
  */
-handle.get(target,key, receiver)
+handle.get(target, key, receiver)
 ```
 
 #### 示例
@@ -339,7 +339,7 @@ const errorMessage = {
 }
 
 const proxy = new Proxy(errorMessage, {
-  get(target,key) {
+  get(target, key) {
     const value = target[key]
     return value || '系统异常，请联系管理员'
   }
@@ -364,20 +364,20 @@ console.log(proxy[500])
  * value: 目标属性要赋的新值
  * receiver: 与 get的receiver 基本一致
  */
-handle.set(target,key,value, receiver)
+handle.set(target, key, value, receiver)
 ```
 
 #### 示例
 
-某系统需要录入一系列数值用于数据统计，但是在录入数值的时候，可能录入的存在一部分异常值，对于这些异常值需要在录入的时候进行处理, 比如大于 `100` 的值，转换为 `100`, 小于0的值，转换为 `0`, 这时候就可以使用`proxy` 的 `set`，在赋值的时候，对数据进行处理
+某系统需要录入一系列数值用于数据统计，但是在录入数值的时候，可能录入的存在一部分异常值，对于这些异常值需要在录入的时候进行处理, 比如大于 `100` 的值，转换为 `100`, 小于 0 的值，转换为 `0`, 这时候就可以使用`proxy` 的 `set`，在赋值的时候，对数据进行处理
 
 ```js
 const numbers = []
 const proxy = new Proxy(numbers, {
-  set(target,key,value) {
-    if(value < 0) {
+  set(target, key, value) {
+    if (value < 0) {
       value = 0
-    }else if(value > 100) {
+    } else if (value > 100) {
       value = 100
     }
     target[key] = value
@@ -393,17 +393,17 @@ proxy.push(-10)
 console.log(numbers)
 ```
 
-#### 对比 *Vue2.0*
+#### 对比 _Vue2.0_
 
-在使用 *Vue2.0* 的时候，如果给对象添加新属性的时候，往往需要调用 `$set`, 这是因为 `Object.defineProperty` 只能监听已存在的属性，而新增的属性无法监听，而通过 `$set` 相当于手动给对象新增了属性，然后再触发数据响应。但是对于 *Vue3.0* 来说，因为使用了 `Proxy`， 在他的 `set` 钩子函数中是可以监听到新增属性的，所以就不再需要使用 `$set`
+在使用 _Vue2.0_ 的时候，如果给对象添加新属性的时候，往往需要调用 `$set`, 这是因为 `Object.defineProperty` 只能监听已存在的属性，而新增的属性无法监听，而通过 `$set` 相当于手动给对象新增了属性，然后再触发数据响应。但是对于 _Vue3.0_ 来说，因为使用了 `Proxy`， 在他的 `set` 钩子函数中是可以监听到新增属性的，所以就不再需要使用 `$set`
 
 ```js
 const obj = {
   name: '子君'
 }
 const proxy = new Proxy(obj, {
-  set(target,key,value) {
-    if(!target.hasOwnProperty(key)) {
+  set(target, key, value) {
+    if (!target.hasOwnProperty(key)) {
       console.log(`新增了属性${key},值为${value}`)
     }
     target[key] = value
@@ -424,7 +424,7 @@ proxy.gzh = '前端有的玩'
  * target: 目标对象，即通过proxy代理的对象
  * key: 要判断的key是否在target中
  */
- handle.has(target,key)
+handle.has(target, key)
 ```
 
 #### 示例
@@ -432,16 +432,16 @@ proxy.gzh = '前端有的玩'
 一般情况下我们在 `js` 中声明私有属性的时候，会将属性的名字以 `_` 开头，对于这些私有属性，是不需要外部调用，所以如果可以隐藏掉是最好的，这时候就可以通过 `has` 在判断某个属性是否在对象时，如果以 `_` 开头，则返回 `false`
 
 ```js
-const obj =  {
+const obj = {
   publicMethod() {},
-  _privateMethod(){}
+  _privateMethod() {}
 }
 const proxy = new Proxy(obj, {
   has(target, key) {
-    if(key.startsWith('_')) {
+    if (key.startsWith('_')) {
       return false
     }
-    return Reflect.get(target,key)
+    return Reflect.get(target, key)
   }
 })
 
@@ -461,7 +461,7 @@ console.log('publicMethod' in proxy)
  * target: 目标对象，即通过proxy代理的对象
  * key: 要删除的属性
  */
- handle.deleteProperty(target,key)
+handle.deleteProperty(target, key)
 ```
 
 #### 示例
@@ -478,15 +478,15 @@ const userInfo = {
 // 只能删除用户名和公众号
 const readonlyKeys = ['name', 'gzh']
 const proxy = new Proxy(userInfo, {
-  set(target,key,value) {
-    if(readonlyKeys.includes(key)) {
+  set(target, key, value) {
+    if (readonlyKeys.includes(key)) {
       throw new Error(`属性${key}不能被修改`)
     }
     target[key] = value
     return true
   },
-   deleteProperty(target,key) {
-    if(readonlyKeys.includes(key)) {
+  deleteProperty(target, key) {
+    if (readonlyKeys.includes(key)) {
       throw new Error(`属性${key}不能被删除`)
       return
     }
@@ -494,17 +494,17 @@ const proxy = new Proxy(userInfo, {
     return true
   }
 })
-// 报错 
+// 报错
 delete proxy.name
 ```
 
-#### 对比 *Vue2.0*
+#### 对比 _Vue2.0_
 
-其实与 `$set` 解决的问题类似，*Vue2.0* 是无法监听到属性被删除的，所以提供了 `$delete` 用于删除属性，但是对于 `Proxy`，是可以监听删除操作的，所以就不需要再使用 `$delete` 了
+其实与 `$set` 解决的问题类似，_Vue2.0_ 是无法监听到属性被删除的，所以提供了 `$delete` 用于删除属性，但是对于 `Proxy`，是可以监听删除操作的，所以就不需要再使用 `$delete` 了
 
 ### 其他操作
 
-在上文中，我们提到了 `Proxy` 的 `handler` 提供了十三个函数，在上面我们列举了最常用的三个，其实每一个的用法都是基本一致的，比如 `ownKeys`，当通过`Object.getOwnPropertyNames`,`Object.getownPropertySymbols`,`Object.keys,Reflect.ownKeys` 去获取对象的信息的时候，就会进入 `ownKeys` 这个钩子函数，使用这个我们就可以对一些我们不像暴露的属性进行保护，比如一般会约定_开头的为私有属性，所以在使用 `Object.keys` 去获取对象的所有 `key` 的时候，就可以把所有 `_` 开头的属性屏蔽掉。关于剩余的那些属性，建议大家多去看看 `MDN` 中的介绍。
+在上文中，我们提到了 `Proxy` 的 `handler` 提供了十三个函数，在上面我们列举了最常用的三个，其实每一个的用法都是基本一致的，比如 `ownKeys`，当通过`Object.getOwnPropertyNames`,`Object.getownPropertySymbols`,`Object.keys,Reflect.ownKeys` 去获取对象的信息的时候，就会进入 `ownKeys` 这个钩子函数，使用这个我们就可以对一些我们不像暴露的属性进行保护，比如一般会约定*开头的为私有属性，所以在使用 `Object.keys` 去获取对象的所有 `key` 的时候，就可以把所有 `*`开头的属性屏蔽掉。关于剩余的那些属性，建议大家多去看看`MDN` 中的介绍。
 
 ## Reflect
 
@@ -513,8 +513,8 @@ delete proxy.name
 ```js
 const obj = {}
 const proxy = new Proxy(obj, {
-  get(target,key,receiver) {
-    return Reflect.get(target,key,receiver)
+  get(target, key, receiver) {
+    return Reflect.get(target, key, receiver)
   }
 })
 ```
@@ -522,14 +522,14 @@ const proxy = new Proxy(obj, {
 大家可能看到上面的代码与直接使用 `target[key]` 的方式没什么区别，但实际上 `Reflect` 的出现是为了让 `Object` 上面的操作更加规范，比如我们要判断某一个 `prop` 是否在一个对象中，通常会使用到 `in`,即
 
 ```js
-const obj = {name: '子君'}
+const obj = { name: '子君' }
 console.log('name' in obj)
 ```
 
 但上面的操作是一种命令式的语法，通过 `Reflect` 可以将其转变为函数式的语法，显得更加规范
 
 ```js
-Reflect.has(obj,'name')
+Reflect.has(obj, 'name')
 ```
 
 除了 `has`,`get` 之外，其实 `Reflect` 上面总共提供了十三个静态方法，这十三个静态方法与 `Proxy` 的 `handler` 上面的十三个方法是一一对应的，通过将 `Proxy` 与 `Reflect` 相结合，就可以对对象上面的默认操作进行拦截处理，当然这也就属于函数元编程的范畴了。

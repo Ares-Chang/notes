@@ -17,7 +17,7 @@ Flutter 环境运行需要基于 [Java JDK](https://www.oracle.com/cn/java/techn
 下载完成是个安装程序，直接下一步，下一步就可以了。
 
 安装完成，在 cmd 中输入 `java`，有说明输入，说明安装正确。
-   
+
 ### 安装 Flutter SDK
 
 下载安装 [Flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases#windows)。
@@ -28,13 +28,13 @@ Flutter 环境运行需要基于 [Java JDK](https://www.oracle.com/cn/java/techn
 
 - 此电脑，右键点击属性，高级系统设置，环境变量
 
-	![](./images/flutter-env-setup/Snipaste_2021-03-30_18-52-50.png)
-	![](./images/flutter-env-setup/Snipaste_2021-03-30_18-53-53.png)
-	![](./images/flutter-env-setup/Snipaste_2021-03-30_18-54-44.png)
-	![](./images/flutter-env-setup/Snipaste_2021-03-31_10-24-30.png)
-	![](./images/flutter-env-setup/Snipaste_2021-03-31_10-36-03.png)
-	
-	设置完成，重启电脑，在 cmd 中输入 `flutter -v` 出现说明提示即为设置成功。
+  ![](./images/flutter-env-setup/Snipaste_2021-03-30_18-52-50.png)
+  ![](./images/flutter-env-setup/Snipaste_2021-03-30_18-53-53.png)
+  ![](./images/flutter-env-setup/Snipaste_2021-03-30_18-54-44.png)
+  ![](./images/flutter-env-setup/Snipaste_2021-03-31_10-24-30.png)
+  ![](./images/flutter-env-setup/Snipaste_2021-03-31_10-36-03.png)
+
+  设置完成，重启电脑，在 cmd 中输入 `flutter -v` 出现说明提示即为设置成功。
 
 ### 设置国内镜像
 
@@ -48,14 +48,14 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 ```
 
 > 注意：此镜像为临时镜像，并不能保证一直可用，读者可以参考详情请参考 [Using Flutter in China](https://github.com/flutter/flutter/wiki) 以获得有关镜像服务器的最新动态。
-> 
+>
 > 或关注 [Flutter 中文网](https://flutterchina.club/setup-windows/) 获取最新配置方案。
 
 - 转到 “控制面板>用户帐户>用户帐户>更改我的环境变量”
 - 在“用户变量”下检查是否有名为“Path”的条目:
-	- 如果该条目存在, 追加 `flutter\bin`的全路径，使用 ; 作为分隔符.
-	- 如果条目不存在, 创建一个新用户变量 `Path` ，然后将 `flutter\bin`的全路径作为它的值.
-	- 在“用户变量”下检查是否有名为”PUB_HOSTED_URL”和”FLUTTER_STORAGE_BASE_URL”的条目，如果没有，也添加它们。
+  - 如果该条目存在, 追加 `flutter\bin`的全路径，使用 ; 作为分隔符.
+  - 如果条目不存在, 创建一个新用户变量 `Path` ，然后将 `flutter\bin`的全路径作为它的值.
+  - 在“用户变量”下检查是否有名为”PUB_HOSTED_URL”和”FLUTTER_STORAGE_BASE_URL”的条目，如果没有，也添加它们。
 - **环境变量设置完成，需要重启以应用此更改**。
 
 ![](./images/flutter-env-setup/Snipaste_2021-03-31_18-16-26.png)
@@ -73,7 +73,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 打开后会出现配置指引，需要按照提示下载 `Android SDK`，**不要一味跳过！！！**
 
 > Android Studio 是不支持中文的，版本一直在更迭，汉化链接不是长期生效。
-> 
+>
 > 如果想要汉化自行百度加载。
 
 ### 检测运行环境
@@ -90,8 +90,8 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 1. 表示安装 Flutter SDK
 2. 表示安装 Android SDK 和 证书
-	- 这里缺少安卓证书，按提示输入：`flutter doctor --android-licenses` 安装即可。
-	- 下载后会提示一些信息选择，一路按 `y` 就可以。
+   - 这里缺少安卓证书，按提示输入：`flutter doctor --android-licenses` 安装即可。
+   - 下载后会提示一些信息选择，一路按 `y` 就可以。
 3. 表示安装 Chrome
 4. 表示安装 Android Studio
 5. 表示安装 VS Code
@@ -143,7 +143,6 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 然后点击 Tools ，选择 AVD Manager，启动模拟器，如果没有模拟器，请参照[新建模拟器](#新建模拟器)设置加载。
 
 ![](./images/flutter-env-setup/Snipaste_2021-04-01_16-45-40.png)
-
 
 点击运行或 debug 项目，等待底栏加载进度。
 
@@ -199,11 +198,12 @@ Android Studio 的体量太大，对一般电脑太不友好了。幸运的是 V
 VS Code 中的 `Create Android Emulator` 命令也是走的 Android Studio 中的 AVD Manager 模板信息，如果有需要也可以使用。
 
 ::: tip 提示
+
 - 如果你没看到 Flutter 版本号或者设备信息，你的项目可能不被识别为一个 Flutter 项目。请确认 VS Code Workspace Folder 的目录中是否含有 pubspec.yaml。
 - 如果状态栏显示无设备表明 Flutter 没有发现任何已连接的 IOS、Android 或者模拟器。你需要连接设备或者启动模拟器。
 - Flutter 扩展会自动选择上次连接的设备。
 - 如果要删除模拟器可以在 Android Studio 中进行。
-:::
+  :::
 
 如果还有疑问，也可以参考[Flutter 中文网](https://flutter.cn/docs/development/tools/vs-code)，信息更具体。
 

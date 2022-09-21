@@ -7,31 +7,32 @@ title: 表单验证踩坑记录
 
 ```js
 ruleValidate: {
-	name: [
-			{ required: true, message: 'The name cannot be empty', trigger: 'blur' }
-	],
-	mail: [
-			{ required: true, message: 'Mailbox cannot be empty', trigger: 'blur' },
-			{ type: 'email', message: 'Incorrect email format', trigger: 'blur' }
-	]
+  name: [
+    { required: true, message: 'The name cannot be empty', trigger: 'blur' }
+  ],
+  mail: [
+    { required: true, message: 'Mailbox cannot be empty', trigger: 'blur' },
+    { type: 'email', message: 'Incorrect email format', trigger: 'blur' }
+  ]
 }
 ```
 
 - type :
-	- string: 必须是字符串类型。这是默认类型
-	- number: 必须是数字
-	- boolean: 必须是布尔型的
-	- method: 必须是类型函数
-	- regexp: 必须是ReGEXP的实例，或者是在创建新的ReGEXP时不会生成异常的字符串
-	- integer: 必须是整数.
-	- float: 必须是浮点数.
-	- array: 必须是由Array.isArray确定的数组
-	- object: 必须是类型对象而不是Array.isArray
-	- enum: 枚举中必须存在值。
-	- date: 按日期确定的值必须有效
-	- url: 必须是URL类型。
-	- hex: 必须是十六进制。
-	- email: 必须是电子邮件类型。
+
+  - string: 必须是字符串类型。这是默认类型
+  - number: 必须是数字
+  - boolean: 必须是布尔型的
+  - method: 必须是类型函数
+  - regexp: 必须是 ReGEXP 的实例，或者是在创建新的 ReGEXP 时不会生成异常的字符串
+  - integer: 必须是整数.
+  - float: 必须是浮点数.
+  - array: 必须是由 Array.isArray 确定的数组
+  - object: 必须是类型对象而不是 Array.isArray
+  - enum: 枚举中必须存在值。
+  - date: 按日期确定的值必须有效
+  - url: 必须是 URL 类型。
+  - hex: 必须是十六进制。
+  - email: 必须是电子邮件类型。
 
 - required:true | false
 - pattern :正则表达式
@@ -47,8 +48,8 @@ ruleValidate: {
 - messages: 错误信息
 - trigger : ‘change’ | ‘blur’
 - whitespace : true | false
-	- true:空白字符 ->错误提醒
-	- false: 空白字符->不报错
+  - true:空白字符 ->错误提醒
+  - false: 空白字符->不报错
 
 ```js
 { type: 'string', whitespace:true,message:'包含空白字符',trigger: 'change'}
@@ -56,7 +57,7 @@ ruleValidate: {
 
 ## 表单必填标志显示偏移
 
-使用情况：需要做一个以 Radio 单选框来控制表单内容的显示和隐藏。但是当单选框切换时，表单验证的 * 号却跑偏了。
+使用情况：需要做一个以 Radio 单选框来控制表单内容的显示和隐藏。但是当单选框切换时，表单验证的 \* 号却跑偏了。
 
 原因：`v-if` 会影响到 iview 表单的显示
 

@@ -32,5 +32,4 @@ title: 实现点击输入密码弹窗
 
 <img style="width: 374px" src="./images/uni-pop_up/Snipaste_2020-10-30_18-57-54.png">
 
-
 - 第四次实现通过谷歌查询，可以使用 `text-indent: -999rpx;` 来隐藏文字显示，通过 `margin-left: -100%;` 来隐藏 `input` 光标，完美实现需求 成功 Nice~

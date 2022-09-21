@@ -9,6 +9,7 @@ title: 撤销上次提交
 ## 解决方法
 
 我们使用 `git reset` 来完成这个需求
+
 ```shell
 git reset --soft HEAD^
 ```

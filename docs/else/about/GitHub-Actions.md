@@ -20,24 +20,23 @@ GitHub Actions 由 GitHub 官方推出的工作流工具。典型的应用场景
 ![](./images/GitHub-Actions/image-20200208222252745.png)
 
 > 记录类型：CNAME
-> 
+>
 > 主机记录：
-> 
+>
 > - `@`: 访问地址：`areschang.top`
 > - `www` 访问地址：`www.areschang.top`
 > - `demo` 访问地址： `demo.areschang.top`
-> 
+>
 > 解析线路：默认
-> 
+>
 > 记录值：`你的GitHub用户名.github.io`
-> 
-> TTL: 10分钟，默认的
-
-
+>
+> TTL: 10 分钟，默认的
 
 然后在项目的 `public` 目录中添加一个文件 `CNAME` 写入你的自定义域名
 
 例如：
+
 ```
 demo.areschang.top
 ```
@@ -64,14 +63,14 @@ demo.areschang.top
 
 ![](./images/GitHub-Actions/image-20200208223455169.png)
 
->  注意：这个令牌自己保存好，只会出现一次，如果忘记只能再次重新生成
+> 注意：这个令牌自己保存好，只会出现一次，如果忘记只能再次重新生成
 
 ## 三、将 token 配置到项目的 secrets 中
 
 ![](./images/GitHub-Actions/image-20200208224538226.png)
 
 > Name：最好和我的一致，如果你修改了则下面的脚本内容也要修改。
-> 
+>
 > Value：填写上一步生成的那个 token。
 
 ![](./images/GitHub-Actions/image-20200208224724799.png)
@@ -97,7 +96,7 @@ jobs:
     steps:
     # 下载仓库代码
     - uses: actions/checkout@v2
-    
+
     # 缓存依赖
     - name: Cache dependencies
       uses: actions/cache@v1
@@ -106,13 +105,13 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-    
+
     # 安装依赖
     - run: npm ci
-    
+
     # 打包构建
     - run: npm run build
-    
+
     # 发布到 GitHub Pages
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
@@ -140,11 +139,10 @@ git push
 ![](./images/GitHub-Actions/image-20200208232052118.png)
 
 > 当所有的任务都完成变为绿色的对勾之后，就表示本次自动部署成功了。
-> 
+>
 > 当有新的源码 push 推送过来，会再次触发自动部署。
-> 
+>
 > 如果自动部署失败，会有红色的 ×，它还会给你发一封邮件告诉你部署失败了。
-
 
 ## 七、访问网站
 

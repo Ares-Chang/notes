@@ -12,7 +12,7 @@ title: webpack 配置全局引入 npm 包
 
 `webpack` 有一个开放 `api`，`ProvidePlugin` ，它可以自动引入并加载模块。
 
-> 自动加载模块，而不必到处 import 或 require 。		—— 引自 webpack 文档
+> 自动加载模块，而不必到处 import 或 require 。 —— 引自 webpack 文档
 
 ### 使用方法
 
@@ -28,23 +28,23 @@ const webpack = require('webpack')
 
 ```js
 module.exports = {
-	...
-	// 注册公共插件
-	plugins: [
-		new webpack.ProvidePlugin({
-			qs: 'qs',
-			qss: ['qs','stringify']
-		})
-	]
-	... // 业务代码
+  ...
+  // 注册公共插件
+  plugins: [
+    new webpack.ProvidePlugin({
+      qs: 'qs',
+      qss: ['qs','stringify']
+    })
+  ]
+  ... // 业务代码
 }
 ```
 
 4. 插件全局暴露已经完成，后面直接在项目中使用就可以了，无需再次 `import` 引入了
 
 ```js
-console.log(qs.stringify([1,2,3]))
-console.log(qss([1,2,3]))
+console.log(qs.stringify([1, 2, 3]))
+console.log(qss([1, 2, 3]))
 ```
 
 ### 参数详解
@@ -53,7 +53,7 @@ console.log(qss([1,2,3]))
 
 ```js
 new webpack.ProvidePlugin({
-  identifier: 'module1',
+  identifier: 'module1'
   // ...
 })
 ```
@@ -64,7 +64,7 @@ new webpack.ProvidePlugin({
 
 ```js
 new webpack.ProvidePlugin({
-  identifier: ['module1', 'property1'],
+  identifier: ['module1', 'property1']
   // ...
 })
 ```

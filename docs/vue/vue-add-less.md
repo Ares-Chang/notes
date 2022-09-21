@@ -20,7 +20,7 @@ yarn add less less-loader --save-dev
 # npm install less less-loader --save-dev
 ```
 
-2. 配置 less 
+2. 配置 less
 
 打开 `build/webpack.base.conf.js` 文件，在 module.rules 后面添加以下代码：
 

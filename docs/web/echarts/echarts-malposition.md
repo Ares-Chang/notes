@@ -20,7 +20,7 @@ title: 解决鼠标悬停借位问题
 
 ```css
 body {
-	zoom: 90%;
+  zoom: 90%;
 }
 ```
 
@@ -31,7 +31,8 @@ body {
 只能在 ECharts 的父标签上放大同样的 `zoom` 以解决这个问题。
 
 ```css
-main {	/* ECharts 父级 */
-	zoom: 110%;
+main {
+  /* ECharts 父级 */
+  zoom: 110%;
 }
 ```

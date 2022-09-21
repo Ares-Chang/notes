@@ -12,11 +12,14 @@ title: 文本打点展示
 
 ### 单行打点展示
 
-**示例：**
+::: tip **示例：**
 
 <div class="demo_content">
-  <div class="singleLine_text">我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长</div>
+  <div class="singleLine_text">
+    我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长
+  </div>
 </div>
+
 <style>
   .demo_content {
     font-size: 1rem;
@@ -31,14 +34,19 @@ title: 文本打点展示
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    background-color: #c1bcbd3d;
   }
 </style>
+
+:::
 
 **代码块：**
 
 ```html
 <template>
-  <div class="singleLine_text">我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长</div>
+  <div class="singleLine_text">
+    我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长
+  </div>
 </template>
 <style>
   .singleLine_text {
@@ -57,11 +65,14 @@ title: 文本打点展示
 
 ### 多行打点展示
 
-**示例：**
+::: tip **示例：**
 
 <div class="demo_content">
-  <div class="multiLine_text">我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长</div>
+  <div class="multiLine_text">
+    我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长
+  </div>
 </div>
+
 <style>
   .multiLine_text {
     width: 200px;
@@ -70,15 +81,19 @@ title: 文本打点展示
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    background-color: #c1bcbd3d;
   }
 </style>
+
+:::
 
 **代码块：**
 
 ```html
-<template>
-  <div class="multiLine_text">我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长</div>
-</template>
+<div class="multiLine_text">
+  我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长
+</div>
+
 <style>
   .multiLine_text {
     width: 200px;

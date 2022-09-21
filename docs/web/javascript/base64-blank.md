@@ -25,8 +25,8 @@ title: base 64 图片显示不成功
 代码块:
 
 ```js
-let { code } = this.getQRCode(); // 获取用户二维码数据
-this.QRCode = `data:image/png;base64,${code.replace(/[\r\n]/g, "")}`; // 添加文件头并去除换行符
+let { code } = this.getQRCode() // 获取用户二维码数据
+this.QRCode = `data:image/png;base64,${code.replace(/[\r\n]/g, '')}` // 添加文件头并去除换行符
 ```
 
 最后直接放在 `src` 使用，完美解决。

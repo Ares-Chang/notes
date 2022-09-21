@@ -17,8 +17,8 @@ title: wangeditor 取消自动获取焦点
 在 `node_module` 中 找到 `wangeditor/release/wangeditor.js` 将
 
 ```js
-this.selection.createRangeByElem($last, false, true);
-this.selection.restoreSelection();
+this.selection.createRangeByElem($last, false, true)
+this.selection.restoreSelection()
 ```
 
 注释掉

@@ -14,15 +14,16 @@ sidebarDepth: 2
 `setTimeout` 是一次性定时器，可以用来倒计时，执行一次必任务等场景。
 
 **使用方法：**
+
 ```js
-setTimeout([要执行的函数], [执行间隔时间]);
+setTimeout([要执行的函数], [执行间隔时间])
 ```
 
 **代码块：**
 
 ```js
 setTimeout(() => {
-  console.log('定时器一秒后执行！');
+  console.log('定时器一秒后执行！')
 }, 1000)
 ```
 
@@ -33,16 +34,16 @@ setTimeout(() => {
 **使用方法：**
 
 ```js
-clearTimeout([需要清除的定时器ID]);
+clearTimeout([需要清除的定时器ID])
 ```
 
 **代码块：**
 
 ```js
 let timer = setTimeout(() => {
-  console.log('定时器不会被执行！');
+  console.log('定时器不会被执行！')
 }, 1000)
-clearTimeout(timer);
+clearTimeout(timer)
 ```
 
 ### setInterval
@@ -59,7 +60,7 @@ setInterval([要执行的函数], [执行间隔时间])
 
 ```js
 setInterval(() => {
-  console.log('定时器每一秒执行一次！');
+  console.log('定时器每一秒执行一次！')
 }, 1000)
 ```
 
@@ -70,18 +71,18 @@ setInterval(() => {
 **使用方法：**
 
 ```js
-clearInterval([需要清除的定时器ID]);
+clearInterval([需要清除的定时器ID])
 ```
 
 **代码块：**
 
 ```js
 let timer = setInterval(() => {
-  console.log('一秒后定时器不会被执行了！');
+  console.log('一秒后定时器不会被执行了！')
 }, 1000)
 
 setTimeout(() => {
-  clearInterval(timer);
+  clearInterval(timer)
 }, 1000)
 ```
 
@@ -94,14 +95,15 @@ setTimeout(() => {
 > 下面代码块放入 `.html` 文件中
 
 ```html
-<button id='test'>点我！</button>
+<button id="test">点我！</button>
 <script>
-  let btn = document.getElementById('test');
+  let btn = document.getElementById('test')
 
-  let timer;
+  let timer
   btn.onclick = () => {
-    if (timer) {  // 如果定时器存在进入
-      clearTimeout(timer);  // 每次清除定时器。
+    if (timer) {
+      // 如果定时器存在进入
+      clearTimeout(timer) // 每次清除定时器。
     }
     timer = setTimeout(() => {
       console.log('点击多次只会触发一次！')

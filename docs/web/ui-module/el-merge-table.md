@@ -54,59 +54,59 @@ export default {
       // 模拟数据列表
       dataList: [
         {
-          date: "2021/12/07",
-          name: "王小虎",
-          food: "苹果",
-          price: "3.2",
+          date: '2021/12/07',
+          name: '王小虎',
+          food: '苹果',
+          price: '3.2'
         },
         {
-          date: "2021/12/07",
-          name: "王小虎",
-          food: "香蕉",
-          price: "5.0",
+          date: '2021/12/07',
+          name: '王小虎',
+          food: '香蕉',
+          price: '5.0'
         },
         {
-          date: "2021/12/08",
-          name: "张小明",
-          food: "香蕉",
-          price: "2.3",
+          date: '2021/12/08',
+          name: '张小明',
+          food: '香蕉',
+          price: '2.3'
         },
         {
-          date: "2021/12/08",
-          name: "赵小红",
-          food: "鸭梨",
-          price: "8.2",
-        },
+          date: '2021/12/08',
+          name: '赵小红',
+          food: '鸭梨',
+          price: '8.2'
+        }
       ],
       // 表单头列表
       mergeName: [
         {
-          name: "date",
-          value: "日期",
-          merge: true,  // 控制是否合并单元格
+          name: 'date',
+          value: '日期',
+          merge: true // 控制是否合并单元格
         },
         {
-          name: "name",
-          value: "人物",
-          merge: true,
+          name: 'name',
+          value: '人物',
+          merge: true
         },
         {
-          name: "food",
-          value: "食物",
-          merge: false,
+          name: 'food',
+          value: '食物',
+          merge: false
         },
         {
-          name: "price",
-          value: "价格",
-          merge: false,
-        },
+          name: 'price',
+          value: '价格',
+          merge: false
+        }
       ],
-      mergeList: [],  // 记录合并数据
-    };
+      mergeList: [] // 记录合并数据
+    }
   },
   created() {
-    this.createMergeList(); // 创建合并数据
-    console.log(this.mergeList);
+    this.createMergeList() // 创建合并数据
+    console.log(this.mergeList)
   },
   methods: {
     /**
@@ -117,19 +117,19 @@ export default {
     addList() {
       this.dataList.push(
         {
-          date: "2021/12/09",
-          name: "赵小红",
-          food: "波菜",
-          price: "2.2",
+          date: '2021/12/09',
+          name: '赵小红',
+          food: '波菜',
+          price: '2.2'
         },
         {
-          date: "2021/12/09",
-          name: "赵小红",
-          food: "地瓜",
-          price: "4.1",
+          date: '2021/12/09',
+          name: '赵小红',
+          food: '地瓜',
+          price: '4.1'
         }
-      );
-      this.createMergeList();	// 注意！！！数据更新后，这里一定要调用，否则会出现数据更新，页面不刷新情况
+      )
+      this.createMergeList() // 注意！！！数据更新后，这里一定要调用，否则会出现数据更新，页面不刷新情况
     },
     /**
      * 遍历创建要合并的数据
@@ -144,8 +144,8 @@ export default {
      */
     createMergeList() {
       this.mergeName.map((item, index) => {
-        this.setMergeList(index, item.name, item.merge);
-      });
+        this.setMergeList(index, item.name, item.merge)
+      })
     },
     /**
      * 创建要合并的数据
@@ -157,18 +157,18 @@ export default {
       // 判别是否需要合并
       if (!merge) {
         // 不需要合并的初始化默认值 1
-        this.mergeList[idx] = new Array(this.dataList.length).fill(1);
-        return;
+        this.mergeList[idx] = new Array(this.dataList.length).fill(1)
+        return
       }
       // 以下为需要合并的处理
-      this.mergeList[idx] = []; // 初始化列表，后续会向内部填充数据
-      let position = 0; // 控制二维列表下标，数据相同情况下不处理，不同情况下替换为处理数据下标
+      this.mergeList[idx] = [] // 初始化列表，后续会向内部填充数据
+      let position = 0 // 控制二维列表下标，数据相同情况下不处理，不同情况下替换为处理数据下标
       // 开始遍历数据
       this.dataList.map((item, index) => {
         // 如果当前处理数据是第一条，没有上一条做对比，不做处理，填充 1
         if (index === 0) {
-          this.mergeList[idx].push(1);
-          position = 0; // 防止进入下一轮遍历时无法从第一条开始
+          this.mergeList[idx].push(1)
+          position = 0 // 防止进入下一轮遍历时无法从第一条开始
         } else {
           // 判别当前值和上一条值是否一致
           // 特殊条件：必须日期和时间相同的才会合并，否则正常跳过
@@ -177,15 +177,15 @@ export default {
             item.date === this.dataList[index - 1].date &&
             item.name === this.dataList[index - 1].name
           ) {
-            this.mergeList[idx][position] += 1; // 如果一致，合并数 + 1
-            this.mergeList[idx].push(0); // 当前下标补 0 删除
+            this.mergeList[idx][position] += 1 // 如果一致，合并数 + 1
+            this.mergeList[idx].push(0) // 当前下标补 0 删除
           } else {
             // 不符合条件，正常渲染
-            this.mergeList[idx].push(1);
-            position = index; // 下标置为 index
+            this.mergeList[idx].push(1)
+            position = index // 下标置为 index
           }
         }
-      });
+      })
     },
     /**
      * 列表合并回调
@@ -195,19 +195,19 @@ export default {
       for (let i = 0; i < this.mergeName.length; i++) {
         // 0 为删除，1 为正常显示，>1 为合并多少格
         if (columnIndex === i) {
-          const rowspan = this.mergeList[i][rowIndex]; // 行合并数
-          const colspan = rowspan > 0 ? 1 : 0; // 列合并数
+          const rowspan = this.mergeList[i][rowIndex] // 行合并数
+          const colspan = rowspan > 0 ? 1 : 0 // 列合并数
           console.log(
             `当前位于 ${rowIndex} 行，${columnIndex} 列，行合并：${rowspan}，列合并：${colspan}`
-          );
+          )
           return {
             rowspan,
-            colspan,
-          };
+            colspan
+          }
         }
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 ```

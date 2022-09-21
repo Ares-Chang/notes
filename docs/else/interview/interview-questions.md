@@ -5,7 +5,7 @@ title: '面试题'
 ## 数据排序并去重(es6)
 
 ```js
-[...new Set(arr)].sort((a,b) => a-b)
+;[...new Set(arr)].sort((a, b) => a - b)
 ```
 
 ## 如何理解 MVVM 原理？
@@ -14,13 +14,13 @@ title: '面试题'
 
 ## 响应式数据的原理是什么？
 
-Vue 是一个数据驱动视图的框架，它的响应数据主要依赖 `Object.defineProperty()` 这个方法进行数据劫持。这是个ES5里面提供的方法，函数内有 `get()` 和 `set()` 两个方法，当访问的时候，自动调用 get ，赋值的时候自动调用 set ，但是这个方法是 ES5 中一个无法 shim 的特性，所以不支持 IE8 及以下的浏览器
+Vue 是一个数据驱动视图的框架，它的响应数据主要依赖 `Object.defineProperty()` 这个方法进行数据劫持。这是个 ES5 里面提供的方法，函数内有 `get()` 和 `set()` 两个方法，当访问的时候，自动调用 get ，赋值的时候自动调用 set ，但是这个方法是 ES5 中一个无法 shim 的特性，所以不支持 IE8 及以下的浏览器
 
 ES6 也提供了一个方法 Proxy ，这个方法也可以实现，效果比 `Object.defineProperty()` 更好
 
 ## 组件中的 data 为什么是一个函数?
 
-因为JS本身特质的问题，如果 data 不是函数而是一个对象的话，两个实例都引用一个对象，只要修改了其中一个，另外一个也会改变，为了避免这个问题，data 设置成函数，拥有自己的作用域
+因为 JS 本身特质的问题，如果 data 不是函数而是一个对象的话，两个实例都引用一个对象，只要修改了其中一个，另外一个也会改变，为了避免这个问题，data 设置成函数，拥有自己的作用域
 
 ## Vue 组件如何通信？
 
@@ -32,7 +32,7 @@ Vue 组件通信分为父子传值 props ,子父传值 $emit ,兄弟传值 event
 
 ## 简述 Vue 中 diff 算法原理？
 
-> 关于 diff 算法：diff算法即是差异查找算法，对比两个 dom 树不同点，相同的复用，不同的重新渲染
+> 关于 diff 算法：diff 算法即是差异查找算法，对比两个 dom 树不同点，相同的复用，不同的重新渲染
 
 ## v-for 中为什么要用 key ?
 
@@ -40,9 +40,9 @@ Vue 组件通信分为父子传值 props ,子父传值 $emit ,兄弟传值 event
 
 `v-for` 更新已渲染元素列表时，默认采用`就地复用`策略，列表数据修改的时候，他会根据 key 值去判断某个值是否修改，如果修改，则重新渲染这一项，否则复用之前的元素。
 
-## 什么是虚拟DOM
+## 什么是虚拟 DOM
 
-直接操作 DOM 性能消耗太大，所以通过 JS 实现了一个与 DOM 树对应的虚拟 dom对象，他的出现解决了直接操作 DOM 的性能消耗，避免了大量无谓的计算量
+直接操作 DOM 性能消耗太大，所以通过 JS 实现了一个与 DOM 树对应的虚拟 dom 对象，他的出现解决了直接操作 DOM 的性能消耗，避免了大量无谓的计算量
 
 ## css-loader 和 style-loader 有什么区别
 
@@ -54,7 +54,7 @@ Vue 组件通信分为父子传值 props ,子父传值 $emit ,兄弟传值 event
 
 ## http 协议的特点
 
- 无状态，无连接
+无状态，无连接
 
 ## DOM 事件模型
 
@@ -64,7 +64,7 @@ Vue 组件通信分为父子传值 props ,子父传值 $emit ,兄弟传值 event
 
 冒泡阶段 > 目标阶段 > 捕获阶段
 
-## H5新特性
+## H5 新特性
 
 出现了一些具有语义性的标签 header footer nav article
 
@@ -72,7 +72,7 @@ video audio canvas
 
 新的表单元素 email url time date
 
-## C3中的伪类
+## C3 中的伪类
 
 - first-of-type
 - last-of-type
@@ -81,11 +81,11 @@ video audio canvas
 - nth-child
 - last-child
 
-## C3中唯一引入的伪元素是
+## C3 中唯一引入的伪元素是
 
 :selection 被用户高亮的部分
 
-## Vue生命周期
+## Vue 生命周期
 
 - beforeCreate
 - created
@@ -96,21 +96,21 @@ video audio canvas
 - beforeDestroy
 - destroyed
 
-## v-if和v-show的区别
+## v-if 和 v-show 的区别
 
-v-show 和 v-if 都是用来显示隐藏元素，v-if 还有一个 v-else 配合使用，两者达到的效果都一样，性能方面却有很大的区别。 v-if 绝对是更消耗性能的，因为 v-if 在显示隐藏过程中有DOM的添加和删除，v-show 就简单多了，只是操作 css 。
+v-show 和 v-if 都是用来显示隐藏元素，v-if 还有一个 v-else 配合使用，两者达到的效果都一样，性能方面却有很大的区别。 v-if 绝对是更消耗性能的，因为 v-if 在显示隐藏过程中有 DOM 的添加和删除，v-show 就简单多了，只是操作 css 。
 
-## axios和 ajax 的区别
+## axios 和 ajax 的区别
 
 axios 是通过 promise 封装 XML 达到效果，ajax 就一种单纯的异步请求技术
 
-## ajax的缺点
+## ajax 的缺点
 
 - 存在安全问题
 - 对搜索引擎支持较弱
 - 不是很好的支持移动设备
 
-## ajax有什么数据类型格式
+## ajax 有什么数据类型格式
 
 json 和字符串, XML
 
@@ -120,29 +120,29 @@ json 和字符串, XML
 
 ## 解决跨域的方式有哪几种？
 
-jsonp：常用方法，通过动态添加script标签来达到跨域的效果
+jsonp：常用方法，通过动态添加 script 标签来达到跨域的效果
 
-CORS：在发送请求的时候，添加一个特殊的请求头，来达成效果 
+CORS：在发送请求的时候，添加一个特殊的请求头，来达成效果
 
-服务端跨域：在前后端分离的项目中可以借助服务器实现跨域，具体做法是：前端向本地服务器发送请求，本地服务器代替前端再向api服务器接口发送请求进行服务器间通信，本地服务器其实就是个中转站的角色，再将响应的数据返回给前端，下面用node.js做一个示例
+服务端跨域：在前后端分离的项目中可以借助服务器实现跨域，具体做法是：前端向本地服务器发送请求，本地服务器代替前端再向 api 服务器接口发送请求进行服务器间通信，本地服务器其实就是个中转站的角色，再将响应的数据返回给前端，下面用 node.js 做一个示例
 
-postmessage 跨域，H5新添加的一种方法，类似于 jsonp ，动态添加 iframe 标签来达到效果
+postmessage 跨域，H5 新添加的一种方法，类似于 jsonp ，动态添加 iframe 标签来达到效果
 
 ## 你用过什么后台语言,java,基本类型有哪几个
 
 Java 基本类型共有八种，基本类型可以分为三类，字符类型 char，布尔类型 boolean 以及数值类型 byte、short、int、long、float、double。
 
-## element-ui用的哪个版本
+## element-ui 用的哪个版本
 
 element-ui: ^2.13.0
 
 vant: ^2.4.1
 
-## bootstrap用过吗，按钮有那几个样式
+## bootstrap 用过吗，按钮有那几个样式
 
 默认，成功，提交，危险，警告
 
-## ajax中信息是如何在浏览器和服务器之间进行传递的
+## ajax 中信息是如何在浏览器和服务器之间进行传递的
 
 Ajax 与服务端是通过字符串或者 xml 进行交互的
 
@@ -150,13 +150,13 @@ Ajax 与服务端是通过字符串或者 xml 进行交互的
 
 有单位时，子元素继承了父元素计算得出的行距；无单位时继承了系数，子元素会分别计算各自行距（推荐使用）。
 
-## ES6提供了什么
+## ES6 提供了什么
 
 `let` `const` `() => {}` 有了块级作用域 解构赋值 模板字符串
 
 ## promise 和 ajax 有什么区别
 
-ajax是异步的。promise 是同步的，并且解决了 ajax 回调函数造成的回调地狱问题
+ajax 是异步的。promise 是同步的，并且解决了 ajax 回调函数造成的回调地狱问题
 
 ## 什么是闭包
 
@@ -164,9 +164,9 @@ ajax是异步的。promise 是同步的，并且解决了 ajax 回调函数造�
 
 ## 怎么解决内存泄漏
 
-尽量少使用闭包，js自己有垃圾回收机制
+尽量少使用闭包，js 自己有垃圾回收机制
 
-## js如何实现一个栈
+## js 如何实现一个栈
 
 数组的添加和删除
 
@@ -184,7 +184,7 @@ innerHTML
 
 MVVM 数据双向绑定，数据驱动视图，指令化操作,组件化，可复用
 
-## JQuery 和 JQuery-UI的区别
+## JQuery 和 JQuery-UI 的区别
 
 jquery-ui 只是 jquery 的一个插件，是一个 UI 框架，
 jQuery 本身注重于后台，没有漂亮的界面，而 jQueryUI 则补充了前者的不足
@@ -195,31 +195,31 @@ jQuery 本身注重于后台，没有漂亮的界面，而 jQueryUI 则补充了
 
 ## 雪碧图的原理
 
-为了减少http请求，把多张小的照片，组合成一张，可以有效减少请求次数
+为了减少 http 请求，把多张小的照片，组合成一张，可以有效减少请求次数
 
 ## 定位有哪几种
 
 绝对定位，相对定位，静态定位，固定定位
 
-## node使用多吗，SQL增删改查
+## node 使用多吗，SQL 增删改查
 
-insert  value
+insert value
 
-delete  form
+delete form
 
-update  set
+update set
 
-select  form
+select form
 
 ## 什么是面向对象
 
 我个人的理解，面向对象开发就是，把一个任务看作一个人，这个人他会干什么，有什么，放在程序里就是，把这个任务看成一个对象，对象有什么属性，有什么方法，这些，属性方法都是可以复用的，这就很友好
 
-## vue第一次渲染会触发哪几个钩子函数
+## vue 第一次渲染会触发哪几个钩子函数
 
 beforeCreate，created，beforeMount，mounted
 
-## DOM渲染在哪个阶段完成
+## DOM 渲染在哪个阶段完成
 
 mounted
 
@@ -230,7 +230,7 @@ mounted
 
 都提供了一些供开发者使用的 API
 
-## 说一下keep-alive
+## 说一下 keep-alive
 
 keep-alive 是 vue 中提供的动态缓存机制，可以缓存设置了的页面不被销毁
 
@@ -238,20 +238,20 @@ keep-alive 是 vue 中提供的动态缓存机制，可以缓存设置了的页�
 
 git add
 
-git commit 
+git commit
 
 git log
 
 git status
 
-git push 
+git push
 
 git branch
 
 ## call 和 apply 的区别
 
-两者都可以改变this指向，但是传递参数的形式不一向，
-第一个参数都是指向谁，但是apply的第二个参数是个数组，参数放在数组中
+两者都可以改变 this 指向，但是传递参数的形式不一向，
+第一个参数都是指向谁，但是 apply 的第二个参数是个数组，参数放在数组中
 
 ## 什么是事件委托
 
@@ -263,38 +263,38 @@ e.preventDefault
 
 e.stopPropageation
 
-## 如何让盒子往右平移200像素，在放大2倍
+## 如何让盒子往右平移 200 像素，在放大 2 倍
 
 transform:translate 平移
 transform:scale 放大
 
-## 解决移动端300ms的延迟
+## 解决移动端 300ms 的延迟
 
 - 禁用缩放功能
 
 - 更改默认视口宽度
 
-- 使用touch-action事件来解决这个问题
+- 使用 touch-action 事件来解决这个问题
 
-## new事件经历了什么
+## new 事件经历了什么
 
-1.开辟一个空间，this指向这个空间
+1.开辟一个空间，this 指向这个空间
 
-2.执行this.xx = xx
+2.执行 this.xx = xx
 
-3.隐式的返回this
+3.隐式的返回 this
 
-## ES6中箭头函数和普通函数有什么区别
+## ES6 中箭头函数和普通函数有什么区别
 
 更加简洁高效
 
-箭头函数中没有this
+箭头函数中没有 this
 
-没有arguments
+没有 arguments
 
 不能作为构造函数使用
 
-没有原型prototype
+没有原型 prototype
 
 ## 同步和异步的区别
 
@@ -304,7 +304,7 @@ transform:scale 放大
 
 ## 渐进式框架的理解
 
-Vue就是渐进式开发
+Vue 就是渐进式开发
 
 我的理解是：渐进式开发，代表就是组件化，它本身提供了很多组件，插件，你可以引入一两个组件来使用，也可以使用提供的全家桶来开发项目，是充满选择性的。
 
@@ -320,11 +320,11 @@ ES6 是 ES5 的进阶版本，代码行为更为严谨
 
 提供了 let 和 const 定义变量，可以产生作用域
 
-## promise是同步执行的还是异步执行的
+## promise 是同步执行的还是异步执行的
 
 是同步执行的但是 .then() 方法是异步执行的
 
-## promise有哪几种状态
+## promise 有哪几种状态
 
 三种状态
 
@@ -332,7 +332,7 @@ ES6 是 ES5 的进阶版本，代码行为更为严谨
 已成功
 已失败
 
-## forEach For in 和for of 的区别
+## forEach For in 和 for of 的区别
 
 forEach 是 ES6 提交的用来遍历数组的一个方法，但是中途不能停止
 
@@ -352,7 +352,7 @@ const 不能保证 object, array 等类型的数据不可改变
 
 单线程
 
-异步I/O，提升并发量
+异步 I/O，提升并发量
 
 事件驱动
 
@@ -362,15 +362,15 @@ chear:both
 
 BFC：overflow:hidden
 
-## Css引入的方式有哪几种
+## Css 引入的方式有哪几种
 
 内联，内嵌，外联，导入（@imponent）
 
 ## 优雅降级与渐进增强
 
-因为高级的css会有兼容性问题，所以为了全部兼容浏览器，有了优雅降级与渐进增强，优雅降级是由繁入简，渐进增强是由简入繁，先实现最简单的效果，然后在增加特效
+因为高级的 css 会有兼容性问题，所以为了全部兼容浏览器，有了优雅降级与渐进增强，优雅降级是由繁入简，渐进增强是由简入繁，先实现最简单的效果，然后在增加特效
 
-## JS中那些数据返回false
+## JS 中那些数据返回 false
 
 0，null，undefined,false,""
 
@@ -392,13 +392,13 @@ instanceof 是个关键字，可以检测这是不是个对象，是个什么类
 
 通过 export 方式导入，导入时必须要加 {}, export default 则不需要
 
-export 能直接导出变量表达式，export default不行。
+export 能直接导出变量表达式，export default 不行。
 
 ## require 和 import 的区别
 
 require 是 commonJS 提供的规范，动态加载
 
-import 是ES6新规范，静态加载，导入的方法更多，但是需要借用 babel 模块解析
+import 是 ES6 新规范，静态加载，导入的方法更多，但是需要借用 babel 模块解析
 
 现 node.js 对 ES6 支持不够强，依旧需要使用 require 导入
 
@@ -417,15 +417,15 @@ Vue 采用的是双向数据流绑定 双向数据指的就是视图和数据绑
 观察者模式就是一种一对多的关系，一个对象同时被多个对象监听，如果当一个对象被修改时，会自动通知他的依赖对象，观察者模式属于行为模式,行为型模式关注的是对象之间的通讯，观察者模式就是观察者和被观察者之间的通讯。
 它定义了四种角色: 抽象主题，具体主题，抽象观察者，具体观察者
 
-## active-class是哪个组件的属性
+## active-class 是哪个组件的属性
 
 router-link
 
-## 怎么获取vue-router动态参数
+## 怎么获取 vue-router 动态参数
 
 $route.params
 
-## vue-router有哪几种导航钩子
+## vue-router 有哪几种导航钩子
 
 有全局导航钩子和路由独享的钩子
 
@@ -446,11 +446,11 @@ Map 是一组键值对的结构，具有极快的查找速度
 
 ## $route 和 $router 的区别是什么
 
-`$route` 是“路由信息对象”，包括path，params，hash，query，fullPath，matched，name等路由信息参数。
+`$route` 是“路由信息对象”，包括 path，params，hash，query，fullPath，matched，name 等路由信息参数。
 
 而 `$router` 是“路由实例”对象包括了路由的跳转方法，钩子函数等。
 
-## 怎么让谷歌支持小于12px的文字
+## 怎么让谷歌支持小于 12px 的文字
 
 可以加谷歌前缀。或者使用 transfrom:scale(0.8) 来进行强制缩放
 
@@ -458,15 +458,15 @@ Map 是一组键值对的结构，具有极快的查找速度
 
 可以通过 $set() 方法来主动通知 Vue 你的数据该更新了
 
-## vue-cli怎么新增自定义指令
+## vue-cli 怎么新增自定义指令
 
 通过 directives 属性来绑定自定义指令
 
-## vue-router两种路由的模式
+## vue-router 两种路由的模式
 
 hash 和 history
 
-## vue的动态组件怎么注册
+## vue 的动态组件怎么注册
 
 :is 属性
 
@@ -485,9 +485,9 @@ arr.flat(Infinity) 可以解决这个问题，把多维数组降级为一维数�
 - ES6 的类必须通过 new 调用，构造函数则可以不用
 - Class 不存在变量提升
 - ES6 的类没有私有方法和私有属性（正在提议中）
-- Class 多了一个静态方法（static）,里面的this指向的是类本身，静态方法可以被子类继承
+- Class 多了一个静态方法（static）,里面的 this 指向的是类本身，静态方法可以被子类继承
 - ES6 的静态属性和静态方法
-- ES6 类多了一个new Target 可以判定new 的构造函数
+- ES6 类多了一个 new Target 可以判定 new 的构造函数
 
 ## vue 各个组件怎么修改头部 title
 
@@ -503,7 +503,7 @@ OSI 参考模型将整个网络通信的功能划分为七个层次,它们由低
 
 ## li 与 li 之间有看不见的空白，是什么原因？
 
-把 li 标签转换成行内块就可以了，因为在渲染html的时候，会把换行渲染为空格添加到页面中
+把 li 标签转换成行内块就可以了，因为在渲染 html 的时候，会把换行渲染为空格添加到页面中
 
 ## Vuex 页面刷新的时候数据丢失怎么解决
 

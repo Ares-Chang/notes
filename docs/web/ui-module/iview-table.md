@@ -13,17 +13,17 @@ iview 官方文档中关于 table 的 Render 写法介绍只有哪么几个，�
 
 ```js
 render: (h, params) => {
-	return h("Input", {
-		props: {
-			value: "",
-			size: "small",
-		},
-		on: {
-			input: (val) => {
-				t.data[params.index].estimateTime = val;
-			},
-		},
-	});
+  return h("Input", {
+    props: {
+      value: "",
+      size: "small",
+    },
+    on: {
+      input: (val) => {
+        t.data[params.index].estimateTime = val;
+      },
+    },
+  });
 },
 ```
 
@@ -31,25 +31,25 @@ render: (h, params) => {
 
 ```js
 render: (h, params) => {
-	return h(
-		"Select",
-		{
-			props: {},
-			on: {
-				"on-change": (event) => {
-					this.data[params.index].volumeType = event;
-				},
-			},
-		},
-		params.row.action.map((item) => {
-			return h("Option", {
-				props: {
-					value: item.value,
-					label: item.name,
-				},
-			});
-		})
-	);
+  return h(
+    "Select",
+    {
+      props: {},
+      on: {
+        "on-change": (event) => {
+          this.data[params.index].volumeType = event;
+        },
+      },
+    },
+    params.row.action.map((item) => {
+      return h("Option", {
+        props: {
+          value: item.value,
+          label: item.name,
+        },
+      });
+    })
+  );
 },
 ```
 
@@ -59,35 +59,35 @@ render: (h, params) => {
 
 ```js
 render: (h, params) => {
-	//return h('元素',{元素的性质},'内容')
-	return h(
-		"i-switch",
-		{
-			props: {
-				size: "large",
-				value: params.row.status == "true",
-			},
-			on: {
-				"on-change": (value) => {
-					console.log(value)
-				},
-			},
-		},
-		[
-			h("span", {
-				slot: "open",
-				domProps: {
-					innerHTML: "正常",
-				},
-			}),
-			h("span", {
-				slot: "close",
-				domProps: {
-					innerHTML: "冻结",
-				},
-			}),
-		]
-	);
+  //return h('元素',{元素的性质},'内容')
+  return h(
+    "i-switch",
+    {
+      props: {
+        size: "large",
+        value: params.row.status == "true",
+      },
+      on: {
+        "on-change": (value) => {
+          console.log(value)
+        },
+      },
+    },
+    [
+      h("span", {
+        slot: "open",
+        domProps: {
+          innerHTML: "正常",
+        },
+      }),
+      h("span", {
+        slot: "close",
+        domProps: {
+          innerHTML: "冻结",
+        },
+      }),
+    ]
+  );
 },
 ```
 
@@ -95,25 +95,25 @@ render: (h, params) => {
 
 ```js
 render: (h, params) => {
-	//return h('元素',{元素的性质},'内容')
-	return h(
-		"i-switch",
-		{
-			props: {
-				size: "large",
-				value: params.row.status == "true",
-			},
-			on: {
-				"on-change": (value) => {
-					console.log(value)
-				},
-			},
-			scopedSlots: {
-				open: () => h("span", "正常"),
-				close: () => h("span", "冻结"),
-			},
-		},
-	);
+  //return h('元素',{元素的性质},'内容')
+  return h(
+    "i-switch",
+    {
+      props: {
+        size: "large",
+        value: params.row.status == "true",
+      },
+      on: {
+        "on-change": (value) => {
+          console.log(value)
+        },
+      },
+      scopedSlots: {
+        open: () => h("span", "正常"),
+        close: () => h("span", "冻结"),
+      },
+    },
+  );
 },
 ```
 
@@ -123,12 +123,12 @@ Render 语法中是可以嵌套 js 语法使用的
 
 ```js
 render: (h, params) => {
-	return h(
-		"div",
-		params.row.grade.map((item) => {
-			return h("Tag", item);
-		})
-	);
+  return h(
+    "div",
+    params.row.grade.map((item) => {
+      return h("Tag", item);
+    })
+  );
 },
 ```
 

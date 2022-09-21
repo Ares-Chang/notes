@@ -12,10 +12,10 @@ title: 配置 title 图标及文字
 
 ```html
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="ico" href="./logo.ico" type="image/x-icon">
-	<title>Ares Chang的小笔记</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="ico" href="./logo.ico" type="image/x-icon" />
+  <title>Ares Chang的小笔记</title>
 </head>
 ```
 

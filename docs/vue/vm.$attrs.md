@@ -18,42 +18,43 @@ props 可以用来做组件传值，需要在父组件传入，子组件用 prop
 
 ```vue
 <template>
-	<div class="father">
-		我是父组件
-		<son :code="'我是子组件'" />
-	</div>
+  <div class="father">
+    我是父组件
+    <son :code="'我是子组件'" />
+  </div>
 </template>
 <script>
-import son from "./son";
+import son from './son'
 export default {
-	components: {
-		son
-	}
+  components: {
+    son
+  }
 }
 </script>
 ```
 
 ```vue
 <template>
-	<div class="son">
-		{{code}}
-	</div>
+  <div class="son">
+    {{ code }}
+  </div>
 </template>
 
 <script>
 export default {
-	props: ['code'],	// 直接使用
+  props: ['code'] // 直接使用
 }
 </script>
 
 <script>
 export default {
-	props: {	// 传入验证
-		code: {
-			type: String,	// 判断数据类型
-			required: true	// 判断是否必传
-		}
-	}
+  props: {
+    // 传入验证
+    code: {
+      type: String, // 判断数据类型
+      required: true // 判断是否必传
+    }
+  }
 }
 </script>
 ```
@@ -70,26 +71,26 @@ export default {
 
 ```vue
 <template>
-	<div class="father">
-		我是父组件
-		<son :code="'我是子组件'" />
-	</div>
+  <div class="father">
+    我是父组件
+    <son :code="'我是子组件'" />
+  </div>
 </template>
 <script>
-import son from "./son";
+import son from './son'
 export default {
-	components: {
-		son
-	}
+  components: {
+    son
+  }
 }
 </script>
 ```
 
 ```vue
 <template>
-	<div class="son">
-		{{$attrs.code}}
-	</div>
+  <div class="son">
+    {{ $attrs.code }}
+  </div>
 </template>
 ```
 
@@ -109,30 +110,30 @@ export default {
 
 ```vue
 <template>
-	<div class="father">
-		我是父组件
-		<son />
-	</div>
+  <div class="father">
+    我是父组件
+    <son />
+  </div>
 </template>
 <script>
-import son from "./son";
+import son from './son'
 export default {
-	components: {
-		son
-	},
-	data() {
-		return {
-			code: '我是子组件'
-		}
-	}
+  components: {
+    son
+  },
+  data() {
+    return {
+      code: '我是子组件'
+    }
+  }
 }
 </script>
 ```
 
 ```vue
 <template>
-	<div class="son">
-		{{$parent.code}}
-	</div>
+  <div class="son">
+    {{ $parent.code }}
+  </div>
 </template>
 ```

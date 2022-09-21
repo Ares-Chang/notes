@@ -12,14 +12,14 @@ title: 解决 git 合并未完成问题
 
 1. 可以直接提交当前所有文件为一次 commit 记录
 
-```git
+```
 git commit -m "fixing merge conflicts"
 git push
 ```
 
 2. 如果不想提交当前内容，污染 `commit` 记录。可以通过 `git merge --abort` 来简单地退出合并。
 
-```git
+```
 git merge --abort
 ```
 

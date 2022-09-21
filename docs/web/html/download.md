@@ -15,8 +15,8 @@ title: 图片文件下载
 可以通过后端接口来通知浏览器 `header` 信息，来实现下载。
 
 ```js
-header('Content-type: image/jpeg'); 
-header("Content-Disposition: attachment; filename='download.jpg'"); 
+header('Content-type: image/jpeg')
+header("Content-Disposition: attachment; filename='download.jpg'")
 ```
 
 当直接访问的某个文件时，如果该文件是二进制等浏览器无法解析的文件，浏览器才会下载该文件，但如果浏览器可以自己解析该文件，则它会打开该文件并以自己的方式呈现出来，而不会下载，此时就需要设置消息响应头，告诉浏览器该文件需要下载而不是简单的打开。
@@ -44,28 +44,28 @@ header("Content-Disposition: attachment; filename='download.jpg'");
 // 参数一： src
 // 参数二： 图片名称，可选
 export const downloadImage = (src, name) => {
-	const image = new Image();
-	// 解决跨域 canvas 污染问题
-	image.setAttribute('crossOrigin','anonymous');
-	image.onload = function(){
-		const canvas = document.createElement('canvas');
-		canvas.width = image.width;
-		canvas.height = image.height;
-		const context = canvas.getContext('2d');
-		context.drawImage(image,0,0,image.width,image.height);
-		const url = canvas.toDataURL('image/png');
-		// 生成一个 a 标签
-		const a = document.createElement('a');
-		// 创建一个点击事件
-		const event = new MouseEvent('click');
-		// 将 a 的 download 属性设置为我们想要下载的图片的名称，若 name 不存在则使用'图片'作为默认名称
-		a.download = name || '图片';
-		// 将生成的 URL 设置为 a.href 属性
-		a.href = url;
-		// 触发 a 的点击事件
-		a.dispatchEvent(event);
-	};
-	image.src = src
+  const image = new Image()
+  // 解决跨域 canvas 污染问题
+  image.setAttribute('crossOrigin', 'anonymous')
+  image.onload = function () {
+    const canvas = document.createElement('canvas')
+    canvas.width = image.width
+    canvas.height = image.height
+    const context = canvas.getContext('2d')
+    context.drawImage(image, 0, 0, image.width, image.height)
+    const url = canvas.toDataURL('image/png')
+    // 生成一个 a 标签
+    const a = document.createElement('a')
+    // 创建一个点击事件
+    const event = new MouseEvent('click')
+    // 将 a 的 download 属性设置为我们想要下载的图片的名称，若 name 不存在则使用'图片'作为默认名称
+    a.download = name || '图片'
+    // 将生成的 URL 设置为 a.href 属性
+    a.href = url
+    // 触发 a 的点击事件
+    a.dispatchEvent(event)
+  }
+  image.src = src
 }
 ```
 
@@ -77,32 +77,32 @@ export const downloadImage = (src, name) => {
 
 ```js
 let eleTextarea = [1, 2, 3, 4, 5]
-let eleButton = document.querySelector('button');
+let eleButton = document.querySelector('button')
 
 // 下载文件方法
 let funDownload = function (content, filename) {
-	let eleLink = document.createElement('a');
-	eleLink.download = filename;
-	eleLink.style.display = 'none';
-	// 字符内容转变成blob地址
-	let blob = new Blob([content]);
-	eleLink.href = URL.createObjectURL(blob);
-	// 触发点击
-	document.body.appendChild(eleLink);
-	eleLink.click();
-	// 然后移除
-	document.body.removeChild(eleLink);
-};
+  let eleLink = document.createElement('a')
+  eleLink.download = filename
+  eleLink.style.display = 'none'
+  // 字符内容转变成blob地址
+  let blob = new Blob([content])
+  eleLink.href = URL.createObjectURL(blob)
+  // 触发点击
+  document.body.appendChild(eleLink)
+  eleLink.click()
+  // 然后移除
+  document.body.removeChild(eleLink)
+}
 
 if ('download' in document.createElement('a')) {
-	// 作为test.html文件下载
-	eleButton.addEventListener('click', function () {
-		funDownload(eleTextarea, 'test');
-	});
+  // 作为test.html文件下载
+  eleButton.addEventListener('click', function () {
+    funDownload(eleTextarea, 'test')
+  })
 } else {
-	eleButton.onclick = function () {
-		alert('浏览器不支持');
-	};
+  eleButton.onclick = function () {
+    alert('浏览器不支持')
+  }
 }
 ```
 
@@ -110,4 +110,4 @@ if ('download' in document.createElement('a')) {
 
 <br/>
 
-参考自[张鑫旭](https://www.zhangxinxu.com/)大神的[JS前端创建html或json文件并浏览器导出下载](https://www.zhangxinxu.com/wordpress/2017/07/js-text-string-download-as-html-json-file/)
+参考自[张鑫旭](https://www.zhangxinxu.com/)大神的[JS 前端创建 html 或 json 文件并浏览器导出下载](https://www.zhangxinxu.com/wordpress/2017/07/js-text-string-download-as-html-json-file/)

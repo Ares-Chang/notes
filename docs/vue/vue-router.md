@@ -25,11 +25,11 @@ sidebarDepth: 3
 
 ```vue
 <template>
-	<div>
+  <div>
     <router-link to="home">router-link 跳转</router-link>
-    <router-link :to="{name: 'home'}">name 跳转</router-link>
-    <router-link :to="{path: '/home'}">path 跳转</router-link>
-	</div>
+    <router-link :to="{ name: 'home' }">name 跳转</router-link>
+    <router-link :to="{ path: '/home' }">path 跳转</router-link>
+  </div>
 </template>
 ```
 
@@ -37,11 +37,17 @@ sidebarDepth: 3
 
 ```vue
 <template>
-	<div>
-    <router-link :to="{path: 'home', query: {id: 1}}">query 传参</router-link>
-    <router-link :to="{name: 'home', query: {id: 1}}">query 传参</router-link>
-    <router-link :to="{name: 'home', params: {id: 1}}">params 传参</router-link>
-	</div>
+  <div>
+    <router-link :to="{ path: 'home', query: { id: 1 } }"
+      >query 传参</router-link
+    >
+    <router-link :to="{ name: 'home', query: { id: 1 } }"
+      >query 传参</router-link
+    >
+    <router-link :to="{ name: 'home', params: { id: 1 } }"
+      >params 传参</router-link
+    >
+  </div>
 </template>
 ```
 
@@ -53,8 +59,8 @@ sidebarDepth: 3
 
 ```js
 this.$router.push('home')
-this.$router.push({ name: "home" });
-this.$router.push({ path: "/home" });
+this.$router.push({ name: 'home' })
+this.$router.push({ path: '/home' })
 ```
 
 - `$router.replace()`
@@ -70,8 +76,8 @@ this.$router.replace({ path: '/home' })
 `n` 为参数，可以填写正负整数，n 为正整数页面向前进，n 为负整数页面向后退。
 
 ```js
-this.$router.go(-1)	// 后退
-this.$router.go(1)	// 前进
+this.$router.go(-1) // 后退
+this.$router.go(1) // 前进
 ```
 
 ### 路由传参
@@ -88,17 +94,16 @@ this.$router.go(1)	// 前进
 
 ```js
 // push 的 query 方式
-this.$router.push({ name: "home", query: { id: "1" } });
-this.$router.push({ path: "/home", query: { id: "1" } });
+this.$router.push({ name: 'home', query: { id: '1' } })
+this.$router.push({ path: '/home', query: { id: '1' } })
 
 // push 的 params 方式
-this.$router.push({ name: "home", params: { id: "1" } });
-
+this.$router.push({ name: 'home', params: { id: '1' } })
 
 // replace 的 query 方式
-this.$router.replace({ name: "home", query: { id: "1" } });
-this.$router.replace({ path: "/home", query: { id: "1" } });
+this.$router.replace({ name: 'home', query: { id: '1' } })
+this.$router.replace({ path: '/home', query: { id: '1' } })
 
 // replace 的 params 方式
-this.$router.replace({ name: "home", params: { id: "1" } });
+this.$router.replace({ name: 'home', params: { id: '1' } })
 ```

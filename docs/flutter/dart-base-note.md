@@ -10,11 +10,11 @@ Flutter 是 Google 开源的一个跨平台框架，基于 Dart 语法进行开�
 
 ## 安装环境
 
-可以访问 [Dart官方文档](https://dart.dev/get-dart) 来查看环境安装，以下提供 Windows 环境安装软件。
+可以访问 [Dart 官方文档](https://dart.dev/get-dart) 来查看环境安装，以下提供 Windows 环境安装软件。
 
 下载地址：[https://gekorm.com/dart-windows](https://gekorm.com/dart-windows)（安装非常慢，经常超时，注意心态~）
 
-> ps: 从Flutter 1.21开始，Flutter SDK包含完整的Dart SDK。因此，如果已安装Flutter，则可能无需显式下载Dart SDK。
+> ps: 从 Flutter 1.21 开始，Flutter SDK 包含完整的 Dart SDK。因此，如果已安装 Flutter，则可能无需显式下载 Dart SDK。
 
 下载 VS Code 插件：
 
@@ -24,7 +24,7 @@ Flutter 是 Google 开源的一个跨平台框架，基于 Dart 语法进行开�
 
 ## Hello World
 
-- 新建一个 `hello_world.dart` 文件，dart 语言后缀文件名是 `.dart` 
+- 新建一个 `hello_world.dart` 文件，dart 语言后缀文件名是 `.dart`
 
 - 打开文件键入以下代码：
 
@@ -93,16 +93,16 @@ print(date2);
 常用数据类型：
 
 - Number(数值) :
-	- int(整型)
-	- double(浮点型)
+  - int(整型)
+  - double(浮点型)
 - Strings(字符串) :
-	- String
+  - String
 - Booleans(布尔) :
-	- bool
+  - bool
 - List(数组) :
-	- 在 Dart 中，数组是列表对象，所以大多数人只是称它们为列表
+  - 在 Dart 中，数组是列表对象，所以大多数人只是称它们为列表
 - Maps(字典) ：
-	- 通常来说，Map 是一个键值对相关的对象。键和值可以是任何类型的对象。
+  - 通常来说，Map 是一个键值对相关的对象。键和值可以是任何类型的对象。
 
 ### String(字符串类型)
 
@@ -137,6 +137,7 @@ print('$str1$str2');  // 你好Dart
 print('${str1}${str2}');  // 你好Dart
 print(str1 + str2); // 你好Dart
 ```
+
 ### Number(数值类型)
 
 使用 `int` 和 `double` 来进行定义，分为整型和浮点型数字，可正常进行 `+-*/%`运算。
@@ -154,9 +155,9 @@ print(a+b); // 3.1
 ```dart
 bool a = true;
 if(a) {
-	print('真');
+  print('真');
 } else {
-	print('假');
+  print('假');
 }
 ```
 
@@ -333,8 +334,8 @@ print(person.values); // 获取所有的值
 print(person.isEmpty); // 判断 List 是否为空
 print(person.isNotEmpty); // 判断 List 内是否有值
 person.addAll({
-	"sex": '男',
-	'work': ['敲代码', '送外卖']
+  "sex": '男',
+  'work': ['敲代码', '送外卖']
 }); // 添加键值对
 print(person);
 person.remove('sex'); // 删除对应键值对
@@ -349,12 +350,12 @@ print(person.containsValue('张三')); // 判断是否包含该值
 List myList = ['苹果', '香蕉', '西瓜'];
 // for 循环
 for (var i = 0; i < myList.length; i++) {
-	print(myList[i]);
+  print(myList[i]);
 }
 
 // forEach 循环
 myList.forEach((value) {
-	print(value);
+  print(value);
 });
 
 // map 循环
@@ -376,7 +377,7 @@ print(myList.every((item) => item.length >= 2));
 
 ```dart
 void printInfo() {
-	print('我是一个自定义方法');
+  print('我是一个自定义方法');
 }
 
 printInfo();
@@ -388,8 +389,8 @@ printInfo();
 
 ```dart
 int getNum() {
-	var myNum = 123;
-	return myNum;
+  var myNum = 123;
+  return myNum;
 }
 print(getNum());
 ```
@@ -406,11 +407,11 @@ print(getNum());
 
 ```dart
 int sumNum(int val) {
-	int sum = 0;
-	for (var i = 0; i <= val; i++) {
-		sum += i;
-	}
-	return sum;
+  int sum = 0;
+  for (var i = 0; i <= val; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 print(sumNum(10));
@@ -424,11 +425,11 @@ print(sumNum(10));
 
 ```dart
 String printUserInfo(String userName, [var age, String sex = '男']) {
-	if (age != null) {
-		return '姓名：$userName --- 性别：$sex --- $age';
-	} else {
-		return '姓名：$userName --- 性别：$sex --- 年龄保密';
-	}
+  if (age != null) {
+    return '姓名：$userName --- 性别：$sex --- $age';
+  } else {
+    return '姓名：$userName --- 性别：$sex --- 年龄保密';
+  }
 }
 
 print(printUserInfo('张三', 12));
@@ -442,7 +443,7 @@ print(printUserInfo('张三'));
 
 ```dart
 String printUserInfo(String userName, {var age, String sex = '男'}) {
-	return '姓名：$userName --- 性别：$sex --- 年龄：$age';
+  return '姓名：$userName --- 性别：$sex --- 年龄：$age';
 }
 print(printUserInfo('张三', age: 12));
 ```
@@ -478,7 +479,7 @@ class Person {
   }
 }
 void main() {
-	var p = new Person();
+  var p = new Person();
   print(p.name);
   p.getInfo();
 }
@@ -497,7 +498,7 @@ class Person {
   }
 }
 void main() {
-	Person p = new Person();
+  Person p = new Person();
 }
 ```
 
@@ -516,7 +517,7 @@ class Person {
   }
 }
 void main() {
-	Person p = new Person('张三', 18);
+  Person p = new Person('张三', 18);
   p.getInfo();
   Person p1 = new Person('李四', 24);
   p1.getInfo();
@@ -535,14 +536,14 @@ class Person {
   }
 }
 void main() {
-	Person p = new Person('张三', 18);
+  Person p = new Person('张三', 18);
   p.getInfo();
   Person p1 = new Person('李四', 24);
   p1.getInfo();
 }
 ```
 
-Dart 中构造函数可以有多个，和类名相同的会定义为默认构造函数，可以自行定义无限个命名构造函数。(同js类中的方法)
+Dart 中构造函数可以有多个，和类名相同的会定义为默认构造函数，可以自行定义无限个命名构造函数。(同 js 类中的方法)
 
 ```dart
 class Person {
@@ -557,7 +558,7 @@ class Person {
   }
 }
 void main() {
-	Person p = new Person.now();
+  Person p = new Person.now();
 }
 ```
 
@@ -588,10 +589,10 @@ class Person {
 
 ```dart
 void() {
-	Person p = new Person('张三', 18);
-	// print(p._name) // error：私有变量不可使用
-	// p._getInfo();  // error：私有方法不可使用
-	print(p.getName());	// 张三
+  Person p = new Person('张三', 18);
+  // print(p._name) // error：私有变量不可使用
+  // p._getInfo();  // error：私有方法不可使用
+  print(p.getName());	// 张三
 }
 ```
 
@@ -706,7 +707,6 @@ r.printInfo();
 >
 > 非静态成员可以通过 `this.xxx` 访问，或直接访问变量名(方法名)，但是推荐使用 `this.xxx` 来访问。
 
-
 ### 对象操作符
 
 - `?` 条件运算符
@@ -811,7 +811,7 @@ w.printInfo();  // 张三 --- 20
 w.run(); // 张三 --- 20 --- 男
 ```
 
->  调用子类属性和方法，**会首先在子类自身查找，如果没有的话才会去父类查找。**
+> 调用子类属性和方法，**会首先在子类自身查找，如果没有的话才会去父类查找。**
 
 #### 覆写
 
@@ -889,7 +889,7 @@ Dog dog = new Dog();
 Cat cat = new Cat();
 dog.eat();  // 小狗！
 dog.printInfo();  // 我是抽象类中的一个普通方法！
-cat.eat();  // 小猫！ 
+cat.eat();  // 小猫！
 ```
 
 ### 多态
@@ -929,7 +929,7 @@ dog.run();
 
 #### 接口定义 && Demo 介绍
 
-`Dart`  的接口没有 `interface` 关键字定义接口，而是使用普通类或者抽象类作为接口实现。
+`Dart` 的接口没有 `interface` 关键字定义接口，而是使用普通类或者抽象类作为接口实现。
 
 同样使用 `implements` 关键字进行实现。
 
@@ -942,7 +942,7 @@ Demo 介绍：
 ```dart
 /**
  * 定义一个DB库 支持 mysql mssql .
- * mysql mssql 两个类里面都有同样的方法 
+ * mysql mssql 两个类里面都有同样的方法
  */
 
 abstract class Db {
@@ -1087,7 +1087,7 @@ class B {
   void printB() {
     print('B');
   }
-  
+
   void run() {
     print('run B');
   }
@@ -1155,29 +1155,33 @@ print(getData<String>('123'));  // '123' String
 
 - 自定义的库
   自己抽离出来的一些功能模块，可以理解为自定义库。
-- 系统内置的库 
+- 系统内置的库
   只要安装完成 `Dart SDK` 内置的一些库：
-    - `import 'dart:math';`
-    - `import 'dart:io;`
-    - `import 'dart:convert';`
-- Pub包管理系统中的库
+  - `import 'dart:math';`
+  - `import 'dart:io;`
+  - `import 'dart:convert';`
+- Pub 包管理系统中的库
   托管到远程 Pub 中的一些库。(类似 npm，但过程不是很一样。)
 
   官网地址：
-    - [https://pub.dev/packages](https://pub.dev/packages)
-    - [https://pub.flutter-io.cn/packages](https://pub.flutter-io.cn/packages)
-    - [https://pub.dartlang.org/flutter](https://pub.dartlang.org/flutter)
-  
+
+  - [https://pub.dev/packages](https://pub.dev/packages)
+  - [https://pub.flutter-io.cn/packages](https://pub.flutter-io.cn/packages)
+  - [https://pub.dartlang.org/flutter](https://pub.dartlang.org/flutter)
+
   使用说明：
+
   1. 需要在项目根目录新建一个 `pubspec.yaml` 文件
   2. 在 `pubspec.yaml` 文件配置名称、描述、依赖等信息
-    ```yaml
-    name: xxx
-    description: 名称和描述可以根据项目进行定义，dependencies 写入库的版本信息。
-    dependencies:
-      http: ^0.12.0+2
-      date_format: ^1.0.6
-    ```
+
+  ```yaml
+  name: xxx
+  description: 名称和描述可以根据项目进行定义，dependencies 写入库的版本信息。
+  dependencies:
+    http: ^0.12.0+2
+    date_format: ^1.0.6
+  ```
+
   3. 然后运行 `pub get` 获取包下载到本地
   4. 项目中引入库 `import 'package:http/http.dart' as http;` 。
   5. 看文档进行使用。

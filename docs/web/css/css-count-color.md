@@ -41,22 +41,22 @@ sidebarDepth: 2
 
 ```js
 const lighten = (color, lighten) => {
-  const c = color.replace("#", ""); // 去除 # 号
+  const c = color.replace('#', '') // 去除 # 号
   // 取值
   let rgb = [
     parseInt(c.substr(0, 2), 16),
     parseInt(c.substr(2, 2), 16),
-    parseInt(c.substr(4, 2), 16),
-  ];
-  let returnstatement = "#"; // 添加 # 号
+    parseInt(c.substr(4, 2), 16)
+  ]
+  let returnstatement = '#' // 添加 # 号
   // 改变色值
-  rgb.forEach((color) => {
+  rgb.forEach(color => {
     returnstatement += Math.round(
       (255 - color) * (1 - Math.pow(Math.E, -lighten)) + color
-    ).toString(16);
-  });
-  return returnstatement;
-};
+    ).toString(16)
+  })
+  return returnstatement
+}
 ```
 
 [点击 CodePen 查看效果](https://codepen.io/ares-chang/pen/wvrGNJO)

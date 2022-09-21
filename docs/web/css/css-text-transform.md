@@ -15,7 +15,7 @@ title: CSS 控制文本大小写
 可选属性：
 
 | 属性       | 值                                             |
-|:-----------|:-----------------------------------------------|
+| :--------- | :--------------------------------------------- |
 | none       | 默认。定义带有小写字母和大写字母的标准的文本。 |
 | capitalize | 文本中的每个单词以大写字母开头。               |
 | uppercase  | 定义仅有大写字母。                             |
@@ -27,6 +27,7 @@ title: CSS 控制文本大小写
 网址如无法打开可以复制代码块到本地运行。
 
 ::: details 点击查看代码块
+
 ```html
 <div class="capitalize">text-transform: capitalize;</div>
 <div class="uppercase">text-transform: uppercase;</div>
@@ -45,4 +46,5 @@ title: CSS 控制文本大小写
   }
 </style>
 ```
+
 :::

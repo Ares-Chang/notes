@@ -1,5 +1,5 @@
 ---
-title: 在 H5 中打开小程序 
+title: 在 H5 中打开小程序
 ---
 
 ## 关于
@@ -52,11 +52,11 @@ location.href = 'weixin://dl/business/?t= *TICKET*'
 
 ### 调用上限
 
-Scheme 将根据是否为到期有效与失效时间参数，分为**短期有效Scheme**与**长期有效Scheme**：
+Scheme 将根据是否为到期有效与失效时间参数，分为**短期有效 Scheme**与**长期有效 Scheme**：
 
-1. 单个小程序每日生成 Scheme 上限为50万个（包含短期有效 Scheme 与长期有效 Scheme）
-2. 有效时间超过31天的 Scheme 或永久有效的 Scheme 为**长期有效Scheme**，单个小程序总共可生成长期有效 Scheme 上限为10万个，请谨慎调用
-3. 有效时间不超过31天的 Scheme 为**短期有效Scheme**，单个小程序生成短期有效 Scheme 不设上限
+1. 单个小程序每日生成 Scheme 上限为 50 万个（包含短期有效 Scheme 与长期有效 Scheme）
+2. 有效时间超过 31 天的 Scheme 或永久有效的 Scheme 为**长期有效 Scheme**，单个小程序总共可生成长期有效 Scheme 上限为 10 万个，请谨慎调用
+3. 有效时间不超过 31 天的 Scheme 为**短期有效 Scheme**，单个小程序生成短期有效 Scheme 不设上限
 
 ### 注意事项
 

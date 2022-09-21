@@ -7,6 +7,7 @@ title: 重写历史
 每次提交完成代码之后,发现某个地方有问题或者 commit 信息有误，但是我们又不想再添加一条记录。
 
 这时我们只需要再次完成修改依次执行:
+
 ```shell
 git add .
 git commit --amend "commit 内容"

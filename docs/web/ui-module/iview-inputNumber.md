@@ -22,16 +22,21 @@ title: InputNumber 默认显示占位符
 ```vue
 <template>
   物资数量：
-  <InputNumber :max="10" :min="1" v-model="value1" placeholder="请输入"></InputNumber>
+  <InputNumber
+    :max="10"
+    :min="1"
+    v-model="value1"
+    placeholder="请输入"
+  ></InputNumber>
 </template>
 <script>
-  export default {
-    data () {
-      return {
-        value1: null  // 这里设置为空就可以解决
-      }
+export default {
+  data() {
+    return {
+      value1: null // 这里设置为空就可以解决
     }
   }
+}
 </script>
 ```
 

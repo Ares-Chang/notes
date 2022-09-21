@@ -53,7 +53,7 @@ git stash -a	// 暂存所有文件(包含忽略文件)
 git stash list
 ```
 
-### 3. 重新应用缓存的stash
+### 3. 重新应用缓存的 stash
 
 可以通过 `git stash pop` 命令恢复之前缓存的工作目录。
 

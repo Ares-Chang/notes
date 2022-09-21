@@ -12,17 +12,21 @@ title: JS Date 日期格式和字符串的相互转换
 
 ## 解决方法
 
-我们可以通过 `new Date()` 获取当前时间，可以使用自己封装的一个方法来实现格式转换。(现发现，new Date() 附有原生方法,汗😓)
+我们可以通过 `new Date()` 获取当前时间，可以使用自己封装的一个方法来实现格式转换。(现发现，new Date() 附有原生方法,汗 😓)
 
 ### 原生方法
 
 - 转换为字符串
-	- [`toLocaleDateString()`](https://www.runoob.com/jsref/jsref-tolocaledatestring.html): 根据本地时间格式，把 Date 对象的日期部分转换为字符串。
-	- [`toTimeString()`](https://www.runoob.com/jsref/jsref-totimestring.html): 把 Date 对象的时间部分转换为字符串。
+  - [`toLocaleDateString()`](https://www.runoob.com/jsref/jsref-tolocaledatestring.html): 根据本地时间格式，把 Date 对象的日期部分转换为字符串。
+  - [`toTimeString()`](https://www.runoob.com/jsref/jsref-totimestring.html): 把 Date 对象的时间部分转换为字符串。
 
 ```js
 let time = 'Sat Sep 12 2020 18:40:31 GMT+0800 (GMT+08:00)'
-console.log(new Date(time).toLocaleDateString() + " " + new Date(time).toTimeString().slice(0,8))
+console.log(
+  new Date(time).toLocaleDateString() +
+    ' ' +
+    new Date(time).toTimeString().slice(0, 8)
+)
 ```
 
 - 反向转换
@@ -38,19 +42,19 @@ console.log(new Date(time))
 
 ```js
 var formatDate = function (date) {
-	date = new Date(date)
-	var y = date.getFullYear();  
-	var m = date.getMonth() + 1;  
-	m = m < 10 ? ('0' + m) : m;  
-	var d = date.getDate();  
-	d = d < 10 ? ('0' + d) : d;  
-	var h = date.getHours();  
-	var minute = date.getMinutes();  
-	minute = minute < 10 ? ('0' + minute) : minute; 
-	var second= date.getSeconds();  
-	second = minute < 10 ? ('0' + second) : second;  
-	return y + '-' + m + '-' + d+' '+h+':'+minute+':'+ second;  
-};  
+  date = new Date(date)
+  var y = date.getFullYear()
+  var m = date.getMonth() + 1
+  m = m < 10 ? '0' + m : m
+  var d = date.getDate()
+  d = d < 10 ? '0' + d : d
+  var h = date.getHours()
+  var minute = date.getMinutes()
+  minute = minute < 10 ? '0' + minute : minute
+  var second = date.getSeconds()
+  second = minute < 10 ? '0' + second : second
+  return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second
+}
 ```
 
 使用：
@@ -64,14 +68,14 @@ formatDate('Sat Sep 12 2020 18:40:31 GMT+0800 (GMT+08:00)') // "2020-09-12 18:40
 反向转换：
 
 ```js
-var parserDate = function (date) {  
-	var t = Date.parse(date);  
-	if (!isNaN(t)) {  
-			return new Date(Date.parse(date.replace(/-/g, "/")));  
-	} else {  
-			return new Date();  
-	}  
-}; 
+var parserDate = function (date) {
+  var t = Date.parse(date)
+  if (!isNaN(t)) {
+    return new Date(Date.parse(date.replace(/-/g, '/')))
+  } else {
+    return new Date()
+  }
+}
 ```
 
 使用：

@@ -13,14 +13,14 @@ wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
 
 - 选择要安装的软件
 
-	- 安装微信
-	
-	```shell
-	sudo apt-get install deepin.com.wechat
-	```
+  - 安装微信
 
-	- 安装 QQ
+  ```shell
+  sudo apt-get install deepin.com.wechat
+  ```
 
-	```shell
-	sudo apt-get install deepin.com.qq.im
-	```
+  - 安装 QQ
+
+  ```shell
+  sudo apt-get install deepin.com.qq.im
+  ```

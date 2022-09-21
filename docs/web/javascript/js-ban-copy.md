@@ -34,7 +34,7 @@ sidebarDepth: 3
 
 2. 使用了相应的键盘组合键，比如: `ctrl+c`、`ctrl+v`、`ctrl+x`;
 
-就算你是随便按的，也会触发事件。高程中介绍在 Chorme、Firefox 和 Safari 中，这几个 `before` 事件只会在真实会发生剪贴板事件的情况下触发，IE上则可以触发 `before`。
+就算你是随便按的，也会触发事件。高程中介绍在 Chorme、Firefox 和 Safari 中，这几个 `before` 事件只会在真实会发生剪贴板事件的情况下触发，IE 上则可以触发 `before`。
 
 但实际测试的时候，使用最新版 chorme 乱按也会触发，所以限制应该是在早一点的版本上。
 
@@ -46,12 +46,12 @@ so,想说的是：`before` 这几个事件最好不要用,有关于剪切板的�
 
 ```js
 document.body.oncopy = e => {
-	// 监听全局复制 做点什么
+  // 监听全局复制 做点什么
 }
 // 还有这种写法：
-document.addEventListener("copy", e => {
-	// 监听全局复制 做点什么
-});
+document.addEventListener('copy', e => {
+  // 监听全局复制 做点什么
+})
 ```
 
 上面是在 `document.body` 上全局监听的，同时我们还可以为某些 `dom` 单独添加剪切板事件：
@@ -62,12 +62,12 @@ document.addEventListener("copy", e => {
 <div id="test2">test2</div>
 
 <script>
-	// 写法一样：
-	let test1 = document.querySelector('#test1');
-	test1.oncopy = e => {
-		// 监听test1发生的复制事件 做点什么
-		// test1发生的复制事件会触发回调，其他地方不会触发回调
-	}
+  // 写法一样：
+  let test1 = document.querySelector('#test1')
+  test1.oncopy = e => {
+    // 监听test1发生的复制事件 做点什么
+    // test1发生的复制事件会触发回调，其他地方不会触发回调
+  }
 </script>
 ```
 
@@ -83,38 +83,38 @@ document.addEventListener("copy", e => {
 
 ```js
 document.body.oncopy = e => {
-	let clipboardData = (e.clipboardData || window.clipboardData); 
-	// 获取 clipboardData 对象 + do something
+  let clipboardData = e.clipboardData || window.clipboardData
+  // 获取 clipboardData 对象 + do something
 }
 ```
 
 我们虽然获取到了剪贴板中的数据，但是无法直接访问，需要通过该对象的三个方法来做到，分别是：`getDate()`、`setDate()`、`clearDate()`
 
 - `getDate()` 获取剪切板中的数据
-	参数：`getDate()` 接受一个参数，即要取得的数据的格式。在 `IE` 中，有两种数据格式：`"text"` 和 `"URL"`。在其他浏览器中，这个参数是一种 MIME 类型；不过，可以用 `"text"` 代表
+  参数：`getDate()` 接受一个参数，即要取得的数据的格式。在 `IE` 中，有两种数据格式：`"text"` 和 `"URL"`。在其他浏览器中，这个参数是一种 MIME 类型；不过，可以用 `"text"` 代表
 
-	在 `IE` 浏览器中，`cut` 和 `copy` 事件中的 `getData()` 方法始终返回 `null`；而其他浏览器始终返回空字符串 `''`。但如果和 `setDada()` 方法配合，就可以正常使用
+  在 `IE` 浏览器中，`cut` 和 `copy` 事件中的 `getData()` 方法始终返回 `null`；而其他浏览器始终返回空字符串 `''`。但如果和 `setDada()` 方法配合，就可以正常使用
 
-	实际上在 `chorme` 上测试只有 `paste` 粘贴的时候才能用 `getData()` 访问到数据，用法如下：
+  实际上在 `chorme` 上测试只有 `paste` 粘贴的时候才能用 `getData()` 访问到数据，用法如下：
 
-	1. 要粘贴的数据：
+  1.  要粘贴的数据：
 
-		```js
-		document.body.onpaste = e => {
-			let clipboardData = (e.clipboardData || window.clipboardData); // 兼容处理
-			console.log('要粘贴的数据', clipboardData.getData('text'));
-		}
-		```
+      ```js
+      document.body.onpaste = e => {
+        let clipboardData = e.clipboardData || window.clipboardData // 兼容处理
+        console.log('要粘贴的数据', clipboardData.getData('text'))
+      }
+      ```
 
-	2. 被复制/剪切的数据：
+  2.  被复制/剪切的数据：
 
-		在复制和剪切中的数据，需要通过 `window.getSelection(0).toString()` 来访问:
+      在复制和剪切中的数据，需要通过 `window.getSelection(0).toString()` 来访问:
 
-		```js
-			document.body.oncopy = e => {
-				console.log('被复制的数据:', window.getSelection(0).toString());
-		}
-		```
+      ```js
+      document.body.oncopy = e => {
+        console.log('被复制的数据:', window.getSelection(0).toString())
+      }
+      ```
 
 - `setDate()` 修改剪切板中的数据
 
@@ -137,24 +137,27 @@ document.body.oncopy = e => {
 ```js
 // 掘金这里不是全局监听，应该只是监听文章的dom范围内。
 document.body.oncopy = event => {
-	event.preventDefault(); // 取消默认的复制事件 
-	let textFont, copyFont = window.getSelection(0).toString(); // 被复制的文字 等下插入
-	// 防知乎掘金 复制一两个字则不添加版权信息 超过一定长度的文字 就添加版权信息
-	if (copyFont.length > 10) {
-			textFont = copyFont + '\n'
-					+ '作者：test\n'
-					+ '链接：https://juejin.cn/\n'
-					+ '来源：掘金\n'
-					+ '著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。';
-	} else {
-			textFont = copyFont; // 没超过十个字 则采用被复制的内容。
-	}
-	if (event.clipboardData) {
-			return event.clipboardData.setData('text', textFont); // 将信息写入粘贴板
-	} else {
-			// 兼容IE
-			return window.clipboardData.setData("text", textFont);
-		}
+  event.preventDefault() // 取消默认的复制事件
+  let textFont,
+    copyFont = window.getSelection(0).toString() // 被复制的文字 等下插入
+  // 防知乎掘金 复制一两个字则不添加版权信息 超过一定长度的文字 就添加版权信息
+  if (copyFont.length > 10) {
+    textFont =
+      copyFont +
+      '\n' +
+      '作者：test\n' +
+      '链接：https://juejin.cn/\n' +
+      '来源：掘金\n' +
+      '著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。'
+  } else {
+    textFont = copyFont // 没超过十个字 则采用被复制的内容。
+  }
+  if (event.clipboardData) {
+    return event.clipboardData.setData('text', textFont) // 将信息写入粘贴板
+  } else {
+    // 兼容IE
+    return window.clipboardData.setData('text', textFont)
+  }
 }
 ```
 
@@ -178,46 +181,47 @@ document.body.oncopy = event => {
 ```js
 // 禁止右键菜单
 document.body.oncontextmenu = e => {
-	console.log(e, '右键');
-	return false;
-	// e.preventDefault();
-};
+  console.log(e, '右键')
+  return false
+  // e.preventDefault();
+}
 // 禁止文字选择。
 document.body.onselectstart = e => {
-	console.log(e, '文字选择');
-	return false;
-	// e.preventDefault();
-};
+  console.log(e, '文字选择')
+  return false
+  // e.preventDefault();
+}
 // 禁止复制
 document.body.oncopy = e => {
-	console.log(e, 'copy');
-	return false; 
-	// e.preventDefault();
+  console.log(e, 'copy')
+  return false
+  // e.preventDefault();
 }
 // 禁止剪切
 document.body.oncut = e => {
-	console.log(e, 'cut');
-	return false;
-	// e.preventDefault();
-};
+  console.log(e, 'cut')
+  return false
+  // e.preventDefault();
+}
 // 禁止粘贴
 document.body.onpaste = e => {
-	console.log(e, 'paste');
-	return false;
-	// e.preventDefault();
-};
-```
-```css
-/* css 禁止文本选择 这样不会触发js */
-body {
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
+  console.log(e, 'paste')
+  return false
+  // e.preventDefault();
 }
 ```
 
-> ps: 
+```css
+/* css 禁止文本选择 这样不会触发js */
+body {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+```
+
+> ps:
 >
 > - 使用 `e.preventDefault()` 也可以禁用，但建议使用 `return false` 这样就不用去访问 `e` 和 `e` 的方法了。
 > - 示例中 `document.body` 全局都禁用了，也可以对 `dom(某些区域)` 进行禁用。
@@ -239,22 +243,22 @@ body {
 - 击的时候，将要复制的内容放进 `input` 框中
 
 - 选择文本内容 `input.select()`
-	这里只能用 `input` 或者 `textarea` 才能选择文本。
+  这里只能用 `input` 或者 `textarea` 才能选择文本。
 
 - `document.execCommand("copy")`，执行浏览器的复制命令。
 
 ```js
 function copyText() {
-	var text = document.getElementById("text").innerText; // 获取要复制的内容也可以传进来
-	var input = document.getElementById("input"); // 获取隐藏input的dom
-	input.value = text; // 修改文本框的内容
-	input.select(); // 选中文本
-	document.execCommand("copy"); // 执行浏览器复制命令
-	alert("复制成功");
+  var text = document.getElementById('text').innerText // 获取要复制的内容也可以传进来
+  var input = document.getElementById('input') // 获取隐藏input的dom
+  input.value = text // 修改文本框的内容
+  input.select() // 选中文本
+  document.execCommand('copy') // 执行浏览器复制命令
+  alert('复制成功')
 }
 ```
 
-[点击复制内容](https://codepen.io/OBKoro1/pen/mjjEGa)的demo在这里，可以点进去看看。
+[点击复制内容](https://codepen.io/OBKoro1/pen/mjjEGa)的 demo 在这里，可以点进去看看。
 
 <br />
 

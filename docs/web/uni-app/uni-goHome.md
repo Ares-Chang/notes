@@ -12,7 +12,7 @@ title: 去除左上小房子
 
 ```js
 onShow(){
-	uni.hideHomeButton();
+  uni.hideHomeButton();
 }
 ```
 

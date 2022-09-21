@@ -19,36 +19,47 @@ title: 小程序中手动控制视频播放
 ## 具体实现
 
 结构：
+
 ```html
 <template>
-	<view>
-		<video id="myVideo" src="http://img.cdn.qiniu.dcloud.net.cn/wap2appvsnative.mp4" controls></video>
-		<button class="btn-info" plain="true" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber"></button>
-	</view>
+  <view>
+    <video
+      id="myVideo"
+      src="http://img.cdn.qiniu.dcloud.net.cn/wap2appvsnative.mp4"
+      controls
+    ></video>
+    <button
+      class="btn-info"
+      plain="true"
+      open-type="getPhoneNumber"
+      @getphonenumber="getPhoneNumber"
+    ></button>
+  </view>
 </template>
 ```
 
 行为：
+
 ```js
 export default {
-	data() {
-		return {
-			videoContext: {}
-		}
-	}
-	onReady: function (res) {
-		// 获取 video 元素
-		this.videoContext = uni.createVideoContext('myVideo')
-	},
-	methods: {
-		getPhoneNumber() {
-			// 获取授权信息
-			...
-			// 手动播放视频
-			this.videoContext.play()
-			...
-			// 其他业务代码
-		}
-	}
+  data() {
+    return {
+      videoContext: {}
+    }
+  }
+  onReady: function (res) {
+    // 获取 video 元素
+    this.videoContext = uni.createVideoContext('myVideo')
+  },
+  methods: {
+    getPhoneNumber() {
+      // 获取授权信息
+      ...
+      // 手动播放视频
+      this.videoContext.play()
+      ...
+      // 其他业务代码
+    }
+  }
 }
 ```

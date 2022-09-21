@@ -9,36 +9,36 @@ sidebarDepth: 2
 
 效果展示：
 
-<template>
-  <span class="base_span chartlet">background-clip: text;</span>
-  <br />
-  <span class="base_span color">background-clip: text;</span>
-  <style>
-    .base_span {
-      text-transform: capitalize;
-      font-size: 60px;
-      font-weight: 700;
+<span class="base_span chartlet">background-clip: text;</span>
+<br />
+<span class="base_span color">background-clip: text;</span>
+
+<style>
+  .base_span {
+    text-transform: capitalize;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .chartlet {
+    background: no-repeat center/100% url(http://areschang.top/hero.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .color {
+    color: transparent;
+    background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: huerotate 3s infinite;
+  }
+  @keyframes huerotate {
+    100% {
+      filter: hue-rotate(360deg); /* 滤镜 色调旋转 */
     }
-    .chartlet {
-      background: no-repeat center/100% url(http://areschang.top/hero.jpg);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .color {
-      color: transparent;
-      background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #9c27b0, #8bc34a);
-      background-clip: text;
-      -webkit-background-clip: text;
-      animation: huerotate 3s infinite;
-    }
-    @keyframes huerotate {
-      100% {
-        filter: hue-rotate(360deg); /* 滤镜 色调旋转 */
-      }
-    }
-  </style>
-</template>
+  }
+</style>
 
 ## 实现方法
 
@@ -67,6 +67,7 @@ color: transparent; /* 设置字体透明，可以透出背景 */
 如果上方[在线 Demo](https://codepen.io/ares-chang/pen/JjWgpbo) 无法打开可以查看下方代码块：
 
 ::: details 点击查看代码块
+
 ```html
 <span class="chartlet">background-clip: text;</span>
 <style>
@@ -81,6 +82,7 @@ color: transparent; /* 设置字体透明，可以透出背景 */
   }
 </style>
 ```
+
 :::
 
 ### 渐变文字
@@ -96,6 +98,7 @@ color: transparent; /* 设置字体透明，可以透出背景 */
 具体可以查看代码块：
 
 ::: details 点击查看代码块
+
 ```html
 <span class="color">background-clip: text;</span>
 <style>
@@ -117,14 +120,15 @@ color: transparent; /* 设置字体透明，可以透出背景 */
   }
 </style>
 ```
+
 :::
 
 ### 歌词加载动画
 
 根据上文，实现一个歌词加载动画。
 
-<template>
 <span class="toLoad" text-data="hello world~~">hello world~~</span>
+
 <style>
   .toLoad {
     position: relative;
@@ -134,6 +138,7 @@ color: transparent; /* 设置字体透明，可以透出背景 */
     text-transform: capitalize;
     /* 防止脱标换行 */
     white-space: nowrap;
+    line-height: normal;
   }
   .toLoad::after {
     content: attr(text-data);
@@ -165,11 +170,11 @@ color: transparent; /* 设置字体透明，可以透出背景 */
     }
   }
 </style>
-</template>
 
 [点击查看在线 Demo](https://codepen.io/ares-chang/pen/gOmVegB)。
 
 ::: details 点击查看代码块
+
 ```html
 <span text-data="hello world~~">hello world~~</span>
 <style>
@@ -226,6 +231,7 @@ color: transparent; /* 设置字体透明，可以透出背景 */
   }
 </style>
 ```
+
 :::
 
 > PS: 上文使用的 [`text-transform: capitalize;`](./css-text-transform.md) 和 [`content: attr(text-data);`](./css-tooltip.md) 属性，可以点击查看对应使用详解。

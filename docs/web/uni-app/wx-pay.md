@@ -30,21 +30,22 @@ sidebarDepth: 3
 可以使用 [`uni.requestPayment`](https://uniapp.dcloud.io/api/plugins/payment?id=requestpayment)方法来处理直接应用。
 
 示例代码：
+
 ```js
 uni.requestPayment({
-	provider: 'wxpay',
-	timeStamp: String(Date.now()),
-	nonceStr: 'A1B2C3D4E5',
-	package: 'prepay_id=wx20180101abcdefg',
-	signType: 'MD5',
-	paySign: '',
-	success: function (res) {
-		console.log('success:' + JSON.stringify(res));
-	},
-	fail: function (err) {
-		console.log('fail:' + JSON.stringify(err));
-	}
-});
+  provider: 'wxpay',
+  timeStamp: String(Date.now()),
+  nonceStr: 'A1B2C3D4E5',
+  package: 'prepay_id=wx20180101abcdefg',
+  signType: 'MD5',
+  paySign: '',
+  success: function (res) {
+    console.log('success:' + JSON.stringify(res))
+  },
+  fail: function (err) {
+    console.log('fail:' + JSON.stringify(err))
+  }
+})
 ```
 
 基本数据微信都已经返回了，可以直接应用，但是注意，`timeStamp` `signType` `paySign`，这三个参数需要前端自己处理
@@ -60,71 +61,73 @@ uni.requestPayment({
 ### 实例代码
 
 ```js
-import md5 from "@/js_sdk/js-md5/build/md5.min.js";
+import md5 from '@/js_sdk/js-md5/build/md5.min.js'
 export default {
-	data() {
-		return {
-			dataList: [],
-			code: ''
-		};
-	},
-	onLoad(q) {
-		this.getWxCode()
-	},
-	methods: {
-		async getWxCode() {
-			let [err, loginRes] = await uni.login({
-				provider: 'weixin',
-			});
-			this.code = loginRes.code
-		},
-		async payMoney() {
-			uni.checkSession({
-				success: async () => {
-					// 注意！签名 time 和 调起收银台的 time 一定要一致，这是个坑
-					let time = JSON.stringify(new Date().getTime());
+  data() {
+    return {
+      dataList: [],
+      code: ''
+    }
+  },
+  onLoad(q) {
+    this.getWxCode()
+  },
+  methods: {
+    async getWxCode() {
+      let [err, loginRes] = await uni.login({
+        provider: 'weixin'
+      })
+      this.code = loginRes.code
+    },
+    async payMoney() {
+      uni.checkSession({
+        success: async () => {
+          // 注意！签名 time 和 调起收银台的 time 一定要一致，这是个坑
+          let time = JSON.stringify(new Date().getTime())
 
-					let res = await this.$u.api.getCreate_order({
-						code: this.code,
-					})
-					if (!res) {
-						return this.getWxCode().then(res => {
-							this.payMoney()
-						})
-					}
-					
-					// 签名生成
-					var pay =
-						`appId=${res.original.data.appid}&nonceStr=${res.original.data.nonce_str}&package=${"prepay_id=" + res.original.data.prepay_id}&signType=MD5&timeStamp=${time}&key=支付密钥`;
-					var sign = md5(pay).toUpperCase();
+          let res = await this.$u.api.getCreate_order({
+            code: this.code
+          })
+          if (!res) {
+            return this.getWxCode().then(res => {
+              this.payMoney()
+            })
+          }
 
-					// 调起收银台
-					uni.requestPayment({
-						provider: 'wxpay',
-						timeStamp: time,
-						nonceStr: res.original.data.nonce_str,
-						package: `prepay_id=${res.original.data.prepay_id}`,
-						signType: 'MD5',
-						paySign: sign,
-						success: function(res) {
-							console.log('success:' + JSON.stringify(res));
-							// 回上一页
-							uni.navigateBack({
-								delta: 1
-							});
-						},
-						fail: function(err) {
-							console.log('fail:' + JSON.stringify(err));
-						}
-					});
-				},
-				fail: () => {
-					console.log("session_key 已经失效，需要重新执行登录流程");
-					this.wxlogin(); //重新登录
-				}
-			})
+          // 签名生成
+          var pay = `appId=${res.original.data.appid}&nonceStr=${
+            res.original.data.nonce_str
+          }&package=${
+            'prepay_id=' + res.original.data.prepay_id
+          }&signType=MD5&timeStamp=${time}&key=支付密钥`
+          var sign = md5(pay).toUpperCase()
 
-		}
-	}
+          // 调起收银台
+          uni.requestPayment({
+            provider: 'wxpay',
+            timeStamp: time,
+            nonceStr: res.original.data.nonce_str,
+            package: `prepay_id=${res.original.data.prepay_id}`,
+            signType: 'MD5',
+            paySign: sign,
+            success: function (res) {
+              console.log('success:' + JSON.stringify(res))
+              // 回上一页
+              uni.navigateBack({
+                delta: 1
+              })
+            },
+            fail: function (err) {
+              console.log('fail:' + JSON.stringify(err))
+            }
+          })
+        },
+        fail: () => {
+          console.log('session_key 已经失效，需要重新执行登录流程')
+          this.wxlogin() //重新登录
+        }
+      })
+    }
+  }
 }
 ```

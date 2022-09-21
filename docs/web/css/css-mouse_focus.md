@@ -8,28 +8,29 @@ title: CSS 鼠标聚焦动画
 
 鼠标移动，展示效果：
 
-<template>
-  <div class="content">
-    <span class="btn">按钮</span>
-  </div>
-</template>
+<div class="_content">
+  <span class="_btn">按钮</span>
+</div>
+  
 <style>
-  .content {
-    padding: 20px
+  ._content {
+    display: inline-block;
+    padding: 20px;
+    margin-top: 10px;
   }
-  .btn {
+  ._btn {
     position: relative;
     font-size: 30px;
     padding: 20px 30px;
     cursor: pointer;
     transition: all .5s;
   }
-  .btn:hover {
+  ._btn:hover {
     background: pink;
     box-shadow: 0 0 50px pink;
     transition-delay: 0.5s;
   }
-  .btn::before {
+  ._btn::before {
     content: "";
     position: absolute;
     width: 16px;
@@ -41,11 +42,11 @@ title: CSS 鼠标聚焦动画
     top: 0;
     transition: all .5s;
   }
-  .btn:hover::before {
+  ._btn:hover::before {
     width: 100%;
     height: 100%;
   }
-  .btn::after {
+  ._btn::after {
     content: "";
     position: absolute;
     width: 16px;
@@ -57,7 +58,7 @@ title: CSS 鼠标聚焦动画
     bottom: 0;
     transition: all .5s;
   }
-  .btn:hover::after {
+  ._btn:hover::after {
     width: 100%;
     height: 100%;
   }
@@ -110,7 +111,7 @@ title: CSS 鼠标聚焦动画
     border-left: 6px solid pink;
     left: 0;
     top: 0;
-    transition: all .5s;
+    transition: all 0.5s;
     box-sizing: border-box;
   }
   span:hover::before {
@@ -128,7 +129,7 @@ title: CSS 鼠标聚焦动画
     border-right: 6px solid pink;
     right: 0;
     bottom: 0;
-    transition: all .5s;
+    transition: all 0.5s;
     box-sizing: border-box;
   }
   span:hover::after {

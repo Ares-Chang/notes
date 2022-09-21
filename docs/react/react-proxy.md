@@ -35,8 +35,8 @@ Proxy 原理就是在本地开启一个微型服务器，我们项目请求链�
 使用时可以直接填写项目地址请求：
 
 ```jsx
-import axios from "axios";
-import React, { Component } from "react";
+import axios from 'axios'
+import React, { Component } from 'react'
 
 export default class GetDataList extends Component {
   /**
@@ -44,15 +44,15 @@ export default class GetDataList extends Component {
    */
   getStudentData = async () => {
     // 代理服务和项目运行在同一地址，可直接使用 3000 端口
-    let res = await axios("http://localhost:3000/students");
-    console.log(res);
-  };
+    let res = await axios('http://localhost:3000/students')
+    console.log(res)
+  }
   render() {
     return (
       <div>
         <button onClick={this.getStudentData}>点击请求学生数据</button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -67,25 +67,25 @@ export default class GetDataList extends Component {
 /**
  * @description Proxy 全局代理配置
  */
-const proxy = require("http-proxy-middleware");
+const proxy = require('http-proxy-middleware')
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.use(
     // /api1 为 http://localhost:5000 别名，拦截请求检测到 /api1 会自动匹配此规则
-    proxy("/api1", {
-      target: "http://localhost:5000", // 转发目标地址
+    proxy('/api1', {
+      target: 'http://localhost:5000', // 转发目标地址
       // 控制服务器收到的响应头中 Host 字段的值 true 为 目标地址，false 为 项目地址
       changeOrigin: true, // 默认值为 false，需改为 true
-      pathRewrite: { "^/api1": "" }, // 重写请求路径，将 /api1 替换为空串
+      pathRewrite: { '^/api1': '' } // 重写请求路径，将 /api1 替换为空串
     }),
-    proxy("/api2", {
-      target: "http://localhost:5001",
+    proxy('/api2', {
+      target: 'http://localhost:5001',
       changeOrigin: true,
-      pathRewrite: { "^/api2": "" },
+      pathRewrite: { '^/api2': '' }
     })
     // ... 如果还有别的配置项，可以继续向下写
-  );
-};
+  )
+}
 ```
 
 `http-proxy-middleware` 模块在创建项目时已经被安装好，在 `package.json` 文件中的配置也是使用的这个模块，只是默认已经配置好了罢了。
@@ -95,8 +95,8 @@ module.exports = function(app) {
 使用时需要在项目地址后添加 `/cname` 来请求：
 
 ```jsx
-import axios from "axios";
-import React, { Component } from "react";
+import axios from 'axios'
+import React, { Component } from 'react'
 
 export default class GetDataList extends Component {
   /**
@@ -104,21 +104,21 @@ export default class GetDataList extends Component {
    */
   getStudentData = async () => {
     // 项目地址之前添加 /api1
-    let res = await axios("http://localhost:3000/api1/students");
-    console.log(res);
-  };
+    let res = await axios('http://localhost:3000/api1/students')
+    console.log(res)
+  }
   getCarData = async () => {
     // 项目地址之前添加 /api2
-    let res = await axios("http://localhost:3000/api2/cars");
-    console.log(res);
-  };
+    let res = await axios('http://localhost:3000/api2/cars')
+    console.log(res)
+  }
   render() {
     return (
       <div>
         <button onClick={this.getStudentData}>点击请求学生数据</button>
         <button onClick={this.getCarData}>点击请求汽车数据</button>
       </div>
-    );
+    )
   }
 }
 ```
