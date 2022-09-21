@@ -6,7 +6,7 @@ title: CSS 实现 Tooltip 效果
 
 使用 CSS 来实现组件库中的 Tooltip 文字提醒功能。
 
-![](./images/css-tooltip/GIF%202021-6-23%2017-10-26.gif)
+![](./images/css-tooltip/GIF_2021-6-23_17-10-26.gif)
 
 > PS：本文主要想介绍 attr() 表达式，Tooltip 小组件是附带功能。如介意，请跳过。😊
 

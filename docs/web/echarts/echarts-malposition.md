@@ -8,7 +8,7 @@ title: 解决鼠标悬停借位问题
 
 如下所示：
 
-![](./images/echarts-malposition/GIF%202021-9-26%2018-32-51.gif)
+![](./images/echarts-malposition/GIF_2021-9-26_18-32-51.gif)
 
 这可是个大问题？？？也不能这么交工啊，怎么解决？
 

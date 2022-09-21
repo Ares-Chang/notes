@@ -38,15 +38,15 @@ Cmder 是解压即用的软件，你当然可以安装完双击使用。
 
 点击 win 键，查询环境变量，打开系统属性，点击环境变量
 
-<img class="zoom" src="/tools/cmder/Snipaste_2020-02-16_21-17-18.png" style="width:500px;">
+<img class="zoom" src="./images/cmder/Snipaste_2020-02-16_21-17-18.png" style="width:500px;">
 
 选择 Path 点击编辑
 
-<img class="zoom" src="/tools/cmder/Snipaste_2020-02-16_21-23-08.png" style="width:500px;">
+<img class="zoom" src="./images/cmder/Snipaste_2020-02-16_21-23-08.png" style="width:500px;">
 
 点击新建，输入你 Cmder.exe 所有的文件夹
 
-<img class="zoom" src="/tools/cmder/Snipaste_2020-02-16_21-24-10.png" style="width:500px;">
+<img class="zoom" src="./images/cmder/Snipaste_2020-02-16_21-24-10.png" style="width:500px;">
 
 现在 Win + R 输入 cmder 测试一下是否可以打开
 
@@ -70,7 +70,7 @@ Ctrl + Alt + T 快捷打开，你值得拥有。
 
 首先设置一个桌面快捷方式，点击属性，设置你想用的快捷键。
 
-<img class="zoom" src="/tools/cmder/Snipaste_2020-02-16_21-38-44.png" style="width:500px;">
+<img class="zoom" src="./images/cmder/Snipaste_2020-02-16_21-38-44.png" style="width:500px;">
 
 注意哦~ 这个方式有个 BUG ，设置的快捷键打开有 3s 左右的延迟效果。
 
@@ -78,6 +78,6 @@ Ctrl + Alt + T 快捷打开，你值得拥有。
 
 打开 Cmder 点击 win + Alt + P 打开设置，选择简体中文。
 
-<img class="zoom" src="/tools/cmder/Snipaste_2020-02-16_21-43-16.png" style="width:500px;">
+<img class="zoom" src="./images/cmder/Snipaste_2020-02-16_21-43-16.png" style="width:500px;">
 
 接下来就是你们的时间了~
