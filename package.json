@@ -3,9 +3,9 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "dev": "vitepress",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
     "preinstall": "npx only-allow pnpm"
   },
   "license": "MIT",

@@ -5,8 +5,9 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Ares Chang',
   description: 'Ares Chang 的小笔记 - 前端个人开放文档',
+  srcDir: 'src',
+  outDir: './dist',
   lastUpdated: true,
-  // cleanUrls: 'with-subfolders',
 
   head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 
