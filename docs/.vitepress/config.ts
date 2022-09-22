@@ -6,7 +6,7 @@ export default defineConfig({
   title: 'Ares Chang',
   description: 'Ares Chang 的小笔记 - 前端个人开放文档',
   lastUpdated: true,
-  cleanUrls: 'with-subfolders',
+  // cleanUrls: 'with-subfolders',
 
   head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 
