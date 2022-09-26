@@ -15,10 +15,12 @@ export default defineConfig({
     nav,
     sidebar,
 
+    outline: [2, 3],
+
     algolia: {
       appId: 'WGIT0DXO75',
       apiKey: '8368a68b7a33c1840b6521d3fc059538',
-      indexName: 'areschang',
+      indexName: 'areschang'
     },
 
     socialLinks: [
