@@ -1,12 +1,16 @@
-# [AresChang](https://areschang.top/) &middot; [![Build Status](https://travis-ci.com/Ares-Chang/notes.svg?branch=master)](https://travis-ci.com/Ares-Chang/notes) [![License MIT](https://img.shields.io/badge/license-MIT-green?logo=github)](https://github.com/Ares-Chang/notes/blob/master/LICENSE)
+# [AresChang](https://areschang.top/) &middot; [![Netlify Status](https://api.netlify.com/api/v1/badges/92dc5fb5-c6c2-4003-88a5-a24bfcdd4264/deploy-status)](https://app.netlify.com/sites/singular-kheer-68b100/deploys) [![License MIT](https://img.shields.io/badge/license-MIT-green?logo=github)](https://github.com/Ares-Chang/notes/blob/master/LICENSE)
 
-# 关于仓库
 
-这是一个由 [VuePress](https://vuepress.vuejs.org/zh/) 搭建的文档。
+## 关于仓库
+
+这是一个由 [~~VuePress~~](https://vuepress.vuejs.org/zh/) 搭建的文档。
+**现已更新升级为 [VitePress](https://vitepress.vuejs.org/) 框架。🎉 🎉 🎉**
 
 起初可能只是想搭建一个线上个人文档，方便自己查看，查漏补缺。
 
-一开始接触了 [hexo](https://hexo.io/zh-cn/)，搭建起来确实挺简单，但是翻遍了主题都找不到一个满意的。并且整体风格个人并不是非常喜欢，并不像一个文档的样子。也不能怪人家，毕竟 hexo 的定位是博客框架。
+一开始接触了 [hexo](https://hexo.io/zh-cn/)，搭建起来确实挺简单，但是翻遍了主题都找不到一个满意的。
+
+整体风格个人并不是非常喜欢，并不符合个人理解的文档的样子。毕竟 hexo 的定位是 Blogs 框架。
 
 后来在 [b站](https://www.bilibili.com/) 发现了 [飞跃高山与大洋的鱼录制的 VuePress 搭建教程](https://www.bilibili.com/video/av43316513/)。
 
