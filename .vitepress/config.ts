@@ -15,6 +15,12 @@ export default defineConfig({
     nav,
     sidebar,
 
+    algolia: {
+      appId: 'WGIT0DXO75',
+      apiKey: '8368a68b7a33c1840b6521d3fc059538',
+      indexName: 'areschang',
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ares-chang/notes' }
     ],
