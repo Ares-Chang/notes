@@ -1,7 +1,4 @@
----
-title: taze
-sidebarDepth: 2
----
+# taze
 
 ## 关于
 

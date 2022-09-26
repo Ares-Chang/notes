@@ -1,6 +1,4 @@
----
-title: 将Ubuntu的'桌面'改为'Desktop'
----
+# 将 Ubuntu 的'桌面'改为'Desktop'
 
 ## 问题
 

@@ -1,7 +1,4 @@
----
-title: git stash 暂存修改
-sidebarDepth: 3
----
+# git stash 暂存修改
 
 ## 需求
 

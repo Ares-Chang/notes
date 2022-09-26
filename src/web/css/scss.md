@@ -1,7 +1,4 @@
----
-title: sass/scss 使用简介
-sidebarDepth: 3
----
+# sass/scss 使用简介
 
 ## 介绍
 

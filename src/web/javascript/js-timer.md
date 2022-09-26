@@ -1,7 +1,4 @@
----
-title: js 定时器代码块
-sidebarDepth: 2
----
+# js 定时器代码块
 
 ## 关于
 

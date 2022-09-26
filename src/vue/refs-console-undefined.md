@@ -1,6 +1,4 @@
----
-title: this.$refs 打印 undefined 问题
----
+# this.$refs 打印 undefined 问题
 
 ## 问题
 

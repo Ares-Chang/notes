@@ -1,7 +1,4 @@
----
-title: React 脚手架安装
-autoPrev: README
----
+# React 脚手架安装
 
 ## 脚手架安装
 

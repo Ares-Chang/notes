@@ -1,7 +1,4 @@
----
-autoGroup-1: 生态环境
-title: 使用 deepin-wine 安装微信
----
+# 使用 deepin-wine 安装微信
 
 ## 安装
 

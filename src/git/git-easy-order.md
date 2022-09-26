@@ -1,8 +1,4 @@
----
-title: Git 常用命令
-autoPrev: README
-sidebarDepth: 3
----
+# Git 常用命令
 
 ## 基本提交流程
 

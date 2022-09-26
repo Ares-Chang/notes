@@ -1,6 +1,4 @@
----
-title: 微信分享按钮呈灰色
----
+# 微信分享按钮呈灰色
 
 ## 问题
 
@@ -35,10 +33,10 @@ export default {
 
 详细参数请参考[官方文档](https://uniapp.dcloud.io/api/plugins/share?id=onshareappmessage)
 
-#### 如页面中根本没有分享按钮，请查看分享按钮是否被隐藏。
+**如页面中根本没有分享按钮，请查看分享按钮是否被隐藏。**
 
 检查代码中是否存在 [`uni.hideShareMenu`](https://uniapp.dcloud.io/api/plugins/share?id=hidesharemenu) 方法，该方法可以隐藏原生菜单中的分享按钮。
 
-#### 如果需要分享群聊获取回调
+**如果需要分享群聊获取回调**
 
 可以使用 [`uni.showShareMenu`](https://uniapp.dcloud.io/api/plugins/share?id=showsharemenu) 来完成分享，该方法分享到群聊中，用户点击会携带特定参数进入，可以做判别操作。

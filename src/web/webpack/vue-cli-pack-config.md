@@ -1,7 +1,4 @@
----
-title: Vue Cli 多环境打包命令配置
-sidebarDepth: 3
----
+# Vue Cli 多环境打包命令配置
 
 ## 需求
 

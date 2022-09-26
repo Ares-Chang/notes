@@ -1,7 +1,4 @@
----
-title: ni
-sidebarDepth: 2
----
+# ni
 
 ## 关于
 

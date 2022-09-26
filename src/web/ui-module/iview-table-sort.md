@@ -1,7 +1,4 @@
----
-autoGroup-1: iView
-title: table 表格中排序错乱问题
----
+# table 表格中排序错乱问题
 
 ## 问题
 

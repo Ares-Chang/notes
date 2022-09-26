@@ -1,7 +1,4 @@
----
-title: git 中忽略某个文件
-sidebarDepth: 2
----
+# git 中忽略某个文件
 
 ## 需求
 

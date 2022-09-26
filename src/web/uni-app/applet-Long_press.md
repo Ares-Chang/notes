@@ -1,6 +1,4 @@
----
-title: 小程序内长按分享图片
----
+# 小程序内长按分享图片
 
 ## 需求
 
@@ -8,7 +6,7 @@ title: 小程序内长按分享图片
 
 ## 解决方法
 
-- 方法一：
+### 方法一
 
 小程序为 `image` 标签预设了 `show-menu-by-longpress` 属性。
 
@@ -26,7 +24,7 @@ title: 小程序内长按分享图片
 
 详细问题请查看 [官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
 
-- 方法二：
+### 方法二
 
 可以通过 `wx.previewImage` 方法在新页面中全屏预览图片。预览的过程中用户可以进行保存图片、发送给朋友等操作。
 

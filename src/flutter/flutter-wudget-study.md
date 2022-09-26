@@ -1,9 +1,4 @@
----
-autoGroup+1: Flutter Note
-title: Flutter 组件学习
-sidebarDepth: 2
-autoPrev: flutter-env-setup
----
+# Flutter 组件学习
 
 ## 关于
 

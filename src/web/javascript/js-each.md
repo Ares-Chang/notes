@@ -1,8 +1,4 @@
----
-title: 常用遍历方法
-autoPrev: common-method
-sidebarDepth: 2
----
+# 常用遍历方法
 
 ## 关于
 

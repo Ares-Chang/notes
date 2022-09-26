@@ -1,6 +1,8 @@
 ---
-title: git commit 规范
+outline: [2, 4]
 ---
+
+# git commit 规范
 
 ## 提交规范
 

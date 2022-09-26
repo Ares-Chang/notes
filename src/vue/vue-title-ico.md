@@ -1,6 +1,8 @@
 ---
-title: 配置 title 图标及文字
+aside: false
 ---
+
+# 配置 title 图标及文字
 
 ### 1. **把 logo.ico 放在项目根目录下**
 

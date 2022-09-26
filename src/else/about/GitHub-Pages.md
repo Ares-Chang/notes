@@ -1,7 +1,4 @@
----
-title: GitHub Pages
-autoPrev: README
----
+# GitHub Pages
 
 ## 介绍
 

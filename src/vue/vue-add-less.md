@@ -1,8 +1,8 @@
 ---
-title: 安装 less
+aside: false
 ---
 
-## 安装
+# 安装 less
 
 vue cli 在配置时可以选配是否添加 less 等预处理器。
 

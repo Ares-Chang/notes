@@ -1,13 +1,10 @@
----
-autoGroup-1: iView
-title: iview 中 table 里嵌套其他组件
----
+# iview 中 table 里嵌套其他组件
 
-## 问题
+## 需求
 
 iview 官方文档中关于 table 的 Render 写法介绍只有哪么几个，那么如果要嵌套其他组件怎么写入呢？
 
-## 解决方法
+## 代码块
 
 ### input
 

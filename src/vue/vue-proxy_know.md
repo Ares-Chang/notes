@@ -1,7 +1,4 @@
----
-title: 学习了解 Proxy
-sidebarDepth: 3
----
+# 学习了解 Proxy
 
 > 产品经理身旁过，需求变更逃不过。 测试姐姐眯眼笑，今晚 bug 必然多。
 

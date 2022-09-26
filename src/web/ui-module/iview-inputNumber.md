@@ -1,7 +1,4 @@
----
-autoGroup-1: iView
-title: InputNumber 默认显示占位符
----
+# InputNumber 默认显示占位符
 
 ## 问题
 

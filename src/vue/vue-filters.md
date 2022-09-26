@@ -1,6 +1,4 @@
----
-title: 注册全局 filter
----
+# 注册全局 filter
 
 ## 关于
 

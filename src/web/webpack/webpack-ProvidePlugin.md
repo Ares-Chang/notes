@@ -1,6 +1,4 @@
----
-title: webpack 配置全局引入 npm 包
----
+# webpack 配置全局引入 npm 包
 
 ## 关于
 

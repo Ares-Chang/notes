@@ -1,7 +1,4 @@
----
-title: vue 路由跳转
-sidebarDepth: 3
----
+# vue 路由跳转
 
 ## 关于
 

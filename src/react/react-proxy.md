@@ -1,6 +1,4 @@
----
-title: React Proxy 代理配置
----
+# React Proxy 代理配置
 
 ## 关于
 

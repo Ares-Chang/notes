@@ -1,7 +1,4 @@
----
-autoGroup-1: 生态环境
-title: 安装 Chrome
----
+# 安装 Chrome
 
 ## 安装
 

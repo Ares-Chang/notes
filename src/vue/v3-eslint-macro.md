@@ -1,7 +1,4 @@
----
-autoGroup+1: Vue 3
-title: Eslint 搭配 defineProps 报错问题
----
+# Eslint 搭配 defineProps 报错问题
 
 ## 关于
 

@@ -1,6 +1,4 @@
----
-title: wangeditor 取消自动获取焦点
----
+# wangeditor 取消自动获取焦点
 
 ## 问题
 

@@ -1,8 +1,4 @@
----
-title: JSX 基础语法
-sidebarDepth: 2
-autoPrev: react-staging
----
+# JSX 基础语法
 
 ## 关于
 

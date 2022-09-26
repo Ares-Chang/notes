@@ -1,7 +1,4 @@
----
-title: 安装 less 的错误处理
-autoPrev: vue-add-less
----
+# 安装 less 的错误处理
 
 ## 问题
 

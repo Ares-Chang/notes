@@ -1,7 +1,4 @@
----
-title: Vue 中模式及环境变量配置
-autoPrev: vue-env
----
+# Vue 中模式及环境变量配置
 
 ## 关于
 

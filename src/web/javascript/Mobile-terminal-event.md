@@ -1,7 +1,4 @@
----
-title: 移动端常见事件
-autoPrev: common-method
----
+# 移动端常见事件
 
 ## click 事件
 

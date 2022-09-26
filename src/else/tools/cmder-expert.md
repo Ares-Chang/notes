@@ -1,7 +1,4 @@
----
-title: Cmder 高级应用
-autoPrev: cmder
----
+# Cmder 高级应用
 
 ## 介绍
 

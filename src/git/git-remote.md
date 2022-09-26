@@ -1,7 +1,4 @@
----
-title: git remote 命令
-sidebarDepth: 2
----
+# git remote 命令
 
 ## 关于
 

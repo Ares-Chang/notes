@@ -1,6 +1,4 @@
----
-title: HEAD^ 提示 More?
----
+# HEAD^ 提示 More?
 
 ## 问题
 

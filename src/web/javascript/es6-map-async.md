@@ -1,6 +1,4 @@
----
-title: 解决 map 中无法进行 async 问题
----
+# 解决 map 中无法进行 async 问题
 
 ## 问题
 
@@ -15,18 +13,18 @@ title: 解决 map 中无法进行 async 问题
 代码块：
 
 ```js
-console.log("start");
-[1, 2, 3].map(async (item) => {
+console.log('start')
+;[1, 2, 3].map(async item => {
   // 模拟请求
   console.log(
-    await new Promise((resolve) => {
+    await new Promise(resolve => {
       setTimeout(() => {
-        resolve(item);
-      }, 1000);
+        resolve(item)
+      }, 1000)
     })
-  );
-});
-console.log("end");
+  )
+})
+console.log('end')
 // console 顺序 => start, end, 1, 2, 3
 ```
 
@@ -39,21 +37,21 @@ console.log("end");
 代码块：
 
 ```js
-(async () => {
+;(async () => {
   // 自执行函数，可直接放入浏览器执行
-  console.log("start");
-  const arr = [1, 2, 3];
+  console.log('start')
+  const arr = [1, 2, 3]
   for (let i = 0; i < arr.length; i++) {
     console.log(
-      await new Promise((resolve) => {
+      await new Promise(resolve => {
         setTimeout(() => {
-          resolve(arr[i]);
-        }, 1000);
+          resolve(arr[i])
+        }, 1000)
       })
-    );
+    )
   }
-  console.log("end");
-})();
+  console.log('end')
+})()
 // console 顺序 => start, 1, 2, 3, end
 ```
 
@@ -68,23 +66,23 @@ console.log("end");
 代码块：
 
 ```js
-(async () => {
-  console.log("start");
+;(async () => {
+  console.log('start')
   // Promise.all 统一调用，这里也需要 await 操作
   await Promise.all(
-    [1, 2, 3].map(async (item) => {
+    [1, 2, 3].map(async item => {
       // 模拟请求
       console.log(
-        await new Promise((resolve) => {
+        await new Promise(resolve => {
           setTimeout(() => {
-            resolve(item);
-          }, 1000);
+            resolve(item)
+          }, 1000)
         })
-      );
+      )
     })
-  );
-  console.log("end");
-})();
+  )
+  console.log('end')
+})()
 // console 顺序 => start, 1, 2, 3, end
 ```
 
@@ -93,31 +91,31 @@ console.log("end");
 因为每层 `Promise.all` 也需要异步操作，否则还是不会被执行。
 
 ```js
-(async () => {
-  console.log("start");
+;(async () => {
+  console.log('start')
   // 每层 map 都需要 Promise.all
   await Promise.all(
     [
       [1, 2, 3],
-      [4, 5, 6],
-    ].map(async (item) => {
+      [4, 5, 6]
+    ].map(async item => {
       // 每层 map 都需要 Promise.all
       await Promise.all(
-        item.map(async (item) => {
+        item.map(async item => {
           // 模拟请求
           console.log(
-            await new Promise((resolve) => {
+            await new Promise(resolve => {
               setTimeout(() => {
-                resolve(item);
-              }, 1000);
+                resolve(item)
+              }, 1000)
             })
-          );
+          )
         })
-      );
+      )
     })
-  );
-  console.log("end");
-})();
+  )
+  console.log('end')
+})()
 ```
 
 综上所述，`Promise.all` 固然可以解决这个问题，但是如果层级多了，代码反而繁琐不好理解了。（ps：我最初的想法是优化一下的。。。没想到越优化越复杂）
@@ -129,21 +127,21 @@ console.log("end");
 可以使用 `for of` 来实现，简单好理解，不会产生 `map` 的提前返回问题。
 
 ```js
-(async () => {
-  console.log("start");
-  const arr = [1, 2, 3];
+;(async () => {
+  console.log('start')
+  const arr = [1, 2, 3]
   for (const item of arr) {
     // item 为每一项
     console.log(
-      await new Promise((resolve) => {
+      await new Promise(resolve => {
         setTimeout(() => {
-          resolve(item);
-        }, 1000);
+          resolve(item)
+        }, 1000)
       })
-    );
+    )
   }
-  console.log("end");
-})();
+  console.log('end')
+})()
 ```
 
 关于 `map` 循环，此方案可能不是最优解，如果有更好的办法请分享出来，感谢。

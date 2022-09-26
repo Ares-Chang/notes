@@ -1,6 +1,4 @@
----
-title: video poster 属性空白
----
+# video poster 属性空白
 
 ## 问题
 

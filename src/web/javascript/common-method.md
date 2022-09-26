@@ -1,7 +1,4 @@
----
-title: 常用方法
-autoPrev: README
----
+# 常用方法
 
 ## 手机号加密
 

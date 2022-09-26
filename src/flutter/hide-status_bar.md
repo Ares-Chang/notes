@@ -1,6 +1,4 @@
----
-title: 隐藏状态栏及操作栏
----
+# 隐藏状态栏及操作栏
 
 ## 问题
 
@@ -72,5 +70,4 @@ class MyApp extends StatelessWidget {
 
 ### 效果图
 
-<br/>
 ![](./images/hide-status_bar/Snipaste_2021-06-16_16-08-44.png)

@@ -1,6 +1,4 @@
----
-title: Sublime Text 插件推荐
----
+# Sublime Text 插件推荐
 
 - Localization 编辑器汉化
 - Emmet 前端神器，代码补全

@@ -1,6 +1,4 @@
----
-title: git 无法 push 成功问题
----
+# git 无法 push 成功问题
 
 ## 问题
 

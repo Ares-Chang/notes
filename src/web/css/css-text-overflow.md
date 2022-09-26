@@ -1,6 +1,4 @@
----
-title: 文本打点展示
----
+# 文本打点展示
 
 ## 业务需求
 
@@ -42,7 +40,7 @@ title: 文本打点展示
 
 **代码块：**
 
-```html
+```html {8-11}
 <template>
   <div class="singleLine_text">
     我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长
@@ -89,7 +87,7 @@ title: 文本打点展示
 
 **代码块：**
 
-```html
+```html {7-12}
 <div class="multiLine_text">
   我是一段很长很长的长文本，你看我长不长，长不长，长不长，长不长，长不长，长不长，长不长，长不长
 </div>
@@ -100,7 +98,7 @@ title: 文本打点展示
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 3; /* 行数 */
     -webkit-box-orient: vertical;
   }
 </style>

@@ -1,7 +1,4 @@
----
-title: 傻傻分不清之 Cookie、Session、Token、JWT
-sidebarDepth: 3
----
+# 傻傻分不清之 Cookie、Session、Token、JWT
 
 ## 什么是认证（Authentication）
 

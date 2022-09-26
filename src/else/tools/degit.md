@@ -1,7 +1,4 @@
----
-title: degit
-sidebarDepth: 2
----
+# degit
 
 ## 关于
 

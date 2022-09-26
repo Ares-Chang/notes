@@ -1,7 +1,4 @@
----
-title: Linux 常用命令
-autoPrev: README
----
+# Linux 常用命令
 
 > 下列命令部分可在 Windows 上使用
 >

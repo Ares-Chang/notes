@@ -1,8 +1,10 @@
 ---
-title: Chrome 主页被劫持到 hao123
+aside: false
 ---
 
-## 问题
+# Chrome 主页被劫持到 hao123
+
+##
 
 昨天下载软件被莫名植入了病毒，Chrome 启动时自动打开 hao123，打开 IE 发现也被劫持了。
 

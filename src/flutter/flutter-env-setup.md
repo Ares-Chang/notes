@@ -1,8 +1,4 @@
----
-autoGroup+1: Flutter Note
-title: Flutter 环境搭建
-sidebarDepth: 2
----
+# Flutter 环境搭建
 
 ## 历史
 

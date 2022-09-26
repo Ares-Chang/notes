@@ -1,6 +1,4 @@
----
-title: PubSubJS 发布订阅机制
----
+# PubSubJS 发布订阅机制
 
 ## 关于
 

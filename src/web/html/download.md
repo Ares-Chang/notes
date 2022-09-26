@@ -1,6 +1,4 @@
----
-title: 图片文件下载
----
+# 图片文件下载
 
 ## 需求
 
@@ -10,7 +8,7 @@ title: 图片文件下载
 
 ## 实现
 
-- 方法一（需后端配合）：
+### 方法一（需后端配合）：
 
 可以通过后端接口来通知浏览器 `header` 信息，来实现下载。
 
@@ -23,7 +21,7 @@ header("Content-Disposition: attachment; filename='download.jpg'")
 
 然而在现在前后端分离的大趋势下，这种事情还跑去求后端就太累了。万事靠自己！
 
-- 方法二：
+### 方法二：
 
 我们希望点击"下载"链接下载图片而不是浏览，直接增加一个 `download` 属性就可以：
 
@@ -35,7 +33,7 @@ header("Content-Disposition: attachment; filename='download.jpg'")
 
 如果想要模拟，可以在 `vscode` 中下载个插件 `Live Server` 启用本地服务模拟。
 
-- 方法三：
+### 方法三：
 
 使用 `canvas` 下载跨域网站的图片
 

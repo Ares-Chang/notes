@@ -1,8 +1,8 @@
 ---
-title: 删除某次提交记录
+aside: false
 ---
 
-## 删除最后一次提交
+# 删除某次提交记录
 
 - git revert
 

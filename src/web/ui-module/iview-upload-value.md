@@ -1,11 +1,8 @@
----
-autoGroup-1: iView
-title: Upload 上传成功后 input 框无法赋值
----
+# Upload 上传成功后 input 框无法赋值
 
 ## 问题
 
-最近在使用 iview 组件库时,遇到了利用 Upload 上传成功后获取到 url 赋值给 input 但是无法成功的问题.
+最近在使用 iview 组件库时，遇到了利用 Upload 上传成功后获取到 url 赋值给 input 但是无法成功的问题。
 
 ```html
 <i-col span="16">
@@ -36,7 +33,7 @@ title: Upload 上传成功后 input 框无法赋值
 
 ![](./images/iview-upload-value/iview-upload-value.png)
 
-## 解释
+## 产生原因
 
 当看 vue 文档的时候，会发现有这么一句话：如果在实例创建之后添加新的属性到实例上，它不会触发视图更新。
 
@@ -44,13 +41,13 @@ title: Upload 上传成功后 input 框无法赋值
 
 ## 解决方法
 
-- 方法一：
+### 方法一
 
 图片虽然上传成功,但是赋值却没有成功,因为在定义 formData 时未定义 iconUrl 属性造成的组件赋值失败.
 
 这里默认在 formData 将 iconUrl 属性定义一下就可以解决这个问题.
 
-- 方法二 ( 推荐 ) ：
+### 方法二 ( 推荐 )
 
 我们可以使用 `this.$set(this.data,key,value)` 来实现视图的响应式更新。
 
@@ -64,7 +61,7 @@ uploadBooImg() {
 }
 ```
 
-- 方法三 ( 不推荐 ) ：
+### 方法三 ( 不推荐 )
 
 可以使用 `vm.$forceUpdate()` 来强制重新渲染当前组件内容来达到效果。
 
