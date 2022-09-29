@@ -18,8 +18,8 @@ export default defineConfig({
     outline: [2, 3],
 
     algolia: {
-      appId: 'WGIT0DXO75',
-      apiKey: '8368a68b7a33c1840b6521d3fc059538',
+      appId: '1NORI5DM33',
+      apiKey: 'fb3c8555f05beb4a981518857e30697c',
       indexName: 'areschang'
     },
 
