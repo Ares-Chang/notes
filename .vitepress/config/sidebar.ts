@@ -719,12 +719,16 @@ export const sidebar = {
           link: '/else/tools/nrm'
         },
         {
+          text: 'taze',
+          link: '/else/tools/taze'
+        },
+        {
           text: 'Sublime Text 插件推荐',
           link: '/else/tools/sublime-plugin'
         },
         {
-          text: 'taze',
-          link: '/else/tools/taze'
+          text: '关闭 VS Code 标签同步修改',
+          link: '/else/tools/vscode-close-linked-editing'
         }
       ]
     }
