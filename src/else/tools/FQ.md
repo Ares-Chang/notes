@@ -42,6 +42,8 @@
 
 [汉化包](https://github.com/BoyceLig/Clash_Chinese_Patch/releases)，每次更新软件都需要重新安装汉化包
 
+[示例文档](https://www.ermao.net/uncategorized/clash-for-windows/)
+
 ## 未尝试
 
 以下两种方法本人并没有尝试过，仅做列举
