@@ -38,9 +38,9 @@
 
 代理 App + 订阅链接，可自由转换，可尽量防止导致以上插件失效问题。
 
-传送门: [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg)，其他版本可以自行搜索 GitHub 仓库
+传送门: [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)，[GitHub 仓库](https://github.com/Fndroid/clash_for_windows_pkg) 其他版本可以自行搜索 GitHub 仓库
 
-[使用及汉化方法](https://www.ermao.net/uncategorized/clash-for-windows/)
+[汉化包](https://github.com/BoyceLig/Clash_Chinese_Patch/releases)，每次更新软件都需要重新安装汉化包
 
 ## 未尝试
 
