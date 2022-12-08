@@ -723,6 +723,10 @@ export const sidebar = {
           link: '/else/tools/taze'
         },
         {
+          text: 'Snipaste',
+          link: '/else/tools/snipaste'
+        },
+        {
           text: 'Sublime Text 插件推荐',
           link: '/else/tools/sublime-plugin'
         },
