@@ -10,7 +10,7 @@
   <span class="_btn">按钮</span>
 </div>
   
-<style>
+<style scoped>
   ._content {
     display: inline-block;
     padding: 20px;

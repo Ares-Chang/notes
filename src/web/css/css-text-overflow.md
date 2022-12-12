@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<style>
+<style scoped>
   .demo_content {
     font-size: 1rem;
     color: #999;
@@ -71,7 +71,7 @@
   </div>
 </div>
 
-<style>
+<style scoped>
   .multiLine_text {
     width: 200px;
     overflow: hidden;

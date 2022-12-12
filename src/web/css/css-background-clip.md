@@ -10,7 +10,7 @@
 <br />
 <span class="base_span color">background-clip: text;</span>
 
-<style>
+<style scoped>
   .base_span {
     text-transform: capitalize;
     font-size: 60px;
@@ -126,7 +126,7 @@ color: transparent; /* 设置字体透明，可以透出背景 */
 
 <span class="toLoad" text-data="hello world~~">hello world~~</span>
 
-<style>
+<style scoped>
   .toLoad {
     position: relative;
     font-size: 60px;

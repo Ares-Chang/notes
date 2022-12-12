@@ -34,7 +34,7 @@ CSS 提供一个规定鼠标事件的属性 [`pointer-events`](https://developer
   </div>
 </div>
 
-<style>
+<style scoped>
   ._app {
     position: relative;
   }

@@ -12,7 +12,7 @@ layout: page
   <a href="https://antfu.me/posts/why-reproductions-are-required-zh" target="_blank">[原]</a>
 </div>
 
-<style>
+<style scoped>
 footer[class="VPFooter"] {
   display: none;
 }
