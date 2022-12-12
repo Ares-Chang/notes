@@ -82,6 +82,10 @@ export const sidebar = {
         {
           text: 'sass/scss 使用简介',
           link: '/web/css/scss'
+        },
+        {
+          text: '悬浮卡片间隙影响背景拖动问题',
+          link: '/web/css/css-pointer-events'
         }
       ]
     }
