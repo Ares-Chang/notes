@@ -727,6 +727,10 @@ export const sidebar = {
           link: '/else/tools/taze'
         },
         {
+          text: 'GifCam',
+          link: '/else/tools/gifcam'
+        },
+        {
           text: 'Snipaste',
           link: '/else/tools/snipaste'
         },
