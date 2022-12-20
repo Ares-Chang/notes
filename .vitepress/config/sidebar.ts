@@ -458,6 +458,10 @@ export const sidebar = {
           link: '/git/git-partition'
         },
         {
+          text: 'Git Proxy',
+          link: '/git/git-proxy'
+        },
+        {
           text: '删除某次提交记录',
           link: '/git/delete-commit'
         },
