@@ -205,7 +205,7 @@ Object.values(obj).map(item => {
 
 ```js
 const obj = { a: 1, b: 2, c: 3 }
-Oject.entries(obj).map(item => {
+Object.entries(obj).map(item => {
   console.log(item) // ['a', 1] ['b', 2] ['c', 3]
 })
 ```
