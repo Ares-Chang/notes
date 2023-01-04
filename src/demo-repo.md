@@ -13,8 +13,9 @@ layout: page
 </div>
 
 <style scoped>
-footer[class="VPFooter"] {
-  display: none;
+:global(:root) {
+  /* Footer z-index 下移 */
+  --vp-z-index-footer: -1;
 }
 
 #antfu-why-reproductions-are-required-zh {
@@ -27,12 +28,12 @@ footer[class="VPFooter"] {
 }
 @media screen and (max-width: 960px) {
   #antfu-why-reproductions-are-required-zh {
-    padding-top: 56px;
+    top: 56px;
   }
 }
 @media screen and (min-width: 960px) {
   #antfu-why-reproductions-are-required-zh {
-    padding-top: 73px;
+    top: 73px;
   }
 }
 
