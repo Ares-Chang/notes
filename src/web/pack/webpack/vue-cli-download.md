@@ -10,6 +10,6 @@ Vue CLI create 新项目会自动采用 yarn 下载依赖，这样就不会产�
 
 C:\ => [users] => .vuerc => packageManager 修改成想用的下载器
 
-![](./images/VueCLI-download/image-20200210085804382.png)
+![](./images/vue-cli-download/image-20200210085804382.png)
 
-![](./images/VueCLI-download/image-20200210090034566.png)
+![](./images/vue-cli-download/image-20200210090034566.png)

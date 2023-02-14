@@ -329,7 +329,7 @@ export const sidebar = {
         },
         {
           text: 'Vue CLI 默认依赖下载器修改',
-          link: '/web/pack/webpack/VueCLI-download'
+          link: '/web/pack/webpack/vue-cli-download'
         },
         {
           text: '获取本机 IP',
