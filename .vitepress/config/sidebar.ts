@@ -315,8 +315,8 @@ export const sidebar = {
       text: 'Pack',
       items: [
         {
-          text: '关于',
-          link: '/web/pack/'
+          text: '只允许 pnpm',
+          link: '/web/pack/only-allow-pnpm'
         }
       ]
     },
