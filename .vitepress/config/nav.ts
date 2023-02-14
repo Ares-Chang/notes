@@ -15,7 +15,7 @@ export const nav = [
         items: [
           { text: 'UI 组件库', link: '/web/ui-module/' },
           { text: 'uni-app', link: '/web/uni-app/' },
-          { text: 'webpack', link: '/web/webpack/' },
+          { text: 'Pack', link: '/web/pack/' },
           { text: 'ECharts', link: '/web/echarts/' }
         ]
       }

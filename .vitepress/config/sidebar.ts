@@ -310,33 +310,42 @@ export const sidebar = {
     }
   ],
 
-  '/web/webpack/': [
+  '/web/pack/': [
+    {
+      text: 'Pack',
+      items: [
+        {
+          text: '关于',
+          link: '/web/pack/'
+        }
+      ]
+    },
     {
       text: 'Webpack',
       items: [
         {
           text: '关于',
-          link: '/web/webpack/'
+          link: '/web/pack/webpack/'
         },
         {
           text: 'Vue CLI 默认依赖下载器修改',
-          link: '/web/webpack/VueCLI-download'
+          link: '/web/pack/webpack/VueCLI-download'
         },
         {
           text: '获取本机 IP',
-          link: '/web/webpack/get-local-ip'
+          link: '/web/pack/webpack/get-local-ip'
         },
         {
           text: 'Vue Cli 多环境打包命令配置',
-          link: '/web/webpack/vue-cli-pack-config'
+          link: '/web/pack/webpack/vue-cli-pack-config'
         },
         {
           text: 'vue-cli 2.X 如何开启局域网访问',
-          link: '/web/webpack/vue-host-ip'
+          link: '/web/pack/webpack/vue-host-ip'
         },
         {
           text: 'webpack 配置全局引入 npm 包',
-          link: '/web/webpack/webpack-ProvidePlugin'
+          link: '/web/pack/webpack/webpack-ProvidePlugin'
         }
       ]
     }
