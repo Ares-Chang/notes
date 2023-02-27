@@ -57,3 +57,5 @@ URL: https://github.com/xxx/xxx.git
  * [pruned] origin/@feat/factoryAMap
  * [pruned] origin/@feat/heatMap
 ```
+
+> 参考：[git-remote Documentation](https://git-scm.com/docs/git-remote#Documentation/git-remote.txt-empruneem)
