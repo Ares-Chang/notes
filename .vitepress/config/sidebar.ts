@@ -511,6 +511,10 @@ export const sidebar = {
           link: '/git/git-merger-failure'
         },
         {
+          text: '清理无效远程追踪分支',
+          link: '/git/git-remote-prune'
+        },
+        {
           text: 'git remote 命令',
           link: '/git/git-remote'
         },
