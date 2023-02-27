@@ -136,3 +136,11 @@ origin  https://github.com/xxx/xxxxx.git (push)
 这些信息非常有用，它告诉你正处于 `master` 分支，并且如果运行 `git pull`，就会抓取所有的远程引用，
 
 然后将远程 `master` 分支合并到本地 `master` 分支。它也会列出拉取到的所有远程引用。
+
+### 清理分支的过期引用
+
+如题，如果远端分支已删除，但本地分支通过 `git branch -a` 仍然可以看到远端分支链接。
+
+可使用 `git remote prune [origin]` 来进行清理。
+
+详情请参考 [清理无效的远程追踪分支](./git-remote-prune)
