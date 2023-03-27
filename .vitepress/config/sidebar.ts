@@ -835,6 +835,10 @@ export const sidebar = {
         {
           text: '关于',
           link: '/else/read-books/'
+        },
+        {
+          text: '许三观卖血记',
+          link: '/else/read-books/许三观卖血记'
         }
       ]
     }
