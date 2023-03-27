@@ -811,9 +811,9 @@ export const sidebar = {
     }
   ],
 
-  '/else/about/': [
+  '/else/': [
     {
-      text: '',
+      text: 'About',
       items: [
         {
           text: '关于',
@@ -826,6 +826,15 @@ export const sidebar = {
         {
           text: 'GitHub Actions 自动部署',
           link: '/else/about/GitHub-Actions'
+        }
+      ]
+    },
+    {
+      text: 'Read Books',
+      items: [
+        {
+          text: '关于',
+          link: '/else/read-books/'
         }
       ]
     }
