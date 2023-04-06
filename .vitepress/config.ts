@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { nav, sidebar } from './config/index'
+import { nav, sidebar } from './configs/index'
 
 export default defineConfig({
   lang: 'zh-CN',
