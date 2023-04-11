@@ -43,7 +43,25 @@ info: detecting host provider for 'https://github.com/xxx/xxx.git'...
 
 ## 解决方法
 
-通过 [`git remote show [origin]`](./git-remote#查看某个远程仓库) 方法查看链接关系后，可使用 `git remote prune [origin]` 方法来清除无效链接。
+### `git fetch -p`
+
+使用 `git fetch -p` 方法可以清除本地不存在远程分支的缓存。
+
+```shell {1}
+λ git fetch -p
+info: detecting host provider for 'https://github.com/xxx/xxx.git'...
+info: detecting host provider for 'https://github.com/xxx/xxx.git'...
+From https://github.com/xxx/xxx.git
+ - [deleted]           (none)     -> origin/test
+```
+
+展开来说，当我们在本地仓库执行 `git fetch` 命令时，git 会尝试从远程仓库中拉取最新的代码，包括分支、标签等内容，然后将这些内容存储在本地仓库的缓存中。但是，如果远程仓库中删除了某个分支或标签，那么 git 在执行 `fetch` 命令时并不会将本地缓存中对应的内容删除，这就会导致本地仓库和远程仓库的状态不一致。
+
+为了解决这个问题，我们需要使用 `git fetch -p` 命令。该命令中的 `-p` 选项表示 `prune`，即清除本地不存在的远程分支的缓存。执行该命令后，git 会在拉取最新代码的同时，清除本地缓存中不存在的远程分支，保证本地仓库和远程仓库的状态一致。
+
+### `git remote prune [origin]`
+
+再或者，通过 [`git remote show [origin]`](./git-remote#查看某个远程仓库) 方法查看链接关系后，可使用 `git remote prune [origin]` 方法来清除无效链接。
 
 > `[origin]` 需修改为 `remote` 别名
 
