@@ -1,11 +1,11 @@
 # Linux 常用命令
 
-> 下列命令部分可在 Windows 上使用
->
-> 下列只做拓展，具体参数可参考 --help 来查看
+下列命令部分可在 Windows 上使用
+
+本章只做拓展，具体参数可参考 --help 来查看
 
 ::: tip 注意:
-[] 内包裹为用户自定义内容
+`[]` 内包裹为可选自定义内容
 :::
 
 ## ls
@@ -38,7 +38,7 @@ ls -al
 - 查看文件完整内容
 
 ```shell
-cat [test.md] # 查看 test.md 文件内容
+cat test.md # 查看 test.md 文件内容
 ```
 
 > cat 命令会把文件内容全部输出到命令行，大文件不容易观看，可以使用 less 命令查看。
@@ -48,13 +48,13 @@ cat [test.md] # 查看 test.md 文件内容
 - 查看文件内容，可通过 vim 命令进行光标调度及查询。
 
 ```shell
-less [test.md] # 查看 test.md 文件内容
+less test.md # 查看 test.md 文件内容
 ```
 
 - `-N`: 显示行号
 
 ```shell
-less -N [test.md] # 查看 test.md 文件内容，并显示行号
+less -N test.md # 查看 test.md 文件内容，并显示行号
 ```
 
 ## grep
@@ -62,7 +62,7 @@ less -N [test.md] # 查看 test.md 文件内容，并显示行号
 搜索文件内容，并打印出匹配的行。
 
 ```shell
-grep '123' [test.md] # 在 test.md 文件中搜索 123
+grep '123' test.md # 在 test.md 文件中搜索 123
 ```
 
 参数使用:
@@ -88,7 +88,7 @@ grep [options] [pattern] [file]
 - 创建文件夹：
 
 ```shell
-mkdir [test]
+mkdir test
 ```
 
 ## cd
@@ -96,7 +96,7 @@ mkdir [test]
 - 进入到指定文件夹
 
 ```shell
-cd [code] # 进入本目录下 code 文件夹
+cd code # 进入本目录下 code 文件夹
 
 cd \ # 跳转到根目录
 
@@ -110,7 +110,7 @@ cd ~ # 跳转到家目录
 - 创建文件
 
 ```shell
-touch [readme.md] # 创建一个 Makedown 文件
+touch readme.md # 创建一个 Makedown 文件
 ```
 
 ## mkdir
@@ -118,7 +118,7 @@ touch [readme.md] # 创建一个 Makedown 文件
 - 创建文件夹
 
 ```shell
-mkdir [projects] # 创建一个叫 projects 的文件夹
+mkdir projects # 创建一个叫 projects 的文件夹
 ```
 
 ## rm
@@ -126,7 +126,7 @@ mkdir [projects] # 创建一个叫 projects 的文件夹
 - 删除文件
 
 ```shell
-rm [readme.md] # 删除 readme.md 文件
+rm readme.md # 删除 readme.md 文件
 ```
 
 - 彻底删除文件夹
@@ -136,7 +136,7 @@ rm [readme.md] # 删除 readme.md 文件
 如有文件需要，彻底删除才可以
 
 ```shell
-rm -rf [projects] # 强制删除 projects 文件夹下所有内容
+rm -rf projects # 强制删除 projects 文件夹下所有内容
 
 # 💡解释：
 #  -r 就是向下递归，不管有多少级目录，一并删除。
@@ -156,13 +156,13 @@ rm -rf ./123/* # 清空 123 目录下的所有文件及文件夹,但是保留 12
 - 重命名文件
 
 ```shell
-mv [readme.md] [README.md] # 把 readme.md 剪切粘贴并重命名为 README.md
+mv readme.md README.md # 把 readme.md 剪切粘贴并重命名为 README.md
 ```
 
 - 剪切
 
 ```shell
-mv [123.md] [../] # 剪切 123.md 到上级目录
+mv 123.md ../ # 剪切 123.md 到上级目录
 ```
 
 > -u：若目标文件已经存在，对比目标文件，新的才会更新
@@ -181,15 +181,15 @@ clear # 清空当前命令行
 - 拷贝文件
 
 ```shell
-cp [test.md] [./abc] # 把 test.md 文件拷贝到当前目录 abc 文件夹下
+cp test.md ./abc # 把 test.md 文件拷贝到当前目录 abc 文件夹下
 
-cp [test.md] [123.md] # 复制 test.md 并重命名为 123.md
+cp test.md 123.md # 复制 test.md 并重命名为 123.md
 ```
 
 - 拷贝文件夹
 
 ```shell
-cp -r [123] [234] # 把 123 文件夹复制到 234 文件夹下
+cp -r 123 234 # 把 123 文件夹复制到 234 文件夹下
 # -r 递归复制，文件夹下有文件一起复制
 ```
 
