@@ -491,6 +491,10 @@ export const sidebar = {
           link: '/git/git-amend'
         },
         {
+          text: '设置大小写敏感',
+          link: '/git/git-core.ignorecase'
+        },
+        {
           text: 'git commit 规范',
           link: '/git/git-commit'
         },
