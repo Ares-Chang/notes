@@ -736,6 +736,10 @@ export const sidebar = {
           link: '/else/tools/cmder-expert'
         },
         {
+          text: 'PowerShell',
+          link: '/else/tools/power-shell'
+        },
+        {
           text: 'degit',
           link: '/else/tools/degit'
         },
