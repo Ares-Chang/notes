@@ -126,6 +126,14 @@ Import-Module -Name Terminal-Icons
 
 有关详细信息（包括用法和命令），请参阅 `GitHub` 上的 [`Terminal-Icons`](https://github.com/devblackops/Terminal-Icons) 存储库。
 
+## VS Code 乱码
+
+如果你使用 `VS Code`，你可能会发现 `Oh My Posh` 会在终端中显示乱码。
+
+其原因是因为字体设置不正确，并没有同 `Windows Terminal` 的字体同步正确，需要单独设置。
+
+打开设置 -> 搜索 `Editor: Font Family` -> 把你配置的 `Nerd` 字体配置进去 -> 重启 `VS Code`。
+
 ## 随机主题
 
 如果每次打开终端想要获取一个随机主题，可以在配置文件中配置以下命令。
