@@ -740,6 +740,10 @@ export const sidebar = {
           link: '/else/tools/power-shell'
         },
         {
+          text: 'Oh My Posh',
+          link: '/else/tools/oh-my-posh'
+        },
+        {
           text: 'degit',
           link: '/else/tools/degit'
         },
