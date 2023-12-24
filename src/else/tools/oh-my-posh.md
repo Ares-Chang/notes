@@ -107,3 +107,32 @@ Get-PoshThemes
 名称中带有 `minimal` 的主题不需要 `Nerd` 字体。
 
 需要了解更多信息，请参阅 [Themes](https://ohmyposh.dev/docs/themes)。
+
+## 使用 `Terminal-Icons` 添加缺少的文件夹或文件图标
+
+[`Terminal-Icons`](https://github.com/devblackops/Terminal-Icons) 是一个 `PowerShell` 模块，它会添加在 `Windows` 终端中显示文件或文件夹时可能缺少的文件和文件夹图标，并基于名称或扩展名查找相应的图标。 它尝试将图标用于已知文件/文件夹，但如果找不到此内容，则会回滚到通用文件或文件夹图标。
+
+若要使用 `PowerShell` 安装 `Terminal-Icons`，请使用以下命令：
+
+```bash
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
+
+使用 `notepad $PROFILE` 打开 `PowerShell` 配置文件，输入以下内容配置 `Terminal-Icons` 运行。
+
+```text
+Import-Module -Name Terminal-Icons
+```
+
+有关详细信息（包括用法和命令），请参阅 `GitHub` 上的 [`Terminal-Icons`](https://github.com/devblackops/Terminal-Icons) 存储库。
+
+## 随机主题
+
+如果每次打开终端想要获取一个随机主题，可以在配置文件中配置以下命令。
+
+```bash
+# 设置 Theme 目录下随机主题
+$theme = Get-Childitem $env:POSH_THEMES_PATH | Get-Random
+echo "Hello! Today's lucky theme is $theme :)"
+oh-my-posh init pwsh --config $theme | Invoke-Expression
+```
