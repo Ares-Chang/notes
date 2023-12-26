@@ -91,3 +91,9 @@ WSManStackVersion              3.0
 点击 `设置 -> 配置文件|默认值`，可自由配置。
 
 文本主题、文字样式、背景颜色、背景图片、亚克力材质、不透明度等等...
+
+## 我的配置
+
+- [我正在使用的](https://github.com/Ares-Chang/use)
+- [我的 Windows Terminal 配置](https://github.com/Ares-Chang/.config/blob/master/WindowsTerminal/settings.json)
+- [我的 PowerShell 配置](https://github.com/Ares-Chang/.config/blob/master/Microsoft.PowerShell_profile.ps1)

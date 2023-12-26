@@ -64,3 +64,8 @@ cmderr=cd /d "%CMDER_ROOT%"
 - cmderr cd 到 cmder 安装路径文件夹
 
 - ~ cd 到桌面文件夹
+
+## 我的配置
+
+- [我正在使用的](https://github.com/Ares-Chang/use)
+- [我的 cmder 配置](https://github.com/Ares-Chang/.config/blob/master/cmder/user_aliases.cmd)

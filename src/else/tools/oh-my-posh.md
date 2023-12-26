@@ -144,3 +144,9 @@ $theme = Get-Childitem $env:POSH_THEMES_PATH | Get-Random
 echo "Hello! Today's lucky theme is $theme :)"
 oh-my-posh init pwsh --config $theme | Invoke-Expression
 ```
+
+## 我的配置
+
+- [我正在使用的](https://github.com/Ares-Chang/use)
+- [我的 Windows Terminal 配置](https://github.com/Ares-Chang/.config/blob/master/WindowsTerminal/settings.json)
+- [我的 PowerShell 配置](https://github.com/Ares-Chang/.config/blob/master/Microsoft.PowerShell_profile.ps1)
