@@ -9,9 +9,16 @@ export default defineConfig({
   srcDir: './src',
   outDir: './dist',
 
-  lastUpdated: true,
+  cleanUrls: true,
 
-  head: [['link', { rel: 'icon', href: '/logo.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.ico' }],
+    ['meta', { name: 'theme-color', content: '#5f67ee' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:locale', content: 'zh-CN' }],
+    ['meta', { name: 'og:site_name', content: 'Ares Chang' }],
+    ['meta', { name: 'og:image', content: 'https://areschang.top/hero.jpg' }],
+  ],
 
   themeConfig: {
     nav,
@@ -19,10 +26,13 @@ export default defineConfig({
 
     outline: [2, 3],
 
-    algolia: {
-      appId: '1NORI5DM33',
-      apiKey: 'fb3c8555f05beb4a981518857e30697c',
-      indexName: 'areschang'
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '1NORI5DM33',
+        apiKey: 'fb3c8555f05beb4a981518857e30697c',
+        indexName: 'areschang'
+      }
     },
 
     socialLinks: [
@@ -38,6 +48,13 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/ares-chang/notes/edit/master/src/:path',
       text: '在 GitHub 上编辑此页'
+    },
+    lastUpdated: {
+      text: '上次更新时间'
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
     },
 
     footer: {
