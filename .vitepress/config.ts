@@ -5,8 +5,10 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Ares Chang',
   description: 'Ares Chang 的小笔记 - 前端个人开放文档',
-  srcDir: 'src',
+
+  srcDir: './src',
   outDir: './dist',
+
   lastUpdated: true,
 
   head: [['link', { rel: 'icon', href: '/logo.ico' }]],
@@ -43,8 +45,4 @@ export default defineConfig({
       copyright: 'Copyright © 2020-PRESENT Ares Chang'
     }
   },
-
-  vue: {
-    reactivityTransform: true
-  }
 })
