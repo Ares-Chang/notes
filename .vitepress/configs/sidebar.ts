@@ -670,6 +670,18 @@ export const sidebar = {
     }
   ],
 
+  '/linux/wsl/': [
+    {
+      text: 'WSL',
+      items: [
+        {
+          text: '关于',
+          link: '/linux/wsl/'
+        },
+      ]
+    }
+  ],
+
   '/linux/ubuntu/': [
     {
       text: 'Ubuntu',

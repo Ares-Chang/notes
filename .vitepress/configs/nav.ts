@@ -32,6 +32,12 @@ export const nav = [
         items: [
           { text: 'Linux 基础', link: '/linux/linux/' },
           { text: 'Vim', link: '/linux/vim/' },
+        ]
+      },
+      {
+        text: '系统',
+        items: [
+          { text: 'WSL', link: '/linux/wsl/' },
           { text: 'Ubuntu', link: '/linux/ubuntu/' }
         ]
       }
