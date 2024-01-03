@@ -8,6 +8,8 @@
 
 安装不赘述，直接看 [微软文档](https://learn.microsoft.com/zh-cn/windows/wsl/install)，应该比大部分文章更简单易懂。
 
+**推荐阅读官方教程 [最佳安全实践](https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment)。**
+
 ## 使用
 
 推荐 [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/)，自己家的更配哦~
