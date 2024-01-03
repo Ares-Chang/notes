@@ -1,8 +1,8 @@
 # 常用命令
 
-- [启动](#start) 启动系统
-- [`-l -v`](#verbose-v) 列出系统详细信息
-- [`--shutdown`](shutdown) 关闭所有系统
+- [启动](#start) - 启动系统
+- [`-l -v`](#verbose-v) - 列出系统详细信息
+- [`--shutdown`](#shutdown) - 关闭所有系统
 
 以上所列出仅为常用指令，其余的请学习使用 [`--help`](#help)
 
@@ -89,7 +89,7 @@ wsl --set-default-version 2
 wsl --set-default Ubuntu
 ```
 
-## 启动 `wsl` 并进入指定目录 {#start}
+## 启动 `wsl` 并进入指定目录 <Badge type="tip" text="常用" /> {#start}
 
 ```shell
 wsl ~
