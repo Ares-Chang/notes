@@ -678,6 +678,10 @@ export const sidebar = {
           text: '关于',
           link: '/linux/wsl/'
         },
+        {
+          text: '常用命令',
+          link: '/linux/wsl/common-commands'
+        },
       ]
     }
   ],
