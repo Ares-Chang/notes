@@ -695,6 +695,10 @@ export const sidebar = {
           text: 'zsh',
           link: '/linux/wsl/zsh/'
         },
+        {
+          text: 'Oh My Zsh',
+          link: '/linux/wsl/zsh/oh-my-zsh'
+        },
       ]
     }
   ],
