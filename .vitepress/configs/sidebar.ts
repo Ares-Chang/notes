@@ -682,6 +682,10 @@ export const sidebar = {
           text: '常用命令',
           link: '/linux/wsl/common-commands'
         },
+        {
+          text: 'wsl 代理配置',
+          link: '/linux/wsl/not-supported-proxy'
+        },
       ]
     },
     {
