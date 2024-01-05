@@ -683,6 +683,15 @@ export const sidebar = {
           link: '/linux/wsl/common-commands'
         },
       ]
+    },
+    {
+      text: 'Zsh',
+      items: [
+        {
+          text: 'zsh',
+          link: '/linux/wsl/zsh/'
+        },
+      ]
     }
   ],
 
