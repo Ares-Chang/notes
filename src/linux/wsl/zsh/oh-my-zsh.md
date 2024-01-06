@@ -87,3 +87,11 @@ alias cls='clear'
 
 - [我正在使用的](https://github.com/Ares-Chang/use)
 - [我的 `.zshrc` 配置](https://github.com/Ares-Chang/.config/blob/master/.zshrc)
+
+## 有趣的命令
+
+以下命令为 `ohmyzsh` 创建，只能在 `ohmyzsh` 中使用。
+
+- `mkcd` - 创建并切换目录
+- `zsh_stats` - 列出前 20 个使用频率最高的命令
+- `take` - 功能类似 `mkcd` (可以完成替代)，不过 `take` 可以识别远程 `URL` 信息。
