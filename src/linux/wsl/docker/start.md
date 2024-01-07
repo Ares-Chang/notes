@@ -1,8 +1,6 @@
-# 开始
+# 安装并验证
 
 以下安装环境基于 `Win + Wsl2` 环境，其它环境可参考 [Docker 官方文档](https://docs.docker.com/)
-
-## 安装并验证
 
 1. 查看 [下载页面](https://docs.docker.com/desktop/install/windows-install/) 下载 Docker Desktop for Windows
 2. 按照通常的安装说明安装 Docker Desktop。根据你使用的 Windows 版本，Docker Desktop 可能会在安装过程中提示你打开 WSL 2。阅读屏幕上显示的信息并打开 WSL 2 功能以继续。

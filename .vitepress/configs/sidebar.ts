@@ -709,8 +709,12 @@ export const sidebar = {
           link: '/linux/wsl/docker/'
         },
         {
-          text: '开始',
+          text: '安装',
           link: '/linux/wsl/docker/start'
+        },
+        {
+          text: '常用命令',
+          link: '/linux/wsl/docker/commands'
         },
       ]
     }
