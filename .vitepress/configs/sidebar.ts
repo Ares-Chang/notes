@@ -716,6 +716,10 @@ export const sidebar = {
           text: '常用命令',
           link: '/linux/wsl/docker/commands'
         },
+        {
+          text: '设置镜像源',
+          link: '/linux/wsl/docker/image-source'
+        },
       ]
     }
   ],
