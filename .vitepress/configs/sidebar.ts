@@ -700,6 +700,15 @@ export const sidebar = {
           link: '/linux/wsl/zsh/oh-my-zsh'
         },
       ]
+    },
+    {
+      text: 'Docker',
+      items: [
+        {
+          text: '关于',
+          link: '/linux/wsl/docker/'
+        },
+      ]
     }
   ],
 
