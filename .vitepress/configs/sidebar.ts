@@ -708,6 +708,10 @@ export const sidebar = {
           text: '关于',
           link: '/linux/wsl/docker/'
         },
+        {
+          text: '开始',
+          link: '/linux/wsl/docker/start'
+        },
       ]
     }
   ],
