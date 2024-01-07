@@ -15,3 +15,9 @@ Docker 容器与虚拟机类似，但不会创建整个虚拟操作系统。 相
 这使得应用包能够仅要求主计算机上尚未安装的部件，从而降低包大小以及提高性能。
 
 若要了解详细信息，请查看 [Docker 容器简介](https://learn.microsoft.com/zh-cn/training/modules/intro-to-docker-containers/)。
+
+## 重要概念
+
+镜像：可以理解为系统安装包，`windows.iso` 文件。
+
+容器：是安装包解压开的状态，理解为一个完整的系统，内部可以随意操作。
