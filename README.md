@@ -2,6 +2,8 @@
 
 My online documentation, based on Vitepress.
 
+I'm happy if I can help you.
+
 <br>
 
 <samp>
