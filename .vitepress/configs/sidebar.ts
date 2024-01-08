@@ -539,6 +539,10 @@ export const sidebar = {
           link: '/git/issue-repository-exists'
         },
         {
+          text: 'GitHub SSH keys 配置',
+          link: '/git/github-ssh-keys'
+        },
+        {
           text: '保存 git 帐户密码',
           link: '/git/save-password'
         }
