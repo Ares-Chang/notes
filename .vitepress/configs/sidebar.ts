@@ -743,6 +743,10 @@ export const sidebar = {
           link: '/linux/ubuntu/ubuntu-common-order'
         },
         {
+          text: '设置国内镜像源',
+          link: '/linux/ubuntu/set-source'
+        },
+        {
           text: '自动隐藏上主状态栏',
           link: '/linux/ubuntu/beautify-hideTopBar'
         },
