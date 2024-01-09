@@ -690,6 +690,10 @@ export const sidebar = {
           text: 'wsl 代理配置',
           link: '/linux/wsl/not-supported-proxy'
         },
+        {
+          text: 'Vim 同步 Win 剪贴板',
+          link: '/linux/wsl/connect-win-clip'
+        },
       ]
     },
     {
