@@ -24,11 +24,11 @@ Flutter 环境运行需要基于 [Java JDK](https://www.oracle.com/cn/java/techn
 
 - 此电脑，右键点击属性，高级系统设置，环境变量
 
-  ![](./images/flutter-env-setup/Snipaste_2021-03-30_18-52-50.png)
-  ![](./images/flutter-env-setup/Snipaste_2021-03-30_18-53-53.png)
-  ![](./images/flutter-env-setup/Snipaste_2021-03-30_18-54-44.png)
-  ![](./images/flutter-env-setup/Snipaste_2021-03-31_10-24-30.png)
-  ![](./images/flutter-env-setup/Snipaste_2021-03-31_10-36-03.png)
+  ![](../images/flutter-env-setup/Snipaste_2021-03-30_18-52-50.png)
+  ![](../images/flutter-env-setup/Snipaste_2021-03-30_18-53-53.png)
+  ![](../images/flutter-env-setup/Snipaste_2021-03-30_18-54-44.png)
+  ![](../images/flutter-env-setup/Snipaste_2021-03-31_10-24-30.png)
+  ![](../images/flutter-env-setup/Snipaste_2021-03-31_10-36-03.png)
 
   设置完成，重启电脑，在 cmd 中输入 `flutter -v` 出现说明提示即为设置成功。
 
@@ -54,7 +54,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
   - 在“用户变量”下检查是否有名为”PUB_HOSTED_URL”和”FLUTTER_STORAGE_BASE_URL”的条目，如果没有，也添加它们。
 - **环境变量设置完成，需要重启以应用此更改**。
 
-![](./images/flutter-env-setup/Snipaste_2021-03-31_18-16-26.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_18-16-26.png)
 
 具体图解请看楼上[安装 Flutter SDK](#安装-flutter-sdk)...
 
@@ -80,7 +80,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 按以上操作步骤安装，运行结果大致如下：
 
-![](./images/flutter-env-setup/Snipaste_2021-03-31_18-00-35.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_18-00-35.png)
 
 <span style="color: #87b525;">√</span> 代表成功可运行，<span style="color: #b8ac56;">！</span>表示环境存在问题，<span style="color: #ca275f;">X</span> 表示缺少部件。
 
@@ -99,12 +99,12 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 点击配置，下载插件，在市场中搜索 Flutter 下载的同时会提示需要一起下载 Dart 插件，点击确认。
 
-![](./images/flutter-env-setup/Snipaste_2021-03-31_13-49-30.png)
-![](./images/flutter-env-setup/Snipaste_2021-03-31_13-50-56.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_13-49-30.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_13-50-56.png)
 
 安装完成会提示需要重启 IDE 才能生效，如果没有提示请自行重启。
 
-![](./images/flutter-env-setup/Snipaste_2021-03-31_13-52-06.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_13-52-06.png)
 
 ### 新建模拟器
 
@@ -112,11 +112,11 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 选择一个模拟设备手机型号
 
-![](./images/flutter-env-setup/Snipaste_2021-04-01_13-30-41.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-01_13-30-41.png)
 
 选择一个模拟设备操作系统，如果本机没有，点击 Download 下载。
 
-![](./images/flutter-env-setup/Snipaste_2021-04-01_13-32-22.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-01_13-32-22.png)
 
 点击下一步新建一个模拟设备。点击运行就可以打开虚拟设备。
 
@@ -126,27 +126,27 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 打开 Android Studio 点击新建 Flutter 项目
 
-![](./images/flutter-env-setup/Snipaste_2021-03-31_14-59-46.png)
-![](./images/flutter-env-setup/Snipaste_2021-03-31_15-14-50.png)
-![](./images/flutter-env-setup/Snipaste_2021-03-31_18-51-56.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_14-59-46.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_15-14-50.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_18-51-56.png)
 
 一般 win 都可以自动识别路径，如果地址没有自动选择，请自行选择。
 
-![](./images/flutter-env-setup/Snipaste_2021-03-31_15-18-57.png)
+![](../images/flutter-env-setup/Snipaste_2021-03-31_15-18-57.png)
 
 点击完成，等待项目加载完成。
 
 然后点击 Tools ，选择 AVD Manager，启动模拟器，如果没有模拟器，请参照[新建模拟器](#新建模拟器)设置加载。
 
-![](./images/flutter-env-setup/Snipaste_2021-04-01_16-45-40.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-01_16-45-40.png)
 
 点击运行或 debug 项目，等待底栏加载进度。
 
-![](./images/flutter-env-setup/Snipaste_2021-04-01_14-30-28.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-01_14-30-28.png)
 
 加载完成自动打开模拟器，注意需要手动开机，点击开机按钮。
 
-![](./images/flutter-env-setup/Snipaste_2021-04-01_16-49-41.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-01_16-49-41.png)
 
 ## VS Code 开发(推荐)
 
@@ -179,7 +179,7 @@ Android Studio 的体量太大，对一般电脑太不友好了。幸运的是 V
 
 **带热更新哦~**
 
-![](./images/flutter-env-setup/Snipaste_2021-04-01_18-25-17.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-01_18-25-17.png)
 
 > PS: 运行和调试集成了 `DevTools` 工具，它是一个运行在浏览器中的调试以及性能测试工具集。DevTools 取代了前一代基于浏览器的性能测试工具 Observatory，它包含了以前仅适用于 Android Studio 和 IntelliJ 的功能，例如 Flutter inspector。
 
@@ -189,7 +189,7 @@ Android Studio 的体量太大，对一般电脑太不友好了。幸运的是 V
 
 点击即可更改启动设备，如果没有安卓模拟器的话，可以参考[新建模拟器](#新建模拟器)，或者连接真机使用。
 
-![](./images/flutter-env-setup/Snipaste_2021-04-02_10-35-23.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-02_10-35-23.png)
 
 VS Code 中的 `Create Android Emulator` 命令也是走的 Android Studio 中的 AVD Manager 模板信息，如果有需要也可以使用。
 
@@ -224,7 +224,7 @@ cmd 中运行 `flutter run` 是没有提供热更新的！！！<br/>
 
 如果模拟器已经打开 `flutter run` 之后会直接打包运行程序，如果没有会提示选择 `web` 端打开(默认是搜索不到模拟器的，需要先自行打开)。
 
-![](./images/flutter-env-setup/Snipaste_2021-04-02_17-10-59.png)
+![](../images/flutter-env-setup/Snipaste_2021-04-02_17-10-59.png)
 
 提供的其他热键功能：
 

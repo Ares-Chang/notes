@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^1.1.0
     version: 1.1.0(@algolia/client-search@4.23.3)(search-insights@2.13.0)
   vitepress-auto-sidebar-plugin:
-    specifier: ^0.2.1
-    version: 0.2.1(vite@5.2.9)(vitepress@1.1.0)
+    specifier: ^0.2.2
+    version: 0.2.2(vite@5.2.9)(vitepress@1.1.0)
 
 packages:
 
@@ -1238,8 +1238,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress-auto-sidebar-plugin@0.2.1(vite@5.2.9)(vitepress@1.1.0):
-    resolution: {integrity: sha512-TWEDenoLF8Kbdxx//ZsJnv226EdNtRmxdjU7fNPGepNu2ltX0+IBy67pvcVSbEc2NsOfmyuFT2caDpXIGjv/4A==}
+  /vitepress-auto-sidebar-plugin@0.2.2(vite@5.2.9)(vitepress@1.1.0):
+    resolution: {integrity: sha512-hJ4MhehyLM0XMerpido16f6B/SVRtJF1lHL7Ja5RgHkIroGistRhbvqt4BK03IRH7MYl9CGyI6ZjUnjobsV6Mw==}
     peerDependencies:
       vite: ^5.2.9
       vitepress: ^1.1.0

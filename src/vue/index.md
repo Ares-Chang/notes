@@ -1,3 +1,9 @@
+---
+groupTitle: Vue 2
+groupIndex: 0
+collapsed: true
+---
+
 # 关于
 
 Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。

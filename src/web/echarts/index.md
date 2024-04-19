@@ -1,3 +1,8 @@
+---
+group: true
+collapsed: false
+---
+
 # 关于
 
 学习，分享，记录使用 [ECharts](https://echarts.apache.org/zh/index.html)的过程。
