@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /else/about/
+      link: /else/
     - theme: alt
       text: Gadget
       link: /else/tools/
