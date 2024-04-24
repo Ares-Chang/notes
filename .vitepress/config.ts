@@ -29,15 +29,14 @@ export default defineConfig({
             { text: 'HTML', link: '/web/html/' },
             { text: 'CSS', link: '/web/css/' },
             { text: 'JavaScript', link: '/web/javascript/' },
-            { text: 'AJAX', link: '/web/ajax/' }
           ]
         },
         {
           text: '工具',
           items: [
-            { text: 'UI 组件库', link: '/web/ui-module/' },
-            { text: 'uni-app', link: '/web/uni-app/' },
-            { text: 'Pack', link: '/web/pack/' },
+            { text: 'UI 组件库', link: '/ui-module/' },
+            { text: 'uni-app', link: '/uni-app/' },
+            { text: 'Pack', link: '/pack/' },
             { text: 'ECharts', link: '/web/echarts/' }
           ]
         }
@@ -52,15 +51,15 @@ export default defineConfig({
       items: [
         {
           items: [
-            { text: 'Linux 基础', link: '/linux/linux/' },
+            { text: 'Linux 基础', link: '/linux/' },
             { text: 'Vim', link: '/linux/vim/' },
           ]
         },
         {
           text: '系统',
           items: [
-            { text: 'WSL', link: '/linux/wsl/' },
-            { text: 'Ubuntu', link: '/linux/ubuntu/' }
+            { text: 'WSL', link: '/wsl/' },
+            { text: 'Ubuntu', link: '/ubuntu/' }
           ]
         }
       ]
@@ -72,8 +71,7 @@ export default defineConfig({
           items: [
             { text: 'Gadget', link: '/else/tools/' },
             { text: '面试题', link: '/else/interview/' },
-            { text: '大杂绘', link: '/else/hodgepodge/' },
-            { text: '关于我', link: '/else/about/' },
+            { text: '关于我', link: '/else/' },
             { text: 'Demo Repo', link: '/demo-repo' },
           ]
         }

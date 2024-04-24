@@ -1,6 +1,7 @@
 ---
-group: true
-collapsed: false
+index: 1
+groupTitle: JavaScript
+groupAlone: true
 ---
 
 # 关于

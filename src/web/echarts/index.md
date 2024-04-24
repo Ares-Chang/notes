@@ -1,6 +1,5 @@
 ---
-group: true
-collapsed: false
+groupAlone: true
 ---
 
 # 关于

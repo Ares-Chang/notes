@@ -1,3 +1,7 @@
+---
+sortNext: jsx-basic-study
+---
+
 # React 脚手架安装
 
 ## 脚手架安装

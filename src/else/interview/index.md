@@ -1,3 +1,8 @@
+---
+groupTitle: Rice Bowl
+groupAlone: true
+---
+
 # 介绍
 
 毛主席教导我们：不打无准备之仗。

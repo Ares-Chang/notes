@@ -1,3 +1,8 @@
+---
+groupIndex: 1
+groupTitle: WSL
+---
+
 # 关于
 
 `WSL`，适用于 `Linux` 的 `Windows 子系统 (WSL)` 是 `Windows` 的一项功能，可用于在 `Windows` 计算机上运行 `Linux` 环境，而无需单独的虚拟机或双引导。
@@ -14,4 +19,4 @@
 
 推荐 [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/)，自己家的更配哦~
 
-> 对 `PowerShell` 感兴趣可以看看我的 [PowerShell 美化篇](../../else/tools/power-shell)
+> 对 `PowerShell` 感兴趣可以看看我的 [PowerShell 美化篇](../else/tools/power-shell)

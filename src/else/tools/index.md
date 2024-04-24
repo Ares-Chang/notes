@@ -1,3 +1,8 @@
+---
+groupTitle: Gadget
+groupAlone: true
+---
+
 # 关于
 
 现在已经过了那个靠一个记事本走天下的年代了。

@@ -1,3 +1,7 @@
+---
+index: 1
+---
+
 # GitHub Pages
 
 ## 介绍

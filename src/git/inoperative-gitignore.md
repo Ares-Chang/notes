@@ -1,3 +1,7 @@
+---
+title: 解决 .gitignore 不生效问题
+---
+
 # 解决 `.gitignore` 不生效问题
 
 ## 问题

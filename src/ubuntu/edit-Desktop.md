@@ -1,4 +1,4 @@
-# 将 Ubuntu 的'桌面'改为'Desktop'
+# 将 '桌面' 改为 'Desktop'
 
 ## 问题
 

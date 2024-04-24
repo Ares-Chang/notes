@@ -1,3 +1,8 @@
+---
+groupIndex: 2
+group: true
+---
+
 # 安装 Zsh
 
 ```sh

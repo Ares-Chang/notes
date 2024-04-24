@@ -1,6 +1,6 @@
 ---
-group: true
-collapsed: false
+groupTitle: CSS
+groupAlone: true
 ---
 
 # 关于

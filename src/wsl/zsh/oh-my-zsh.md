@@ -1,4 +1,4 @@
-# Oh My Zsh !!!
+# Oh My Zsh ‼
 
 终极 Shell 解决方案 [Oh My Zsh](https://ohmyz.sh/)。
 
