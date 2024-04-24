@@ -34,7 +34,7 @@ wsl --update
 wsl --status
 ```
 
-```output
+```sh
 默认分发: Ubuntu
 默认版本: 2
 当前计算机配置不支持 WSL1。
@@ -49,7 +49,7 @@ wsl --status
 wsl --version
 ```
 
-```output
+```sh
 WSL 版本： 2.0.9.0
 内核版本： 5.15.133.1-1
 WSLg 版本： 1.0.59

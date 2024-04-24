@@ -4,7 +4,7 @@
 
 在使用 ViewUI 的 table 表格排序功能的时候，排出来的序列是乱序的，并没有达到预期的排序效果。
 
-![](./images/iview-table-sort/Snipaste_2020-11-18_10-34-20.png)
+![](../images/iview-table-sort/Snipaste_2020-11-18_10-34-20.png)
 
 ## 产生原因
 
@@ -18,10 +18,10 @@
 
 2. 前端自行 `Number()` 一下或者 `*1` 把字符串类型转换一下在排序,
 
-![](./images/iview-table-sort/Snipaste_2020-11-18_11-04-38.png)
+![](../images/iview-table-sort/Snipaste_2020-11-18_11-04-38.png)
 
 注意：`table` 排序是根据设置的 `key` 值进行的，所以如果要转换字段类型请直接转换原值，不要转换用于展示的字段。
 
 同样如果需要自行拼装数据展示方式并排序，请确认好 `key` 值的对应字段是否正确
 
-![](./images/iview-table-sort/Snipaste_2020-11-18_11-00-26.png)
+![](../images/iview-table-sort/Snipaste_2020-11-18_11-00-26.png)

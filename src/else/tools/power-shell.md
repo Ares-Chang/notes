@@ -29,7 +29,7 @@
 winget search Microsoft.PowerShell
 ```
 
-```Output
+```sh
 Name               Id                           Version   Source
 -----------------------------------------------------------------
 PowerShell         Microsoft.PowerShell         7.4.0.0   winget
@@ -51,7 +51,7 @@ winget install Microsoft.PowerShell
 $PSVersionTable
 ```
 
-```Output {3}
+```sh {3}
 Name                           Value
 ----                           -----
 PSVersion                      7.4.0

@@ -121,7 +121,7 @@ ssh -T git@github.com
 
 您可能会看到类似如下的警告：
 
-```out
+```
 The authenticity of host 'github.com (20.205.243.166)' can't be established.
 ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
 This key is not known by any other names
@@ -130,7 +130,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 验证所看到的信息是否与上面的公钥匹配。如果是，则键入 `yes`:
 
-```out
+```
 Hi Ares-Chang! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 

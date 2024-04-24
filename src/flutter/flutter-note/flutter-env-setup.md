@@ -2,7 +2,7 @@
 
 ## 历史
 
-Flutter 是 Google 开源的一个跨平台框架，基于 Dart 语法进行开发，需要 [Dart 语法基础](./dart-base-note.md)进行学习使用。
+Flutter 是 Google 开源的一个跨平台框架，基于 Dart 语法进行开发，需要 [Dart 语法基础](../dart/dart-base-note.md)进行学习使用。
 
 ## 安装环境
 

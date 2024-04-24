@@ -31,7 +31,7 @@
 
 效果如下:
 
-![](./images/iview-upload-value/iview-upload-value.png)
+![](../images/iview-upload-value/iview-upload-value.png)
 
 ## 产生原因
 

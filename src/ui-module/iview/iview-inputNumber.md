@@ -6,7 +6,7 @@
 
 业务需求：默认不设置值，显示 `placeholder` 设置的文字。
 
-![](./images/iview-inputNumber/Snipaste_2021-06-15_16-16-54.png)
+![](../images/iview-inputNumber/Snipaste_2021-06-15_16-16-54.png)
 
 ## 解决方法
 
