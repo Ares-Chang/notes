@@ -31,7 +31,7 @@ origin
 ::: warning 注意：
 λ 并不是输入的命令，和 Linux 终端中的 $ 一样，这是每行开始的符号。
 
-我使用的 [Cmder](https://cmder.net/)，如果感兴趣可以点击查看我的 [Cmder 配置](/else/tools/cmder)。
+我使用的 [Cmder](https://cmder.net/)，如果感兴趣可以点击查看我的 [Cmder 配置](../windows/cmder)。
 :::
 
 如果想要查看详细信息，可以在 `git remote` 后面加个 `-v`

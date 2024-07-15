@@ -19,4 +19,4 @@ groupTitle: WSL
 
 推荐 [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/)，自己家的更配哦~
 
-> 对 `PowerShell` 感兴趣可以看看我的 [PowerShell 美化篇](../else/tools/power-shell)
+> 对 `PowerShell` 感兴趣可以看看我的 [PowerShell 美化篇](../windows/power-shell)
