@@ -59,7 +59,8 @@ export default defineConfig({
           text: '系统',
           items: [
             { text: 'WSL', link: '/wsl/' },
-            { text: 'Ubuntu', link: '/ubuntu/' }
+            { text: 'Ubuntu', link: '/ubuntu/' },
+            { text: 'Windows', link: '/windows/' }
           ]
         }
       ]
