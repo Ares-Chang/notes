@@ -46,6 +46,7 @@ export default defineConfig({
     { text: 'Git', link: '/git/' },
     { text: 'React', link: '/react/' },
     { text: 'Flutter', link: '/flutter/' },
+    { text: 'Node', link: '/node/' },
     {
       text: 'Linux',
       items: [
