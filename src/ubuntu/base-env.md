@@ -72,9 +72,15 @@ sudo apt install git -y
 
 开发必备，[详细文档](https://code.visualstudio.com/docs/setup/linux)。
 
-两个安装方案：
+三个安装方案：
 
-1. 将 [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868)，安装包下载到本地并运行以下进行安装。
+1. 使用 `snap` 进行安装，优点可自动更新(推荐)
+
+```
+sudo snap install code --classic
+```
+
+2. 将 [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868)，安装包下载到本地并运行以下进行安装。
 
 ```
 sudo apt install ./<file>.deb
@@ -86,7 +92,7 @@ sudo apt install ./<file>.deb
 
 > 安装 `.deb` 包将自动安装 `apt` 仓库和签名密钥，以启用使用系统的包管理器进行自动更新。
 
-2. 手动安装存储库和密钥
+3. 手动安装存储库和密钥
 
 ```sh
 sudo apt-get install wget gpg
