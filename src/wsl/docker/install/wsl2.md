@@ -1,4 +1,6 @@
-# 安装并验证
+# WSL2
+
+## 安装并验证
 
 以下安装环境基于 `Win + Wsl2` 环境，其它环境可参考 [Docker 官方文档](https://docs.docker.com/)
 
